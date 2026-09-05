@@ -22,6 +22,7 @@ use BgCommerce3\Background\Locations_Sync;
 use BgCommerce3\Support\Label_Pdf_Store;
 use BgCommerce3\Email\Emails;
 use BgCommerce3\Shipping\Pricing;
+use BgCommerce3\Privacy\Policy;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -69,6 +70,7 @@ final class Plugin {
 		self::maybe_upgrade_storage();
 		self::maybe_cleanup_legacy_runtime();
 		Label_Pdf_Store::register();
+		Policy::init();
 		Remote_Catalog::init();
 
 		$c = $this->container;

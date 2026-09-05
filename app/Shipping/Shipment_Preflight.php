@@ -257,6 +257,7 @@ final class Shipment_Preflight {
 		$wb = is_array( $wb ) ? $wb : array();
 		$invalid_row = Package_Dimensions::invalid_complete_row( isset( $wb['packages'] ) ? $wb['packages'] : array() );
 		if ( $invalid_row > 0 ) {
+			/* translators: %d: invalid shipment package row number. */
 			$this->block( 'invalid_package_row', sprintf( __( 'Shipment package %d has missing or non-positive dimensions/weight.', 'bg-commerce-suite' ), $invalid_row ) );
 		}
 		if ( empty( $package['contents_present'] ) ) {

@@ -556,8 +556,8 @@ class Checkout {
 
 		// phpcs:ignore WordPress.Security.NonceVerification.Missing -- WC checkout nonce is verified by WooCommerce upstream.
 		if ( isset( $_POST['shipping_method'] ) ) {
-			// phpcs:ignore WordPress.Security.NonceVerification.Missing
-			$posted  = wp_unslash( $_POST['shipping_method'] );
+			// phpcs:ignore WordPress.Security.NonceVerification.Missing -- WooCommerce owns checkout nonces upstream.
+			$posted  = array_map( 'sanitize_text_field', (array) wp_unslash( $_POST['shipping_method'] ) );
 			$methods = is_array( $posted ) ? $posted : array( $posted );
 		}
 
@@ -646,6 +646,7 @@ class Checkout {
 		$track_url  = ( $module && method_exists( $module, 'tracking_url' ) ) ? $module->tracking_url( $number ) : '';
 
 		if ( $plain_text ) {
+			/* translators: 1: courier name, 2: shipment label number. */
 			echo "\n" . esc_html( sprintf( __( 'Shipping with %1$s — shipment label: %2$s', 'bg-commerce-suite' ), $courier, $number ) ) . "\n";
 			if ( $track_url ) {
 				echo esc_html__( 'Tracking: ', 'bg-commerce-suite' ) . esc_url( $track_url ) . "\n";
@@ -890,8 +891,10 @@ class Checkout {
 	 */
 	private function throw_persistence_error( $message ) {
 		if ( class_exists( '\\WC_Data_Exception' ) ) {
+			// phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Exception messages are data, not direct output.
 			throw new \WC_Data_Exception( 'bgcs3_order_persistence', $message );
 		}
+		// phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Exception messages are data, not direct output.
 		throw new \Exception( $message );
 	}
 

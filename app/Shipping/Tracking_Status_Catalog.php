@@ -153,8 +153,10 @@ final class Tracking_Status_Catalog {
 		$ids = self::couriers_for( $state );
 		$names = array_map( array( __CLASS__, 'courier_name' ), $ids );
 		if ( 1 === count( $names ) ) {
+			/* translators: %s: courier name. */
 			return sprintf( __( 'This status is specific to %s.', 'bg-commerce-suite' ), $names[0] );
 		}
+		/* translators: %s: comma-separated courier names. */
 		return sprintf( __( 'Recognized for: %s.', 'bg-commerce-suite' ), implode( ', ', $names ) );
 	}
 }

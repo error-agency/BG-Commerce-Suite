@@ -10,6 +10,8 @@
 
 namespace BgCommerce3\Addon;
 
+use BgCommerce3\Support\Options;
+
 defined( 'ABSPATH' ) || exit;
 
 final class Remote_Catalog {
@@ -25,6 +27,8 @@ final class Remote_Catalog {
 	const SCHEDULE_OPTION = 'bgcs3_catalog_schedule_interval';
 	const REFRESH_ACTION  = 'bgcs3_refresh_product_catalog';
 	const REFRESH_NONCE   = 'bgcs3_refresh_product_catalog';
+	const PRIVACY_URL     = 'https://github.com/error-agency/BG-Commerce-Suite/blob/main/legal/PRIVACY.md';
+	const TERMS_URL       = 'https://github.com/error-agency/BG-Commerce-Suite/blob/main/legal/CATALOG-SERVICE-TERMS.md';
 
 	/** Register scheduled and manual refresh entry points. */
 	public static function init() {
@@ -33,8 +37,18 @@ final class Remote_Catalog {
 		add_action( 'admin_post_' . self::REFRESH_ACTION, array( __CLASS__, 'handle_manual_refresh' ) );
 	}
 
+	/** Whether an administrator explicitly enabled the optional remote catalog. */
+	public static function is_enabled() {
+		return 'yes' === Options::get( 'catalog', 'enabled', 'no' );
+	}
+
 	/** Ensure the shared catalog is refreshed hourly with startup jitter. */
 	public static function maybe_schedule() {
+		if ( ! self::is_enabled() ) {
+			self::unschedule();
+			return;
+		}
+
 		if ( ! function_exists( 'as_has_scheduled_action' ) || ! function_exists( 'as_schedule_recurring_action' ) ) {
 			return;
 		}
@@ -49,6 +63,23 @@ final class Remote_Catalog {
 			$delay = function_exists( 'wp_rand' ) ? wp_rand( 300, 3600 ) : 900;
 			as_schedule_recurring_action( time() + $delay, self::INTERVAL, self::SYNC_HOOK, array(), self::GROUP );
 		}
+	}
+
+	/** Remove scheduled work and its interval marker without contacting the service. */
+	public static function unschedule() {
+		if ( function_exists( 'as_has_scheduled_action' )
+			&& function_exists( 'as_unschedule_all_actions' )
+			&& as_has_scheduled_action( self::SYNC_HOOK, array(), self::GROUP ) ) {
+			as_unschedule_all_actions( self::SYNC_HOOK, array(), self::GROUP );
+		}
+		delete_option( self::SCHEDULE_OPTION );
+	}
+
+	/** Persist opt-out, remove cached offers and stop every catalog refresh. */
+	public static function disable() {
+		Options::set( 'catalog', 'enabled', 'no' );
+		self::unschedule();
+		delete_option( self::OPTION );
 	}
 
 	/** Refresh from the scheduled worker without affecting the stored good feed on failure. */
@@ -71,6 +102,19 @@ final class Remote_Catalog {
 			wp_die( esc_html__( 'You do not have permission for this action.', 'bg-commerce-suite' ) );
 		}
 		check_admin_referer( self::REFRESH_NONCE );
+		if ( ! self::is_enabled() ) {
+			wp_safe_redirect(
+				add_query_arg(
+					array(
+						'page'            => 'bgcs3-settings',
+						'tab'             => 'dashboard',
+						'catalog_refresh' => 'disabled',
+					),
+					admin_url( 'admin.php' )
+				)
+			);
+			exit;
+		}
 
 		$result = self::refresh();
 		$status = is_wp_error( $result ) ? 'failed' : ( isset( $result['status'] ) ? sanitize_key( (string) $result['status'] ) : 'updated' );
@@ -93,6 +137,10 @@ final class Remote_Catalog {
 	 * @return array<string,mixed>|\WP_Error
 	 */
 	public static function refresh() {
+		if ( ! self::is_enabled() ) {
+			return new \WP_Error( 'catalog_disabled', __( 'The optional product catalog is disabled.', 'bg-commerce-suite' ) );
+		}
+
 		$url = self::feed_url();
 		if ( ! self::allowed_url( $url ) ) {
 			return self::record_error( new \WP_Error( 'catalog_invalid_endpoint', __( 'The product catalog endpoint is not allowed.', 'bg-commerce-suite' ) ) );
@@ -302,6 +350,10 @@ final class Remote_Catalog {
 
 	/** Return current remote entries without making a network request. */
 	public static function items() {
+		if ( ! self::is_enabled() ) {
+			return array();
+		}
+
 		$state = self::state();
 		if ( empty( $state['payload'] ) || ! is_array( $state['payload'] ) ) {
 			return array();
@@ -311,12 +363,13 @@ final class Remote_Catalog {
 
 	/** Return safe status metadata for the Dashboard extensions area. */
 	public static function status() {
-		$state        = self::state();
+		$enabled      = self::is_enabled();
+		$state        = $enabled ? self::state() : array();
 		$payload      = isset( $state['payload'] ) && is_array( $state['payload'] ) ? $state['payload'] : array();
 		$last_success = isset( $state['last_success_at'] ) ? (int) $state['last_success_at'] : 0;
 		$expires_at   = isset( $payload['expires_at'] ) ? (string) $payload['expires_at'] : '';
 		$expires      = self::timestamp( $expires_at );
-		$cache_status = 'empty';
+		$cache_status = $enabled ? 'empty' : 'disabled';
 		if ( ! empty( $payload ) ) {
 			$cache_status = false !== $expires && $expires <= time()
 				? 'expired'
@@ -324,6 +377,7 @@ final class Remote_Catalog {
 		}
 
 		return array(
+			'enabled'         => $enabled,
 			'endpoint'        => self::feed_url(),
 			'schema_version'  => isset( $payload['schema_version'] ) ? (int) $payload['schema_version'] : self::SCHEMA_VERSION,
 			'last_attempt_at' => isset( $state['last_attempt_at'] ) ? (int) $state['last_attempt_at'] : 0,

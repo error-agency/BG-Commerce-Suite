@@ -68,11 +68,13 @@ final class Cod {
 		// phpcs:ignore WordPress.Security.NonceVerification.Missing -- read-only проверка на текущия избор; nonce се проверява от WooCommerce.
 		$chosen = isset( $_POST['payment_method'] ) ? sanitize_text_field( wp_unslash( $_POST['payment_method'] ) ) : '';
 
+		// phpcs:ignore WordPress.Security.NonceVerification.Missing -- WooCommerce verifies the checkout nonce before this hook.
 		if ( '' === $chosen && isset( $_POST['post_data'] ) && is_string( $_POST['post_data'] ) ) {
 			$posted = array();
 			// BGCS-AUDIT-011 — WordPress slashes the whole $_POST superglobal, so
 			// the value must be unslashed BEFORE parsing; sanitizing the extracted
 			// value below stays as it is (wp_unslash → sanitize, never the reverse).
+			// phpcs:ignore WordPress.Security.NonceVerification.Missing,WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- WooCommerce verifies the checkout nonce; the extracted payment method is sanitized below.
 			parse_str( wp_unslash( $_POST['post_data'] ), $posted );
 			if ( ! empty( $posted['payment_method'] ) && is_string( $posted['payment_method'] ) ) {
 				$chosen = sanitize_text_field( $posted['payment_method'] );

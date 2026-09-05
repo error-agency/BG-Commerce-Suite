@@ -7,7 +7,7 @@ plugin.
 
 |  |  |
 | --- | --- |
-| **Current version** | [4.3.2](https://github.com/error-agency/BG-Commerce-Suite/releases/latest) |
+| **Current version** | [4.4.0](https://github.com/error-agency/BG-Commerce-Suite/releases/latest) |
 | **Requires WordPress** | 6.3 or later (tested up to 7.0) |
 | **Requires PHP** | 7.4 or later |
 | **Requires WooCommerce** | 8.2 or later |
@@ -72,10 +72,11 @@ Optional BGCS add-ons are independent WordPress plugins that extend Core through
 runtime behaviour belongs in the module `register()` method so that disabled or incompatible
 modules stay inert.
 
-The merchant-facing catalog refreshes validated public product metadata from `error.bg` hourly
-through Action Scheduler, with an authorized manual refresh and a persistent last-known-good
-fallback. Product cards are sourced from that feed rather than bundled product records. Remote
-metadata cannot install or activate plugins, or execute code.
+The merchant-facing product catalog is optional and disabled by default. After a site
+administrator explicitly enables it, BGCS refreshes validated public product metadata from
+`error.bg` hourly through Action Scheduler, with an authorized manual refresh and a persistent
+last-known-good fallback. Product cards are sourced from that feed rather than bundled product
+records. Remote metadata cannot install or activate plugins, or execute code.
 
 Checkout renderers such as BGCS Flow read why a courier service is not selectable through the
 public shipping-availability contract: the `bgcs3_shipping_availability` filter, and the
@@ -98,11 +99,14 @@ functionality may use OpenStreetMap tiles, and BOX NOW locker selection can use 
 BOX NOW map/widget. Do not point destructive provider-side tests at production courier
 credentials.
 
-The Dashboard extensions area checks `https://error.bg/wp-json/error-catalog/v1/feed` hourly
-and when an authorized administrator requests a refresh. The request uses the generic
+If a site administrator opts in, the Dashboard extensions area checks
+`https://error.bg/wp-json/error-catalog/v1/feed` hourly and when an authorized administrator
+requests a refresh. The request uses the generic
 `BG-Commerce-Suite-Catalog/1` User-Agent and does not send the store URL, plugin inventory,
 customer/order data, credentials or cookies; the remote server necessarily sees the connecting
-server IP. The last valid product metadata remains cached locally during an outage.
+server IP. The last valid product metadata remains cached locally during an outage and is
+deleted when the catalog is disabled. See the [privacy notice](legal/PRIVACY.md) and
+[catalog service terms](legal/CATALOG-SERVICE-TERMS.md).
 
 ## Repository layout
 
@@ -117,7 +121,10 @@ server IP. The last valid product metadata remains cached locally during an outa
 | `tools/` | Translation, release packaging and clean public-source export scripts |
 | `readme.txt` | Canonical WordPress plugin readme and changelog |
 | `uninstall.php` | Uninstall cleanup |
-| `THIRD-PARTY-NOTICES.md` | Required notices for bundled open-source components |
+| `legal/THIRD-PARTY-NOTICES.md` | Required notices for bundled open-source components |
+| `legal/NOTICE.md` | Copyright and redistribution notices |
+| `legal/PRIVACY.md` | External-service and data-processing disclosure |
+| `legal/TRADEMARKS.md` | Accurate attribution and non-endorsement rules |
 | `PUBLICATION.md` | Clean-history public repository procedure and export boundary |
 
 The clean public-source export deliberately omits `dist/`, `docs/`, `audit/`, internal handoffs,
@@ -141,7 +148,7 @@ and environment-specific evidence remain in the private repository. See
 2. Mirror that changelog block into [CHANGELOG.md](CHANGELOG.md).
 3. Build `dist/bg-commerce-suite-<version>.zip`. The archive must extract to a single
    `bg-commerce-suite/` directory.
-4. Run `php tools/build-public-source.php` and `php tests/test-publication-readiness.php`.
+4. Run `php tools/build-public-source.php` and `php tests/test-publication-readiness.php` from the private development repository.
 5. Commit, then publish the tag and the artifact together:
 
 ```bash
@@ -153,8 +160,8 @@ gh release create v<version> dist/bg-commerce-suite-<version>.zip --title "BG Co
 BG Commerce Suite is free software, released under the GNU General Public License version 2 or
 (at your option) any later version. See [LICENSE](LICENSE) for the full text.
 
-Copyright © 2026 [Err.or](https://error.bg)
+Copyright © 2026 [Error Web Agency](https://error.bg)
 
 Bundled open-source components retain their own licenses and notices. See
-[THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md). Courier names and marks identify the services
+[THIRD-PARTY-NOTICES.md](legal/THIRD-PARTY-NOTICES.md). Courier names and marks identify the services
 with which the plugin integrates; no endorsement is implied.

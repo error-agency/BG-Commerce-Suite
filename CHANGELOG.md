@@ -9,6 +9,13 @@ Every version that still has a build artifact is tagged `v<version>` and publish
 [GitHub release](https://github.com/error-agency/BG-Commerce-Suite/releases) with the original ZIP attached. A few versions were superseded
 before a ZIP was archived — they are listed as *no build artifact* and carry no tag.
 
+## 4.4.0 — 2026-09-05
+
+* Made the optional Error Web Agency product catalog an explicit administrator opt-in that is disabled by default; no catalog request can run without consent, and opting out removes its schedule and cached offers.
+* Added WordPress privacy-policy helper text and plain-language disclosures for courier APIs, maps and the optional catalog service.
+* Added Error Web Agency copyright, redistribution, privacy, catalog-service and trademark notices while preserving all bundled third-party licenses.
+* Reduced the WordPress.org readme to five tags and a compact current changelog suitable for directory parsing.
+
 ## 4.3.2 — 2026-09-05
 
 * Added complete third-party software notices and asset provenance documentation to the distributed plugin.

@@ -91,6 +91,7 @@ class Cache {
 		$canonical = $wpdb->esc_like( self::PREFIX . $needle . '_' ) . '%';
 		$legacy    = $wpdb->esc_like( self::PREFIX . self::PREFIX . $needle . '_' ) . '%';
 
+		// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- Enumerates matching transient keys so the courier-specific cache can be invalidated.
 		$names = $wpdb->get_col(
 			$wpdb->prepare(
 				"SELECT option_name FROM {$wpdb->options} WHERE option_name LIKE %s OR option_name LIKE %s OR option_name LIKE %s OR option_name LIKE %s",

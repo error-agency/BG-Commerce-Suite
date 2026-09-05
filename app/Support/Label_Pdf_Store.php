@@ -143,7 +143,7 @@ class Label_Pdf_Store {
 		header( 'Content-Type: application/pdf' );
 		header( 'Content-Disposition: ' . $disposition . '; filename="' . $name . '"' );
 		header( 'Content-Length: ' . filesize( $path ) );
-		readfile( $path ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_read_readfile
+		readfile( $path ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_readfile -- Streams the validated local PDF response.
 		exit;
 	}
 
@@ -172,8 +172,11 @@ class Label_Pdf_Store {
 
 		$deleted = false;
 		foreach ( array_unique( $candidates ) as $filepath ) {
-			if ( is_file( $filepath ) && unlink( $filepath ) ) {
-				$deleted = true;
+			if ( is_file( $filepath ) ) {
+				wp_delete_file( $filepath );
+				if ( ! is_file( $filepath ) ) {
+					$deleted = true;
+				}
 			}
 		}
 

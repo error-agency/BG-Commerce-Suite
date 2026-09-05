@@ -71,25 +71,25 @@ function bgcs3_uninstall_scheduled_actions() {
 }
 
 if ( is_multisite() ) {
-	$offset = 0;
+	$bgcs3_offset = 0;
 	do {
-		$site_ids = get_sites(
+		$bgcs3_site_ids = get_sites(
 			array(
 				'fields' => 'ids',
 				'number' => 100,
-				'offset' => $offset,
+				'offset' => $bgcs3_offset,
 			)
 		);
 
-		foreach ( $site_ids as $site_id ) {
-			switch_to_blog( (int) $site_id );
+		foreach ( $bgcs3_site_ids as $bgcs3_site_id ) {
+			switch_to_blog( (int) $bgcs3_site_id );
 			bgcs3_uninstall_site();
 			bgcs3_uninstall_scheduled_actions();
 			restore_current_blog();
 		}
 
-		$offset += 100;
-	} while ( count( $site_ids ) === 100 );
+		$bgcs3_offset += 100;
+	} while ( count( $bgcs3_site_ids ) === 100 );
 } else {
 	bgcs3_uninstall_site();
 	bgcs3_uninstall_scheduled_actions();

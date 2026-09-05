@@ -1,4 +1,8 @@
 <?php
+namespace BgCommerce3\Modules\Shipping\Econt;
+
+defined( 'ABSPATH' ) || exit;
+
 /**
  * Explicit map between the two Econt vocabularies that BGCS-AUDIT-017 found
  * being compared as if they were one.
@@ -48,10 +52,6 @@
  *
  * @package BgCommerce3
  */
-
-namespace BgCommerce3\Modules\Shipping\Econt;
-
-defined( 'ABSPATH' ) || exit;
 
 final class Shipment_Type_Map {
 

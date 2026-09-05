@@ -1671,6 +1671,7 @@ class BoxNow extends Abstract_Courier {
 		$pdf_data = $this->label_pdf( $reference, $parcel_id, count( $parcel_ids ) );
 
 		if ( is_wp_error( $pdf_data ) ) {
+			/* translators: %s: provider error returned while retrieving the label PDF. */
 			$result->meta['provider_warning'] = sprintf( __( 'BOX NOW created the shipment, but the label PDF could not be retrieved: %s', 'bg-commerce-suite' ), $this->explain_error( $pdf_data ) );
 			return $result;
 		}
@@ -2020,6 +2021,7 @@ class BoxNow extends Abstract_Courier {
 
 		$names = array_filter( array_map( 'trim', $names ) );
 
+		/* translators: %s: WooCommerce order number. */
 		return $names ? implode( ', ', $names ) : sprintf( __( 'Order %s', 'bg-commerce-suite' ), $order->get_order_number() );
 	}
 
@@ -2634,17 +2636,22 @@ class BoxNow extends Abstract_Courier {
 		$scope = sanitize_key( (string) $scope );
 
 		if ( '' === $scope || 'methods' === $scope ) {
-			$raw = isset( $_POST['boxnow_weight_ranges'] ) && is_array( $_POST['boxnow_weight_ranges'] )
-				? wp_unslash( $_POST['boxnow_weight_ranges'] )
-				: array();
+			$raw = array();
+			// phpcs:ignore WordPress.Security.NonceVerification.Missing -- Core verified the settings nonce before calling this.
+			if ( isset( $_POST['boxnow_weight_ranges'] ) && is_array( $_POST['boxnow_weight_ranges'] ) ) {
+				// phpcs:ignore WordPress.Security.NonceVerification.Missing -- Core verified the settings nonce before calling this.
+				$raw = map_deep( wp_unslash( $_POST['boxnow_weight_ranges'] ), 'sanitize_text_field' );
+			}
 			Options::set( self::ID, 'weight_price_ranges', Weight_Pricing::sanitize_ranges( $raw ) );
 		}
 
 		if ( '' === $scope || 'account' === $scope ) {
+			$warehouses = array();
 			// phpcs:ignore WordPress.Security.NonceVerification.Missing -- Core verified the settings nonce before calling this.
-			$warehouses = isset( $_POST['boxnow_warehouses'] ) && is_array( $_POST['boxnow_warehouses'] )
-				? wp_unslash( $_POST['boxnow_warehouses'] )
-				: array();
+			if ( isset( $_POST['boxnow_warehouses'] ) && is_array( $_POST['boxnow_warehouses'] ) ) {
+				// phpcs:ignore WordPress.Security.NonceVerification.Missing -- Core verified the settings nonce before calling this.
+				$warehouses = map_deep( wp_unslash( $_POST['boxnow_warehouses'] ), 'sanitize_text_field' );
+			}
 
 			$clean = array();
 			foreach ( Warehouses::sanitize_rows( $warehouses ) as $row ) {

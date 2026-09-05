@@ -92,7 +92,7 @@ class MetaBox {
 					'working'       => __( 'Please wait…', 'bg-commerce-suite' ),
 					'error'         => __( 'Error.', 'bg-commerce-suite' ),
 					'loadError'     => __( 'The directory is unavailable. The saved value remains unchanged.', 'bg-commerce-suite' ),
-					// %d е буквален placeholder, заменян client-side с номера на пакета.
+					/* translators: %d: package sequence number inserted in the browser. */
 					'packLabel'     => __( 'Package %d', 'bg-commerce-suite' ),
 				),
 			)
@@ -193,9 +193,11 @@ class MetaBox {
 		$this->f_search_select( __( 'City', 'bg-commerce-suite' ), 'bgcs-order-city-search', $city_id, $city, 'cities', $courier_id );
 		$this->f_text( __( 'Postcode', 'bg-commerce-suite' ), 'bgcs-edit-pc', $pc );
 		$this->f_search_select( __( 'Office/Locker', 'bg-commerce-suite' ), 'bgcs-order-office-search', $off_id, $off_txt, 'offices', $courier_id );
-		$street_hint = ( '' === $street_id && '' !== trim( $street ) )
-			? sprintf( __( 'Current: %s — saved without a directory ID. Select from the list only if you want to replace it.', 'bg-commerce-suite' ), $street )
-			: '';
+		$street_hint = '';
+		if ( '' === $street_id && '' !== trim( $street ) ) {
+			/* translators: %s: currently saved street text. */
+			$street_hint = sprintf( __( 'Current: %s — saved without a directory ID. Select from the list only if you want to replace it.', 'bg-commerce-suite' ), $street );
+		}
 		$this->f_search_select( __( 'Street (for address)', 'bg-commerce-suite' ), 'bgcs-order-street-search', $street_id, $street, 'streets', $courier_id, 'bgcs-order-city-search', $street_hint );
 		$this->f_text( __( 'Number (for address)', 'bg-commerce-suite' ), 'bgcs-edit-num', $num );
 		$this->f_text( __( 'Block (for address)', 'bg-commerce-suite' ), 'bgcs-edit-block', $block );
@@ -521,6 +523,7 @@ class MetaBox {
 			$expected_currency = ! empty( $payout_mismatch['expected_currency'] ) ? strtoupper( (string) $payout_mismatch['expected_currency'] ) : '';
 			$reported_amount   = isset( $payout_mismatch['reported_amount'] ) && is_numeric( $payout_mismatch['reported_amount'] ) ? number_format_i18n( (float) $payout_mismatch['reported_amount'], 2 ) : '—';
 			$reported_currency = ! empty( $payout_mismatch['reported_currency'] ) ? strtoupper( (string) $payout_mismatch['reported_currency'] ) : '';
+			/* translators: 1: expected amount, 2: expected currency, 3: reported amount, 4: reported currency. */
 			echo '<div class="bgcs-alert bgcs-alert--warning">' . Icons::svg( 'alert', 18 ) . '<div><strong>' . esc_html__( 'COD payout requires review.', 'bg-commerce-suite' ) . '</strong><br>' . esc_html( sprintf( __( 'The courier payout report did not exactly match the shipment snapshot, so BGCS did not mark the COD as paid. Expected: %1$s %2$s. Reported: %3$s %4$s.', 'bg-commerce-suite' ), $expected_amount, $expected_currency, $reported_amount, $reported_currency ) ) . '</div></div>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		}
 		if ( ! empty( $tracking['events'] ) && is_array( $tracking['events'] ) ) {
@@ -573,9 +576,11 @@ class MetaBox {
 		} elseif ( Shipment_Mutation::CANCEL_FAILED === $status ) {
 			echo '<div class="bgcs-alert bgcs-alert--danger">' . Icons::svg( 'alert', 18 ) . '<div><strong>' . esc_html__( 'The courier refused the cancellation.', 'bg-commerce-suite' ) . '</strong><br>' . esc_html__( 'The shipment remains active. No local shipment data was removed and no replacement was created.', 'bg-commerce-suite' ) . '</div></div>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		} elseif ( ! $has_active_label && Shipment_Mutation::CANCELLED === $status ) {
-			$message = '' !== $number
-				? sprintf( __( 'Shipment %s was cancelled. There is currently no active shipment; review the saved settings before creating its replacement.', 'bg-commerce-suite' ), $number )
-				: __( 'The previous shipment was cancelled. There is currently no active shipment; review the saved settings before creating its replacement.', 'bg-commerce-suite' );
+			$message = __( 'The previous shipment was cancelled. There is currently no active shipment; review the saved settings before creating its replacement.', 'bg-commerce-suite' );
+			if ( '' !== $number ) {
+				/* translators: %s: cancelled shipment number. */
+				$message = sprintf( __( 'Shipment %s was cancelled. There is currently no active shipment; review the saved settings before creating its replacement.', 'bg-commerce-suite' ), $number );
+			}
 			echo '<div class="bgcs-alert bgcs-alert--info">' . Icons::svg( 'info', 18 ) . '<div><strong>' . esc_html__( 'No active shipment.', 'bg-commerce-suite' ) . '</strong><br>' . esc_html( $message ) . '</div></div>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		}
 	}
@@ -682,8 +687,10 @@ class MetaBox {
 			echo '<summary>';
 			echo esc_html( sprintf( '%1$s · %2$s', $when, $courier ) );
 			if ( '' !== $blocked ) {
+				/* translators: %s: shipment creation stage where processing stopped. */
 				echo ' <strong>' . esc_html( sprintf( __( 'stopped at: %s', 'bg-commerce-suite' ), $blocked ) ) . '</strong>';
 			} elseif ( ! empty( $stages['unconfirmed_option'] ) ) {
+				/* translators: %s: courier option not confirmed by the provider. */
 				echo ' <strong>' . esc_html( sprintf( __( 'not confirmed by courier: %s', 'bg-commerce-suite' ), (string) $stages['unconfirmed_option'] ) ) . '</strong>';
 			} else {
 				echo ' ' . esc_html__( '(created)', 'bg-commerce-suite' );
@@ -1137,6 +1144,7 @@ class MetaBox {
 		echo '<template class="bgcs-wb-pack-template">';
 		$this->render_pack_row( array(), 0, $columns );
 		echo '</template>';
+		// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Icons::svg() returns allowlisted static markup.
 		echo '<button type="button" class="bgcs-btn bgcs-btn--sm bgcs-wb-add-pack">' . Icons::svg( 'plus', 16 ) . esc_html__( 'Add package', 'bg-commerce-suite' ) . '</button>';
 		echo '</div>';
 	}
@@ -1184,6 +1192,7 @@ class MetaBox {
 	 */
 	private function render_pack_row( array $pack, $index, array $columns ) {
 		echo '<div class="bgcs-wb-pack-row">';
+		/* translators: %d: package sequence number. */
 		echo '<span class="bgcs-wb-pack-row__label">' . esc_html( sprintf( __( 'Package %d', 'bg-commerce-suite' ), (int) $index + 1 ) ) . '</span>';
 		echo '<div class="bgcs-inline4">';
 
@@ -1193,6 +1202,7 @@ class MetaBox {
 		}
 
 		echo '</div>';
+		// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Icons::svg() returns allowlisted static markup.
 		echo '<button type="button" class="bgcs-btn bgcs-btn--sm bgcs-btn--danger bgcs-wb-remove-pack">' . Icons::svg( 'trash', 14 ) . '</button>';
 		echo '</div>';
 	}
@@ -1390,11 +1400,13 @@ class MetaBox {
 				$street_label = isset( $stored['street'] ) ? (string) $stored['street'] : '';
 			}
 
+			// phpcs:disable WordPress.Security.NonceVerification.Missing -- verify_and_get_order() verified the action nonce before this protected save path.
 			$block     = isset( $_POST['block'] ) ? $field( 'block' ) : ( isset( $stored['block'] ) ? (string) $stored['block'] : '' );
 			$entrance  = isset( $_POST['entrance'] ) ? $field( 'entrance' ) : ( isset( $stored['entrance'] ) ? (string) $stored['entrance'] : '' );
 			$floor     = isset( $_POST['floor'] ) ? $field( 'floor' ) : ( isset( $stored['floor'] ) ? (string) $stored['floor'] : '' );
 			$apartment = isset( $_POST['apartment'] ) ? $field( 'apartment' ) : ( isset( $stored['apartment'] ) ? (string) $stored['apartment'] : '' );
 			$note      = isset( $_POST['note'] ) ? $field( 'note' ) : ( isset( $stored['note'] ) ? (string) $stored['note'] : '' );
+			// phpcs:enable WordPress.Security.NonceVerification.Missing
 
 			$address = array(
 				'street_id' => $street_id,
@@ -1515,7 +1527,7 @@ class MetaBox {
 	 */
 	private function posted_packages() {
 		// phpcs:ignore WordPress.Security.NonceVerification.Missing -- nonce verified in verify_and_get_order().
-		$raw = isset( $_POST['wb_packages'] ) ? wp_unslash( $_POST['wb_packages'] ) : '';
+		$raw = isset( $_POST['wb_packages'] ) ? sanitize_textarea_field( wp_unslash( $_POST['wb_packages'] ) ) : '';
 		if ( '' === $raw ) {
 			return array();
 		}
@@ -1613,8 +1625,10 @@ class MetaBox {
 			Shipment_Creation::complete( $order->order, $result );
 
 			$order->order->update_meta_data( '_bgcs3_label', $result->to_array() );
+			/* translators: %s: newly created shipment label number. */
 			$order->order->add_order_note( sprintf( __( 'Shipment label created: %s', 'bg-commerce-suite' ), $result->number ) );
 			if ( ! empty( $result->meta['provider_warning'] ) ) {
+				/* translators: %s: warning returned by the courier. */
 				$order->order->add_order_note( sprintf( __( 'Courier warning: %s', 'bg-commerce-suite' ), (string) $result->meta['provider_warning'] ) );
 			}
 			$order->order->save();

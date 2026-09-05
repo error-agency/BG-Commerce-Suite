@@ -36,7 +36,7 @@ Before publishing, verify:
 2. The repository is created under the intended owner and starts as private for a final review.
 3. The current plugin version agrees in `bg-commerce-suite.php`, `readme.txt`, `README.md` and
    `CHANGELOG.md`.
-4. `LICENSE`, `THIRD-PARTY-NOTICES.md` and `assets/img/PROVENANCE.md` are present.
+4. `LICENSE`, `legal/THIRD-PARTY-NOTICES.md` and `assets/img/PROVENANCE.md` are present.
 5. `php tools/build-zip.php` creates one `bg-commerce-suite/` archive root and the generated ZIP
    passes `php tests/test-publication-readiness.php`.
 6. A clean WordPress/WooCommerce installation can install and activate the reviewed ZIP.

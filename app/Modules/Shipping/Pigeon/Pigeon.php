@@ -140,6 +140,7 @@ class Pigeon extends Abstract_Courier {
 			'locations',
 			__( 'Offices and lockers', 'bg-commerce-suite' ),
 			empty( $missing_locations ) ? Setup_Status::STATE_OK : Setup_Status::STATE_WARN,
+			/* translators: %s: comma-separated list of missing Pigeon location datasets. */
 			empty( $missing_locations ) ? '' : sprintf( __( 'Synchronize the missing locations: %s.', 'bg-commerce-suite' ), implode( ', ', $missing_locations ) )
 		);
 
@@ -327,6 +328,7 @@ class Pigeon extends Abstract_Courier {
 			$fields[ 'svc_group_' . $group_key ] = array(
 				'group'       => 'services',
 				'type'        => 'select',
+				/* translators: %s: Pigeon service-option group name. */
 				'label'       => sprintf( __( 'Pigeon option — %s', 'bg-commerce-suite' ), $group ),
 				'options'     => array( '' => __( 'Use settings', 'bg-commerce-suite' ), '__none__' => __( 'No', 'bg-commerce-suite' ) ) + $options,
 				'description' => __( 'Pigeon allows exactly one option from this group for a shipment.', 'bg-commerce-suite' ),
@@ -626,7 +628,7 @@ class Pigeon extends Abstract_Courier {
 				return;
 			}
 			// phpcs:ignore WordPress.Security.NonceVerification.Missing -- verified by Core.
-			$raw  = isset( $_POST['pigeon_courier'] ) && is_array( $_POST['pigeon_courier'] ) ? wp_unslash( $_POST['pigeon_courier'] ) : array();
+			$raw  = isset( $_POST['pigeon_courier'] ) && is_array( $_POST['pigeon_courier'] ) ? map_deep( wp_unslash( $_POST['pigeon_courier'] ), 'sanitize_text_field' ) : array();
 		$form = array();
 		foreach ( $raw as $key => $value ) {
 			if ( is_scalar( $value ) ) {
@@ -1140,6 +1142,7 @@ class Pigeon extends Abstract_Courier {
 				$fields[ 'service_' . $code ] = array(
 					'type'           => 'checkbox',
 					'label'          => $label,
+					/* translators: %s: Pigeon service name. */
 					'checkbox_label' => sprintf( __( 'Enable service “%s”', 'bg-commerce-suite' ), $label ),
 					'default'        => 'no',
 					'description'    => $description,
@@ -1151,6 +1154,7 @@ class Pigeon extends Abstract_Courier {
 			$key = 'service_group_' . $this->service_group_key( $group );
 			$fields[ $key ] = array(
 				'type'        => 'select',
+				/* translators: %s: Pigeon service-option group name. */
 				'label'       => sprintf( __( 'Pigeon option — %s', 'bg-commerce-suite' ), $group ),
 				'default'     => '',
 				'options'     => array( '' => __( 'No', 'bg-commerce-suite' ) ) + $options,

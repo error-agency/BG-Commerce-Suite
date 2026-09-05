@@ -77,6 +77,7 @@ final class Tracking_Status_Policy {
 			$default = isset( $defaults[ $state ] ) && null !== $defaults[ $state ] ? (string) $defaults[ $state ] : '';
 			$fields[ $key ] = array(
 				'type'        => 'select',
+				/* translators: %s: normalized shipment tracking status. */
 				'label'       => sprintf( __( 'When “%s”', 'bg-commerce-suite' ), Tracking_State::label( $state ) ),
 				'default'     => $default,
 				'options'     => $options,
@@ -104,6 +105,7 @@ final class Tracking_Status_Policy {
 			return '';
 		}
 		return sprintf(
+			/* translators: 1: courier name, 2: semicolon-separated provider statuses. */
 			__( 'Provider-specific events for %1$s are kept in tracking and normalized to the closest BGCS state: %2$s.', 'bg-commerce-suite' ),
 			Tracking_Status_Catalog::courier_name( $courier_id ),
 			implode( '; ', $items )
@@ -298,6 +300,7 @@ final class Tracking_Status_Policy {
 		$order->update_status(
 			$new_status,
 			sprintf(
+				/* translators: 1: courier name, 2: shipment status, 3: WooCommerce order status. */
 				__( 'BGCS: the shipment with %1$s is “%2$s”; the order was moved to “%3$s”.', 'bg-commerce-suite' ),
 				Tracking_Status_Catalog::courier_name( $courier_id ),
 				Tracking_State::label( $state ),

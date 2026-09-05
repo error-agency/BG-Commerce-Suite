@@ -156,8 +156,10 @@ final class Emails {
 		$courier = '' !== $email->courier_name ? $email->courier_name : __( 'courier', 'bg-commerce-suite' );
 		$number  = '' !== $email->waybill_number ? $email->waybill_number : '—';
 		if ( $plain_text ) {
+			/* translators: 1: courier name, 2: shipment tracking number. */
 			echo esc_html( sprintf( __( 'A shipment label has been created with %1$s. Tracking number: %2$s', 'bg-commerce-suite' ), $courier, $number ) ) . "\n";
 			if ( '' !== $email->delivery_estimate ) {
+				/* translators: %s: formatted expected-delivery date. */
 				echo esc_html( sprintf( __( 'Expected delivery: %s', 'bg-commerce-suite' ), $email->delivery_estimate ) ) . "\n";
 			}
 			if ( $email->tracking_url ) {
@@ -165,6 +167,7 @@ final class Emails {
 			}
 			return;
 		}
+		/* translators: %s: courier name. */
 		echo '<p>' . esc_html( sprintf( __( 'A shipment label has been created for your order with %s.', 'bg-commerce-suite' ), $courier ) ) . '</p>';
 		echo '<p><strong>' . esc_html__( 'Tracking number:', 'bg-commerce-suite' ) . '</strong> ' . esc_html( $number ) . '</p>';
 		if ( '' !== $email->delivery_estimate ) {

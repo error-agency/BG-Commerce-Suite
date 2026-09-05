@@ -13,4 +13,4 @@ artifact when version 3.0.0 was reconstructed.
 
 No file in this directory is loaded from, or creates a runtime dependency on, another courier
 integration plugin. Courier names and marks remain the property of their respective owners and
-are used only for service identification. See `../../THIRD-PARTY-NOTICES.md`.
+are used only for service identification. See `../../legal/THIRD-PARTY-NOTICES.md`.

@@ -39,8 +39,8 @@ abstract class Method extends \WC_Shipping_Method {
 		$courier            = $this->get_courier();
 		$module_title       = $courier ? (string) Module_Settings::get( $courier->id(), 'method_title' ) : '';
 		$this->method_title = '' !== $module_title ? $module_title : ( $courier ? $courier->name() : $this->id );
-		/* translators: %s courier name */
 		$this->method_description = $courier
+			/* translators: %s: courier name. */
 			? sprintf( __( 'Shipping with %s — automatic price calculation.', 'bg-commerce-suite' ), $courier->name() )
 			: '';
 

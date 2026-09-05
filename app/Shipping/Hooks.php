@@ -653,7 +653,8 @@ class Hooks {
 			: array();
 		// phpcs:ignore WordPress.Security.NonceVerification.Missing -- WooCommerce verifies the AJAX nonce before this hook.
 		if ( isset( $_POST['shipping_method'] ) && is_array( $_POST['shipping_method'] ) ) {
-			$posted_methods = wp_unslash( $_POST['shipping_method'] );
+			// phpcs:ignore WordPress.Security.NonceVerification.Missing -- WooCommerce verifies the AJAX nonce before this hook.
+			$posted_methods = array_map( 'sanitize_text_field', wp_unslash( $_POST['shipping_method'] ) );
 		}
 		if ( ! empty( $posted_methods ) ) {
 			self::seed_posted_shipping_methods( $posted_methods );

@@ -81,25 +81,35 @@ class Addons {
 	 * no remote install/activation flow lives in BGCS Core.
 	 */
 	private function render_product_catalog() {
+		$enabled          = Remote_Catalog::is_enabled();
 		$registry         = $this->container['modules'];
-		$items            = Catalog::items();
+		$items            = $enabled ? Catalog::items() : array();
 		$feed_status      = Remote_Catalog::status();
-		$plugin_inventory = Installed_Product::inventory();
+		$plugin_inventory = $enabled ? Installed_Product::inventory() : array();
 
 		echo '<section class="bgcs-addon-section-head bgcs-addon-section-head--catalog">';
 		echo '<div><h2>' . esc_html__( 'Extensions', 'bg-commerce-suite' ) . '</h2>';
 		echo '<p>' . esc_html__( 'Manage included modules and discover optional extensions in one place.', 'bg-commerce-suite' ) . '</p></div>';
 		echo '<div class="bgcs-addon-section-actions">';
-		if ( current_user_can( 'manage_options' ) ) {
+		if ( $enabled && current_user_can( 'manage_options' ) ) {
 			echo '<a class="bgcs-btn bgcs-btn--outline bgcs-btn--sm" href="' . esc_url( Remote_Catalog::refresh_url() ) . '">' . Icons::svg( 'refresh', 16 ) . esc_html__( 'Refresh catalog', 'bg-commerce-suite' ) . '</a>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		}
-		if ( ! empty( $feed_status['is_usable'] ) && ! empty( $feed_status['last_success_at'] ) ) {
+		if ( ! $enabled ) {
+			echo '<span class="bgcs-addon-section-actions__sync">' . esc_html__( 'Optional catalog disabled', 'bg-commerce-suite' ) . '</span>';
+		} elseif ( ! empty( $feed_status['is_usable'] ) && ! empty( $feed_status['last_success_at'] ) ) {
+			/* translators: %s: human-readable time since the catalog was updated. */
 			echo '<span class="bgcs-addon-section-actions__sync">' . esc_html( sprintf( __( 'Updated %s ago', 'bg-commerce-suite' ), human_time_diff( (int) $feed_status['last_success_at'], time() ) ) ) . '</span>';
 		} else {
 			echo '<span class="bgcs-addon-section-actions__sync">' . esc_html__( 'No catalog data has been loaded.', 'bg-commerce-suite' ) . '</span>';
 		}
 		echo '</div>';
 		echo '</section>';
+
+		if ( ! $enabled ) {
+			$settings_url = add_query_arg( array( 'page' => \BgCommerce3\Admin\Settings\Settings_Page::MENU_SLUG, 'tab' => 'general' ), admin_url( 'admin.php' ) );
+			echo '<div class="bgcs-alert bgcs-alert--info">' . Icons::svg( 'info', 18 ) . '<span>' . esc_html__( 'Optional Error Web Agency product offers are disabled. An administrator can opt in under General settings. Enabling makes an hourly server request to error.bg; no store, customer, order, credential or plugin-inventory data is sent.', 'bg-commerce-suite' ) . ' <a href="' . esc_url( $settings_url ) . '">' . esc_html__( 'General settings', 'bg-commerce-suite' ) . '</a> · <a href="' . esc_url( Remote_Catalog::PRIVACY_URL ) . '" target="_blank" rel="noopener noreferrer">' . esc_html__( 'Privacy', 'bg-commerce-suite' ) . '</a> · <a href="' . esc_url( Remote_Catalog::TERMS_URL ) . '" target="_blank" rel="noopener noreferrer">' . esc_html__( 'Terms', 'bg-commerce-suite' ) . '</a></span></div>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			return;
+		}
 
 		// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- fixed presentation status after a nonce-protected action.
 		$refresh_status = isset( $_GET['catalog_refresh'] ) ? sanitize_key( wp_unslash( $_GET['catalog_refresh'] ) ) : '';
@@ -112,8 +122,11 @@ class Addons {
 				? __( 'The catalog could not be refreshed. The last valid catalog remains active.', 'bg-commerce-suite' )
 				: __( 'The remote catalog is unavailable. No remote products are shown.', 'bg-commerce-suite' );
 			echo '<div class="bgcs-alert bgcs-alert--warning">' . Icons::svg( 'alert', 18 ) . '<span>' . esc_html( $message ) . '</span></div>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		} elseif ( 'disabled' === $refresh_status ) {
+			echo '<div class="bgcs-alert bgcs-alert--info">' . Icons::svg( 'info', 18 ) . '<span>' . esc_html__( 'The optional product catalog is disabled. No external request was made.', 'bg-commerce-suite' ) . '</span></div>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		} elseif ( ! empty( $feed_status['last_error'] ) && ! empty( $feed_status['is_usable'] ) ) {
 			$cached_at = ! empty( $feed_status['last_success_at'] ) ? $this->catalog_time( (int) $feed_status['last_success_at'] ) : __( 'an earlier successful refresh', 'bg-commerce-suite' );
+			/* translators: %s: date or relative time of the last successful catalog refresh. */
 			echo '<div class="bgcs-alert bgcs-alert--warning">' . Icons::svg( 'alert', 18 ) . '<span>' . esc_html( sprintf( __( 'Remote catalog could not be refreshed. Showing the last valid catalog from %s.', 'bg-commerce-suite' ), $cached_at ) ) . '</span></div>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		} elseif ( ! empty( $feed_status['last_error'] ) ) {
 			echo '<div class="bgcs-alert bgcs-alert--warning">' . Icons::svg( 'alert', 18 ) . '<span>' . esc_html__( 'The remote catalog is unavailable. No remote products are shown.', 'bg-commerce-suite' ) . '</span></div>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
@@ -279,6 +292,7 @@ class Addons {
 	/** Render safe feed/cache metadata inside the Dashboard extensions area. */
 	private function render_catalog_diagnostics( array $status ) {
 		$cache_labels = array(
+			'disabled' => __( 'Disabled', 'bg-commerce-suite' ),
 			'empty'   => __( 'Empty', 'bg-commerce-suite' ),
 			'fresh'   => __( 'Fresh', 'bg-commerce-suite' ),
 			'stale'   => __( 'Stale', 'bg-commerce-suite' ),

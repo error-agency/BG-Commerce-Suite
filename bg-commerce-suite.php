@@ -3,8 +3,8 @@
  * Plugin Name:       BG Commerce Suite
  * Plugin URI:        https://error.bg/bg-commerce-suite
  * Description:       Modular WooCommerce integration for Speedy, Econt, BOX NOW, Pigeon Express and COD reports.
- * Version:           4.3.2
- * Author:            Err.or
+ * Version:           4.4.0
+ * Author:            Error Web Agency
  * Author URI:        https://error.bg
  * Text Domain:       bg-commerce-suite
  * Domain Path:       /languages
@@ -15,12 +15,14 @@
  * License:           GPLv2 or later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  *
+ * Copyright (C) 2026 Error Web Agency
+ *
  * @package BgCommerce3
  */
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'BGCS3_VERSION', '4.3.2' );
+define( 'BGCS3_VERSION', '4.4.0' );
 define( 'BGCS3_API_VERSION', '1.1' );
 define( 'BGCS3_FILE', __FILE__ );
 define( 'BGCS3_PATH', plugin_dir_path( __FILE__ ) );
@@ -145,8 +147,6 @@ add_action(
  * Unified plugin bootstrap.
  */
 function bgcs3_bootstrap() {
-	load_plugin_textdomain( 'bg-commerce-suite', false, dirname( BGCS3_BASENAME ) . '/languages' );
-
 	$conflicts = bgcs3_legacy_conflicts();
 	if ( $conflicts ) {
 		add_action(
@@ -192,14 +192,17 @@ add_action( 'plugins_loaded', 'bgcs3_bootstrap', 9 );
 function bgcs3_environment_errors() {
 	$errors = array();
 	if ( version_compare( PHP_VERSION, BGCS3_MIN_PHP, '<' ) ) {
+		/* translators: %s: minimum supported PHP version. */
 		$errors[] = sprintf( __( 'Requires PHP %s or newer.', 'bg-commerce-suite' ), BGCS3_MIN_PHP );
 	}
 	if ( version_compare( get_bloginfo( 'version' ), BGCS3_MIN_WP, '<' ) ) {
+		/* translators: %s: minimum supported WordPress version. */
 		$errors[] = sprintf( __( 'Requires WordPress %s or newer.', 'bg-commerce-suite' ), BGCS3_MIN_WP );
 	}
 	if ( ! class_exists( 'WooCommerce' ) ) {
 		$errors[] = __( 'Requires WooCommerce to be active.', 'bg-commerce-suite' );
 	} elseif ( defined( 'WC_VERSION' ) && version_compare( WC_VERSION, BGCS3_MIN_WC, '<' ) ) {
+		/* translators: %s: minimum supported WooCommerce version. */
 		$errors[] = sprintf( __( 'Requires WooCommerce %s or newer.', 'bg-commerce-suite' ), BGCS3_MIN_WC );
 	}
 	return $errors;

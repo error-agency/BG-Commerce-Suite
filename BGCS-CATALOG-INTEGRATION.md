@@ -12,9 +12,13 @@ The integration presents products, local installation/version state and active
 promotions in the Dashboard extensions area. It is not an update, download,
 activation, licensing or telemetry system.
 
+The service is optional and disabled by default. Only a site administrator with
+`manage_options` can opt in under **WooCommerce → BG Commerce Suite → General
+settings**. Without that explicit setting, no catalog HTTP request is made.
+
 ## Data flow
 
-1. Action Scheduler requests the feed hourly. An administrator with
+1. After opt-in, Action Scheduler requests the feed hourly. An administrator with
    `manage_options` can also request a nonce-protected refresh.
 2. The WordPress HTTP API enforces HTTPS, an approved `error.bg` host, a
    five-second timeout, no redirects and a 256 KiB response limit.
@@ -29,6 +33,10 @@ The request uses `BG-Commerce-Suite-Catalog/1` as a generic User-Agent. It sends
 no store URL, plugin inventory, license, customer, order, email, WooCommerce or
 credential data.
 
+The server necessarily receives the connecting server IP address and the generic
+User-Agent. The admin setting links to the public privacy notice and catalog
+service terms.
+
 ## Cache and failures
 
 The persistent option is the last-known-good catalog. HTTP errors, timeouts,
@@ -36,10 +44,11 @@ unexpected statuses, empty/oversized bodies, malformed JSON, unknown schemas,
 invalid records and invalid cross-references update only the safe error/status
 metadata; they never replace or remove the good payload.
 
-An expired or old payload remains available during an outage. Diagnostics mark
+While enabled, an expired or old payload remains available during an outage. Diagnostics mark
 it as `stale` or `expired`, and the scheduled/manual refresh path keeps trying to
 replace it. Uninstall removes the option through the existing `bgcs3_` cleanup;
-deactivation and uninstall unschedule `bgcs3_sync_product_catalog`.
+deactivation and uninstall unschedule `bgcs3_sync_product_catalog`. Opting out
+also removes the recurring action, interval marker and cached promotional payload.
 
 ## Security boundary
 

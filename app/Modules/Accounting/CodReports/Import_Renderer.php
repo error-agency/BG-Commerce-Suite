@@ -108,10 +108,15 @@ class Import_Renderer {
 		$html .= '<p class="bgcs-card__desc">' . esc_html__( 'Review the results. Conflicting and unmatched rows will not be applied.', 'bg-commerce-suite' ) . '</p>';
 		$html .= '</div></div><div class="bgcs-card__body">';
 		$html .= '<div class="bgcs-alert bgcs-alert--info" role="status">';
+		/* translators: %d: number of orders ready to reconcile. */
 		$html .= esc_html( sprintf( _n( '%d order ready to reconcile', '%d orders ready to reconcile', count( $matches ), 'bg-commerce-suite' ), count( $matches ) ) );
+		/* translators: %d: number of conflicting payout rows. */
 		$html .= ' · ' . esc_html( sprintf( _n( '%d conflict', '%d conflicts', count( $conflicts ), 'bg-commerce-suite' ), count( $conflicts ) ) );
+		/* translators: %d: number of unmatched payout rows. */
 		$html .= ' · ' . esc_html( sprintf( _n( '%d unmatched row', '%d unmatched rows', $unmatched, 'bg-commerce-suite' ), $unmatched ) );
+		/* translators: %d: number of orders already marked paid. */
 		$html .= ' · ' . esc_html( sprintf( _n( '%d already paid order', '%d already paid orders', $already_paid, 'bg-commerce-suite' ), $already_paid ) );
+		/* translators: %d: number of duplicate payout rows. */
 		$html .= ' · ' . esc_html( sprintf( _n( '%d duplicate row', '%d duplicate rows', $duplicates, 'bg-commerce-suite' ), $duplicates ) );
 		$html .= '</div>';
 
@@ -167,7 +172,7 @@ class Import_Renderer {
 			// is far more useful to the merchant than a generic failure.
 			// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- display-only, escaped below.
 			if ( 'courier_error' === $error_code && ! empty( $_GET['import_message'] ) ) {
-				// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+				// phpcs:ignore WordPress.Security.NonceVerification.Recommended,WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- Display-only query value is unslashed, decoded, sanitized, and escaped.
 				$message = sanitize_text_field( rawurldecode( wp_unslash( $_GET['import_message'] ) ) );
 			}
 

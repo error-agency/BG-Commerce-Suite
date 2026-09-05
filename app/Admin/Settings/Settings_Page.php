@@ -9,6 +9,7 @@
 
 namespace BgCommerce3\Admin\Settings;
 
+use BgCommerce3\Addon\Remote_Catalog;
 use BgCommerce3\Admin\Icons;
 use BgCommerce3\Container\Container;
 use BgCommerce3\Module\Categories;
@@ -527,11 +528,13 @@ class Settings_Page {
 				echo '<button type="submit" class="bgcs-btn bgcs-btn--outline">' . Icons::svg( 'refresh', 16 ) . esc_html__( 'Sync directories', 'bg-commerce-suite' ) . '</button>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 				echo '</form>';
 				$last_sync = (int) bgcs3_get_option( $module->id(), '_last_sync_at', 0 );
+				/* translators: %s: date and time of the last successful location update. */
 				echo '<p class="bgcs-sync-status">' . esc_html( $last_sync ? sprintf( __( 'Last successful update: %s', 'bg-commerce-suite' ), wp_date( 'd.m.Y H:i', $last_sync ) ) : __( 'No successful update.', 'bg-commerce-suite' ) ) . '</p>';
 
 				if ( method_exists( $module, 'supports_sender_refresh' ) && $module->supports_sender_refresh() ) {
 					echo '<div class="bgcs-sender-refresh-form"><button type="submit" form="bgcs-settings-form" name="bgcs_task_action" value="refresh_sender" formnovalidate class="bgcs-btn bgcs-btn--outline">' . Icons::svg( 'user', 16 ) . esc_html( $module->sender_refresh_label() ) . '</button></div>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 					$last_sender_sync = (int) bgcs3_get_option( $module->id(), '_last_sender_sync_at', 0 );
+					/* translators: %s: date and time of the last successful sender-profile update. */
 					echo '<p class="bgcs-sync-status">' . esc_html( $last_sender_sync ? sprintf( __( 'Last sender update: %s', 'bg-commerce-suite' ), wp_date( 'd.m.Y H:i', $last_sender_sync ) ) : __( 'No successful sender update.', 'bg-commerce-suite' ) ) . '</p>';
 				}
 				$this->accordion_close();
@@ -635,7 +638,7 @@ class Settings_Page {
 	}
 
 	/**
-	 * Render the two general cards (checkout + automation).
+	 * Render the general settings cards.
 	 */
 	private function render_general_cards() {
 		// Checkout card.
@@ -664,6 +667,22 @@ class Settings_Page {
 			__( 'Fallback mode without a WooCommerce zone', 'bg-commerce-suite' ),
 			__( 'If the matched WooCommerce zone has no BGCS method configured, use Bulgaria as the fallback country and temporarily show active BGCS couriers. An explicitly selected different country and any manually configured BGCS zone settings take priority.', 'bg-commerce-suite' )
 		);
+		$this->card_close();
+
+		// Optional product discovery is an external-service connection and remains
+		// off until an administrator explicitly opts in.
+		$this->card_open( 'package', __( 'Optional product catalog', 'bg-commerce-suite' ), __( 'Product news and extensions from Error Web Agency.', 'bg-commerce-suite' ) );
+		if ( current_user_can( 'manage_options' ) ) {
+			$this->checkbox(
+				'catalog[enabled]',
+				Remote_Catalog::is_enabled(),
+				__( 'Enable the Error Web Agency product catalog', 'bg-commerce-suite' ),
+				__( 'Fetch validated product names, versions, prices, links and promotions from error.bg. Disabled by default. No store, customer, order, credential or plugin-inventory data is sent; the remote server necessarily receives the connecting server IP address.', 'bg-commerce-suite' )
+			);
+		} else {
+			echo '<p class="bgcs-help">' . esc_html__( 'Only a site administrator can enable or disable the external product catalog.', 'bg-commerce-suite' ) . '</p>';
+		}
+		echo '<p class="bgcs-help" style="margin:10px 0 0"><a href="' . esc_url( Remote_Catalog::PRIVACY_URL ) . '" target="_blank" rel="noopener noreferrer">' . esc_html__( 'Privacy notice', 'bg-commerce-suite' ) . '</a> · <a href="' . esc_url( Remote_Catalog::TERMS_URL ) . '" target="_blank" rel="noopener noreferrer">' . esc_html__( 'Catalog service terms', 'bg-commerce-suite' ) . '</a></p>';
 		$this->card_close();
 
 		// Automation card.
@@ -738,6 +757,7 @@ class Settings_Page {
 		$maps   = $this->courier_workspace_field_map( $id, $fields );
 
 		echo '<div class="bgcs-speedy-workspace bgcs-card--wide" data-bgcs-task-tabs="' . esc_attr( $id ) . '">';
+		/* translators: %s: courier name. */
 		echo '<div class="bgcs-task-tabs" role="tablist" aria-label="' . esc_attr( sprintf( __( '%s settings', 'bg-commerce-suite' ), $name ) ) . '">';
 		$this->task_tab_button( $id, 'account', __( 'Account', 'bg-commerce-suite' ), 'user', true );
 		$this->task_tab_button( $id, 'locations', __( 'Locations', 'bg-commerce-suite' ), 'map-pin' );
@@ -749,6 +769,7 @@ class Settings_Page {
 		// Account -----------------------------------------------------------
 		$this->task_panel_open( $id, 'account', true );
 		echo '<div class="bgcs-speedy-section-grid">';
+		/* translators: %s: courier name. */
 		$this->card_open( 'plug', __( 'Account and API', 'bg-commerce-suite' ), sprintf( __( 'Credentials and environment for %s.', 'bg-commerce-suite' ), $name ) );
 		$this->render_field_run( $id, $maps['account'], $fields );
 		if ( method_exists( $module, 'check_connection' ) ) {
@@ -777,6 +798,7 @@ class Settings_Page {
 
 		// Locations ---------------------------------------------------------
 		$this->task_panel_open( $id, 'locations' );
+		/* translators: %s: courier name. */
 		$this->card_open( 'map-pin', __( 'Locations and reference data', 'bg-commerce-suite' ), sprintf( __( 'Up-to-date %s locations used by checkout.', 'bg-commerce-suite' ), $name ) );
 		$this->render_courier_location_metrics( $module );
 		if ( method_exists( $module, 'sync_data' ) ) {
@@ -1027,6 +1049,7 @@ class Settings_Page {
 		$this->card_open(
 			'alert',
 			__( 'Unmapped tracking statuses', 'bg-commerce-suite' ),
+			/* translators: %s: courier name. */
 			sprintf( __( 'New/unknown codes observed only for %s. They do not change the WooCommerce status until they are normalized in Core.', 'bg-commerce-suite' ), $module->name() )
 		);
 		if ( empty( $items ) ) {
@@ -1090,11 +1113,12 @@ class Settings_Page {
 	private function render_courier_shipping_instances( $module ) {
 		$id = $module->id();
 		$name = $module->name();
+		/* translators: %s: courier name. */
 		$this->card_open( 'truck', __( 'Shipping methods', 'bg-commerce-suite' ), sprintf( __( '%s is added to a WooCommerce zone. Each instance can have its own configuration.', 'bg-commerce-suite' ), $name ) );
 		$instances = array();
 		if ( class_exists( '\\WC_Shipping_Zones' ) && class_exists( '\\WC_Shipping_Zone' ) ) {
 			$zones = \WC_Shipping_Zones::get_zones();
-			$zones[0] = array( 'zone_id'=>0, 'zone_name'=>__( 'Locations not covered by your other zones', 'woocommerce' ) );
+			$zones[0] = array( 'zone_id'=>0, 'zone_name'=>__( 'Locations not covered by your other zones', 'bg-commerce-suite' ) );
 			foreach ( $zones as $zone_key => $zone_data ) {
 				$zone_id = isset( $zone_data['zone_id'] ) ? absint( $zone_data['zone_id'] ) : absint( $zone_key );
 				$zone = new \WC_Shipping_Zone( $zone_id );
@@ -1106,6 +1130,7 @@ class Settings_Page {
 			}
 		}
 		if ( empty( $instances ) ) {
+			/* translators: %s: courier name. */
 			echo '<div class="bgcs-method-empty"><span class="bgcs-method-empty__icon">' . Icons::svg( 'alert', 20 ) . '</span><div><strong>' . esc_html( sprintf( __( 'No %s method has been added to a WooCommerce zone.', 'bg-commerce-suite' ), $name ) ) . '</strong><p>' . esc_html__( 'The account may be connected, but checkout will not offer this courier until you add the method to a shipping zone.', 'bg-commerce-suite' ) . '</p></div></div>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		} else {
 			echo '<div class="bgcs-method-list">';
@@ -1125,6 +1150,7 @@ class Settings_Page {
 			echo '</div>';
 		}
 		$zones_url = add_query_arg( array( 'page'=>'wc-settings', 'tab'=>'shipping' ), admin_url( 'admin.php' ) );
+		/* translators: %s: courier name. */
 		echo '<div class="bgcs-speedy-inline-actions bgcs-speedy-inline-actions--spaced"><a class="bgcs-btn bgcs-btn--outline" href="' . esc_url( $zones_url ) . '">' . Icons::svg( 'plus', 15 ) . esc_html( sprintf( __( 'Add %s to zone', 'bg-commerce-suite' ), $name ) ) . '</a></div>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		$this->card_close();
 	}
@@ -1338,12 +1364,15 @@ class Settings_Page {
 			$parts[] = implode( ', ', $counts );
 		}
 		if ( ! empty( $result['updated'] ) ) {
+			/* translators: %s: comma-separated list of updated datasets. */
 			$parts[] = sprintf( __( 'Updated: %s', 'bg-commerce-suite' ), implode( ', ', array_map( 'sanitize_text_field', (array) $result['updated'] ) ) );
 		}
 		if ( ! empty( $result['preserved'] ) ) {
+			/* translators: %s: comma-separated list of preserved datasets. */
 			$parts[] = sprintf( __( 'Saved: %s', 'bg-commerce-suite' ), implode( ', ', array_map( 'sanitize_text_field', (array) $result['preserved'] ) ) );
 		}
 		if ( ! empty( $result['errors'] ) ) {
+			/* translators: %s: comma-separated list of synchronization issues. */
 			$parts[] = sprintf( __( 'Issues: %s', 'bg-commerce-suite' ), implode( ', ', array_map( 'sanitize_text_field', (array) $result['errors'] ) ) );
 		}
 
@@ -1452,19 +1481,26 @@ class Settings_Page {
 		$office_count  = (int) \BgCommerce3\Shipping\Office_Store::meta( $courier_id, 'office' )['count'];
 		$locker_count  = (int) \BgCommerce3\Shipping\Office_Store::meta( $courier_id, 'locker' )['count'];
 		$has_locations = $office_count > 0 || $locker_count > 0;
+		if ( $has_locations ) {
+			// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Icons::svg() returns allowlisted static markup; the text is escaped here.
+			$status_markup = Icons::svg( 'check', 16 ) . '<strong>' . esc_html__( 'Synchronized', 'bg-commerce-suite' ) . '</strong>';
+		} else {
+			// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Icons::svg() returns allowlisted static markup; the text is escaped here.
+			$status_markup = Icons::svg( 'alert', 16 ) . '<strong>' . esc_html__( 'No locations have been synchronized yet', 'bg-commerce-suite' ) . '</strong>';
+		}
 
 		echo '<div class="bgcs-locations-status">';
-		echo '<p class="bgcs-locations-status__line">'
-			. ( $has_locations
-				? Icons::svg( 'check', 16 ) . '<strong>' . esc_html__( 'Synchronized', 'bg-commerce-suite' ) . '</strong>'
-				: Icons::svg( 'alert', 16 ) . '<strong>' . esc_html__( 'No locations have been synchronized yet', 'bg-commerce-suite' ) . '</strong>' )
-			. '</p>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- $status_markup contains allowlisted static SVG markup and escaped text.
+		echo '<p class="bgcs-locations-status__line">' . $status_markup . '</p>';
+		/* translators: %d: number of synchronized courier offices. */
 		echo '<p class="bgcs-locations-status__line">' . esc_html( sprintf( __( 'Offices: %d', 'bg-commerce-suite' ), $office_count ) ) . '</p>';
+		/* translators: %d: number of synchronized courier lockers. */
 		echo '<p class="bgcs-locations-status__line">' . esc_html( sprintf( __( 'Lockers: %d', 'bg-commerce-suite' ), $locker_count ) ) . '</p>';
 
 		if ( function_exists( 'as_next_scheduled_action' ) && 'yes' === bgcs3_get_option( 'checkout', 'auto_sync_locations', 'no' ) ) {
 			$next = as_next_scheduled_action( \BgCommerce3\Background\Locations_Sync::HOOK, array(), \BgCommerce3\Background\Locations_Sync::GROUP );
 			if ( $next ) {
+				/* translators: %s: date and time of the next automatic location update. */
 				echo '<p class="bgcs-locations-status__line">' . esc_html( sprintf( __( 'Next automatic update: %s', 'bg-commerce-suite' ), wp_date( 'd.m.Y H:i', (int) $next ) ) ) . '</p>';
 			}
 		}
@@ -2106,6 +2142,16 @@ class Settings_Page {
 			$remember_selection = isset( $_POST['checkout']['remember_selection'] ) && 'yes' === $_POST['checkout']['remember_selection'];
 			Options::set( 'checkout', 'remember_selection', $remember_selection ? 'yes' : 'no' );
 
+			if ( current_user_can( 'manage_options' ) ) {
+				$catalog_enabled = isset( $_POST['catalog']['enabled'] ) && 'yes' === $_POST['catalog']['enabled'];
+				if ( $catalog_enabled ) {
+					Options::set( 'catalog', 'enabled', 'yes' );
+					Remote_Catalog::maybe_schedule();
+				} else {
+					Remote_Catalog::disable();
+				}
+			}
+
 			$update_order_statuses = isset( $_POST['checkout']['update_order_statuses'] ) && 'yes' === $_POST['checkout']['update_order_statuses'];
 			Options::set( 'checkout', 'update_order_statuses', $update_order_statuses ? 'yes' : 'no' );
 
@@ -2148,7 +2194,7 @@ class Settings_Page {
 				}
 
 				$settings_raw = isset( $_POST['settings'] ) && is_array( $_POST['settings'] )
-					? wp_unslash( $_POST['settings'] )
+					? map_deep( wp_unslash( $_POST['settings'] ), 'sanitize_text_field' )
 					: array();
 				$module_input = isset( $settings_raw[ $module->id() ] ) && is_array( $settings_raw[ $module->id() ] )
 					? $settings_raw[ $module->id() ]

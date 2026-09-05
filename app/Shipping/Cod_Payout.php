@@ -239,7 +239,9 @@ final class Cod_Payout {
 
 		if ( ! $already_paid ) {
 			$note = 'manual' === sanitize_key( (string) $source )
+				/* translators: %s: shipment label number. */
 				? __( 'COD marked as paid manually in COD reports. Shipment label: %s.', 'bg-commerce-suite' )
+				/* translators: %s: shipment label number. */
 				: __( 'COD automatically reconciled from courier report. Shipment label: %s.', 'bg-commerce-suite' );
 			$order->add_order_note( sprintf( $note, (string) $expected['waybill'] ) );
 		}

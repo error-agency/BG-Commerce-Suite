@@ -158,11 +158,13 @@ final class Delivery_Estimate {
 		$estimate = self::sanitize( $estimate );
 		if ( self::KIND_DEADLINE === $estimate['kind'] ) {
 			return function_exists( '__' )
+				/* translators: %s: formatted delivery deadline date. */
 				? sprintf( __( 'Delivery by %s', 'bg-commerce-suite' ), $formatted )
 				: sprintf( 'Delivery by %s', $formatted );
 		}
 
 		return function_exists( '__' )
+			/* translators: %s: formatted expected-delivery date. */
 			? sprintf( __( 'Expected delivery: %s', 'bg-commerce-suite' ), $formatted )
 			: sprintf( 'Expected delivery: %s', $formatted );
 	}

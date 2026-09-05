@@ -479,6 +479,7 @@ class Econt extends Abstract_Courier {
 		}
 
 		$profile_id = trim( (string) bgcs3_get_option( self::ID, 'econt_profile_id', '' ) );
+		/* translators: %s: comma-separated list of missing Econt location datasets. */
 		$rows[] = Setup_Status::row(
 			'profile',
 			__( 'Sender profile', 'bg-commerce-suite' ),
@@ -505,11 +506,16 @@ class Econt extends Abstract_Courier {
 		if ( in_array( 'locker', $active_types, true ) && ! Office_Store::has( self::ID, 'locker' ) ) {
 			$missing_locations[] = __( 'lockers', 'bg-commerce-suite' );
 		}
+		$locations_message = '';
+		if ( ! empty( $missing_locations ) ) {
+			/* translators: %s: comma-separated list of missing courier location types. */
+			$locations_message = sprintf( __( 'Synchronize the missing locations: %s.', 'bg-commerce-suite' ), implode( ', ', $missing_locations ) );
+		}
 		$rows[] = Setup_Status::row(
 			'locations',
 			__( 'Offices and lockers', 'bg-commerce-suite' ),
 			empty( $missing_locations ) ? Setup_Status::STATE_OK : Setup_Status::STATE_WARN,
-			empty( $missing_locations ) ? '' : sprintf( __( 'Synchronize the missing locations: %s.', 'bg-commerce-suite' ), implode( ', ', $missing_locations ) )
+			$locations_message
 		);
 
 		$pricing_ok = Pricing::MODE_OWN !== Pricing::mode( self::ID ) || Pricing::has_active_rules( self::ID );
@@ -1289,16 +1295,20 @@ class Econt extends Abstract_Courier {
 
 		$warnings = array();
 		if ( ! empty( $data['warnings'] ) ) {
+			/* translators: %s: warning returned by Econt. */
 			$warnings[] = sprintf( __( 'Econt delivery warning: %s', 'bg-commerce-suite' ), (string) $data['warnings'] );
 		}
 		if ( ! empty( $response['delayedDeliveryWarning'] ) ) {
+			/* translators: %s: warning returned by Econt. */
 			$warnings[] = sprintf( __( 'Econt delivery warning: %s', 'bg-commerce-suite' ), (string) $response['delayedDeliveryWarning'] );
 		}
 		if ( ! empty( $response['delayedRequestWarning'] ) ) {
+			/* translators: %s: courier-request warning returned by Econt. */
 			$warnings[] = sprintf( __( 'Econt courier-request warning: %s', 'bg-commerce-suite' ), (string) $response['delayedRequestWarning'] );
 		}
 		if ( ! empty( $response['payAfterAcceptIgnored'] ) ) {
 			$warnings[] = sprintf(
+				/* translators: %s: reason returned by Econt for ignoring the requested Review/Test service. */
 				__( 'Econt ignored the “review/test before payment” request: %s. The shipment exists, but without the requested review/test service.', 'bg-commerce-suite' ),
 				(string) $response['payAfterAcceptIgnored']
 			);
@@ -1586,6 +1596,7 @@ class Econt extends Abstract_Courier {
 		$warnings = array();
 		if ( ! empty( $response['payAfterAcceptIgnored'] ) ) {
 			$ignored_warning = sprintf(
+				/* translators: %s: reason returned by Econt for ignoring the requested Review/Test service. */
 				__( 'Econt ignored the “review/test before payment” request: %s. The shipment exists, but without the requested review/test service.', 'bg-commerce-suite' ),
 				(string) $response['payAfterAcceptIgnored']
 			);
@@ -1595,17 +1606,21 @@ class Econt extends Abstract_Courier {
 			$warnings[] = $ignored_warning;
 		}
 		if ( ! empty( $response['delayedDeliveryWarning'] ) ) {
+			/* translators: %s: warning returned by Econt. */
 			$warnings[] = sprintf( __( 'Econt delivery warning: %s', 'bg-commerce-suite' ), (string) $response['delayedDeliveryWarning'] );
 		}
 		if ( ! empty( $response['delayedRequestWarning'] ) ) {
+			/* translators: %s: courier-request warning returned by Econt. */
 			$warnings[] = sprintf( __( 'Econt courier-request warning: %s', 'bg-commerce-suite' ), (string) $response['delayedRequestWarning'] );
 		}
 
 		$data = $response['label'];
 		if ( ! empty( $data['warnings'] ) ) {
+			/* translators: %s: warning returned by Econt. */
 			$warnings[] = sprintf( __( 'Econt delivery warning: %s', 'bg-commerce-suite' ), (string) $data['warnings'] );
 		}
 		if ( ! empty( $data['shipmentEdition']['editionError'] ) ) {
+			/* translators: %s: shipment edition error returned by Econt. */
 			return Label_Result::error( sprintf( __( 'Econt did not apply the shipment edition: %s', 'bg-commerce-suite' ), (string) $data['shipmentEdition']['editionError'] ) );
 		}
 		$number = isset( $data['shipmentNumber'] ) ? (string) $data['shipmentNumber'] : '';
@@ -1714,10 +1729,12 @@ class Econt extends Abstract_Courier {
 		// are rejected before a real shipment number is issued.
 		$validation = $this->client()->call( Client::LABEL_CREATE, $this->label_request_payload( $label, 'validate', true, $wb ) );
 		if ( is_wp_error( $validation ) ) {
+			/* translators: %s: validation error returned by Econt. */
 			$error = Label_Result::error( sprintf( __( 'Econt rejected the shipment settings during validation: %s', 'bg-commerce-suite' ), $validation->get_error_message() ) );
 			return $preflight->reject( $error, 'econt_provider_validation' );
 		}
 		if ( ! empty( $validation['payAfterAcceptIgnored'] ) ) {
+			/* translators: %s: reason returned by Econt for rejecting the requested Review/Test option. */
 			$error = Label_Result::error( sprintf( __( 'Econt cannot apply the requested Review/Test option: %s', 'bg-commerce-suite' ), (string) $validation['payAfterAcceptIgnored'] ) );
 			return $preflight->reject( $error, 'econt_service_validation' );
 		}
@@ -2242,6 +2259,7 @@ class Econt extends Abstract_Courier {
 		echo '</select></div>';
 		echo '</div>';
 		echo '<p class="description">';
+		/* translators: %d: number of prepared Econt shipments. */
 		printf( esc_html__( 'Prepared Econt shipments that will be attached: %d', 'bg-commerce-suite' ), count( $pending ) );
 		echo '</p>';
 		echo '<p class="description">' . esc_html__( 'The request is sent with the sender profile/address configured above. Econt remains authoritative for pickup availability and may return a delay warning.', 'bg-commerce-suite' ) . '</p>';
@@ -2300,7 +2318,7 @@ class Econt extends Abstract_Courier {
 			return;
 		}
 		// phpcs:ignore WordPress.Security.NonceVerification.Missing -- verified by Core.
-		$raw = isset( $_POST['econt_courier'] ) && is_array( $_POST['econt_courier'] ) ? wp_unslash( $_POST['econt_courier'] ) : array();
+		$raw = isset( $_POST['econt_courier'] ) && is_array( $_POST['econt_courier'] ) ? map_deep( wp_unslash( $_POST['econt_courier'] ), 'sanitize_text_field' ) : array();
 		$form = array();
 		foreach ( $raw as $key => $value ) {
 			if ( is_scalar( $value ) ) {

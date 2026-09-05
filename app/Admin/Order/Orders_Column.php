@@ -259,6 +259,7 @@ class Orders_Column {
 			Shipment_Creation::complete( $order, $result );
 
 			$order->update_meta_data( '_bgcs3_label', $result->to_array() );
+			/* translators: %s: newly created shipment label number. */
 			$order->add_order_note( sprintf( __( 'Shipment label created: %s', 'bg-commerce-suite' ), $result->number ) );
 			$order->save();
 		} catch ( \Throwable $e ) {

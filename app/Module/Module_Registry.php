@@ -136,8 +136,8 @@ class Module_Registry {
 	public function boot( Container $container ) {
 		foreach ( $this->modules as $id => $module ) {
 			if ( ! $this->is_compatible( $module ) ) {
-				/* translators: 1: module name, 2: required API version */
 				$this->incompatible[ $id ] = sprintf(
+					/* translators: 1: module name, 2: required API version. */
 					__( '“%1$s” requires BG Commerce Suite Module API %2$s or newer.', 'bg-commerce-suite' ),
 					$module->name(),
 					$module->requires_api()
