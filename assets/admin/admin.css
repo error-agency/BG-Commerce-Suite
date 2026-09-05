@@ -1,0 +1,2676 @@
+/**
+ * BG Commerce Suite — admin UI (settings page + order metabox).
+ * Minimal, professional, WordPress-admin-native: cards on a CSS grid, uniform
+ * forms, button variants, compact alerts. Light borders over heavy shadows.
+ */
+
+.bgcs-settings,
+.bgcs-order-box,
+.bgcs-h18-order-box {
+	/* Neutrals on a soft mint page (TeamHub-style). */
+	--bgcs-bg: #f2f7f4;
+	--bgcs-surface: #fff;
+	--bgcs-border: #e3ece6;
+	--bgcs-border-strong: #cfdcd4;
+	--bgcs-text: #17221c;
+	--bgcs-muted: #64756c;
+
+	/* Brand green accent + semantic. */
+	--bgcs-accent: #1f7a5c;
+	--bgcs-accent-hover: #166047;
+	--bgcs-accent-soft: #def2e6;
+	--bgcs-success: #1f7a5c;
+	--bgcs-success-soft: #def2e6;
+	--bgcs-warning: #b07d18;
+	--bgcs-warning-soft: #fdf6e3;
+	--bgcs-danger: #c94f43;
+	--bgcs-danger-soft: #fdefed;
+	--bgcs-info: #1f7a5c;
+	--bgcs-info-soft: #eaf6ef;
+
+	/* 8px spacing system + radius (rounder, airier). */
+	--bgcs-s1: 4px;
+	--bgcs-s2: 8px;
+	--bgcs-s3: 12px;
+	--bgcs-s4: 16px;
+	--bgcs-s5: 24px;
+	--bgcs-radius: 14px;
+	--bgcs-shadow-sm: 0 1px 2px rgba( 23, 34, 28, .06 );
+}
+
+/* ----------------------------------------------------------------------- */
+/* Icons                                                                    */
+/* ----------------------------------------------------------------------- */
+.bgcs-ico {
+	flex: 0 0 auto;
+	vertical-align: middle;
+}
+
+/* ----------------------------------------------------------------------- */
+/* Card (shared)                                                            */
+/* ----------------------------------------------------------------------- */
+.bgcs-card {
+	display: flex;
+	flex-direction: column;
+	background: var( --bgcs-surface );
+	border: 1px solid var( --bgcs-border );
+	border-radius: var( --bgcs-radius );
+}
+
+.bgcs-card__head {
+	display: flex;
+	align-items: flex-start;
+	gap: var( --bgcs-s3 );
+	padding: var( --bgcs-s4 );
+	border-bottom: 1px solid var( --bgcs-border );
+}
+
+.bgcs-card__icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 34px;
+	height: 34px;
+	border-radius: var( --bgcs-radius );
+	background: var( --bgcs-accent-soft );
+	color: var( --bgcs-accent );
+}
+
+/* Courier brand logo inside the icon chip (white, auto width for wordmarks). */
+.bgcs-card__icon--logo {
+	width: auto;
+	min-width: 34px;
+	padding: 4px 8px;
+	background: var( --bgcs-surface );
+	border: 1px solid var( --bgcs-border );
+}
+
+.bgcs-card__icon--logo .bgcs-courier-logo {
+	height: 100%;
+	max-height: 26px;
+	max-width: 120px;
+}
+
+.bgcs-courier-logo {
+	display: block;
+	width: auto;
+	object-fit: contain;
+}
+
+
+.bgcs-card__titles {
+	min-width: 0;
+}
+
+.bgcs-card__title {
+	margin: 0;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 1.3;
+	color: var( --bgcs-text );
+}
+
+.bgcs-card__desc {
+	margin: 2px 0 0;
+	font-size: 12px;
+	line-height: 1.45;
+	color: var( --bgcs-muted );
+}
+
+.bgcs-card__body {
+	padding: var( --bgcs-s4 );
+	flex: 1 1 auto;
+}
+
+.bgcs-card__foot {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var( --bgcs-s2 );
+	padding: var( --bgcs-s3 ) var( --bgcs-s4 );
+	border-top: 1px solid var( --bgcs-border );
+}
+
+.bgcs-topbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: var( --bgcs-s4 );
+}
+
+.bgcs-module-toggle {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	gap: var( --bgcs-s2 );
+	font-size: 12px;
+	font-weight: 600;
+	color: var( --bgcs-muted );
+	cursor: pointer;
+}
+
+.bgcs-module-toggle input {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	opacity: 0;
+	pointer-events: none;
+}
+
+.bgcs-module-toggle__control {
+	position: relative;
+	width: 38px;
+	height: 22px;
+	border-radius: 999px;
+	background: var( --bgcs-border );
+	transition: background .18s ease;
+}
+
+.bgcs-module-toggle__control::after {
+	content: "";
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	background: var( --bgcs-surface );
+	box-shadow: 0 1px 3px rgba( 15, 23, 42, .22 );
+	transition: transform .18s ease;
+}
+
+.bgcs-module-toggle input:checked + .bgcs-module-toggle__control {
+	background: var( --bgcs-accent );
+}
+
+.bgcs-module-toggle input:checked + .bgcs-module-toggle__control::after {
+	transform: translateX( 16px );
+}
+
+.bgcs-module-toggle input:focus-visible + .bgcs-module-toggle__control {
+	outline: 2px solid var( --bgcs-accent );
+	outline-offset: 2px;
+}
+
+.bgcs-accordion {
+	grid-column: 1 / -1;
+}
+
+.bgcs-accordion__trigger {
+	width: 100%;
+	border: 0;
+	border-radius: var( --bgcs-radius );
+	background: transparent;
+	text-align: left;
+	cursor: pointer;
+}
+
+.bgcs-accordion__trigger .bgcs-card__titles {
+	display: grid;
+	row-gap: 3px;
+}
+
+.bgcs-accordion__trigger .bgcs-card__title,
+.bgcs-accordion__trigger .bgcs-card__desc {
+	display: block;
+}
+
+.bgcs-accordion__trigger .bgcs-card__desc {
+	margin-top: 0;
+}
+
+.bgcs-accordion.is-open .bgcs-accordion__trigger {
+	border-radius: var( --bgcs-radius ) var( --bgcs-radius ) 0 0;
+}
+
+.bgcs-accordion__trigger:hover {
+	background: var( --bgcs-accent-soft );
+}
+
+.bgcs-accordion__trigger:focus-visible {
+	outline: 2px solid var( --bgcs-accent );
+	outline-offset: -2px;
+}
+
+.bgcs-accordion__chevron {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	flex: 0 0 30px;
+	width: 30px;
+	height: 30px;
+	margin-left: auto;
+	border: 1px solid var( --bgcs-border );
+	border-radius: 999px;
+	background: var( --bgcs-surface );
+	color: var( --bgcs-muted );
+	transition: color .18s ease, background .18s ease, border-color .18s ease;
+}
+
+.bgcs-accordion.is-open .bgcs-accordion__chevron {
+	border-color: var( --bgcs-accent );
+	background: var( --bgcs-accent-soft );
+	color: var( --bgcs-accent );
+}
+
+.bgcs-accordion__chevron .bgcs-ico {
+	transition: transform .18s ease;
+}
+
+.bgcs-accordion.is-open .bgcs-accordion__chevron .bgcs-ico {
+	transform: rotate( 180deg );
+}
+
+/* `hidden` is a STATE, not a style preference, so no stylesheet may override it.
+   A module's admin CSS is enqueued with `bgcs-admin` as a dependency and thus
+   always loads later; a rule like
+   `.bgcs-boxnow-weight-pricing .bgcs-card__body { display: grid }` has the same
+   (0,2,0) specificity as the selector below and therefore used to win on source
+   order alone. The panel then stayed on screen while the JS believed it had
+   closed it — the card opened but never collapsed. */
+.bgcs-accordion__panel[hidden] {
+	display: none !important;
+}
+
+/* ----------------------------------------------------------------------- */
+/* Form fields (uniform: label above, control, description below)          */
+/* ----------------------------------------------------------------------- */
+.bgcs-field {
+	display: flex;
+	flex-direction: column;
+	gap: var( --bgcs-s1 );
+	margin: 0 0 var( --bgcs-s4 );
+}
+
+.bgcs-field:last-child {
+	margin-bottom: 0;
+}
+
+.bgcs-field__label {
+	font-size: 12px;
+	font-weight: 600;
+	color: var( --bgcs-text );
+}
+
+.bgcs-field__heading,
+.bgcs-check__heading {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+}
+
+.bgcs-help-toggle {
+	display: none;
+	align-items: center;
+	justify-content: center;
+	width: 24px;
+	height: 24px;
+	min-width: 24px;
+	margin: 0;
+	padding: 0;
+	border: 1px solid var( --bgcs-border-strong );
+	border-radius: 50%;
+	background: var( --bgcs-surface );
+	color: var( --bgcs-accent );
+	cursor: pointer;
+}
+
+.bgcs-help-ready .bgcs-help-toggle {
+	display: inline-flex;
+}
+
+.bgcs-help-toggle:hover {
+	border-color: var( --bgcs-accent );
+	background: #f0f8f5;
+}
+
+.bgcs-help-toggle:focus-visible {
+	outline: 2px solid var( --bgcs-accent );
+	outline-offset: 2px;
+}
+
+.bgcs-help-panel {
+	display: block;
+	box-sizing: border-box;
+	width: 100%;
+	margin-top: 2px;
+	padding: 10px 12px;
+	border-left: 3px solid var( --bgcs-accent );
+	border-radius: 0 var( --bgcs-radius ) var( --bgcs-radius ) 0;
+	background: #f7faf8;
+	white-space: normal;
+	overflow-wrap: anywhere;
+}
+
+.bgcs-help-panel[hidden] {
+	display: none !important;
+}
+
+.bgcs-field__desc {
+	font-size: 12px;
+	line-height: 1.45;
+	color: var( --bgcs-muted );
+}
+
+.bgcs-field input[type="text"],
+.bgcs-field input[type="number"],
+.bgcs-field input[type="email"],
+.bgcs-field input[type="password"],
+.bgcs-field select {
+	width: 100%;
+	box-sizing: border-box;
+	height: 36px;
+	margin: 0;
+	padding: 0 var( --bgcs-s2 );
+	border: 1px solid var( --bgcs-border-strong );
+	border-radius: var( --bgcs-radius );
+	background: var( --bgcs-surface );
+	color: var( --bgcs-text );
+	line-height: 34px;
+}
+
+.bgcs-field select {
+	padding-right: 24px;
+}
+
+.bgcs-field input:focus,
+.bgcs-field select:focus {
+	border-color: var( --bgcs-accent );
+	box-shadow: 0 0 0 1px var( --bgcs-accent );
+	outline: 2px solid transparent;
+}
+
+.bgcs-secret-field {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+}
+
+.bgcs-secret-field input::placeholder {
+	color: var( --bgcs-muted );
+	letter-spacing: 2px;
+	opacity: .85;
+}
+
+.bgcs-secret-field__status {
+	display: flex;
+	align-items: flex-start;
+	gap: 6px;
+	font-size: 12px;
+	line-height: 1.45;
+	color: var( --bgcs-muted );
+}
+
+.bgcs-secret-field__status strong,
+.bgcs-secret-field__check {
+	color: var( --bgcs-success );
+}
+
+.bgcs-secret-field__check {
+	font-weight: 700;
+}
+
+/* Checkbox row. */
+.bgcs-check {
+	display: flex;
+	align-items: flex-start;
+	gap: var( --bgcs-s2 );
+	margin: 0 0 var( --bgcs-s3 );
+	font-size: 13px;
+	color: var( --bgcs-text );
+}
+
+.bgcs-check:last-child {
+	margin-bottom: 0;
+}
+
+.bgcs-check-wrap {
+	display: flex;
+	flex-direction: column;
+	gap: var( --bgcs-s1 );
+}
+
+.bgcs-check__heading .bgcs-check {
+	flex: 1;
+	margin-bottom: 0;
+}
+
+.bgcs-check input[type="checkbox"] {
+	margin: 2px 0 0;
+}
+
+.bgcs-check__text {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+}
+
+.bgcs-check__desc {
+	font-size: 12px;
+	color: var( --bgcs-muted );
+}
+
+/* Two-column field grid inside a card. */
+.bgcs-fieldgrid {
+	display: grid;
+	grid-template-columns: repeat( auto-fit, minmax( 200px, 1fr ) );
+	gap: var( --bgcs-s4 );
+}
+
+.bgcs-fieldgrid .bgcs-field {
+	margin: 0;
+}
+
+.bgcs-field--full {
+	grid-column: 1 / -1;
+}
+
+/* Generic static-pricing repeater. */
+.bgcs-pricing-rules {
+	display: flex;
+	flex-direction: column;
+	gap: var( --bgcs-s2 );
+}
+
+.bgcs-pricing-rules__head,
+.bgcs-pricing-rule {
+	display: grid;
+	grid-template-columns: minmax( 150px, 1.35fr ) repeat( 4, minmax( 95px, .8fr ) ) 38px;
+	gap: var( --bgcs-s2 );
+	align-items: center;
+}
+
+.bgcs-pricing-rules__head {
+	padding: 0 2px;
+	font-size: 11px;
+	font-weight: 700;
+	color: var( --bgcs-muted );
+	text-transform: uppercase;
+	letter-spacing: .03em;
+}
+
+.bgcs-pricing-rules__rows {
+	display: flex;
+	flex-direction: column;
+	gap: var( --bgcs-s2 );
+}
+
+.bgcs-pricing-rule {
+	padding: var( --bgcs-s2 );
+	border: 1px solid var( --bgcs-border );
+	border-radius: var( --bgcs-radius );
+	background: var( --bgcs-surface );
+}
+
+.bgcs-pricing-rule label,
+.bgcs-pricing-rule input,
+.bgcs-pricing-rule select {
+	width: 100%;
+	min-width: 0;
+}
+
+.bgcs-pricing-rule .bgcs-pricing-rule-remove {
+	width: 36px;
+	min-width: 36px;
+	padding-left: 0;
+	padding-right: 0;
+	font-size: 18px;
+	line-height: 1;
+}
+
+.bgcs-pricing-rule-add {
+	align-self: flex-start;
+}
+
+.bgcs-price-breakdown {
+	margin-top: var( --bgcs-s4 );
+	padding-top: var( --bgcs-s3 );
+	border-top: 1px solid var( --bgcs-border );
+}
+
+.bgcs-price-breakdown h4 {
+	margin: 0 0 var( --bgcs-s2 );
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: .03em;
+	color: var( --bgcs-muted );
+}
+
+.bgcs-summary--price {
+	margin-bottom: 0;
+}
+
+@media ( max-width: 960px ) {
+	.bgcs-pricing-rules__head {
+		display: none;
+	}
+
+	.bgcs-pricing-rule {
+		grid-template-columns: repeat( 2, minmax( 0, 1fr ) );
+	}
+
+	.bgcs-pricing-rule .bgcs-pricing-rule-remove {
+		grid-column: 2;
+		justify-self: end;
+	}
+}
+
+/* Colour field: native swatch + hex text input. */
+.bgcs-color {
+	display: inline-flex;
+	align-items: center;
+	gap: var( --bgcs-s2 );
+}
+
+.bgcs-color__swatch {
+	width: 40px;
+	height: 36px;
+	padding: 2px;
+	border: 1px solid var( --bgcs-border-strong );
+	border-radius: var( --bgcs-radius );
+	background: #fff;
+	cursor: pointer;
+}
+
+.bgcs-color__hex {
+	width: 130px !important;
+	min-width: 0 !important;
+	font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+	text-transform: uppercase;
+}
+
+/* Media field: URL input + Media Library button. */
+.bgcs-media {
+	display: flex;
+	gap: var( --bgcs-s2 );
+	align-items: center;
+}
+
+.bgcs-media__url {
+	flex: 1 1 auto;
+}
+
+/* Inline triple (dimensions). */
+.bgcs-inline3 {
+	display: grid;
+	grid-template-columns: repeat( 3, 1fr );
+	gap: var( --bgcs-s2 );
+}
+
+/* Inline quad (per-pack length/width/height/weight). */
+.bgcs-inline4 {
+	display: grid;
+	grid-template-columns: repeat( auto-fit, minmax( 90px, 1fr ) );
+	gap: var( --bgcs-s2 );
+	flex: 1 1 auto;
+}
+
+/* Multi-pack editor: one row per parcel + Add Pack. */
+.bgcs-wb-packages {
+	display: flex;
+	flex-direction: column;
+	gap: var( --bgcs-s2 );
+}
+
+.bgcs-wb-pack-row {
+	display: flex;
+	align-items: center;
+	gap: var( --bgcs-s2 );
+	padding: var( --bgcs-s2 );
+	border: 1px solid var( --bgcs-border );
+	border-radius: var( --bgcs-radius );
+	background: var( --bgcs-surface );
+}
+
+/* Column headings for courier-declared pack columns: a select column has no
+   placeholder to name it, so the names live in one strip above the rows. */
+.bgcs-wb-pack-head {
+	display: flex;
+	align-items: center;
+	gap: var( --bgcs-s2 );
+	padding: 0 var( --bgcs-s2 );
+	font-size: 12px;
+	font-weight: 500;
+	color: var( --bgcs-muted );
+}
+
+.bgcs-wb-pack-head__spacer {
+	flex: 0 0 auto;
+	width: 32px;
+}
+
+.bgcs-wb-pack-row__label {
+	flex: 0 0 auto;
+	width: 72px;
+	font-size: 12px;
+	font-weight: 500;
+	color: var( --bgcs-muted );
+}
+
+.bgcs-wb-pack-row .bgcs-wb-remove-pack {
+	flex: 0 0 auto;
+}
+
+.bgcs-wb-packages-field .bgcs-wb-add-pack {
+	margin-top: var( --bgcs-s2 );
+}
+
+.bgcs-wb-pack-template {
+	display: none;
+}
+
+/* ----------------------------------------------------------------------- */
+/* Buttons (variants + sizes)                                              */
+/* ----------------------------------------------------------------------- */
+.bgcs-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 6px;
+	height: 36px;
+	padding: 0 var( --bgcs-s4 );
+	border: 1px solid var( --bgcs-border-strong );
+	border-radius: var( --bgcs-radius );
+	background: var( --bgcs-surface );
+	color: var( --bgcs-text );
+	font-family: inherit;
+	font-size: 13px;
+	font-weight: 500;
+	line-height: 1;
+	text-decoration: none;
+	cursor: pointer;
+	appearance: none;
+	transition: background .12s ease, border-color .12s ease, color .12s ease;
+}
+
+.bgcs-btn:hover {
+	background: #f6f7f7;
+	color: var( --bgcs-text );
+}
+
+.bgcs-btn:focus {
+	box-shadow: 0 0 0 1px var( --bgcs-accent );
+	outline: 2px solid transparent;
+}
+
+.bgcs-btn:disabled,
+.bgcs-btn[aria-disabled="true"] {
+	opacity: .55;
+	cursor: not-allowed;
+}
+
+.bgcs-btn .bgcs-ico {
+	width: 16px;
+	height: 16px;
+}
+
+.bgcs-btn--primary {
+	background: var( --bgcs-accent );
+	border-color: var( --bgcs-accent );
+	color: #fff;
+}
+
+.bgcs-btn--primary:hover {
+	background: var( --bgcs-accent-hover );
+	border-color: var( --bgcs-accent-hover );
+	color: #fff;
+}
+
+.bgcs-btn--outline {
+	background: transparent;
+	border-color: var( --bgcs-accent );
+	color: var( --bgcs-accent );
+}
+
+.bgcs-btn--outline:hover {
+	background: var( --bgcs-accent-soft );
+	color: var( --bgcs-accent-hover );
+}
+
+.bgcs-btn--danger {
+	background: transparent;
+	border-color: var( --bgcs-danger );
+	color: var( --bgcs-danger );
+}
+
+.bgcs-btn--danger:hover {
+	background: var( --bgcs-danger-soft );
+	color: var( --bgcs-danger );
+}
+
+.bgcs-btn--sm {
+	height: 30px;
+	padding: 0 var( --bgcs-s3 );
+	font-size: 12px;
+}
+
+.bgcs-btn--lg {
+	height: 42px;
+	padding: 0 var( --bgcs-s5 );
+	font-size: 14px;
+}
+
+.bgcs-btngroup {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var( --bgcs-s2 );
+	align-items: center;
+}
+
+.bgcs-btngroup--end {
+	margin-left: auto;
+}
+
+.bgcs-btngroup--spaced {
+	margin-top: var( --bgcs-s3 );
+}
+
+/* ----------------------------------------------------------------------- */
+/* Alerts                                                                   */
+/* ----------------------------------------------------------------------- */
+.bgcs-alert {
+	display: flex;
+	align-items: flex-start;
+	gap: var( --bgcs-s2 );
+	margin: 0 0 var( --bgcs-s4 );
+	padding: var( --bgcs-s2 ) var( --bgcs-s3 );
+	border: 1px solid var( --bgcs-border );
+	border-left-width: 3px;
+	border-radius: var( --bgcs-radius );
+	background: var( --bgcs-surface );
+	font-size: 13px;
+	line-height: 1.45;
+	color: var( --bgcs-text );
+}
+
+.bgcs-alert .bgcs-ico {
+	width: 18px;
+	height: 18px;
+	margin-top: 1px;
+}
+
+.bgcs-alert--success {
+	border-left-color: var( --bgcs-success );
+	background: var( --bgcs-success-soft );
+}
+.bgcs-alert--success .bgcs-ico { color: var( --bgcs-success ); }
+
+.bgcs-alert--warning {
+	border-left-color: var( --bgcs-warning );
+	background: var( --bgcs-warning-soft );
+}
+.bgcs-alert--warning .bgcs-ico { color: var( --bgcs-warning ); }
+
+.bgcs-alert--danger {
+	border-left-color: var( --bgcs-danger );
+	background: var( --bgcs-danger-soft );
+}
+.bgcs-alert--danger .bgcs-ico { color: var( --bgcs-danger ); }
+
+.bgcs-alert--info {
+	border-left-color: var( --bgcs-info );
+	background: var( --bgcs-info-soft );
+}
+.bgcs-alert--info .bgcs-ico { color: var( --bgcs-info ); }
+
+/* ----------------------------------------------------------------------- */
+/* Settings page                                                            */
+/* ----------------------------------------------------------------------- */
+.bgcs-settings {
+	max-width: 1600px;
+	margin-right: 20px;
+}
+
+
+/* Cards laid out on a responsive grid (auto-fills the available width). */
+.bgcs-grid {
+	display: grid;
+	grid-template-columns: repeat( auto-fill, minmax( 340px, 1fr ) );
+	gap: var( --bgcs-s4 );
+	align-items: start;
+}
+
+.bgcs-grid .bgcs-card--wide {
+	grid-column: 1 / -1;
+}
+
+.bgcs-card--standalone {
+	margin-top: var( --bgcs-s4 );
+}
+
+/* ----------------------------------------------------------------------- */
+/* Add-ons catalog                                                          */
+/* ----------------------------------------------------------------------- */
+.bgcs-badge {
+	flex: 0 0 auto;
+	margin-left: auto;
+	padding: 3px 10px;
+	border-radius: 999px;
+	font-size: 11px;
+	font-weight: 600;
+	letter-spacing: .02em;
+	white-space: nowrap;
+	align-self: flex-start;
+}
+
+.bgcs-badge--active {
+	background: var( --bgcs-success-soft );
+	color: var( --bgcs-success );
+}
+
+
+.bgcs-badge--available {
+	background: var( --bgcs-warning-soft );
+	color: var( --bgcs-warning );
+}
+
+.bgcs-badge--soon {
+	background: #f0f0f1;
+	color: var( --bgcs-muted );
+}
+
+.bgcs-badge--mismatch {
+	background: var( --bgcs-danger-soft );
+	color: var( --bgcs-danger );
+}
+
+
+.bgcs-addon__desc {
+	margin: 0;
+	font-size: 13px;
+	line-height: 1.5;
+	color: var( --bgcs-text );
+}
+
+
+
+
+.bgcs-actionsbar {
+	display: flex;
+	gap: var( --bgcs-s2 );
+	margin: var( --bgcs-s5 ) 0 0;
+}
+
+/* ----------------------------------------------------------------------- */
+/* Order metabox                                                            */
+/* ----------------------------------------------------------------------- */
+.bgcs-order-box {
+	font-size: 13px;
+	line-height: 1.5;
+	color: var( --bgcs-text );
+}
+
+/* Shared closed-by-default panels used by Core and order-screen add-ons. */
+.bgcs-order-panels,
+.bgcs-h18-order-box {
+	display: grid;
+	gap: var( --bgcs-s3 );
+}
+
+.bgcs-order-panel {
+	overflow: hidden;
+	border: 1px solid var( --bgcs-border );
+	border-radius: var( --bgcs-radius );
+	background: var( --bgcs-surface );
+	box-shadow: var( --bgcs-shadow-sm );
+}
+
+.bgcs-order-panel__trigger {
+	display: grid;
+	grid-template-columns: auto minmax( 0, 1fr ) auto auto;
+	align-items: center;
+	gap: var( --bgcs-s3 );
+	width: 100%;
+	min-height: 58px;
+	margin: 0;
+	padding: var( --bgcs-s3 ) var( --bgcs-s4 );
+	border: 0;
+	background: transparent;
+	color: var( --bgcs-text );
+	text-align: left;
+	cursor: pointer;
+}
+
+.bgcs-order-panel__trigger:hover {
+	background: var( --bgcs-accent-soft );
+}
+
+.bgcs-order-panel__trigger:focus-visible {
+	outline: 2px solid var( --bgcs-accent );
+	outline-offset: -2px;
+}
+
+.bgcs-order-panel__icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 34px;
+	height: 34px;
+	border-radius: 10px;
+	background: var( --bgcs-accent-soft );
+	color: var( --bgcs-accent );
+}
+
+.bgcs-order-panel__icon--logo {
+	background: var( --bgcs-surface );
+	border: 1px solid var( --bgcs-border );
+}
+
+.bgcs-order-panel__icon .bgcs-courier-logo {
+	display: block;
+	max-width: 24px;
+	max-height: 24px;
+}
+
+.bgcs-order-panel__titles {
+	display: grid;
+	gap: 2px;
+	min-width: 0;
+}
+
+.bgcs-order-panel__title {
+	font-size: 13px;
+	font-weight: 700;
+	line-height: 1.3;
+}
+
+.bgcs-order-panel__description {
+	overflow: hidden;
+	color: var( --bgcs-muted );
+	font-size: 11.5px;
+	line-height: 1.35;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.bgcs-order-panel__status {
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
+	max-width: 180px;
+	padding: 3px 8px;
+	border-radius: 999px;
+	background: #eef2ef;
+	color: var( --bgcs-muted );
+	font-size: 11px;
+	font-weight: 600;
+	line-height: 1.3;
+	white-space: nowrap;
+}
+
+.bgcs-order-panel__status--success {
+	background: var( --bgcs-success-soft );
+	color: var( --bgcs-success );
+}
+
+.bgcs-order-panel__status--warning {
+	background: var( --bgcs-warning-soft );
+	color: #7a5700;
+}
+
+.bgcs-order-panel__status--danger {
+	background: var( --bgcs-danger-soft );
+	color: var( --bgcs-danger );
+}
+
+.bgcs-order-panel__status--working .bgcs-ico {
+	animation: bgcs-order-panel-spin .8s linear infinite;
+}
+
+.bgcs-order-panel__chevron {
+	display: inline-flex;
+	color: var( --bgcs-muted );
+	transition: transform .16s ease;
+}
+
+.bgcs-order-panel.is-open .bgcs-order-panel__chevron {
+	transform: rotate( 180deg );
+}
+
+.bgcs-order-panel__body {
+	padding: var( --bgcs-s4 );
+	border-top: 1px solid var( --bgcs-border );
+}
+
+.bgcs-order-panel__body[hidden] {
+	display: none;
+}
+
+@keyframes bgcs-order-panel-spin {
+	to {
+		transform: rotate( 360deg );
+	}
+}
+
+#side-sortables .bgcs-order-panel__trigger {
+	grid-template-columns: auto minmax( 0, 1fr ) auto;
+	padding: var( --bgcs-s3 );
+}
+
+#side-sortables .bgcs-order-panel__status {
+	grid-column: 2;
+	justify-self: start;
+	max-width: 100%;
+}
+
+#side-sortables .bgcs-order-panel__chevron {
+	grid-column: 3;
+	grid-row: 1;
+}
+
+#side-sortables .bgcs-order-panel__description {
+	white-space: normal;
+}
+
+.bgcs-order-box .bgcs-summary {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	gap: 2px var( --bgcs-s3 );
+	font-size: 13px;
+}
+
+.bgcs-order-box .bgcs-summary dt {
+	color: var( --bgcs-muted );
+}
+
+.bgcs-order-box .bgcs-summary dd {
+	margin: 0;
+	font-weight: 500;
+}
+
+.bgcs-order-box .bgcs-tracking {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	max-height: 220px;
+	overflow: auto;
+}
+
+.bgcs-order-box .bgcs-tracking li {
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	gap: 0 var( --bgcs-s2 );
+	padding: 0 0 var( --bgcs-s2 ) var( --bgcs-s4 );
+	font-size: 12px;
+	color: var( --bgcs-text );
+}
+
+/* Rule 243 — raw provider description and normalized state are two distinct
+   elements, never collapsed into one string. */
+.bgcs-tracking__raw {
+	flex: 1 1 auto;
+}
+
+.bgcs-tracking__state {
+	flex: 0 0 auto;
+	padding: 1px 8px;
+	border-radius: 999px;
+	font-size: 11px;
+	font-weight: 600;
+	white-space: nowrap;
+}
+
+.bgcs-tracking__state.bgcs-tone--success {
+	background: var( --bgcs-success-soft );
+	color: var( --bgcs-success );
+}
+
+.bgcs-tracking__state.bgcs-tone--warning {
+	background: var( --bgcs-warning-soft );
+	color: #7a5700;
+}
+
+.bgcs-tracking__state.bgcs-tone--danger {
+	background: var( --bgcs-danger-soft );
+	color: var( --bgcs-danger );
+}
+
+.bgcs-tracking__state.bgcs-tone--neutral {
+	background: #f0f0f1;
+	color: var( --bgcs-muted );
+}
+
+/* Contract entitlement state. Three states, not two: an entitlement Speedy
+ * never reported is not one it refused, and the panel must not colour them
+ * the same. Follows the .bgcs-tracking__state pattern. */
+.bgcs-contract__state {
+	display: inline-block;
+	padding: 3px 10px;
+	border-radius: 999px;
+	font-size: 11px;
+	font-weight: 600;
+	letter-spacing: .02em;
+	white-space: nowrap;
+}
+
+.bgcs-contract__state.bgcs-tone--success {
+	background: var( --bgcs-success-soft );
+	color: var( --bgcs-success );
+}
+
+.bgcs-contract__state.bgcs-tone--warning {
+	background: var( --bgcs-warning-soft );
+	color: #7a5700;
+}
+
+.bgcs-contract__state.bgcs-tone--neutral {
+	background: #f0f0f1;
+	color: var( --bgcs-muted );
+}
+
+
+
+.bgcs-order-box .bgcs-tracking li::before {
+	content: "";
+	position: absolute;
+	left: 3px;
+	top: 5px;
+	width: 7px;
+	height: 7px;
+	border-radius: 50%;
+	background: var( --bgcs-accent );
+}
+
+/* Rule 77 — visual QA summary, subtly distinct from the plain field list so
+   it reads as "expected/canonical" rather than just more shipment data. */
+.bgcs-order-box .bgcs-summary--qa {
+	padding: var( --bgcs-s2 ) var( --bgcs-s3 );
+	margin-bottom: var( --bgcs-s3 );
+	background: var( --bgcs-info-soft );
+	border-radius: var( --bgcs-radius );
+}
+
+/* Rule 67/72/205 — inline label preview. Responsive (never a hardcoded
+   desktop-only width), own scroll container so the order screen itself
+   never needs to scroll horizontally for a wide/tall embedded document. */
+.bgcs-label-preview {
+	margin-top: var( --bgcs-s3 );
+	border: 1px solid var( --bgcs-border );
+	border-radius: var( --bgcs-radius );
+	overflow: hidden;
+}
+
+.bgcs-label-preview iframe {
+	display: block;
+	width: 100%;
+	height: 70vh;
+	max-height: 800px;
+	border: 0;
+}
+
+.bgcs-order-box .bgcs-tracking time {
+	display: block;
+	color: var( --bgcs-muted );
+	font-size: 11px;
+}
+
+.bgcs-order-box .bgcs-order-msg {
+	margin: var( --bgcs-s2 ) 0 0;
+	min-height: 1em;
+	font-size: 12px;
+	color: var( --bgcs-danger );
+}
+
+.bgcs-order-box .bgcs-empty {
+	margin: 0;
+	color: var( --bgcs-muted );
+}
+
+/* ======================================================================
+   TeamHub-style shell: left sidebar nav + main column (Core 2.8.0)
+   ====================================================================== */
+.bgcs-settings {
+	background: var( --bgcs-bg );
+	margin-left: -20px;
+	padding: 0;
+}
+
+.bgcs-shell {
+	display: flex;
+	align-items: stretch;
+	min-height: calc( 100vh - 32px - 65px );
+	gap: 0;
+}
+
+/* ---- Sidebar ---- */
+.bgcs-sidebar {
+	flex: 0 0 232px;
+	background: var( --bgcs-surface );
+	border-right: 1px solid var( --bgcs-border );
+	padding: 18px 12px;
+	box-sizing: border-box;
+}
+
+.bgcs-sidebar__brand {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	padding: 4px 10px 16px;
+	font-size: 15px;
+	font-weight: 700;
+	color: var( --bgcs-text );
+	border-bottom: 1px solid var( --bgcs-border );
+	margin-bottom: 12px;
+}
+
+.bgcs-sidebar__brand .bgcs-ico {
+	color: var( --bgcs-accent );
+}
+
+.bgcs-nav {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+}
+
+.bgcs-nav__label {
+	margin: 12px 10px 4px;
+	font-size: 10.5px;
+	font-weight: 700;
+	letter-spacing: .06em;
+	text-transform: uppercase;
+	color: var( --bgcs-muted );
+}
+
+.bgcs-nav__item {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 9px 12px;
+	border-radius: 10px;
+	color: var( --bgcs-text );
+	text-decoration: none;
+	font-size: 13px;
+	font-weight: 500;
+	transition: background .1s ease;
+}
+
+.bgcs-nav__item:hover {
+	background: var( --bgcs-accent-soft );
+	color: var( --bgcs-accent-hover );
+}
+
+.bgcs-nav__item.is-active,
+.bgcs-nav__item.is-active:hover {
+	background: var( --bgcs-accent );
+	color: #fff;
+}
+
+.bgcs-nav__item.is-active .bgcs-ico {
+	color: #fff;
+}
+
+.bgcs-nav__item .bgcs-courier-logo {
+	height: 16px;
+	max-width: 64px;
+}
+
+.bgcs-nav__item.is-active .bgcs-courier-logo {
+	box-sizing: content-box;
+	padding: 2px 4px;
+	border-radius: 4px;
+	background: var( --bgcs-surface );
+	filter: none;
+}
+
+/* ---- Main column ---- */
+.bgcs-main {
+	flex: 1 1 auto;
+	min-width: 0;
+	padding: 20px 26px 40px;
+	box-sizing: border-box;
+}
+
+.bgcs-topbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 0 0 18px;
+}
+
+.bgcs-topbar__title {
+	margin: 0;
+	font-size: 20px;
+	font-weight: 700;
+	color: var( --bgcs-text );
+	letter-spacing: -0.01em;
+}
+
+
+/* ---- Dashboard: stat tiles ---- */
+.bgcs-stats {
+	display: grid;
+	grid-template-columns: repeat( auto-fit, minmax( 200px, 1fr ) );
+	gap: 14px;
+	margin-bottom: 18px;
+}
+
+.bgcs-stat {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	padding: 16px;
+	background: var( --bgcs-surface );
+	border: 1px solid var( --bgcs-border );
+	border-radius: var( --bgcs-radius );
+}
+
+.bgcs-stat__icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 42px;
+	height: 42px;
+	border-radius: 12px;
+	background: var( --bgcs-accent-soft );
+	color: var( --bgcs-accent );
+	flex: 0 0 auto;
+}
+
+.bgcs-stat__value {
+	font-size: 20px;
+	font-weight: 700;
+	color: var( --bgcs-text );
+	line-height: 1.2;
+}
+
+.bgcs-stat__label {
+	font-size: 12px;
+	color: var( --bgcs-muted );
+}
+
+/* ---- Toggle switch (Разширения on/off) ---- */
+.bgcs-switch {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.bgcs-switch__knob {
+	position: relative;
+	width: 38px;
+	height: 22px;
+	border-radius: 999px;
+	background: var( --bgcs-border-strong );
+	transition: background .15s ease;
+	flex: 0 0 auto;
+}
+
+.bgcs-switch__knob::after {
+	content: "";
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	background: #fff;
+	box-shadow: 0 1px 3px rgba( 0, 0, 0, .2 );
+	transition: left .15s ease;
+}
+
+.bgcs-switch.is-on .bgcs-switch__knob {
+	background: var( --bgcs-accent );
+}
+
+.bgcs-switch.is-on .bgcs-switch__knob::after {
+	left: 19px;
+}
+
+.bgcs-switch__text {
+	font-size: 12px;
+	font-weight: 600;
+	color: var( --bgcs-muted );
+}
+
+.bgcs-switch.is-on .bgcs-switch__text {
+	color: var( --bgcs-accent );
+}
+
+/* Narrow screens: sidebar stacks on top. */
+@media ( max-width: 960px ) {
+	.bgcs-shell {
+		flex-direction: column;
+	}
+
+	.bgcs-sidebar {
+		flex: 1 1 auto;
+		border-right: 0;
+		border-bottom: 1px solid var( --bgcs-border );
+	}
+
+	.bgcs-nav {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+
+	.bgcs-nav__label {
+		width: 100%;
+	}
+}
+
+/* ======================================================================
+   Report pages (full-page modules): filter bar + data table
+   ====================================================================== */
+.bgcs-filters {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-end;
+	gap: 12px;
+	padding: 14px 16px;
+	margin-bottom: 16px;
+	background: var( --bgcs-surface );
+	border: 1px solid var( --bgcs-border );
+	border-radius: var( --bgcs-radius );
+}
+
+.bgcs-filters__field {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+}
+
+.bgcs-filters__field label {
+	font-size: 11px;
+	font-weight: 700;
+	letter-spacing: .04em;
+	text-transform: uppercase;
+	color: var( --bgcs-muted );
+}
+
+.bgcs-filters__field input[type="date"],
+.bgcs-filters__field select {
+	height: 36px;
+	border: 1px solid var( --bgcs-border-strong );
+	border-radius: 10px;
+	padding: 0 10px;
+	background: var( --bgcs-surface );
+	color: var( --bgcs-text );
+}
+
+.bgcs-filters__spacer {
+	flex: 1 1 auto;
+}
+
+/* Data table (TeamHub-style). */
+.bgcs-table-wrap {
+	background: var( --bgcs-surface );
+	border: 1px solid var( --bgcs-border );
+	border-radius: var( --bgcs-radius );
+	overflow-x: auto;
+}
+
+.bgcs-table {
+	width: 100%;
+	border-collapse: collapse;
+	font-size: 13px;
+}
+
+.bgcs-table th {
+	padding: 12px 14px;
+	text-align: left;
+	font-size: 11px;
+	font-weight: 700;
+	letter-spacing: .05em;
+	text-transform: uppercase;
+	color: var( --bgcs-muted );
+	border-bottom: 1px solid var( --bgcs-border );
+	white-space: nowrap;
+}
+
+.bgcs-table td {
+	padding: 11px 14px;
+	border-bottom: 1px solid var( --bgcs-border );
+	color: var( --bgcs-text );
+	vertical-align: middle;
+}
+
+.bgcs-table tbody tr:last-child td {
+	border-bottom: 0;
+}
+
+.bgcs-table tbody tr:hover {
+	background: var( --bgcs-info-soft );
+}
+
+.bgcs-table .bgcs-table__num {
+	text-align: right;
+	font-weight: 600;
+	white-space: nowrap;
+}
+
+.bgcs-table a {
+	color: var( --bgcs-accent );
+	text-decoration: none;
+	font-weight: 600;
+}
+
+.bgcs-table .bgcs-courier-logo {
+	height: 16px;
+	max-width: 70px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.bgcs-table__empty {
+	padding: 28px 16px;
+	text-align: center;
+	color: var( --bgcs-muted );
+}
+
+/* Buttons inside report tables keep their own text colour (the generic
+   `.bgcs-table a` accent link rule must not make primary buttons invisible). */
+.bgcs-table a.bgcs-btn {
+	font-weight: 500;
+}
+
+.bgcs-table a.bgcs-btn--primary,
+.bgcs-table a.bgcs-btn--primary:hover {
+	color: #fff;
+}
+
+.bgcs-table a.bgcs-btn--outline {
+	color: var( --bgcs-accent );
+}
+
+/* Searchable settings and order-admin selects. */
+.bgcs-settings .select2-container,
+.bgcs-settings .selectWoo-container,
+.bgcs-order-box .select2-container {
+	width: 100% !important;
+	max-width: 100%;
+}
+
+.bgcs-settings .select2-container .select2-selection--single,
+.bgcs-order-box .select2-container .select2-selection--single {
+	min-height: 40px;
+	border-color: var( --bgcs-border-strong );
+	border-radius: 10px;
+}
+
+.bgcs-settings .select2-container--default.select2-container--focus .select2-selection--single,
+.bgcs-order-box .select2-container--default.select2-container--focus .select2-selection--single {
+	border-color: var( --bgcs-accent );
+	box-shadow: 0 0 0 1px var( --bgcs-accent );
+}
+
+.bgcs-sync-status {
+	margin: 8px 0 14px;
+	color: var( --bgcs-muted );
+	font-size: 12px;
+}
+
+.bgcs-sender-refresh-form {
+	margin-top: 12px;
+}
+
+/* ----------------------------------------------------------------------- */
+/* Waybill editor subsections                                              */
+/* ----------------------------------------------------------------------- */
+/* A rich courier (Speedy) contributes 20+ controls to the waybill panel.   */
+/* One flat grid put related fields far apart, so each group is labelled    */
+/* and separated by a hairline rule.                                        */
+.bgcs-wb-group + .bgcs-wb-group {
+	margin-top: var( --bgcs-s5 );
+	padding-top: var( --bgcs-s5 );
+	border-top: 1px solid var( --bgcs-border );
+}
+
+.bgcs-wb-group__title {
+	margin: 0 0 var( --bgcs-s3 );
+	font-size: 12px;
+	font-weight: 700;
+	line-height: 1.3;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	color: var( --bgcs-muted );
+}
+
+/* Conditional fields: hidden until their controlling select is relevant.   */
+.bgcs-field[data-bgcs-show-if][hidden] {
+	display: none;
+}
+
+/* ----------------------------------------------------------------------- */
+/* Settings card field runs                                                */
+/* ----------------------------------------------------------------------- */
+/* Checkboxes are full-width statements, other controls are grid cells. Mixed
+   in one grid, each full-width item breaks auto-placement and strands the
+   fields before it beside empty cells — so consecutive runs are containered
+   separately (Settings_Page::render_field_run()). */
+.bgcs-checkstack {
+	display: flex;
+	flex-direction: column;
+	gap: var( --bgcs-s4 );
+}
+
+.bgcs-fieldgrid + .bgcs-checkstack,
+.bgcs-checkstack + .bgcs-fieldgrid,
+.bgcs-fieldgrid + .bgcs-fieldgrid,
+.bgcs-checkstack + .bgcs-checkstack {
+	margin-top: var( --bgcs-s4 );
+}
+
+.bgcs-checkstack .bgcs-field {
+	margin: 0;
+}
+
+/* ----------------------------------------------------------------------- */
+/* Orders List Column — Waybill & Courier                                  */
+/* ----------------------------------------------------------------------- */
+.column-bgcs3_waybill {
+	width: 140px;
+}
+
+.bgcs-wb-cell {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	align-items: flex-start;
+	min-width: 100px;
+}
+
+.bgcs-wb-cell__courier {
+	display: inline-flex;
+	align-items: center;
+	font-size: 11px;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.03em;
+	color: #64748b;
+	line-height: 1.2;
+}
+
+.bgcs-wb-cell__courier .bgcs-courier-logo {
+	max-height: 18px;
+	max-width: 80px;
+	width: auto;
+	object-fit: contain;
+	display: block;
+}
+
+.bgcs-wb-cell__number {
+	font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+	font-size: 12px;
+	font-weight: 600;
+	color: #1e293b;
+	background: #f1f5f9;
+	padding: 2px 6px;
+	border-radius: 4px;
+	border: 1px solid #e2e8f0;
+	display: inline-block;
+	text-decoration: none;
+	line-height: 1.3;
+	transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.bgcs-wb-cell__number--link {
+	color: #2563eb;
+}
+
+.bgcs-wb-cell__number--link:hover,
+.bgcs-wb-cell__number--link:focus {
+	background: #e2e8f0;
+	border-color: #cbd5e1;
+	color: #1d4ed8;
+	text-decoration: underline;
+}
+
+.bgcs-wb-create-btn {
+	white-space: nowrap;
+	font-size: 12px !important;
+	height: 26px !important;
+	line-height: 24px !important;
+	padding: 0 8px !important;
+}
+
+.bgcs-wb-cell__msg {
+	display: block;
+	font-size: 11px;
+	color: #dc2626;
+	line-height: 1.2;
+	margin-top: 2px;
+	word-break: break-word;
+}
+
+.bgcs-wb-empty {
+	color: #94a3b8;
+	font-weight: 600;
+}
+
+
+/* Setup status checklist (Master Instruction §9). */
+.bgcs-setup-status__list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.bgcs-setup-status__row {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	flex-wrap: wrap;
+}
+
+.bgcs-setup-status__icon {
+	display: inline-flex;
+}
+
+.bgcs-setup-status__row.bgcs-tone--success .bgcs-setup-status__icon {
+	color: var( --bgcs-success );
+}
+
+.bgcs-setup-status__row.bgcs-tone--warning .bgcs-setup-status__icon {
+	color: var( --bgcs-warning );
+}
+
+.bgcs-setup-status__row.bgcs-tone--danger .bgcs-setup-status__icon {
+	color: var( --bgcs-danger );
+}
+
+.bgcs-setup-status__label {
+	font-weight: 600;
+}
+
+.bgcs-setup-status__hint {
+	color: #64748b;
+	font-size: 12px;
+}
+
+/* Locations status + advanced-section subheadings (Master Instruction §30, §33). */
+.bgcs-locations-status {
+	margin-bottom: 12px;
+}
+
+.bgcs-locations-status__line {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	margin: 0 0 4px;
+	color: #475569;
+}
+
+.bgcs-advanced-subsection__title {
+	font-size: 13px;
+	font-weight: 600;
+	margin: 16px 0 4px;
+}
+
+.bgcs-advanced-subsection__title:first-child {
+	margin-top: 0;
+}
+
+.bgcs-advanced-subsection__desc {
+	color: #64748b;
+	font-size: 12px;
+	margin: 0 0 8px;
+}
+
+/* Read-only informational field note (type: 'note'). */
+.bgcs-field--note {
+	background: #f8fafc;
+	border-radius: 6px;
+	padding: 8px 12px;
+}
+
+.bgcs-field__note {
+	margin: 0;
+	font-size: 12px;
+	color: #475569;
+}
+
+/* ----------------------------------------------------------------------- */
+/* Speedy task workspace — account / locations / methods / tracking / diag */
+/* ----------------------------------------------------------------------- */
+.bgcs-speedy-workspace {
+	display: block;
+	margin-top: var( --bgcs-s5 );
+}
+
+.bgcs-task-tabs {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var( --bgcs-s2 );
+	margin: 0 0 var( --bgcs-s5 );
+	padding: var( --bgcs-s1 );
+	border: 1px solid var( --bgcs-border );
+	border-radius: var( --bgcs-radius );
+	background: rgba( 255, 255, 255, .72 );
+}
+
+.bgcs-task-tab {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: var( --bgcs-s2 );
+	min-height: 44px;
+	padding: 9px 14px;
+	border: 1px solid transparent;
+	border-radius: 10px;
+	background: transparent;
+	color: var( --bgcs-muted );
+	font-size: 13px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: background .16s ease, border-color .16s ease, color .16s ease;
+}
+
+.bgcs-task-tab:hover {
+	background: var( --bgcs-accent-soft );
+	color: var( --bgcs-accent );
+}
+
+.bgcs-task-tab:focus-visible {
+	outline: 2px solid var( --bgcs-accent );
+	outline-offset: 2px;
+}
+
+.bgcs-task-tab.is-active {
+	border-color: var( --bgcs-accent );
+	background: var( --bgcs-accent );
+	color: #fff;
+}
+
+.bgcs-task-panel[hidden] {
+	display: none !important;
+}
+
+.bgcs-task-panel {
+	display: grid;
+	gap: var( --bgcs-s5 );
+}
+
+.bgcs-speedy-section-grid {
+	display: grid;
+	grid-template-columns: repeat( 2, minmax( 0, 1fr ) );
+	gap: var( --bgcs-s4 );
+	align-items: start;
+}
+
+.bgcs-speedy-inline-actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var( --bgcs-s2 );
+	margin-top: var( --bgcs-s4 );
+}
+
+.bgcs-speedy-inline-actions--spaced {
+	margin-top: var( --bgcs-s5 );
+}
+
+.bgcs-speedy-action-footer {
+	display: flex;
+	justify-content: flex-end;
+	gap: var( --bgcs-s2 );
+	margin-top: 24px;
+	padding: 20px 0 32px;
+	border-top: 1px solid var( --bgcs-border );
+}
+
+.bgcs-location-metrics {
+	display: grid;
+	grid-template-columns: repeat( 4, minmax( 0, 1fr ) );
+	gap: var( --bgcs-s3 );
+}
+
+.bgcs-location-metric {
+	display: grid;
+	grid-template-columns: auto minmax( 0, 1fr );
+	gap: var( --bgcs-s3 );
+	min-height: 96px;
+	padding: var( --bgcs-s4 );
+	border: 1px solid var( --bgcs-border );
+	border-radius: 12px;
+	background: #fbfdfc;
+}
+
+.bgcs-location-metric__icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 34px;
+	height: 34px;
+	border-radius: 10px;
+	background: var( --bgcs-accent-soft );
+	color: var( --bgcs-accent );
+}
+
+.bgcs-location-metric__label,
+.bgcs-location-metric__meta {
+	display: block;
+	font-size: 11px;
+	line-height: 1.35;
+	color: var( --bgcs-muted );
+}
+
+.bgcs-location-metric__value {
+	display: block;
+	margin: 3px 0;
+	font-size: 17px;
+	line-height: 1.2;
+	color: var( --bgcs-text );
+}
+
+.bgcs-method-list {
+	display: grid;
+	gap: var( --bgcs-s3 );
+}
+
+.bgcs-method-row {
+	display: grid;
+	grid-template-columns: minmax( 0, 1fr ) auto auto;
+	align-items: center;
+	gap: var( --bgcs-s3 );
+	padding: var( --bgcs-s3 ) var( --bgcs-s4 );
+	border: 1px solid var( --bgcs-border );
+	border-radius: 12px;
+	background: #fbfdfc;
+}
+
+.bgcs-method-row__main {
+	display: flex;
+	flex-direction: column;
+	gap: 3px;
+	min-width: 0;
+}
+
+.bgcs-method-row__main > span {
+	font-size: 12px;
+	color: var( --bgcs-muted );
+}
+
+.bgcs-method-row__types {
+	color: var( --bgcs-text ) !important;
+}
+
+.bgcs-method-empty {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	gap: var( --bgcs-s3 );
+	align-items: start;
+	padding: var( --bgcs-s4 );
+	border: 1px dashed var( --bgcs-border-strong );
+	border-radius: 12px;
+	background: #fbfdfc;
+}
+
+.bgcs-method-empty__icon {
+	display: inline-flex;
+	color: var( --bgcs-warning );
+}
+
+.bgcs-method-empty p {
+	margin: 4px 0 0;
+	color: var( --bgcs-muted );
+}
+
+.bgcs-speedy-diagnostics-intro {
+	display: flex;
+	align-items: flex-start;
+	gap: var( --bgcs-s3 );
+	padding: var( --bgcs-s4 );
+	border: 1px solid #bfd8ef;
+	border-radius: 12px;
+	background: #eef7ff;
+	color: #245a86;
+}
+
+.bgcs-speedy-diagnostics-intro p {
+	margin: 0;
+}
+
+.bgcs-speedy-workspace .bgcs-accordion {
+	margin: 0;
+}
+
+.bgcs-speedy-workspace .bgcs-accordion + .bgcs-accordion {
+	margin-top: var( --bgcs-s3 );
+}
+
+.bgcs-setup-status__action {
+	margin-left: auto;
+	font-size: 12px;
+	font-weight: 600;
+	color: var( --bgcs-accent );
+	text-decoration: none;
+}
+
+.bgcs-setup-status__action:hover,
+.bgcs-setup-status__action:focus {
+	text-decoration: underline;
+}
+
+@media ( max-width: 1100px ) {
+	.bgcs-location-metrics {
+		grid-template-columns: repeat( 2, minmax( 0, 1fr ) );
+	}
+}
+
+@media ( max-width: 782px ) {
+	.bgcs-task-tabs {
+		display: grid;
+		grid-template-columns: repeat( 2, minmax( 0, 1fr ) );
+	}
+
+	.bgcs-task-tab {
+		justify-content: flex-start;
+	}
+
+	.bgcs-speedy-section-grid,
+	.bgcs-location-metrics {
+		grid-template-columns: 1fr;
+	}
+
+	.bgcs-method-row {
+		grid-template-columns: 1fr;
+	}
+
+	.bgcs-method-row .bgcs-badge {
+		margin-left: 0;
+		justify-self: start;
+	}
+
+	.bgcs-speedy-action-footer {
+		justify-content: stretch;
+	}
+
+	.bgcs-speedy-action-footer .bgcs-btn {
+		width: 100%;
+		justify-content: center;
+	}
+}
+
+@media ( max-width: 480px ) {
+	.bgcs-task-tabs {
+		grid-template-columns: 1fr;
+	}
+}
+
+/* ======================================================================
+   Speedy shipping-method UX refinement
+   ====================================================================== */
+.bgcs-speedy-business-grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 16px;
+	align-items: start;
+	margin-top: 0;
+}
+
+.bgcs-speedy-business-grid > .bgcs-card {
+	margin: 0;
+}
+
+.bgcs-speedy-scope-note {
+	display: flex;
+	align-items: flex-start;
+	gap: 12px;
+	margin: 0;
+	padding: 14px 16px;
+	border: 1px solid var( --bgcs-border );
+	border-radius: 12px;
+	background: #fbfdfc;
+	color: var( --bgcs-muted );
+}
+
+.bgcs-speedy-scope-note .bgcs-ico {
+	margin-top: 1px;
+	color: var( --bgcs-accent );
+}
+
+.bgcs-speedy-scope-note p {
+	margin: 0;
+	line-height: 1.5;
+}
+
+.bgcs-method-row {
+	grid-template-columns: minmax( 0, 1fr ) auto;
+	min-height: 62px;
+}
+
+.bgcs-method-row__actions {
+	display: inline-flex;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 12px;
+	align-self: center;
+}
+
+.bgcs-method-row__actions .bgcs-badge {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	align-self: center;
+	min-height: 28px;
+	margin: 0;
+	padding: 0 12px;
+	line-height: 1;
+	box-sizing: border-box;
+}
+
+.bgcs-method-row__actions .bgcs-btn {
+	align-self: center;
+}
+
+/* Business cards should read as separate tasks, with breathing room between
+   sections and a local save footer after the whole method configuration. */
+.bgcs-task-panel[data-bgcs-task-panel="methods"] {
+	gap: 24px;
+}
+
+.bgcs-task-panel[data-bgcs-task-panel="methods"] .bgcs-card__body {
+	padding: 20px 24px 24px;
+}
+
+.bgcs-task-panel[data-bgcs-task-panel="methods"] .bgcs-field {
+	margin-bottom: 16px;
+}
+
+.bgcs-task-panel[data-bgcs-task-panel="methods"] .bgcs-field:last-child {
+	margin-bottom: 0;
+}
+
+@media ( max-width: 782px ) {
+	.bgcs-method-row__actions {
+		justify-content: flex-start;
+		width: 100%;
+	}
+
+	.bgcs-method-row__actions .bgcs-badge {
+		justify-self: auto;
+	}
+}
+
+/* Shared account/reputation additions — 3.0.3. */
+.bgcs-account-summary {
+	margin-top: 16px;
+	padding-top: 16px;
+	border-top: 1px solid var( --bgcs-border );
+}
+
+
+/* Conditional UX contract: inactive branches are fully removed from layout. */
+[data-show-if][hidden] {
+	display: none !important;
+}
+
+/* BOX NOW webhook diagnostics. */
+.bgcs-webhook-url-row {
+	display: flex;
+	align-items: center;
+	gap: var( --bgcs-s2 );
+}
+
+.bgcs-webhook-url-row input {
+	flex: 1 1 auto;
+	min-width: 0;
+	font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+}
+
+.bgcs-webhook-meta {
+	display: grid;
+	grid-template-columns: repeat( 3, minmax( 0, 1fr ) );
+	gap: var( --bgcs-s3 );
+	margin: var( --bgcs-s4 ) 0;
+}
+
+.bgcs-webhook-meta > div {
+	display: grid;
+	gap: 4px;
+	padding: var( --bgcs-s3 );
+	border: 1px solid var( --bgcs-border );
+	border-radius: 10px;
+	background: #fbfdfc;
+}
+
+.bgcs-webhook-meta span {
+	overflow-wrap: anywhere;
+}
+
+@media ( max-width: 782px ) {
+	.bgcs-webhook-url-row {
+		align-items: stretch;
+		flex-direction: column;
+	}
+
+	.bgcs-webhook-meta {
+		grid-template-columns: 1fr;
+	}
+}
+
+/* BGCS 3.0.16 — compact post-label shipment workspace. */
+.bgcs-order-panel--shipment > .bgcs-order-panel__trigger {
+	min-height: 50px;
+	padding-block: 9px;
+}
+
+.bgcs-order-panel--shipment > .bgcs-order-panel__body {
+	padding: 0;
+}
+
+.bgcs-shipment-tabs__nav {
+	display: flex;
+	align-items: center;
+	gap: 2px;
+	overflow-x: auto;
+	padding: 8px 10px 0;
+	border-bottom: 1px solid var( --bgcs-border );
+	background: var( --bgcs-surface );
+}
+
+.bgcs-shipment-tab {
+	flex: 0 0 auto;
+	margin: 0;
+	padding: 8px 11px;
+	border: 0;
+	border-bottom: 2px solid transparent;
+	background: transparent;
+	color: var( --bgcs-muted );
+	font-size: 12px;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.bgcs-shipment-tab:hover,
+.bgcs-shipment-tab:focus-visible {
+	color: var( --bgcs-text );
+	background: var( --bgcs-accent-soft );
+	outline: none;
+}
+
+.bgcs-shipment-tab.is-active {
+	border-bottom-color: var( --bgcs-accent );
+	color: var( --bgcs-accent );
+}
+
+.bgcs-shipment-tabpanel {
+	padding: 14px;
+}
+
+.bgcs-shipment-tabpanel[hidden] {
+	display: none;
+}
+
+.bgcs-shipment-overview {
+	display: grid;
+	grid-template-columns: repeat( 2, minmax( 0, 1fr ) );
+	gap: 12px;
+}
+
+.bgcs-shipment-card {
+	padding: 12px;
+	border: 1px solid var( --bgcs-border );
+	border-radius: var( --bgcs-radius );
+	background: var( --bgcs-surface );
+}
+
+.bgcs-shipment-card h4 {
+	margin: 0 0 8px;
+	font-size: 12px;
+}
+
+.bgcs-shipment-quick-actions {
+	margin-top: 12px;
+}
+
+.bgcs-shipment-actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin-bottom: 12px;
+}
+
+.bgcs-label-preview--compact iframe {
+	height: 380px;
+	max-height: 45vh;
+	background: #252525;
+}
+
+.bgcs-shipment-tabpanel > .bgcs-order-panel {
+	margin-top: 10px;
+	box-shadow: none;
+}
+
+.bgcs-shipment-tracking-head {
+	margin-bottom: 12px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid var( --bgcs-border );
+}
+
+@media ( max-width: 782px ) {
+	.bgcs-shipment-overview {
+		grid-template-columns: 1fr;
+	}
+	.bgcs-label-preview--compact iframe {
+		height: 320px;
+		max-height: 55vh;
+	}
+}
+
+/* BGCS 3.0.17 — unified low-click shipment workspace before/after label. */
+.bgcs-order-panel--pending > .bgcs-order-panel__trigger {
+	min-height: 50px;
+	padding-block: 9px;
+}
+
+.bgcs-order-panel--pending .bgcs-shipment-card--editor {
+	min-width: 0;
+}
+
+.bgcs-order-panel--pending .bgcs-shipment-card--editor .bgcs-fieldgrid {
+	grid-template-columns: repeat( auto-fit, minmax( 175px, 1fr ) );
+	gap: 10px;
+}
+
+.bgcs-shipment-primary-actions,
+.bgcs-shipment-editor-actions {
+	position: sticky;
+	bottom: 0;
+	z-index: 2;
+	padding: 10px 0 2px;
+	background: linear-gradient( to bottom, rgba(255,255,255,0), var( --bgcs-surface ) 28% );
+}
+
+.bgcs-shipment-label-empty {
+	margin-bottom: 12px;
+	padding: 10px 12px;
+	border: 1px dashed var( --bgcs-border );
+	border-radius: var( --bgcs-radius );
+	background: var( --bgcs-bg );
+	color: var( --bgcs-muted );
+	font-size: 12px;
+}
+
+.bgcs-shipment-label-empty strong {
+	color: var( --bgcs-text );
+}
+
+.bgcs-shipment-editor-section {
+	margin: 0 0 12px;
+	padding: 12px;
+	border: 1px solid var( --bgcs-border );
+	border-radius: var( --bgcs-radius );
+	background: var( --bgcs-surface );
+}
+
+.bgcs-shipment-editor-section > h4,
+.bgcs-shipment-editor-section__head h4 {
+	margin: 0 0 8px;
+	font-size: 12px;
+}
+
+.bgcs-shipment-editor-section__head {
+	margin-bottom: 10px;
+}
+
+.bgcs-shipment-editor-section__head p {
+	margin: -3px 0 0;
+	color: var( --bgcs-muted );
+	font-size: 11px;
+}
+
+.bgcs-label-actions {
+	align-items: center;
+}
+
+.bgcs-label-actions .bgcs-delete-label {
+	margin-left: auto;
+}
+
+@media ( max-width: 782px ) {
+	.bgcs-label-actions .bgcs-delete-label {
+		margin-left: 0;
+	}
+	.bgcs-shipment-primary-actions,
+	.bgcs-shipment-editor-actions {
+		position: static;
+		background: transparent;
+	}
+}
+
+/* Shipment creation snapshots (Details tab). Read-only diagnostics, shown only
+   when the General settings toggle is on and an attempt has been recorded. */
+.bgcs-diagnostics {
+	margin-top: var( --bgcs-s4 );
+	padding-top: var( --bgcs-s3 );
+	border-top: 1px solid var( --bgcs-border );
+}
+
+.bgcs-diagnostics h4 {
+	margin: 0 0 var( --bgcs-s2 );
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: .03em;
+	color: var( --bgcs-muted );
+}
+
+.bgcs-diagnostics__entry {
+	margin-top: var( --bgcs-s2 );
+	border: 1px solid var( --bgcs-border );
+	border-radius: var( --bgcs-radius, 6px );
+	background: var( --bgcs-surface, #fff );
+}
+
+.bgcs-diagnostics__entry > summary {
+	padding: var( --bgcs-s2 ) var( --bgcs-s3 );
+	cursor: pointer;
+	font-size: 13px;
+}
+
+.bgcs-diagnostics__entry[open] > summary {
+	border-bottom: 1px solid var( --bgcs-border );
+}
+
+.bgcs-diagnostics__stage {
+	padding: 0 var( --bgcs-s3 ) var( --bgcs-s2 );
+}
+
+.bgcs-diagnostics__stage h5 {
+	margin: var( --bgcs-s2 ) 0 4px;
+	font-size: 11px;
+	text-transform: uppercase;
+	letter-spacing: .04em;
+	color: var( --bgcs-muted );
+}
+
+.bgcs-diagnostics__stage pre {
+	margin: 0;
+	padding: var( --bgcs-s2 );
+	max-height: 320px;
+	overflow: auto;
+	font-size: 11px;
+	line-height: 1.5;
+	white-space: pre;
+	background: var( --bgcs-bg, #f6f7f7 );
+	border-radius: 4px;
+}
+
+/* ----------------------------------------------------------------------- */
+/* Extensions catalog                                                      */
+/* ----------------------------------------------------------------------- */
+.bgcs-addon-section-actions {
+	display: grid;
+	flex: 0 0 auto;
+	gap: 6px;
+	justify-items: end;
+	min-width: max-content;
+}
+
+.bgcs-addon-section-actions__sync {
+	display: block;
+	font-size: 12px;
+	line-height: 1.4;
+	text-align: right;
+	color: var( --bgcs-muted );
+}
+
+.bgcs-addon-products {
+	display: grid;
+	grid-template-columns: repeat( auto-fill, minmax( 320px, 1fr ) );
+	gap: var( --bgcs-s4 );
+	margin-bottom: var( --bgcs-s6 );
+}
+
+.bgcs-addon-product.is-featured {
+	border-color: var( --bgcs-accent );
+}
+
+.bgcs-addon-product__promo {
+	margin: var( --bgcs-s3 ) 0 0;
+	font-size: 12px;
+	font-weight: 700;
+	color: var( --bgcs-accent );
+}
+
+.bgcs-addon-diagnostics {
+	margin: 0 0 var( --bgcs-s4 );
+	overflow: hidden;
+}
+
+.bgcs-addon-diagnostics summary {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	padding: var( --bgcs-s3 ) var( --bgcs-s4 );
+	font-size: 13px;
+	font-weight: 700;
+	cursor: pointer;
+	list-style: none;
+}
+
+.bgcs-addon-diagnostics summary::-webkit-details-marker {
+	display: none;
+}
+
+.bgcs-addon-diagnostics__grid {
+	display: grid;
+	grid-template-columns: repeat( auto-fit, minmax( 220px, 1fr ) );
+	gap: 1px;
+	margin: 0;
+	padding: 1px 0 0;
+	background: var( --bgcs-border );
+}
+
+.bgcs-addon-diagnostics__grid > div {
+	min-width: 0;
+	padding: 10px var( --bgcs-s4 );
+	background: var( --bgcs-surface );
+}
+
+.bgcs-addon-diagnostics__grid dt,
+.bgcs-addon-diagnostics__grid dd {
+	margin: 0;
+	font-size: 12px;
+}
+
+.bgcs-addon-diagnostics__grid dt {
+	margin-bottom: 3px;
+	color: var( --bgcs-muted );
+}
+
+.bgcs-addon-diagnostics__grid dd {
+	overflow-wrap: anywhere;
+	font-weight: 600;
+	color: var( --bgcs-text );
+}
+
+.bgcs-addon-meta {
+	display: grid;
+	gap: 8px;
+	margin: var( --bgcs-s3 ) 0 0;
+}
+
+.bgcs-addon-meta > div {
+	display: grid;
+	grid-template-columns: minmax( 120px, .75fr ) minmax( 0, 1.25fr );
+	gap: 12px;
+	align-items: start;
+}
+
+.bgcs-addon-meta dt,
+.bgcs-addon-meta dd {
+	margin: 0;
+	font-size: 12px;
+}
+
+.bgcs-addon-meta dt {
+	color: var( --bgcs-muted );
+}
+
+.bgcs-addon-meta dd {
+	font-weight: 600;
+	color: var( --bgcs-text );
+	overflow-wrap: anywhere;
+}
+
+.bgcs-addon-product__actions {
+	align-items: center;
+	min-height: 52px;
+}
+
+.bgcs-addon-product__note {
+	font-size: 12px;
+	line-height: 1.45;
+	color: var( --bgcs-muted );
+}
+
+.bgcs-addon-section-head {
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	gap: var( --bgcs-s3 );
+	margin: 0 0 var( --bgcs-s3 );
+}
+
+.bgcs-addon-section-head h2 {
+	margin: 0 0 4px;
+	font-size: 18px;
+}
+
+.bgcs-addon-section-head p {
+	margin: 0;
+	color: var( --bgcs-muted );
+}
+
+@media ( max-width: 782px ) {
+	.bgcs-addon-section-head {
+		align-items: flex-start;
+		flex-direction: column;
+	}
+
+	.bgcs-addon-section-actions {
+		justify-items: start;
+		min-width: 0;
+	}
+
+	.bgcs-addon-section-actions__sync {
+		text-align: left;
+	}
+
+	.bgcs-addon-meta > div {
+		grid-template-columns: minmax( 0, 1fr );
+		gap: 2px;
+	}
+}
+
+/* Module/integration switches persist immediately through AJAX. */
+.bgcs-switch.is-saving,
+.bgcs-module-toggle.is-saving {
+	opacity: .68;
+	cursor: wait;
+}
+
+.bgcs-switch.is-saving {
+	pointer-events: none;
+}
+
+.bgcs-module-toggle.is-saving .bgcs-module-toggle__control {
+	pointer-events: none;
+}

@@ -1,0 +1,297 @@
+/* BG Commerce Suite — classic checkout selector (plain CSS, no build). */
+
+body.bgcs3-clean-fields-active .bgcs-hidden-field {
+	display: none !important;
+}
+
+/* Card container (stable host in the checkout form). */
+.bgcs-selector {
+	margin: 16px 0;
+	padding: 16px;
+	border: 1px solid #e3e3e3;
+	border-radius: 10px;
+	background: #fff;
+}
+
+/* Delivery-type icon cards (radios). */
+.bgcs-types {
+	display: flex;
+	flex-flow: row wrap;
+	gap: 12px;
+	margin-bottom: 14px;
+}
+
+.bgcs-type {
+	flex: 1 1 120px;
+	min-width: 104px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 6px;
+	padding: 12px 10px;
+	border: 2px solid #e3e3e3;
+	border-radius: 10px;
+	background: #fafafa;
+	cursor: pointer;
+	text-align: center;
+	user-select: none;
+	transition: all 0.2s ease;
+	margin: 0;
+}
+
+.bgcs-type input[type="radio"] {
+	position: absolute;
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+.bgcs-type .bgcs-type__icon {
+	font-size: 26px;
+	line-height: 1;
+}
+
+.bgcs-type .bgcs-type__label {
+	font-weight: 600;
+	font-size: 0.95em;
+}
+
+.bgcs-type:hover {
+	border-color: #008000;
+	background: #f0f8f0;
+}
+
+.bgcs-type.is-active {
+	border-color: #008000;
+	background: #f0f8f0;
+	box-shadow: 0 2px 10px rgba(0, 128, 0, 0.12);
+}
+
+.bgcs-type.is-active .bgcs-type__label {
+	color: #008000;
+}
+
+/* Labelled fields. */
+.bgcs-selector .bgcs-field {
+	display: block;
+	margin: 0 0 12px;
+}
+
+.bgcs-selector .bgcs-field > label {
+	display: block;
+	font-size: 0.9em;
+	font-weight: 600;
+	margin-bottom: 5px;
+}
+
+.bgcs-selector .bgcs-field input,
+.bgcs-selector .bgcs-field select {
+	width: 100%;
+}
+
+/* Map. */
+.bgcs-map {
+	width: 100%;
+	height: 320px;
+	min-height: 320px;
+	margin: 12px 0;
+	border: 1px solid #e3e3e3;
+	border-radius: 8px;
+	overflow: hidden;
+	position: relative;
+	z-index: 0;
+	background: #f3f4f6;
+}
+
+@media (max-width: 480px) {
+	.bgcs-map {
+		height: 280px;
+		min-height: 280px;
+	}
+}
+
+.bgcs-selected {
+	margin: 4px 0 0;
+	padding: 10px 12px;
+	background: #f0f8f0;
+	border-radius: 8px;
+	font-size: 0.95em;
+}
+
+.bgcs-selected strong {
+	color: #008000;
+}
+
+/* select2 inside our card spans full width. */
+.bgcs-selector .select2-container {
+	width: 100% !important;
+}
+
+/* Merchant-configured short description under a shipping method. */
+.bgcs-rate-desc {
+	margin: 2px 0 4px;
+	font-size: 0.86em;
+	color: #6b7280;
+	font-weight: 400;
+}
+
+.bgcs-rate-warnings {
+	margin: 4px 0 6px;
+	font-size: 0.86em;
+	font-weight: 400;
+}
+
+.bgcs-rate-warning {
+	padding: 6px 8px;
+	border: 1px solid currentColor;
+	border-radius: 6px;
+}
+
+.bgcs-rate-warning + .bgcs-rate-warning {
+	margin-top: 4px;
+}
+
+/* Office / locker search (no city — searchable synced pool). */
+.bgcs-office-search-row {
+	position: relative;
+}
+
+.bgcs-office-search {
+	width: 100%;
+}
+
+.bgcs-office-suggestions {
+	list-style: none;
+	margin: 4px 0 0;
+	padding: 0;
+	max-height: 260px;
+	overflow-y: auto;
+	border: 1px solid #d7d7d7;
+	border-radius: 8px;
+	background: #fff;
+	box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+	position: absolute;
+	z-index: 1000;
+	width: 100%;
+}
+
+.bgcs-office-option {
+	padding: 8px 12px;
+	cursor: pointer;
+	font-size: 0.92em;
+	border-bottom: 1px solid #f0f0f0;
+}
+
+.bgcs-office-option:last-child {
+	border-bottom: 0;
+}
+
+.bgcs-office-option:hover,
+.bgcs-office-option.is-active {
+	background: #f3f6ff;
+}
+
+.bgcs-office-empty {
+	margin: 6px 0 0;
+	font-size: 0.86em;
+	color: #6b7280;
+}
+
+/* City search (plain, robust) — dropdown anchors to the row. */
+.bgcs-selector-status {
+	margin: 8px 0 0;
+	padding: 8px 10px;
+	border-radius: 8px;
+	background: #f3f6ff;
+	color: #4b5563;
+	font-size: 0.88em;
+}
+
+.bgcs-selector-status.is-loading::before {
+	content: "";
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	margin-right: 7px;
+	border: 2px solid currentcolor;
+	border-right-color: transparent;
+	border-radius: 50%;
+	vertical-align: -2px;
+	animation: bgcs-selector-spin 0.65s linear infinite;
+}
+
+.bgcs-selector-status.is-error {
+	background: #fff1f2;
+	color: #9f1239;
+}
+
+.bgcs-selector.is-updating {
+	opacity: 0.78;
+	transition: opacity 120ms ease;
+}
+
+.bgcs-selector.is-updating input,
+.bgcs-selector.is-updating .bgcs-type {
+	cursor: progress;
+}
+
+@keyframes bgcs-selector-spin {
+
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.bgcs-city-row {
+	position: relative;
+}
+
+.bgcs-city-search {
+	width: 100%;
+}
+
+.bgcs-street-row {
+	position: relative;
+}
+.bgcs-availability-row > td {
+	padding-top: 0.5rem;
+}
+
+.bgcs-availability-card {
+	margin: 0.5rem 0;
+	padding: 0.875rem 1rem;
+	border: 1px solid #d8dee4;
+	border-inline-start-width: 4px;
+	border-radius: 4px;
+	background: #f6f7f7;
+	color: #2c3338;
+}
+
+.bgcs-availability-card--unavailable {
+	border-inline-start-color: #d63638;
+}
+
+.bgcs-availability-card--temporary_error,
+.bgcs-availability-card--error {
+	border-inline-start-color: #dba617;
+}
+
+.bgcs-availability-card__title {
+	font-weight: 600;
+}
+
+.bgcs-availability-card__message {
+	margin-top: 0.25rem;
+}
+
+/* Courier delivery estimate, printed under a Classic checkout shipping rate by
+   Shipping\Hooks::render_rate_delivery_time(). Blocks receives the same text
+   through the rate's native delivery_time property and styles it itself. */
+.bgcs3-rate-eta {
+	display: block;
+	margin-top: 2px;
+	font-size: .85em;
+	line-height: 1.35;
+	opacity: .75;
+}

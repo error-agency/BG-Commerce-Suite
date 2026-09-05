@@ -1,0 +1,178 @@
+/* `:not([hidden])` so this never competes with Core's collapsed-panel rule.
+   Without it the card became an accordion that opened but would not close:
+   both selectors are (0,2,0) and this sheet loads after Core's. */
+.bgcs-boxnow-weight-pricing .bgcs-card__body:not( [hidden] ) {
+	display: grid;
+	gap: var( --bgcs-s3 );
+}
+
+.bgcs-boxnow-weight-pricing__priority {
+	padding: var( --bgcs-s3 );
+	border: 1px solid var( --bgcs-border );
+	border-radius: 10px;
+	background: var( --bgcs-info-soft );
+	color: var( --bgcs-text );
+}
+
+.bgcs-boxnow-weight-pricing__priority.is-active {
+	border-color: #ead39d;
+	background: var( --bgcs-warning-soft );
+}
+
+.bgcs-boxnow-weight-pricing__priority p,
+.bgcs-boxnow-weight-pricing__help {
+	margin: 0;
+}
+
+.bgcs-boxnow-weight-pricing__help {
+	color: var( --bgcs-muted );
+	font-size: 12px;
+	line-height: 1.5;
+}
+
+.bgcs-boxnow-weight-pricing__table-wrap {
+	overflow-x: auto;
+}
+
+.bgcs-boxnow-weight-pricing__table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.bgcs-boxnow-weight-pricing__table th {
+	padding: 0 var( --bgcs-s2 ) var( --bgcs-s2 );
+	color: var( --bgcs-muted );
+	font-size: 12px;
+	font-weight: 600;
+	text-align: left;
+}
+
+.bgcs-boxnow-weight-pricing__table td {
+	padding: var( --bgcs-s2 );
+	border-top: 1px solid var( --bgcs-border );
+	vertical-align: middle;
+}
+
+.bgcs-boxnow-weight-pricing__table input[type="number"] {
+	width: 100%;
+	min-width: 100px;
+}
+
+.bgcs-boxnow-weight-pricing__price {
+	display: grid;
+	grid-template-columns: minmax( 100px, 1fr ) auto;
+	align-items: center;
+	gap: var( --bgcs-s2 );
+}
+
+.bgcs-boxnow-weight-pricing__actions {
+	width: 1%;
+	white-space: nowrap;
+}
+
+.bgcs-boxnow-weight-pricing__actions .bgcs-btn {
+	display: inline-flex;
+	align-items: center;
+	gap: var( --bgcs-s1 );
+}
+
+@media ( max-width: 600px ) {
+	.bgcs-boxnow-weight-pricing__table thead {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		padding: 0;
+		margin: -1px;
+		overflow: hidden;
+		clip: rect( 0, 0, 0, 0 );
+		white-space: nowrap;
+		border: 0;
+	}
+
+	.bgcs-boxnow-weight-pricing__table,
+	.bgcs-boxnow-weight-pricing__table tbody,
+	.bgcs-boxnow-weight-pricing__table tr,
+	.bgcs-boxnow-weight-pricing__table td {
+		display: block;
+		width: 100%;
+		box-sizing: border-box;
+	}
+
+	.bgcs-boxnow-weight-pricing__table tr {
+		display: grid;
+		grid-template-columns: repeat( 2, minmax( 0, 1fr ) );
+		gap: var( --bgcs-s2 );
+		padding: var( --bgcs-s3 ) 0;
+		border-top: 1px solid var( --bgcs-border );
+	}
+
+	.bgcs-boxnow-weight-pricing__table td {
+		padding: 0;
+		border: 0;
+	}
+
+	.bgcs-boxnow-weight-pricing__table td::before {
+		display: block;
+		margin-bottom: var( --bgcs-s1 );
+		color: var( --bgcs-muted );
+		font-size: 11px;
+		font-weight: 600;
+		content: attr( data-label );
+	}
+
+	.bgcs-boxnow-weight-pricing__actions {
+		grid-column: 1 / -1;
+	}
+
+	.bgcs-boxnow-weight-pricing__actions::before {
+		display: none;
+	}
+}
+
+/* ---- Складове и контакти за вземане ---------------------------------- */
+/* `:not([hidden])` for the same reason as the weight card above: the panel's
+   collapsed state must never be overridden by a layout rule of ours. */
+.bgcs-boxnow-warehouses .bgcs-card__body:not( [hidden] ) {
+	display: grid;
+	gap: var( --bgcs-s3 );
+}
+
+.bgcs-boxnow-warehouses__help {
+	margin: 0;
+	color: var( --bgcs-muted );
+	font-size: 13px;
+}
+
+.bgcs-boxnow-warehouses__table-wrap {
+	overflow-x: auto;
+}
+
+.bgcs-boxnow-warehouses__table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.bgcs-boxnow-warehouses__table th {
+	padding: 0 var( --bgcs-s2 ) var( --bgcs-s2 );
+	text-align: left;
+	font-size: 12px;
+	font-weight: 500;
+	color: var( --bgcs-muted );
+	white-space: nowrap;
+}
+
+.bgcs-boxnow-warehouses__table td {
+	padding: var( --bgcs-s1 ) var( --bgcs-s2 );
+	vertical-align: middle;
+}
+
+.bgcs-boxnow-warehouses__table input,
+.bgcs-boxnow-warehouses__table select {
+	width: 100%;
+	min-width: 140px;
+}
+
+.bgcs-boxnow-warehouses__actions {
+	width: 1%;
+	white-space: nowrap;
+}
