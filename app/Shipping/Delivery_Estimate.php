@@ -14,6 +14,29 @@ final class Delivery_Estimate {
 	const KIND_DEADLINE = 'deadline';
 	const KIND_ESTIMATE = 'estimate';
 
+	/** Режимът засяга само показването, не събирането на данни от куриера. */
+	public static function display_mode() {
+		$value = function_exists( 'bgcs3_get_option' ) ? bgcs3_get_option( 'checkout', 'delivery_estimate_display', 'both' ) : 'both';
+		return in_array( $value, array( 'checkout', 'email', 'both', 'none' ), true ) ? $value : 'none';
+	}
+
+	/** Валидна бъдеща дата; дата без час важи до края на деня в магазина. */
+	public static function visible( $estimate, $surface, $now = null ) {
+		$mode = self::display_mode();
+		if ( ! in_array( $surface, array( 'checkout', 'email' ), true ) || ( 'both' !== $mode && $surface !== $mode ) ) {
+			return false;
+		}
+		$estimate = self::sanitize( $estimate );
+		if ( empty( $estimate ) ) {
+			return false;
+		}
+		$date = new \DateTimeImmutable( $estimate['value'], self::timezone() );
+		if ( 'date' === $estimate['precision'] ) {
+			$date = $date->setTime( 23, 59, 59 );
+		}
+		return $date->getTimestamp() >= ( null === $now ? time() : (int) $now );
+	}
+
 	/**
 	 * Convert a provider date/deadline to the small persisted BGCS contract.
 	 *
@@ -63,6 +86,10 @@ final class Delivery_Estimate {
 				$date = ( new \DateTimeImmutable( '@' . (string) (int) $timestamp ) )->setTimezone( self::timezone() );
 			} else {
 				$date = new \DateTimeImmutable( $value, self::timezone() );
+				$errors = \DateTimeImmutable::getLastErrors();
+				if ( $errors && ( $errors['warning_count'] || $errors['error_count'] ) ) {
+					return array();
+				}
 			}
 		} catch ( \Exception $exception ) {
 			return array();

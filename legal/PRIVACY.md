@@ -1,6 +1,6 @@
 # BG Commerce Suite privacy notice
 
-Last updated: 5 September 2026
+Last updated: 6 September 2026
 
 This document describes the data connections made by BG Commerce Suite and is
 intended to help a WordPress site owner prepare an accurate site privacy policy.
@@ -11,8 +11,9 @@ BG Commerce Suite contains no general analytics or telemetry system.
 
 ## Error Web Agency product catalog
 
-The optional product catalog is disabled by default. If a site administrator
-opts in, the WordPress server requests public product metadata from
+The optional product catalog is enabled by default when no preference has been
+saved. Previously saved opt-outs are preserved, and an administrator can disable
+it at any time. While enabled, the WordPress server requests public product metadata from
 `https://error.bg/wp-json/error-catalog/v1/feed` hourly and during an authorized
 manual refresh.
 

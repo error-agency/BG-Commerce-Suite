@@ -177,16 +177,17 @@ class Field_Manager {
 
 		// phpcs:ignore WordPress.Security.NonceVerification.Missing -- WooCommerce owns checkout nonces upstream.
 		if ( isset( $_POST['shipping_method'] ) ) {
-			// phpcs:ignore WordPress.Security.NonceVerification.Missing -- WooCommerce owns checkout nonces upstream.
-			$posted = array_map( 'sanitize_text_field', (array) wp_unslash( $_POST['shipping_method'] ) );
+			// phpcs:ignore WordPress.Security.NonceVerification.Missing, WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- WooCommerce проверява nonce; типовете и стойностите се проверяват и почистват по-долу.
+			$posted = wp_unslash( $_POST['shipping_method'] );
 			$methods = is_array( $posted ) ? $posted : array( $posted );
 		}
 
 		// phpcs:ignore WordPress.Security.NonceVerification.Missing -- update_order_review payload.
 		if ( empty( $methods ) && isset( $_POST['post_data'] ) && is_string( $_POST['post_data'] ) ) {
 			$parsed = array();
-			// phpcs:ignore WordPress.Security.NonceVerification.Missing -- WooCommerce owns checkout nonces upstream.
-			parse_str( sanitize_text_field( wp_unslash( $_POST['post_data'] ) ), $parsed );
+			// Първо декодираме формата: sanitize_text_field премахва %5B, %5D и %3A.
+			// phpcs:ignore WordPress.Security.NonceVerification.Missing, WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- WooCommerce проверява nonce; извлечените методи се почистват по-долу.
+			parse_str( wp_unslash( $_POST['post_data'] ), $parsed );
 			if ( isset( $parsed['shipping_method'] ) ) {
 				$posted = $parsed['shipping_method'];
 				$methods = is_array( $posted ) ? $posted : array( $posted );
@@ -197,7 +198,21 @@ class Field_Manager {
 			$methods = (array) WC()->session->get( 'chosen_shipping_methods', array() );
 		}
 
-		return array_values( array_filter( array_map( 'sanitize_text_field', $methods ) ) );
+		// Невалиден пакет не бива да отпада незабелязано и да оставя само BGCS
+		// методи: това би скрило адресните полета, нужни на външния куриер.
+		$clean = array();
+		foreach ( $methods as $method ) {
+			if ( ! is_string( $method ) ) {
+				return array();
+			}
+			$method = sanitize_text_field( $method );
+			if ( '' === $method ) {
+				return array();
+			}
+			$clean[] = $method;
+		}
+
+		return $clean;
 	}
 
 	/**

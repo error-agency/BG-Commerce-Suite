@@ -505,7 +505,7 @@ abstract class Method extends \WC_Shipping_Method {
 		// state is mirrored: Store API strips `_`-prefixed meta, and a renderer
 		// on that side has no other way back to the name this method set.
 		$rate['meta_data']['method_title']   = isset( $meta['_bgcs3_method_title'] ) ? sanitize_text_field( (string) $meta['_bgcs3_method_title'] ) : '';
-		$estimate_text = isset( $meta['_bgcs3_delivery_estimate'] ) ? Delivery_Estimate::format( $meta['_bgcs3_delivery_estimate'] ) : '';
+		$estimate_text = isset( $meta['_bgcs3_delivery_estimate'] ) && Delivery_Estimate::visible( $meta['_bgcs3_delivery_estimate'], 'checkout' ) ? Delivery_Estimate::format( $meta['_bgcs3_delivery_estimate'] ) : '';
 		if ( '' !== $estimate_text ) {
 			$rate['meta_data']['delivery_estimate'] = sanitize_text_field( $estimate_text );
 		}

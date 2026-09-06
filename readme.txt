@@ -3,7 +3,7 @@ Tags: woocommerce, shipping, bulgaria, delivery, couriers
 Requires at least: 6.3
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 4.4.0
+Stable tag: 4.6.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -29,9 +29,9 @@ The complete BG Commerce Suite functionality included in this package is free so
 
 = Optional product catalog =
 
-The Error Web Agency product catalog is disabled by default. A site administrator can explicitly opt in under WooCommerce > BG Commerce Suite > General settings.
+The Error Web Agency product catalog is enabled by default when no preference has been saved. A site administrator can disable it under WooCommerce > BG Commerce Suite > General settings. Previously saved opt-outs are preserved.
 
-After opt-in, the plugin requests validated presentation metadata from error.bg hourly and when an administrator selects Refresh catalog. It does not send the store URL, plugin inventory, customer or order data, credentials, email addresses or cookies. Normal Internet operation exposes the connecting server IP address. Disabling the catalog stops its schedule and removes its cached offers.
+While enabled, the plugin requests validated presentation metadata from error.bg hourly and when an administrator selects Refresh catalog. It does not send the store URL, plugin inventory, customer or order data, credentials, email addresses or cookies. Normal Internet operation exposes the connecting server IP address. Disabling the catalog stops its schedule and removes its cached offers.
 
 Remote catalog metadata cannot install, activate, update or execute plugin code. It can only provide names, descriptions, versions, availability, prices, links and promotion dates for administrator-facing product cards.
 
@@ -64,7 +64,7 @@ No. The plugin contains no general analytics or telemetry system.
 
 = Is the optional Error Web Agency catalog required? =
 
-No. It is disabled by default and the courier integrations operate without it. Only a site administrator can opt in.
+No. It is enabled by default, but an administrator can disable it and the courier integrations operate without it.
 
 = Can catalog metadata install another plugin? =
 
@@ -150,6 +150,21 @@ Bundled open-source component licenses are in `legal/THIRD-PARTY-NOTICES.md`.
 
 == Changelog ==
 
+= 4.6.0 =
+* Enables the product catalog by default when no preference is saved, while preserving existing opt-outs and the administrator's disable control.
+* Removes repository-dependent privacy and terms links from catalog settings and dashboard notices. Bundled disclosures remain available.
+* This distribution requires a renewed catalog-consent review before WordPress.org submission.
+
+= 4.5.0 =
+* Adds BGCS > General > Delivery date: checkout only, email only, both (default), or nowhere. Applies to Classic/Blocks/Flow checkout and order/shipment emails; stored courier data is preserved.
+* Hides missing, malformed or expired delivery dates and dates on unconfirmed shipping rates. Date-only values remain valid through the shop's local day.
+* Invalidates cached shipping rates when the display setting changes.
+
+= 4.4.1 =
+
+* Fixed reading shipping methods from serialized checkout forms before sanitizing their decoded values.
+* Rejected malformed nested shipping-method values without changing courier-switch destination clearing.
+
 = 4.4.0 =
 
 * Made the optional Error Web Agency product catalog an explicit administrator opt-in that is disabled by default.
@@ -167,6 +182,10 @@ Bundled open-source component licenses are in `legal/THIRD-PARTY-NOTICES.md`.
 The complete release history is available at https://github.com/error-agency/BG-Commerce-Suite/blob/main/CHANGELOG.md
 
 == Upgrade Notice ==
+
+= 4.4.1 =
+
+Fixes shipping-method detection during checkout updates, including standard WooCommerce methods and multiple shipping packages.
 
 = 4.4.0 =
 

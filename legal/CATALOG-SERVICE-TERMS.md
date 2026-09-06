@@ -1,6 +1,6 @@
 # Error Web Agency catalog service terms
 
-Last updated: 5 September 2026
+Last updated: 6 September 2026
 
 ## Service
 
@@ -16,8 +16,9 @@ on a WordPress site.
 
 ## Activation and requests
 
-The catalog is disabled by default. A site administrator must explicitly enable
-it in BG Commerce Suite. While enabled, the site may request the feed hourly and
+The catalog is enabled by default when no preference has been saved. A site
+administrator can disable it; previously saved opt-outs are preserved.
+While enabled, the site may request the feed hourly and
 when an authorized administrator selects **Refresh catalog**.
 
 The request contains a generic `BG-Commerce-Suite-Catalog/1` User-Agent and may

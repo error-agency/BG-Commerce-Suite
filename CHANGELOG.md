@@ -9,6 +9,27 @@ Every version that still has a build artifact is tagged `v<version>` and publish
 [GitHub release](https://github.com/error-agency/BG-Commerce-Suite/releases) with the original ZIP attached. A few versions were superseded
 before a ZIP was archived — they are listed as *no build artifact* and carry no tag.
 
+## 4.6.0 — 2026-09-06
+
+* Enabled the optional product catalog by default when no preference is saved, preserving explicit opt-outs and all disable/schedule/cache guards.
+* Removed repository-dependent privacy/terms links from catalog settings and dashboard notices; retained and updated packaged disclosures.
+* WordPress.org submission is blocked pending a renewed external-request consent review; this is a distribution candidate, not a directory-ready build.
+* MINOR release: changed catalog default behavior without removing existing administrator controls or changing the module API.
+
+## 4.5.0 — 2026-09-05
+
+* Added General > Delivery date with checkout-only, email-only, both (default) and nowhere display modes; courier snapshots remain stored regardless of the setting.
+* Applied the policy to Classic/Blocks/Flow checkout and standard order/shipment emails, hiding malformed, expired or unconfirmed dates. Date-only estimates expire at the end of the shop's local day.
+* Invalidated shipping caches on display-mode changes.
+* MINOR release: backward-compatible merchant configuration; no courier or module API changes.
+
+## 4.4.1 — 2026-09-05
+
+* Fixed shipping-method detection in serialized checkout forms by decoding the form before sanitizing individual method values. The current request no longer falls back to an older session choice because percent-encoded brackets were stripped.
+* Rejected malformed nested shipping-method values instead of silently dropping a package and misidentifying checkout field ownership.
+* Preserved the existing destination-clearing behavior when switching couriers.
+* PATCH release: backward-compatible checkout bug fix; no module API or Flow contract changes.
+
 ## 4.4.0 — 2026-09-05
 
 * Made the optional Error Web Agency product catalog an explicit administrator opt-in that is disabled by default; no catalog request can run without consent, and opting out removes its schedule and cached offers.

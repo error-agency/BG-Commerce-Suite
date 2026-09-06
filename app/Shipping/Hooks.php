@@ -260,9 +260,12 @@ class Hooks {
 	 * @return string
 	 */
 	public static function rate_delivery_time( $delivery_time, $rate ) {
+		if ( ! self::rate_is_bgcs( $rate ) ) {
+			return $delivery_time;
+		}
 		$estimate = self::rate_estimate( $rate );
 
-		return empty( $estimate ) ? $delivery_time : Delivery_Estimate::describe( $estimate );
+		return empty( $estimate ) ? '' : Delivery_Estimate::describe( $estimate );
 	}
 
 	/**
@@ -303,10 +306,15 @@ class Hooks {
 		}
 
 		$meta = (array) $rate->get_meta_data();
-
-		return isset( $meta['_bgcs3_delivery_estimate'] )
+		$estimate = isset( $meta['_bgcs3_delivery_estimate'] )
 			? Delivery_Estimate::sanitize( $meta['_bgcs3_delivery_estimate'] )
 			: array();
+		if ( empty( $meta['_bgcs3_validated'] ) || ! in_array( $meta['_bgcs3_price_state'] ?? '', array( 'calculated', 'free' ), true )
+			|| empty( $estimate['courier'] ) || $estimate['courier'] !== ( $meta['_bgcs3_courier'] ?? '' )
+			|| ! Delivery_Estimate::visible( $estimate, 'checkout' ) || ( function_exists( 'is_cart' ) && is_cart() ) ) {
+			return array();
+		}
+		return $estimate;
 	}
 
 	/**

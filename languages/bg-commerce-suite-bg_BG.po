@@ -95,13 +95,13 @@ msgstr "Справочниците на %s са обновени частичн�
 msgid "%s directories were updated."
 msgstr "Справочниците на %s са обновени."
 
-#: ./app/Admin/Settings/Settings_Page.php:1117
+#: ./app/Admin/Settings/Settings_Page.php:1130
 #, python-format
 msgid "%s is added to a WooCommerce zone. Each instance can have its own configuration."
 msgstr "%s се добавя към WooCommerce зона. Всяка инстанция може да има собствена конфигурация."
 
 #. translators: %s: courier name.
-#: ./app/Admin/Settings/Settings_Page.php:761
+#: ./app/Admin/Settings/Settings_Page.php:774
 #, python-format
 msgid "%s settings"
 msgstr "Настройки на %s"
@@ -280,11 +280,11 @@ msgstr "API таен ключ (X-API-Secret)"
 msgid "API username from your contracted Speedy profile."
 msgstr "API потребител от договорния ви Speedy профил."
 
-#: ./app/Admin/Settings/Settings_Page.php:881
+#: ./app/Admin/Settings/Settings_Page.php:894
 msgid "API/custom prices and free-shipping thresholds."
 msgstr "API/собствени цени и прагове за безплатна доставка."
 
-#: ./app/Admin/Settings/Settings_Page.php:905
+#: ./app/Admin/Settings/Settings_Page.php:918
 msgid "API/custom prices and thresholds."
 msgstr "API/собствени цени и прагове."
 
@@ -292,7 +292,7 @@ msgstr "API/собствени цени и прагове."
 msgid "Accepted"
 msgstr "Приета"
 
-#: ./app/Admin/Settings/Settings_Page.php:762
+#: ./app/Admin/Settings/Settings_Page.php:775
 msgid "Account"
 msgstr "Акаунт"
 
@@ -301,7 +301,7 @@ msgid "Account agreement returned by Econt. Agreements marked “Postal money tr
 msgstr "Споразумение, върнато от профила в Еконт. Споразуменията, отбелязани като „Пощенски паричен превод (ППП)“, изплащат сумата от наложения платеж като пощенски паричен превод."
 
 #. translators: %s: courier name.
-#: ./app/Admin/Settings/Settings_Page.php:773
+#: ./app/Admin/Settings/Settings_Page.php:786
 msgid "Account and API"
 msgstr "Акаунт и API"
 
@@ -313,20 +313,20 @@ msgstr "Счетоводство"
 msgid "Action"
 msgstr "Действие"
 
-#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2618 ./app/Modules/Shipping/BoxNow/BoxNow.php:2721
+#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2618 ./app/Modules/Shipping/BoxNow/BoxNow.php:2726
 msgid "Actions"
 msgstr "Действия"
 
 #: ./app/Admin/Addons.php:188 ./app/Admin/Addons.php:217 ./app/Admin/Addons.php:392 ./app/Admin/Addons.php:393
-#: ./app/Admin/Settings/Settings_Page.php:1148 ./app/Admin/Settings/Settings_Page.php:1623
+#: ./app/Admin/Settings/Settings_Page.php:1161 ./app/Admin/Settings/Settings_Page.php:1636
 msgid "Active"
 msgstr "Активен"
 
-#: ./bg-commerce-suite.php:161
+#: ./bg-commerce-suite.php:159
 msgid "Active legacy BGCS plugins were detected. To avoid running two versions at the same time, deactivate the old BG Commerce Suite and its courier add-ons. Their files and settings will not be deleted."
 msgstr "Открити са активни стари BGCS плъгини. За да не работят две версии едновременно, деактивирайте стария BG Commerce Suite и неговите courier add-on-и. Файловете и настройките им няма да бъдат изтрити."
 
-#: ./app/Admin/Settings/Settings_Page.php:623
+#: ./app/Admin/Settings/Settings_Page.php:624
 msgid "Active modules"
 msgstr "Активни модули"
 
@@ -339,12 +339,12 @@ msgid "Active shipment"
 msgstr "Активна пратка"
 
 #. translators: %s: courier name.
-#: ./app/Admin/Settings/Settings_Page.php:1154
+#: ./app/Admin/Settings/Settings_Page.php:1167
 #, python-format
 msgid "Add %s to zone"
 msgstr "Добави %s към зона"
 
-#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2713
+#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2718
 msgid "Add a row only for a warehouse with a different contact. An empty field inherits the value from the “Sender” section, and an empty table means all warehouses use those values."
 msgstr "Попълнете ред само за склад с различен контакт. Празно поле взима стойността от секция „Подател“, а празна таблица значи, че всички складове ползват нея."
 
@@ -372,11 +372,11 @@ msgstr "Добавете ценови правила по тип доставк�
 msgid "Add range"
 msgstr "Добави диапазон"
 
-#: ./app/Admin/Settings/Settings_Page.php:1678
+#: ./app/Admin/Settings/Settings_Page.php:1691
 msgid "Add rule"
 msgstr "Добави правило"
 
-#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2729
+#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2734
 msgid "Add warehouse"
 msgstr "Добави склад"
 
@@ -388,7 +388,7 @@ msgstr "Добавя се към цената на доставката за к�
 msgid "Additional"
 msgstr "Допълнително"
 
-#: ./app/Checkout/Checkout.php:388 ./app/Checkout/Checkout.php:1363
+#: ./app/Checkout/Checkout.php:388 ./app/Checkout/Checkout.php:1364
 msgid "Additional (optional)"
 msgstr "Допълнително (по избор)"
 
@@ -408,12 +408,12 @@ msgstr "Допълнение / бележка"
 msgid "Additional services"
 msgstr "Допълнителни услуги"
 
-#: ./app/Admin/Settings/Settings_Page.php:870 ./app/Admin/Settings/Settings_Page.php:883 ./app/Admin/Settings/Settings_Page.php:894 ./app/Admin/Settings/Settings_Page.php:906
+#: ./app/Admin/Settings/Settings_Page.php:883 ./app/Admin/Settings/Settings_Page.php:896 ./app/Admin/Settings/Settings_Page.php:907 ./app/Admin/Settings/Settings_Page.php:919
 msgid "Additional services and shipment"
 msgstr "Допълнителни услуги и пратка"
 
 #: ./app/Admin/Order/MetaBox.php:192 ./app/Admin/Order/MetaBox.php:266 ./app/Admin/Order/MetaBox.php:378 ./app/Admin/Order/MetaBox.php:1255
-#: ./app/Admin/Settings/Settings_Page.php:1137 ./app/Checkout/Checkout.php:756 ./app/Modules/Shipping/Pigeon/Pigeon.php:205 ./app/Modules/Shipping/Pigeon/Pigeon.php:1003
+#: ./app/Admin/Settings/Settings_Page.php:1150 ./app/Checkout/Checkout.php:756 ./app/Modules/Shipping/Pigeon/Pigeon.php:205 ./app/Modules/Shipping/Pigeon/Pigeon.php:1003
 #: ./app/Shipping/Method.php:89
 msgid "Address"
 msgstr "Адрес"
@@ -430,7 +430,7 @@ msgstr "Адрес, върнат от избрания клиентски про
 msgid "Administrative fee"
 msgstr "Административна такса"
 
-#: ./app/Admin/Settings/Settings_Page.php:1232
+#: ./app/Admin/Settings/Settings_Page.php:1245
 msgid "Advanced settings"
 msgstr "Разширени настройки"
 
@@ -450,7 +450,7 @@ msgstr "След тест"
 msgid "All"
 msgstr "Всички"
 
-#: ./app/Admin/Settings/Settings_Page.php:694
+#: ./app/Admin/Settings/Settings_Page.php:707
 msgid "Allow BGCS to change the WooCommerce status based on the normalized courier status. Specific actions and tracking check frequency are configured separately for each courier."
 msgstr "Позволи на BGCS да променя WooCommerce статуса според нормализирания courier статус. Конкретните действия и честотата на tracking проверките се задават отделно за всеки куриер."
 
@@ -486,7 +486,7 @@ msgstr "Сума без ДДС"
 msgid "Amount mismatch"
 msgstr "Несъответствие в сумата"
 
-#: ./app/Admin/Order/MetaBox.php:1684
+#: ./app/Admin/Order/MetaBox.php:1686
 msgid "Another shipment operation is already in progress for this order. Wait a few seconds and refresh the page."
 msgstr "Вече се изпълнява друга операция с пратката за тази поръчка. Изчакайте няколко секунди и обновете страницата."
 
@@ -528,7 +528,7 @@ msgstr "Автоматично (подател)"
 msgid "Automatic COD payout synchronization"
 msgstr "Автоматично синхронизиране на изплатения наложен платеж"
 
-#: ./app/Admin/Settings/Settings_Page.php:1023
+#: ./app/Admin/Settings/Settings_Page.php:1036
 msgid "Automatic WooCommerce status updates are disabled globally."
 msgstr "Автоматичното обновяване на WooCommerce статуси е изключено глобално."
 
@@ -536,7 +536,7 @@ msgstr "Автоматичното обновяване на WooCommerce ста�
 msgid "Automatic courier API"
 msgstr "Автоматично чрез API на куриера"
 
-#: ./app/Admin/Settings/Settings_Page.php:703
+#: ./app/Admin/Settings/Settings_Page.php:716
 msgid "Automatic data synchronization"
 msgstr "Автоматична синхронизация на данни"
 
@@ -546,7 +546,7 @@ msgstr "Автоматична синхронизация на данни"
 msgid "Automatic status change after shipment label %s."
 msgstr "Автоматична смяна на статуса след товарителница %s."
 
-#: ./app/Admin/Settings/Settings_Page.php:693
+#: ./app/Admin/Settings/Settings_Page.php:706
 msgid "Automatic status updates"
 msgstr "Автоматично обновяване на статуси"
 
@@ -554,7 +554,7 @@ msgstr "Автоматично обновяване на статуси"
 msgid "Automatic tracking synchronization"
 msgstr "Автоматична синхронизация на проследяването"
 
-#: ./app/Admin/Settings/Settings_Page.php:1102
+#: ./app/Admin/Settings/Settings_Page.php:1115
 msgid "Automatic updates"
 msgstr "Автоматично обновяване"
 
@@ -578,7 +578,7 @@ msgstr "Обновявай статусите на пратките автома
 msgid "Automatically update the shipment status from the courier."
 msgstr "Автоматично обновяване на статуса на пратката от куриера."
 
-#: ./app/Admin/Settings/Settings_Page.php:689
+#: ./app/Admin/Settings/Settings_Page.php:702
 msgid "Automation"
 msgstr "Автоматизация"
 
@@ -594,7 +594,7 @@ msgstr "Налично само при доставка до адрес. BGCS б
 msgid "Available only for offices where Speedy explicitly allows parcel drop-off."
 msgstr "Налични са само офиси, за които Спиди изрично разрешава предаване на пратки."
 
-#: ./app/Checkout/Checkout.php:1365 ./app/Shipping/Hooks.php:99 ./app/Shipping/Hooks.php:136
+#: ./app/Checkout/Checkout.php:1366 ./app/Shipping/Hooks.php:99 ./app/Shipping/Hooks.php:136
 msgid "Awaiting calculation"
 msgstr "Очаква изчисляване"
 
@@ -602,7 +602,7 @@ msgstr "Очаква изчисляване"
 msgid "Awaiting payout"
 msgstr "Чака изплащане"
 
-#: ./app/Admin/Settings/Settings_Page.php:235 ./app/Admin/Settings/Settings_Page.php:236 ./app/Privacy/Policy.php:30
+#: ./app/Admin/Settings/Settings_Page.php:236 ./app/Admin/Settings/Settings_Page.php:237 ./app/Privacy/Policy.php:30
 msgid "BG Commerce Suite"
 msgstr "BG Commerce Suite"
 
@@ -615,7 +615,7 @@ msgstr "BG Commerce Suite откри конфликт за module ID „%1$s“.
 msgid "BG Commerce Suite — Shipping"
 msgstr "BG Commerce Suite — Доставка"
 
-#: ./app/Checkout/Checkout.php:1356
+#: ./app/Checkout/Checkout.php:1357
 msgid "BG Commerce Suite — delivery selection"
 msgstr "BG Commerce Suite — избор на доставка"
 
@@ -623,7 +623,7 @@ msgstr "BG Commerce Suite — избор на доставка"
 msgid "BGCS Core"
 msgstr "BGCS Core"
 
-#: ./app/Admin/Settings/Settings_Page.php:565
+#: ./app/Admin/Settings/Settings_Page.php:566
 msgid "BGCS Performance Diagnostics"
 msgstr "BGCS диагностика на производителността"
 
@@ -647,7 +647,7 @@ msgstr "BGCS не редактира автоматично съществува
 msgid "BGCS reads the courier payout report in the background and marks COD as paid only when the shipment number, amount, currency and payout date match the shipment snapshot. It never creates a WooCommerce refund and never changes the payment status automatically."
 msgstr "BGCS чете отчета за изплащанията от куриера във фонов режим и маркира наложения платеж като изплатен само когато номерът на пратката, сумата, валутата и датата на изплащане съвпадат със снимката на пратката. Никога не създава WooCommerce възстановяване и не променя автоматично статуса на плащането."
 
-#: ./app/Admin/Settings/Settings_Page.php:989
+#: ./app/Admin/Settings/Settings_Page.php:1002
 msgid "BGCS state"
 msgstr "BGCS статус"
 
@@ -655,7 +655,7 @@ msgstr "BGCS статус"
 msgid "BGCS status"
 msgstr "BGCS статус"
 
-#: ./app/Admin/Settings/Settings_Page.php:1079
+#: ./app/Admin/Settings/Settings_Page.php:1092
 msgid "BGCS uses a WooCommerce transactional email instead of its own mail transport."
 msgstr "BGCS използва WooCommerce transactional email вместо собствен mail transport."
 
@@ -672,7 +672,7 @@ msgstr "BGCS: %1$s отчете „%2$s“, но тази поръчка е „%
 msgid "BGCS: Resend shipment label email"
 msgstr "BGCS: Изпрати отново имейла за товарителница"
 
-#: ./app/Admin/Order/MetaBox.php:1661
+#: ./app/Admin/Order/MetaBox.php:1663
 msgid "BGCS: order-specific shipment settings were saved. The existing courier shipment was not changed. To apply the new values, cancel the current shipment manually and then create a new shipment label."
 msgstr "BGCS: настройките на пратката за тази поръчка бяха запазени. Съществуващата куриерска пратка не е променяна. За да приложите новите стойности, анулирайте ръчно текущата пратка и след това създайте нова товарителница."
 
@@ -680,7 +680,7 @@ msgstr "BGCS: настройките на пратката за тази пор�
 msgid "BGCS: the shipment label email was not sent. Check the email address and WooCommerce email settings."
 msgstr "BGCS: имейлът за създадена товарителница не беше изпратен. Проверете email адреса и WooCommerce email настройките."
 
-#: ./app/Admin/Order/MetaBox.php:1740 ./app/Email/Emails.php:138
+#: ./app/Admin/Order/MetaBox.php:1742 ./app/Email/Emails.php:138
 msgid "BGCS: the shipment label email was resent manually."
 msgstr "BGCS: имейлът за създадена товарителница е изпратен отново ръчно."
 
@@ -695,7 +695,7 @@ msgstr "BGCS: пратката с %1$s е „%2$s“; поръчката е пр
 msgid "BOX NOW /origins returned an error: %s"
 msgstr "BOX NOW /origins върна грешка: %s"
 
-#: ./app/Admin/Settings/Settings_Page.php:944
+#: ./app/Admin/Settings/Settings_Page.php:957
 msgid "BOX NOW Webhook"
 msgstr "BOX NOW Webhook"
 
@@ -810,15 +810,15 @@ msgstr "BOX NOW върна непълни данни за склада за вр
 msgid "BOX NOW uses only these ranges for paid shipping. Free shipping, when configured, takes priority."
 msgstr "BOX NOW използва само тези диапазони за платена доставка. Безплатната доставка, ако е зададена, има приоритет."
 
-#: ./app/Admin/Settings/Settings_Page.php:689
+#: ./app/Admin/Settings/Settings_Page.php:702
 msgid "Background tasks via Action Scheduler."
 msgstr "Фонови задачи през Action Scheduler."
 
-#: ./app/Admin/Settings/Settings_Page.php:836
+#: ./app/Admin/Settings/Settings_Page.php:849
 msgid "Background updates, webhook (when offered by the courier), and an action immediately after a shipment is created."
 msgstr "Фоново обновяване, webhook (когато куриерът го предлага) и действие непосредствено след създадена пратка."
 
-#: ./app/Admin/Settings/Settings_Page.php:711
+#: ./app/Admin/Settings/Settings_Page.php:724
 msgid "Behavior of additional document sections in the order."
 msgstr "Поведение на допълнителните документни секции в поръчката."
 
@@ -866,7 +866,7 @@ msgstr "НП"
 msgid "COD / PPP payout agreement"
 msgstr "Споразумение за изплащане на НП / ППП"
 
-#: ./app/Admin/Settings/Settings_Page.php:882 ./app/Modules/Shipping/Econt/Econt.php:2625
+#: ./app/Admin/Settings/Settings_Page.php:895 ./app/Modules/Shipping/Econt/Econt.php:2625
 msgid "COD agreement, payout and sender payment method."
 msgstr "Споразумение за наложен платеж, изплащане и метод за плащане от подателя."
 
@@ -874,7 +874,7 @@ msgstr "Споразумение за наложен платеж, изплащ�
 msgid "COD amount"
 msgstr "Сума НП"
 
-#: ./app/Admin/Settings/Settings_Page.php:869
+#: ./app/Admin/Settings/Settings_Page.php:882
 msgid "COD and postal money transfer fee (PMT) settings."
 msgstr "Настройки за НП и таксата за паричен превод (ППП/PMT)."
 
@@ -983,7 +983,7 @@ msgstr "Карго"
 msgid "Cash"
 msgstr "В брой"
 
-#: ./app/Admin/Order/MetaBox.php:863 ./app/Admin/Settings/Settings_Page.php:869 ./app/Admin/Settings/Settings_Page.php:882 ./app/Modules/Shipping/Econt/Econt.php:716
+#: ./app/Admin/Order/MetaBox.php:863 ./app/Admin/Settings/Settings_Page.php:882 ./app/Admin/Settings/Settings_Page.php:895 ./app/Modules/Shipping/Econt/Econt.php:716
 #: ./app/Modules/Shipping/Speedy/Speedy.php:573 ./app/Modules/Shipping/Speedy/Speedy.php:825 ./app/Modules/Shipping/Speedy/Speedy.php:1470 ./app/Modules/Shipping/Speedy/Speedy.php:2572
 msgid "Cash on delivery"
 msgstr "Наложен платеж"
@@ -1025,10 +1025,6 @@ msgstr "Адрес на каталога"
 msgid "Catalog revision"
 msgstr "Ревизия на каталога"
 
-#: ./app/Admin/Settings/Settings_Page.php:685
-msgid "Catalog service terms"
-msgstr "Условия на каталожната услуга"
-
 #: ./app/Admin/Addons.php:65
 msgid "Centralized tracking and reconciliation of courier COD payouts."
 msgstr "Централизирано следене и изравняване на изплатените наложени платежи от куриерите."
@@ -1041,23 +1037,31 @@ msgstr "Променя само начина на предаване за таз
 msgid "Charge the PMT and handling fees even when shipping is free"
 msgstr "Начислявай таксите за ППП и обработка дори когато доставката е безплатна"
 
-#: ./app/Admin/Settings/Settings_Page.php:447
+#: ./app/Admin/Settings/Settings_Page.php:448
 msgid "Check connection"
 msgstr "Провери връзката"
 
-#: ./app/Admin/Settings/Settings_Page.php:570
+#: ./app/Admin/Settings/Settings_Page.php:571
 msgid "Check why render reached the provider"
 msgstr "Проверете защо render е стигнал до provider"
 
-#: ./app/Admin/Settings/Settings_Page.php:645 ./app/Module/Categories.php:28 ./app/Modules/Shipping/BoxNow/BoxNow.php:2585 ./app/Modules/Shipping/Econt/Econt.php:2642
+#: ./app/Admin/Settings/Settings_Page.php:660 ./app/Module/Categories.php:28 ./app/Modules/Shipping/BoxNow/BoxNow.php:2585 ./app/Modules/Shipping/Econt/Econt.php:2642
 msgid "Checkout"
 msgstr "Checkout"
 
-#: ./app/Admin/Settings/Settings_Page.php:871 ./app/Admin/Settings/Settings_Page.php:895 ./app/Admin/Settings/Settings_Page.php:907
+#: ./app/Admin/Settings/Settings_Page.php:651
+msgid "Checkout and email"
+msgstr "В checkout и имейл"
+
+#: ./app/Admin/Settings/Settings_Page.php:649
+msgid "Checkout only"
+msgstr "Само в checkout"
+
+#: ./app/Admin/Settings/Settings_Page.php:884 ./app/Admin/Settings/Settings_Page.php:908 ./app/Admin/Settings/Settings_Page.php:920
 msgid "Checkout presentation"
 msgstr "Представяне в checkout"
 
-#: ./app/Admin/Settings/Settings_Page.php:868
+#: ./app/Admin/Settings/Settings_Page.php:881
 msgid "Choose API pricing or custom rules and set free-shipping thresholds."
 msgstr "Изберете API цена или собствени правила и задайте прагове за безплатна доставка."
 
@@ -1074,7 +1078,7 @@ msgid "Choose which delivery options the customer can see."
 msgstr "Изберете кои възможности за доставка да вижда клиентът."
 
 #: ./app/Admin/Order/MetaBox.php:193 ./app/Admin/Order/MetaBox.php:263 ./app/Admin/Order/MetaBox.php:375 ./app/Checkout/Checkout.php:330
-#: ./app/Checkout/Checkout.php:1357
+#: ./app/Checkout/Checkout.php:1358
 msgid "City"
 msgstr "Град"
 
@@ -1082,7 +1086,7 @@ msgstr "Град"
 msgid "City / locality"
 msgstr "Населено място"
 
-#: ./app/Admin/Settings/Settings_Page.php:649
+#: ./app/Admin/Settings/Settings_Page.php:664
 msgid "Clean checkout"
 msgstr "Изчистен checkout"
 
@@ -1094,7 +1098,7 @@ msgstr "Client ID"
 msgid "Client Secret"
 msgstr "Client Secret"
 
-#: ./app/Admin/Settings/Settings_Page.php:571
+#: ./app/Admin/Settings/Settings_Page.php:572
 msgid "Client-side task tab switching"
 msgstr "Client-side превключване на task tab"
 
@@ -1122,7 +1126,7 @@ msgstr "Адрес на фирмата"
 msgid "Compartment size"
 msgstr "Размер на отделението"
 
-#: ./app/Admin/Settings/Settings_Page.php:850
+#: ./app/Admin/Settings/Settings_Page.php:863
 msgid "Compatibility, diagnostics and special-case settings."
 msgstr "Настройки за съвместимост, диагностика и специални сценарии."
 
@@ -1134,7 +1138,7 @@ msgstr "Завършена"
 msgid "Component"
 msgstr "Компонент"
 
-#: ./app/Admin/Settings/Settings_Page.php:1257
+#: ./app/Admin/Settings/Settings_Page.php:1270
 msgid "Configuration"
 msgstr "Конфигурация"
 
@@ -1146,7 +1150,7 @@ msgstr "Настройте договорен подател в Спиди, а �
 msgid "Configure the Pigeon Express sender (office or address)."
 msgstr "Настройте подателя за Pigeon Express (офис или адрес)."
 
-#: ./app/Admin/Settings/Settings_Page.php:960
+#: ./app/Admin/Settings/Settings_Page.php:973
 msgid "Configured"
 msgstr "Конфигуриран"
 
@@ -1159,7 +1163,7 @@ msgid "Conflicts — will not be applied"
 msgstr "Конфликти — няма да бъдат приложени"
 
 #. translators: %s: courier name, e.g. "Speedy".
-#: ./app/Admin/Settings/Settings_Page.php:449
+#: ./app/Admin/Settings/Settings_Page.php:450
 #, python-format
 msgid "Connect to %s"
 msgstr "Свържи със %s"
@@ -1168,12 +1172,12 @@ msgstr "Свържи със %s"
 msgid "Connect to Speedy"
 msgstr "Свързване със Speedy"
 
-#: ./app/Admin/Order/MetaBox.php:800 ./app/Modules/Shipping/BoxNow/BoxNow.php:2718 ./app/Modules/Shipping/BoxNow/BoxNow.php:2778 ./app/Modules/Shipping/Pigeon/Pigeon.php:270
+#: ./app/Admin/Order/MetaBox.php:800 ./app/Modules/Shipping/BoxNow/BoxNow.php:2723 ./app/Modules/Shipping/BoxNow/BoxNow.php:2783 ./app/Modules/Shipping/Pigeon/Pigeon.php:270
 #: ./app/Modules/Shipping/Pigeon/Pigeon.php:554
 msgid "Contact person"
 msgstr "Лице за контакт"
 
-#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2709
+#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2714
 msgid "Contact person, phone and email for BOX NOW to use for each warehouse separately."
 msgstr "Лице, телефон и имейл, на които BOX NOW да се обади за всеки склад поотделно."
 
@@ -1182,15 +1186,15 @@ msgstr "Лице, телефон и имейл, на които BOX NOW да с�
 msgid "Contract %d"
 msgstr "Договор %d"
 
-#: ./app/Admin/Settings/Settings_Page.php:226
+#: ./app/Admin/Settings/Settings_Page.php:227
 msgid "Copied"
 msgstr "Копирано"
 
-#: ./app/Admin/Settings/Settings_Page.php:952
+#: ./app/Admin/Settings/Settings_Page.php:965
 msgid "Copy"
 msgstr "Копирай"
 
-#: ./app/Admin/Settings/Settings_Page.php:1063
+#: ./app/Admin/Settings/Settings_Page.php:1076
 msgid "Count"
 msgstr "Брой"
 
@@ -1266,7 +1270,7 @@ msgstr "Преглед на куриерския отчет"
 msgid "Courier service payer"
 msgstr "Платец на куриерската услуга"
 
-#: ./app/Admin/Order/MetaBox.php:418 ./app/Admin/Settings/Settings_Page.php:1062
+#: ./app/Admin/Order/MetaBox.php:418 ./app/Admin/Settings/Settings_Page.php:1075
 msgid "Courier status"
 msgstr "Статус от куриера"
 
@@ -1279,7 +1283,7 @@ msgid "Courier warning."
 msgstr "Предупреждение от куриера."
 
 #. translators: %s: warning returned by the courier.
-#: ./app/Admin/Order/MetaBox.php:1630
+#: ./app/Admin/Order/MetaBox.php:1632
 #, python-format
 msgid "Courier warning: %s"
 msgstr "Предупреждение от куриера: %s"
@@ -1304,7 +1308,7 @@ msgstr "Създай товарителница"
 msgid "Created"
 msgstr "Създадена"
 
-#: ./app/Admin/Settings/Settings_Page.php:773
+#: ./app/Admin/Settings/Settings_Page.php:786
 #, python-format
 msgid "Credentials and environment for %s."
 msgstr "Данни за достъп и среда за %s."
@@ -1317,7 +1321,7 @@ msgstr "Ключове и среда."
 msgid "Credit"
 msgstr "Кредит"
 
-#: ./app/Admin/Settings/Settings_Page.php:1161 ./app/Admin/Settings/Settings_Page.php:1653 ./app/Admin/Settings/Settings_Page.php:1812 ./app/Modules/Accounting/CodReports/Report_Controller.php:281
+#: ./app/Admin/Settings/Settings_Page.php:1174 ./app/Admin/Settings/Settings_Page.php:1666 ./app/Admin/Settings/Settings_Page.php:1825 ./app/Modules/Accounting/CodReports/Report_Controller.php:281
 msgid "Currency"
 msgstr "Валута"
 
@@ -1325,7 +1329,7 @@ msgstr "Валута"
 msgid "Currency mismatch"
 msgstr "Несъответствие във валутата"
 
-#: ./app/Admin/Settings/Settings_Page.php:568
+#: ./app/Admin/Settings/Settings_Page.php:569
 msgid "Current BGCS admin request"
 msgstr "Текущата BGCS admin заявка"
 
@@ -1359,11 +1363,11 @@ msgstr "Клиентски профил"
 msgid "Customer reputation"
 msgstr "Репутация на клиенти"
 
-#: ./app/Admin/Settings/Settings_Page.php:569
+#: ./app/Admin/Settings/Settings_Page.php:570
 msgid "DB queries"
 msgstr "DB заявки"
 
-#: ./app/Admin/Settings/Settings_Page.php:268
+#: ./app/Admin/Settings/Settings_Page.php:269
 msgid "Dashboard"
 msgstr "Табло"
 
@@ -1371,7 +1375,7 @@ msgstr "Табло"
 msgid "Data from your contracted Speedy profile."
 msgstr "Данни от договорния ви Speedy профил."
 
-#: ./app/Admin/Settings/Settings_Page.php:513
+#: ./app/Admin/Settings/Settings_Page.php:514
 msgid "Data synchronization"
 msgstr "Синхронизация на данни"
 
@@ -1452,9 +1456,13 @@ msgid "Delivery at a specific time"
 msgstr "Доставка в точен час"
 
 #. translators: %s: formatted delivery deadline date.
-#: ./app/Shipping/Delivery_Estimate.php:162
+#: ./app/Shipping/Delivery_Estimate.php:189
 msgid "Delivery by %s"
 msgstr "Доставка до %s"
+
+#: ./app/Admin/Settings/Settings_Page.php:645
+msgid "Delivery date"
+msgstr "Дата на доставка"
 
 #: ./app/Shipping/Tracking_State.php:96
 msgid "Delivery issue"
@@ -1496,7 +1504,7 @@ msgstr "Доставка до автомат (APS)"
 msgid "Delivery to locker (APT)"
 msgstr "Доставка до автомат (APT)"
 
-#: ./app/Admin/Settings/Settings_Page.php:1804
+#: ./app/Admin/Settings/Settings_Page.php:1817
 msgid "Delivery type"
 msgstr "Тип доставка"
 
@@ -1512,11 +1520,11 @@ msgstr "Типове доставка и поведение на формата.
 msgid "Delivery types at checkout"
 msgstr "Типове доставка в checkout"
 
-#: ./app/Admin/Settings/Settings_Page.php:904
+#: ./app/Admin/Settings/Settings_Page.php:917
 msgid "Delivery types, service and payer."
 msgstr "Видове доставка, услуга и платец."
 
-#: ./app/Admin/Settings/Settings_Page.php:880
+#: ./app/Admin/Settings/Settings_Page.php:893
 msgid "Delivery types."
 msgstr "Типове доставка."
 
@@ -1544,7 +1552,7 @@ msgstr "Унищожаване / кражба / административно �
 msgid "Details"
 msgstr "Детайли"
 
-#: ./app/Admin/Settings/Settings_Page.php:724 ./app/Admin/Settings/Settings_Page.php:766
+#: ./app/Admin/Settings/Settings_Page.php:737 ./app/Admin/Settings/Settings_Page.php:779
 msgid "Diagnostics"
 msgstr "Диагностика"
 
@@ -1588,7 +1596,7 @@ msgstr "Габарити — височина (см)"
 msgid "Dimensions — width (cm)"
 msgstr "Габарити — широчина (см)"
 
-#: ./app/Admin/Settings/Settings_Page.php:906
+#: ./app/Admin/Settings/Settings_Page.php:919
 msgid "Dimensions, label format and services from the profile."
 msgstr "Размери, формат на етикета и услуги от профила."
 
@@ -1597,10 +1605,14 @@ msgid "Dimensions, packaging and printing"
 msgstr "Размери, опаковка и печат"
 
 #: ./app/Admin/Addons.php:188 ./app/Admin/Addons.php:273 ./app/Admin/Addons.php:295 ./app/Admin/Addons.php:392
-#: ./app/Admin/Addons.php:393 ./app/Admin/Addons.php:410 ./app/Admin/Settings/Settings_Page.php:138 ./app/Admin/Settings/Settings_Page.php:222
-#: ./app/Admin/Settings/Settings_Page.php:1148 ./app/Admin/Settings/Settings_Page.php:1530 ./app/Admin/Settings/Settings_Page.php:1542
+#: ./app/Admin/Addons.php:393 ./app/Admin/Addons.php:410 ./app/Admin/Settings/Settings_Page.php:139 ./app/Admin/Settings/Settings_Page.php:223
+#: ./app/Admin/Settings/Settings_Page.php:1161 ./app/Admin/Settings/Settings_Page.php:1543 ./app/Admin/Settings/Settings_Page.php:1555
 msgid "Disabled"
 msgstr "Изключен"
+
+#: ./app/Admin/Settings/Settings_Page.php:645
+msgid "Display courier-provided dates only when valid. No date is calculated or invented by BGCS."
+msgstr "Показват се само валидни дати, получени от куриера. BGCS не изчислява и не предполага дата."
 
 #: ./app/Modules/Shipping/Speedy/Speedy.php:586
 msgid "Do not add the fee to the customer price"
@@ -1614,7 +1626,7 @@ msgstr "Документ"
 msgid "Document pallet"
 msgstr "Документен палет"
 
-#: ./app/Admin/Settings/Settings_Page.php:711
+#: ./app/Admin/Settings/Settings_Page.php:724
 msgid "Documents"
 msgstr "Документи"
 
@@ -1622,7 +1634,7 @@ msgstr "Документи"
 msgid "Download PDF"
 msgstr "Изтегли PDF"
 
-#: ./app/Admin/Settings/Settings_Page.php:514
+#: ./app/Admin/Settings/Settings_Page.php:515
 msgid "Download offices/lockers and reference data (services, contracts) again from the courier API."
 msgstr "Изтегли наново офисите/автоматите и справочните данни (услуги, договори) от API на куриера."
 
@@ -1642,11 +1654,11 @@ msgstr "Офис за предаване"
 msgid "ETag"
 msgstr "ETag"
 
-#: ./app/Admin/Settings/Settings_Page.php:1020
+#: ./app/Admin/Settings/Settings_Page.php:1033
 msgid "Each courier maps its own tracking codes to normalized BGCS states. Here you choose what WooCommerce should do for the states that this courier actually supports."
 msgstr "Всеки куриер превежда собствените си tracking кодове към нормализирани BGCS състояния. Тук избирате какво да прави WooCommerce за състоянията, които този куриер реално поддържа."
 
-#: ./app/Admin/Settings/Settings_Page.php:731
+#: ./app/Admin/Settings/Settings_Page.php:744
 msgid "Each order keeps only its last three create attempts — older ones are discarded automatically, so this cannot grow without limit. Switching it off stops new snapshots; the ones already recorded stay readable in their orders."
 msgstr "Всяка поръчка пази само последните си три опита за създаване — по-старите се изтриват автоматично, така че обемът не може да расте безкрайно. Изключването спира новите записи; вече направените остават четими в съответните поръчки."
 
@@ -1897,13 +1909,17 @@ msgstr "Econt: непълна конфигурация за изчисление
 msgid "Econt: the shipment was included in courier pickup request #%s."
 msgstr "Еконт: пратката беше включена в заявка за вземане от куриер №%s."
 
-#: ./app/Admin/Order/MetaBox.php:802 ./app/Admin/Settings/Settings_Page.php:1161 ./app/Modules/Shipping/BoxNow/BoxNow.php:2720 ./app/Modules/Shipping/BoxNow/BoxNow.php:2782
+#: ./app/Admin/Order/MetaBox.php:802 ./app/Admin/Settings/Settings_Page.php:1174 ./app/Modules/Shipping/BoxNow/BoxNow.php:2725 ./app/Modules/Shipping/BoxNow/BoxNow.php:2787
 msgid "Email"
 msgstr "Имейл"
 
 #: ./app/Modules/Shipping/Econt/Econt.php:308 ./app/Modules/Shipping/Econt/Econt.php:831
 msgid "Email on delivery"
 msgstr "Имейл при доставка"
+
+#: ./app/Admin/Settings/Settings_Page.php:650
+msgid "Email only"
+msgstr "Само в имейл"
 
 #: ./app/Admin/Addons.php:296
 msgid "Empty"
@@ -1921,7 +1937,7 @@ msgstr "Празно или 0 = изключено. Число над 0 = пра
 msgid "Enable BOX NOW and locker delivery."
 msgstr "Включете BOX NOW и доставката до автомат."
 
-#: ./app/Admin/Settings/Settings_Page.php:421
+#: ./app/Admin/Settings/Settings_Page.php:422
 msgid "Enable it using the switch at the top right to use its reports and actions."
 msgstr "Включете го от превключвателя горе вдясно, за да използвате отчетите и действията му."
 
@@ -1931,7 +1947,7 @@ msgstr "Включете го от превключвателя горе вдя�
 msgid "Enable service “%s”"
 msgstr "Включи услуга „%s“"
 
-#: ./app/Admin/Settings/Settings_Page.php:679
+#: ./app/Admin/Settings/Settings_Page.php:693
 msgid "Enable the Error Web Agency product catalog"
 msgstr "Разрешаване на продуктовия каталог на Error Web Agency"
 
@@ -1939,12 +1955,12 @@ msgstr "Разрешаване на продуктовия каталог на E
 msgid "Enable the module and at least one delivery type for checkout."
 msgstr "Включете модула и поне един тип доставка за checkout."
 
-#: ./app/Admin/Addons.php:273 ./app/Admin/Addons.php:410 ./app/Admin/Settings/Settings_Page.php:138 ./app/Admin/Settings/Settings_Page.php:221
-#: ./app/Admin/Settings/Settings_Page.php:1530 ./app/Admin/Settings/Settings_Page.php:1542
+#: ./app/Admin/Addons.php:273 ./app/Admin/Addons.php:410 ./app/Admin/Settings/Settings_Page.php:139 ./app/Admin/Settings/Settings_Page.php:222
+#: ./app/Admin/Settings/Settings_Page.php:1543 ./app/Admin/Settings/Settings_Page.php:1555
 msgid "Enabled"
 msgstr "Включен"
 
-#: ./app/Admin/Settings/Settings_Page.php:1080
+#: ./app/Admin/Settings/Settings_Page.php:1093
 msgid "Enablement, Subject, Heading, Additional content, HTML/Plain/Multipart, sender, CC/BCC, preheader and the other available WooCommerce email features follow the active WooCommerce version and email features."
 msgstr "Включване, Subject, Heading, Additional content, HTML/Plain/Multipart, подател, CC/BCC, preheader и останалите налични WooCommerce email функции следват активната версия и email features на WooCommerce."
 
@@ -2024,7 +2040,7 @@ msgstr "Очакван брой пакети"
 msgid "Estimated total weight (kg)"
 msgstr "Очаквано общо тегло (кг)"
 
-#: ./app/Admin/Settings/Settings_Page.php:989
+#: ./app/Admin/Settings/Settings_Page.php:1002
 msgid "Event"
 msgstr "Събитие"
 
@@ -2032,7 +2048,7 @@ msgstr "Събитие"
 msgid "Expected COD"
 msgstr "Очакван наложен платеж"
 
-#: ./app/Checkout/Checkout.php:774
+#: ./app/Checkout/Checkout.php:775
 msgid "Expected delivery"
 msgstr "Очаквана доставка"
 
@@ -2041,7 +2057,7 @@ msgid "Expected delivery:"
 msgstr "Очаквана доставка:"
 
 #. translators: %s: formatted expected-delivery date.
-#: ./app/Email/Emails.php:163 ./app/Shipping/Delivery_Estimate.php:168
+#: ./app/Email/Emails.php:163 ./app/Shipping/Delivery_Estimate.php:195
 msgid "Expected delivery: %s"
 msgstr "Очаквана доставка: %s"
 
@@ -2085,7 +2101,7 @@ msgstr "Неуспешна"
 msgid "Failed delivery"
 msgstr "Неуспешна доставка"
 
-#: ./app/Admin/Settings/Settings_Page.php:667
+#: ./app/Admin/Settings/Settings_Page.php:682
 msgid "Fallback mode without a WooCommerce zone"
 msgstr "Резервен режим без WooCommerce зона"
 
@@ -2117,10 +2133,6 @@ msgstr "Изтегли и прегледай"
 msgid "Fetch report from courier"
 msgstr "Изтегли отчет от куриера"
 
-#: ./app/Admin/Settings/Settings_Page.php:680
-msgid "Fetch validated product names, versions, prices, links and promotions from error.bg. Disabled by default. No store, customer, order, credential or plugin-inventory data is sent; the remote server necessarily receives the connecting server IP address."
-msgstr "Получава проверени имена, версии, цени, връзки и промоции на продукти от error.bg. По подразбиране е изключено. Не се изпращат данни за магазина, клиенти, поръчки, идентификационни данни или списък с плъгини; отдалеченият сървър неизбежно получава IP адреса на свързващия се сървър."
-
 #: ./app/Modules/Accounting/CodReports/Import_Renderer.php:61
 msgid "Fetches paid COD amounts directly without uploading a file. The period is based on the PAYOUT date, not the delivery date, and cannot exceed one month. You will still see a preview before any changes are made."
 msgstr "Взима директно изплатените суми по наложен платеж, без да качвате файл. Периодът се брои по датата на ИЗПЛАЩАНЕ, не по датата на доставка, и не може да е по-дълъг от един месец. Пак ще видите преглед преди каквато и да е промяна."
@@ -2129,7 +2141,7 @@ msgstr "Взима директно изплатените суми по нал�
 msgid "Filter"
 msgstr "Филтрирай"
 
-#: ./app/Admin/Settings/Settings_Page.php:1811
+#: ./app/Admin/Settings/Settings_Page.php:1824
 msgid "Final price incl. VAT"
 msgstr "Крайна цена с ДДС"
 
@@ -2148,7 +2160,7 @@ msgstr "Финансово несъответствие в цената за д�
 msgid "Financial mismatch while preparing the shipment label: expected COD amount %1$s %3$s, amount sent to Speedy %2$s %3$s (difference: %4$s %3$s). Shipment label creation is blocked to prevent an incorrect amount."
 msgstr "Финансово несъответствие при подготовка на товарителницата: очаквана сума за наложен платеж %1$s %3$s, изпратена към Speedy сума %2$s %3$s (разлика: %4$s %3$s). Създаването на товарителницата е блокирано, за да се предотврати неправилна сума."
 
-#: ./app/Admin/Settings/Settings_Page.php:1064
+#: ./app/Admin/Settings/Settings_Page.php:1077
 msgid "First seen"
 msgstr "Първо видян"
 
@@ -2176,7 +2188,7 @@ msgstr "Например: 17:00"
 msgid "Fragile"
 msgstr "Чупливо"
 
-#: ./app/Checkout/Checkout.php:1366 ./app/Shipping/Hooks.php:106 ./app/Shipping/Hooks.php:142
+#: ./app/Checkout/Checkout.php:1367 ./app/Shipping/Hooks.php:106 ./app/Shipping/Hooks.php:142
 msgid "Free shipping"
 msgstr "Безплатна доставка"
 
@@ -2202,7 +2214,7 @@ msgstr "Търсенето по свободен текст не е разреш
 msgid "Fresh"
 msgstr "Актуален"
 
-#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2618 ./app/Modules/Shipping/BoxNow/BoxNow.php:2803
+#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2618 ./app/Modules/Shipping/BoxNow/BoxNow.php:2808
 msgid "From (kg)"
 msgstr "От (кг)"
 
@@ -2222,11 +2234,11 @@ msgstr "От вашия Pigeon Express профил."
 msgid "GPS on the map"
 msgstr "GPS в картата"
 
-#: ./app/Admin/Settings/Settings_Page.php:867 ./app/Admin/Settings/Settings_Page.php:880 ./app/Admin/Settings/Settings_Page.php:892 ./app/Admin/Settings/Settings_Page.php:904
+#: ./app/Admin/Settings/Settings_Page.php:880 ./app/Admin/Settings/Settings_Page.php:893 ./app/Admin/Settings/Settings_Page.php:905 ./app/Admin/Settings/Settings_Page.php:917
 msgid "General"
 msgstr "Основни"
 
-#: ./app/Admin/Addons.php:110 ./app/Admin/Settings/Settings_Page.php:269 ./app/Admin/Settings/Settings_Page.php:1023
+#: ./app/Admin/Addons.php:110 ./app/Admin/Settings/Settings_Page.php:270 ./app/Admin/Settings/Settings_Page.php:1036
 msgid "General settings"
 msgstr "Общи настройки"
 
@@ -2258,7 +2270,7 @@ msgstr "ЧЧ:ММ; 0 = изключено"
 msgid "HH:MM; blank = settings; 0 = no explicit time"
 msgstr "ЧЧ:ММ; празно = настройки; 0 = без конкретен час"
 
-#: ./app/Admin/Settings/Settings_Page.php:954
+#: ./app/Admin/Settings/Settings_Page.php:967
 msgid "HTTP method: POST. The endpoint is public by necessity, but accepts only BOX NOW events with a valid HMAC-SHA256 datasignature."
 msgstr "HTTP метод: POST. Endpoint-ът е публичен по необходимост, но приема само BOX NOW събития с валиден HMAC-SHA256 datasignature."
 
@@ -2286,7 +2298,7 @@ msgstr "Височина"
 msgid "Height, cm"
 msgstr "Височина, см"
 
-#: ./app/Admin/Settings/Settings_Page.php:650
+#: ./app/Admin/Settings/Settings_Page.php:665
 msgid "Hide unnecessary address fields — they are filled automatically from the selection. Classic checkout only."
 msgstr "Скрий ненужните адресни полета — попълват се автоматично от избора. Само за класическия checkout."
 
@@ -2307,12 +2319,12 @@ msgid "I confirm marking the shown orders as paid."
 msgstr "Потвърждавам маркирането на показаните поръчки като изплатени."
 
 #. translators: %s: warehouse id.
-#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2770
+#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2775
 #, python-format
 msgid "ID %s (no longer in the account)"
 msgstr "ID %s (вече не е в акаунта)"
 
-#: ./app/Admin/Settings/Settings_Page.php:668
+#: ./app/Admin/Settings/Settings_Page.php:683
 msgid "If the matched WooCommerce zone has no BGCS method configured, use Bulgaria as the fallback country and temporarily show active BGCS couriers. An explicitly selected different country and any manually configured BGCS zone settings take priority."
 msgstr "Ако в съвпадналата WooCommerce зона няма настроен BGCS метод, използвай България като начална държава и покажи активните BGCS куриери временно. Реално избрана друга държава и всяка ръчна BGCS настройка в зона имат приоритет."
 
@@ -2360,7 +2372,7 @@ msgstr "Обработка от застрахователен отдел"
 msgid "Insurance, review/test, return voucher and Saturday delivery."
 msgstr "Застраховка, преглед/тест, ваучер за връщане, събота."
 
-#: ./app/Admin/Settings/Settings_Page.php:870
+#: ./app/Admin/Settings/Settings_Page.php:883
 msgid "Insurance, review/test, return, dimensions, packaging and printing."
 msgstr "Застраховка, преглед/тест, връщане, размери, опаковка и печат."
 
@@ -2410,7 +2422,7 @@ msgstr "Невалиден формат на регион. Очаква се н�
 msgid "Invalid net payout"
 msgstr "Невалидна нетна изплатена сума"
 
-#: ./app/Admin/Order/MetaBox.php:1824 ./app/Admin/Order/Orders_Column.php:214
+#: ./app/Admin/Order/MetaBox.php:1826 ./app/Admin/Order/Orders_Column.php:214
 msgid "Invalid order."
 msgstr "Невалидна поръчка."
 
@@ -2447,12 +2459,12 @@ msgid "Invoice before COD payment"
 msgstr "Фактура преди плащане на НП"
 
 #. translators: %s: comma-separated list of synchronization issues.
-#: ./app/Admin/Settings/Settings_Page.php:1376
+#: ./app/Admin/Settings/Settings_Page.php:1389
 #, python-format
 msgid "Issues: %s"
 msgstr "Проблеми: %s"
 
-#: ./app/Admin/Settings/Settings_Page.php:662
+#: ./app/Admin/Settings/Settings_Page.php:677
 msgid "Keep the last chosen office/locker/address in the customer's own browser so it is offered again on the next order. Switch off if you do not want delivery choices stored on shared or public computers — existing stored selections are then removed as well."
 msgstr "Пази последно избрания офис/автомат/адрес в браузъра на клиента, за да му бъде предложен пак при следваща поръчка. Изключете, ако не искате изборът за доставка да се съхранява на споделени или публични компютри — тогава вече запазените избори също се изтриват."
 
@@ -2505,12 +2517,12 @@ msgstr "Последен опит за обновяване"
 msgid "Last request #%1$s for %2$s — status: %3$s."
 msgstr "Последна заявка №%1$s за %2$s — статус: %3$s."
 
-#: ./app/Admin/Settings/Settings_Page.php:1065
+#: ./app/Admin/Settings/Settings_Page.php:1078
 msgid "Last seen"
 msgstr "Последно видян"
 
 #. translators: %s: date and time of the last successful sender-profile update.
-#: ./app/Admin/Settings/Settings_Page.php:538
+#: ./app/Admin/Settings/Settings_Page.php:539
 #, python-format
 msgid "Last sender update: %s"
 msgstr "Последно обновяване на подателя: %s"
@@ -2520,12 +2532,12 @@ msgid "Last successful refresh"
 msgstr "Последно успешно обновяване"
 
 #. translators: %s: date and time of the last successful location update.
-#: ./app/Admin/Settings/Settings_Page.php:532
+#: ./app/Admin/Settings/Settings_Page.php:533
 #, python-format
 msgid "Last successful update: %s"
 msgstr "Последно успешно обновяване: %s"
 
-#: ./app/Admin/Order/MetaBox.php:421 ./app/Admin/Settings/Settings_Page.php:1101
+#: ./app/Admin/Order/MetaBox.php:421 ./app/Admin/Settings/Settings_Page.php:1114
 msgid "Last synchronization"
 msgstr "Последна синхронизация"
 
@@ -2545,7 +2557,7 @@ msgstr "Научи повече"
 msgid "Leave empty if you do not use volumetric weight."
 msgstr "Оставете празно, ако не ползвате обемно тегло."
 
-#: ./app/Admin/Settings/Settings_Page.php:1772
+#: ./app/Admin/Settings/Settings_Page.php:1785
 msgid "Leave empty to keep the current value, or enter a new one to replace it."
 msgstr "Оставете празно, за да запазите текущата стойност, или въведете нова, за да я замените."
 
@@ -2577,7 +2589,7 @@ msgstr "Зарежда се от Econt номенклатурата. Ако сп
 msgid "Loaded from your Speedy profile (/services)."
 msgstr "Зарежда се от вашия Speedy профил (/services)."
 
-#: ./app/Checkout/Checkout.php:1351
+#: ./app/Checkout/Checkout.php:1352
 msgid "Loading…"
 msgstr "Зареждане…"
 
@@ -2589,20 +2601,20 @@ msgstr "Локалната версия е по-нова"
 msgid "Location ID from /origins. It appears as a list after the API credentials are saved."
 msgstr "Location ID от /origins. Появява се като списък след запазване на API данните."
 
-#: ./app/Admin/Settings/Settings_Page.php:763
+#: ./app/Admin/Settings/Settings_Page.php:776
 msgid "Locations"
 msgstr "Локации"
 
 #. translators: %s: courier name.
-#: ./app/Admin/Settings/Settings_Page.php:802
+#: ./app/Admin/Settings/Settings_Page.php:815
 msgid "Locations and reference data"
 msgstr "Локации и номенклатури"
 
-#: ./app/Admin/Settings/Settings_Page.php:1121
+#: ./app/Admin/Settings/Settings_Page.php:1134
 msgid "Locations not covered by your other zones"
 msgstr "Местоположения, които не са обхванати от другите ви зони"
 
-#: ./app/Admin/Order/MetaBox.php:192 ./app/Admin/Order/MetaBox.php:1254 ./app/Admin/Settings/Settings_Page.php:1137 ./app/Checkout/Checkout.php:759
+#: ./app/Admin/Order/MetaBox.php:192 ./app/Admin/Order/MetaBox.php:1254 ./app/Admin/Settings/Settings_Page.php:1150 ./app/Checkout/Checkout.php:759
 #: ./app/Shipping/Method.php:88
 msgid "Locker"
 msgstr "Автомат"
@@ -2629,16 +2641,16 @@ msgstr "Изборът на автомат в checkout-а винаги мина�
 msgid "Locker selection in the order."
 msgstr "Избор на автомат в поръчката."
 
-#: ./app/Admin/Settings/Settings_Page.php:892
+#: ./app/Admin/Settings/Settings_Page.php:905
 msgid "Locker, compartment size and service type."
 msgstr "Автомат, размер на отделението и вид услуга."
 
-#: ./app/Admin/Settings/Settings_Page.php:1100 ./app/Modules/Shipping/BoxNow/BoxNow.php:645
+#: ./app/Admin/Settings/Settings_Page.php:1113 ./app/Modules/Shipping/BoxNow/BoxNow.php:645
 msgid "Lockers"
 msgstr "Автомати"
 
 #. translators: %d: number of synchronized courier lockers.
-#: ./app/Admin/Settings/Settings_Page.php:1498
+#: ./app/Admin/Settings/Settings_Page.php:1511
 #, python-format
 msgid "Lockers: %d"
 msgstr "Автомати: %d"
@@ -2647,7 +2659,7 @@ msgstr "Автомати: %d"
 msgid "Manage included modules and discover optional extensions in one place."
 msgstr "Управлявайте включените модули и откривайте допълнителни разширения на едно място."
 
-#: ./app/Admin/Settings/Settings_Page.php:1080
+#: ./app/Admin/Settings/Settings_Page.php:1093
 msgid "Managed entirely by WooCommerce."
 msgstr "Управлява се изцяло от WooCommerce."
 
@@ -2675,15 +2687,15 @@ msgstr "Отбележи изплатено"
 msgid "Mark the shipment as “Keep upright”"
 msgstr "Маркирай пратката като „Дръж изправен\" (keep upright)"
 
-#: ./app/Admin/Settings/Settings_Page.php:1810
+#: ./app/Admin/Settings/Settings_Page.php:1823
 msgid "Maximum goods value after discounts and taxes"
 msgstr "Максимална стойност на стоките след отстъпки и данъци"
 
-#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2804
+#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2809
 msgid "Maximum weight in kg"
 msgstr "Максимално тегло в кг"
 
-#: ./app/Admin/Settings/Settings_Page.php:1809
+#: ./app/Admin/Settings/Settings_Page.php:1822
 msgid "Maximum weight in kilograms"
 msgstr "Максимално тегло в килограми"
 
@@ -2695,7 +2707,7 @@ msgstr "Средна (Medium)"
 msgid "Merchant instruction: hold at the sorting hub"
 msgstr "Инструкция от търговеца: задържане в разпределителния хъб"
 
-#: ./app/Admin/Settings/Settings_Page.php:907
+#: ./app/Admin/Settings/Settings_Page.php:920
 msgid "Method title and description."
 msgstr "Заглавие и описание на метода."
 
@@ -2711,7 +2723,7 @@ msgstr "Минимална такса ППП"
 msgid "Minimum postal money transfer fee (for example, 0.26)."
 msgstr "Минимален размер на таксата за пощенски паричен превод (напр. 0.26)."
 
-#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2803
+#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2808
 msgid "Minimum weight in kg"
 msgstr "Минимално тегло в кг"
 
@@ -2739,11 +2751,11 @@ msgstr "Липсваща или невалидна дата на изплаща�
 msgid "Module API"
 msgstr "Module API"
 
-#: ./app/Admin/Settings/Settings_Page.php:139
+#: ./app/Admin/Settings/Settings_Page.php:140
 msgid "Module disabled."
 msgstr "Модулът е изключен."
 
-#: ./app/Admin/Settings/Settings_Page.php:139
+#: ./app/Admin/Settings/Settings_Page.php:140
 msgid "Module enabled."
 msgstr "Модулът е включен."
 
@@ -2760,13 +2772,13 @@ msgid "Net payout"
 msgstr "Нетно изплащане"
 
 #. translators: %s: courier name.
-#: ./app/Admin/Settings/Settings_Page.php:1053
+#: ./app/Admin/Settings/Settings_Page.php:1066
 #, python-format
 msgid "New/unknown codes observed only for %s. They do not change the WooCommerce status until they are normalized in Core."
 msgstr "Нови/непознати кодове, наблюдавани само при %s. Те не променят WooCommerce статус, докато не бъдат нормализирани в Core."
 
 #. translators: %s: date and time of the next automatic location update.
-#: ./app/Admin/Settings/Settings_Page.php:1504
+#: ./app/Admin/Settings/Settings_Page.php:1517
 #, python-format
 msgid "Next automatic update: %s"
 msgstr "Следващо автоматично обновяване: %s"
@@ -2775,7 +2787,7 @@ msgstr "Следващо автоматично обновяване: %s"
 msgid "Next day"
 msgstr "Следващия ден (next-day)"
 
-#: ./app/Admin/Settings/Settings_Page.php:1102
+#: ./app/Admin/Settings/Settings_Page.php:1115
 msgid "Next synchronization"
 msgstr "Следваща синхронизация"
 
@@ -2789,7 +2801,7 @@ msgid "No"
 msgstr "Не"
 
 #. translators: %s: courier name.
-#: ./app/Admin/Settings/Settings_Page.php:1134
+#: ./app/Admin/Settings/Settings_Page.php:1147
 #, python-format
 msgid "No %s method has been added to a WooCommerce zone."
 msgstr "Няма добавен %s метод в WooCommerce зона."
@@ -2804,7 +2816,7 @@ msgstr "Няма избор за доставка през BG Commerce Suite."
 msgid "No BOX NOW price is configured for a total weight of %s kg. Check the ranges in settings."
 msgstr "Няма зададена BOX NOW цена за общо тегло %s кг. Проверете диапазоните в настройките."
 
-#: ./app/Admin/Settings/Settings_Page.php:983
+#: ./app/Admin/Settings/Settings_Page.php:996
 msgid "No BOX NOW webhook events have been accepted yet."
 msgstr "Все още няма приети BOX NOW webhook събития."
 
@@ -2832,7 +2844,7 @@ msgstr "Все още няма заредени данни за каталога
 msgid "No cities found."
 msgstr "Няма намерени градове."
 
-#: ./app/Admin/Settings/Settings_Page.php:1099 ./app/Admin/Settings/Settings_Page.php:1100
+#: ./app/Admin/Settings/Settings_Page.php:1112 ./app/Admin/Settings/Settings_Page.php:1113
 msgid "No data"
 msgstr "Няма данни"
 
@@ -2844,7 +2856,7 @@ msgstr "Без отлагане"
 msgid "No extensions are currently published in the remote catalog."
 msgstr "В момента няма публикувани разширения в отдалечения каталог."
 
-#: ./app/Admin/Settings/Settings_Page.php:1489
+#: ./app/Admin/Settings/Settings_Page.php:1502
 msgid "No locations have been synchronized yet"
 msgstr "Все още няма синхронизирани локации"
 
@@ -2856,15 +2868,15 @@ msgstr "Все още няма синхронизирани локации — �
 msgid "No nearby locker was found."
 msgstr "Няма намерен автомат наблизо."
 
-#: ./app/Admin/Settings/Settings_Page.php:570
+#: ./app/Admin/Settings/Settings_Page.php:571
 msgid "No remote API requests during passive render"
 msgstr "Няма remote API заявки при пасивен render"
 
-#: ./app/Checkout/Checkout.php:363 ./app/Checkout/Checkout.php:1352
+#: ./app/Checkout/Checkout.php:363 ./app/Checkout/Checkout.php:1353
 msgid "No results"
 msgstr "Няма резултати"
 
-#: ./app/Admin/Settings/Settings_Page.php:217
+#: ./app/Admin/Settings/Settings_Page.php:218
 msgid "No results found."
 msgstr "Няма намерени резултати."
 
@@ -2876,15 +2888,15 @@ msgstr "Няма товарителница"
 msgid "No streets found."
 msgstr "Няма намерени улици."
 
-#: ./app/Admin/Settings/Settings_Page.php:538
+#: ./app/Admin/Settings/Settings_Page.php:539
 msgid "No successful sender update."
 msgstr "Няма успешно обновяване на подателя."
 
-#: ./app/Admin/Settings/Settings_Page.php:1101
+#: ./app/Admin/Settings/Settings_Page.php:1114
 msgid "No successful update yet"
 msgstr "Все още няма успешно обновяване"
 
-#: ./app/Admin/Settings/Settings_Page.php:532
+#: ./app/Admin/Settings/Settings_Page.php:533
 msgid "No successful update."
 msgstr "Няма успешно обновяване."
 
@@ -2900,7 +2912,7 @@ msgstr "Без данък"
 msgid "No tracking number is available."
 msgstr "Няма номера за проследяване."
 
-#: ./app/Admin/Settings/Settings_Page.php:1056
+#: ./app/Admin/Settings/Settings_Page.php:1069
 msgid "No unmapped statuses have been observed."
 msgstr "Няма наблюдавани неразпознати статуси."
 
@@ -2917,7 +2929,7 @@ msgstr "Редовна цена"
 msgid "Not available"
 msgstr "Няма данни"
 
-#: ./app/Admin/Settings/Settings_Page.php:960
+#: ./app/Admin/Settings/Settings_Page.php:973
 msgid "Not configured"
 msgstr "Не е конфигуриран"
 
@@ -2929,7 +2941,7 @@ msgstr "Все още не е реализирано."
 msgid "Not installed"
 msgstr "Не е инсталиран"
 
-#: ./app/Admin/Settings/Settings_Page.php:1439
+#: ./app/Admin/Settings/Settings_Page.php:1452
 msgid "Not ready to use yet — see what is missing below."
 msgstr "Все още не е готов за работа — вижте кое липсва по-долу."
 
@@ -2937,7 +2949,7 @@ msgstr "Все още не е готов за работа — вижте кое
 msgid "Not recognized"
 msgstr "Не е разпозната"
 
-#: ./app/Admin/Settings/Settings_Page.php:1089
+#: ./app/Admin/Settings/Settings_Page.php:1102
 msgid "Not scheduled"
 msgstr "Не е планирано"
 
@@ -2949,15 +2961,19 @@ msgstr "Забележка при запълнен автомат"
 msgid "Notifications and label"
 msgstr "Известия и етикет"
 
-#: ./app/Admin/Settings/Settings_Page.php:883
+#: ./app/Admin/Settings/Settings_Page.php:896
 msgid "Notifications, services, shipment type, Econt packaging, instructions and dimensions."
 msgstr "Известия, услуги, тип пратка, опаковки на Еконт, инструкции и размери."
 
-#: ./app/Admin/Settings/Settings_Page.php:894
+#: ./app/Admin/Settings/Settings_Page.php:907
 msgid "Notifications, voucher and label information."
 msgstr "Известия, ваучер и информация върху етикета."
 
-#: ./app/Checkout/Checkout.php:384 ./app/Checkout/Checkout.php:1362
+#: ./app/Admin/Settings/Settings_Page.php:652
+msgid "Nowhere"
+msgstr "Никъде"
+
+#: ./app/Checkout/Checkout.php:384 ./app/Checkout/Checkout.php:1363
 msgid "Number"
 msgstr "Номер"
 
@@ -3026,7 +3042,7 @@ msgstr "Изключено по подразбиране: когато важи 
 msgid "Offer ends"
 msgstr "Офертата приключва"
 
-#: ./app/Admin/Order/MetaBox.php:192 ./app/Admin/Order/MetaBox.php:1253 ./app/Admin/Settings/Settings_Page.php:1137 ./app/Checkout/Checkout.php:759
+#: ./app/Admin/Order/MetaBox.php:192 ./app/Admin/Order/MetaBox.php:1253 ./app/Admin/Settings/Settings_Page.php:1150 ./app/Checkout/Checkout.php:759
 #: ./app/Modules/Shipping/Pigeon/Pigeon.php:204 ./app/Shipping/Method.php:87
 msgid "Office"
 msgstr "Офис"
@@ -3035,7 +3051,7 @@ msgstr "Офис"
 msgid "Office delivery"
 msgstr "Доставка до офис"
 
-#: ./app/Admin/Settings/Settings_Page.php:655
+#: ./app/Admin/Settings/Settings_Page.php:670
 msgid "Office map"
 msgstr "Карта с офиси"
 
@@ -3047,7 +3063,7 @@ msgstr "Доставка до офис, автомат и адрес — цен�
 msgid "Office/Locker"
 msgstr "Офис/Автомат"
 
-#: ./app/Admin/Settings/Settings_Page.php:1099
+#: ./app/Admin/Settings/Settings_Page.php:1112
 msgid "Offices"
 msgstr "Офиси"
 
@@ -3055,12 +3071,12 @@ msgstr "Офиси"
 msgid "Offices and lockers"
 msgstr "Офиси и автомати"
 
-#: ./app/Admin/Settings/Settings_Page.php:625
+#: ./app/Admin/Settings/Settings_Page.php:626
 msgid "Offices/lockers in the database"
 msgstr "Офиси/автомати в базата"
 
 #. translators: %d: number of synchronized courier offices.
-#: ./app/Admin/Settings/Settings_Page.php:1496
+#: ./app/Admin/Settings/Settings_Page.php:1509
 #, python-format
 msgid "Offices: %d"
 msgstr "Офиси: %d"
@@ -3069,7 +3085,7 @@ msgstr "Офиси: %d"
 msgid "On hold"
 msgstr "Задържана"
 
-#: ./app/Admin/Settings/Settings_Page.php:893
+#: ./app/Admin/Settings/Settings_Page.php:906
 msgid "One BOX NOW pricing configuration: weight ranges and an optional free-shipping threshold."
 msgstr "Една конфигурация за BOX NOW: диапазони според теглото и по желание праг за безплатна доставка."
 
@@ -3081,7 +3097,7 @@ msgstr "Един от редовете за пакети на Econt е нева�
 msgid "One of the selected Econt instruction templates is not available for the current sender profile. Synchronize Econt data and select valid templates."
 msgstr "Един от избраните шаблони за инструкции на Еконт не е наличен за текущия профил на подателя. Синхронизирайте данните и изберете валидни шаблони."
 
-#: ./app/Admin/Settings/Settings_Page.php:683
+#: ./app/Admin/Settings/Settings_Page.php:697
 msgid "Only a site administrator can enable or disable the external product catalog."
 msgstr "Само администратор на сайта може да разреши или изключи външния продуктов каталог."
 
@@ -3089,15 +3105,15 @@ msgstr "Само администратор на сайта може да раз
 msgid "Only fetches and saves the current courier status — it does not change the order status by itself (see the setting below under “General”)."
 msgstr "Само извлича и записва актуалния статус от куриера — не сменя статус на поръчка сама по себе си (виж настройката по-долу в „Общи“)."
 
-#: ./app/Admin/Settings/Settings_Page.php:846
+#: ./app/Admin/Settings/Settings_Page.php:859
 msgid "Only technical and rarely used settings are shown here. Pricing, COD and services are under Shipping methods."
 msgstr "Тук са само техническите и рядко използвани настройки. Цени, НП и услуги са при методите за доставка."
 
-#: ./app/Admin/Settings/Settings_Page.php:1080
+#: ./app/Admin/Settings/Settings_Page.php:1093
 msgid "Open WooCommerce → Settings → Emails"
 msgstr "Отвори WooCommerce → Настройки → Имейли"
 
-#: ./app/Admin/Settings/Settings_Page.php:715
+#: ./app/Admin/Settings/Settings_Page.php:728
 msgid "Open document sections by default"
 msgstr "Отваряй секциите за документи по подразбиране"
 
@@ -3109,17 +3125,13 @@ msgstr "Отвори в нов прозорец"
 msgid "Open module"
 msgstr "Отвори модула"
 
-#: ./app/Admin/Settings/Settings_Page.php:716
+#: ./app/Admin/Settings/Settings_Page.php:729
 msgid "Open the Ordinance N-18 sections (and future document add-ons) in the order when the page loads."
 msgstr "Секциите на Наредба Н-18 (и бъдещи document add-ons) в поръчката да са отворени при зареждане на страницата."
 
 #: ./app/Shipping/Pricing.php:437
 msgid "Optional (for example, EUR). A rule with an empty currency inherits this value. If a currency is set and does not match the store currency, the rule is skipped and the courier price is used."
 msgstr "По избор (напр. EUR). Правило с празна валута наследява тази стойност. Ако е попълнена и валутата на магазина не съвпада, правилото се пропуска и се използва цена от куриера."
-
-#: ./app/Admin/Addons.php:110
-msgid "Optional Error Web Agency product offers are disabled. An administrator can opt in under General settings. Enabling makes an hourly server request to error.bg; no store, customer, order, credential or plugin-inventory data is sent."
-msgstr "Незадължителните продуктови предложения на Error Web Agency са изключени. Администратор може да ги разреши в Общи настройки. При разрешаване сървърът изпраща заявка до error.bg веднъж на час; не се изпращат данни за магазина, клиенти, поръчки, идентификационни данни или списък с плъгини."
 
 #: ./app/Modules/Shipping/Pigeon/Pigeon.php:281
 msgid "Optional and independent from the other company fields."
@@ -3133,7 +3145,7 @@ msgstr "Незадължителният каталог е изключен"
 msgid "Optional contract-object override. When empty, the configured Speedy sender is used."
 msgstr "Незадължителна промяна на договорния обект. Ако е празно, се използва настроеният подател в Спиди."
 
-#: ./app/Admin/Settings/Settings_Page.php:674
+#: ./app/Admin/Settings/Settings_Page.php:688
 msgid "Optional product catalog"
 msgstr "Незадължителен продуктов каталог"
 
@@ -3157,7 +3169,7 @@ msgstr "По избор — начало на интервала за доста
 msgid "Optional. Enter width/depth/height for volumetric pricing."
 msgstr "По избор. Попълнете широчина/дълбочина/височина за обемно ценообразуване."
 
-#: ./app/Admin/Settings/Settings_Page.php:989 ./app/Modules/Accounting/CodReports/Cod_Reports.php:233 ./app/Modules/Accounting/CodReports/Import_Renderer.php:215 ./app/Modules/Accounting/CodReports/Report_Controller.php:275
+#: ./app/Admin/Settings/Settings_Page.php:1002 ./app/Modules/Accounting/CodReports/Cod_Reports.php:233 ./app/Modules/Accounting/CodReports/Import_Renderer.php:215 ./app/Modules/Accounting/CodReports/Report_Controller.php:275
 msgid "Order"
 msgstr "Поръчка"
 
@@ -3167,7 +3179,7 @@ msgstr "Поръчка"
 msgid "Order %s"
 msgstr "Поръчка %s"
 
-#: ./app/Admin/Settings/Settings_Page.php:645
+#: ./app/Admin/Settings/Settings_Page.php:660
 msgid "Order form behavior."
 msgstr "Поведение на формата за поръчка."
 
@@ -3175,7 +3187,7 @@ msgstr "Поведение на формата за поръчка."
 msgid "Order registration in BOX NOW failed."
 msgstr "Неуспешна регистрация на поръчката в BoxNow."
 
-#: ./app/Admin/Order/MetaBox.php:1667
+#: ./app/Admin/Order/MetaBox.php:1669
 msgid "Order settings saved. The existing shipment was not changed. Cancel it manually and create a new shipment label to apply the changes."
 msgstr "Настройките за поръчката са запазени. Съществуващата пратка не е променяна. Анулирайте я ръчно и създайте нова товарителница, за да приложите промените."
 
@@ -3183,7 +3195,7 @@ msgstr "Настройките за поръчката са запазени. С
 msgid "Order status after shipment label creation"
 msgstr "Статус на поръчката след товарителница"
 
-#: ./app/Admin/Settings/Settings_Page.php:1035
+#: ./app/Admin/Settings/Settings_Page.php:1048
 msgid "Orders that are Refunded, Cancelled or Failed are never moved by these rules. A late or repeated courier event cannot undo a decision you have already taken about the money — the event is still recorded on the order, with a note explaining which change was declined."
 msgstr "Поръчки във „Върната сума“, „Отказана“ или „Неуспешна“ никога не се местят от тези правила. Закъсняло или повторено куриерско събитие не може да отмени решение, което вече сте взели за парите — събитието пак се записва в поръчката, с бележка коя промяна е отказана."
 
@@ -3191,7 +3203,7 @@ msgstr "Поръчки във „Върната сума“, „Отказана
 msgid "Ordinary WooCommerce goods use “Parcel / pack” by default. Financial shipment types are intentionally not exposed here."
 msgstr "Обикновените WooCommerce стоки използват „Пакет / колет“ по подразбиране. Финансовите типове пратки умишлено не се предлагат тук."
 
-#: ./app/Admin/Settings/Settings_Page.php:1252 ./app/Module/Categories.php:31
+#: ./app/Admin/Settings/Settings_Page.php:1265 ./app/Module/Categories.php:31
 msgid "Other"
 msgstr "Други"
 
@@ -3211,7 +3223,7 @@ msgstr "Заменя мястото за вземане от Pigeon само з�
 msgid "Overrides the sender contact for this order only."
 msgstr "Заменя контакта на подателя само за тази поръчка."
 
-#: ./app/Admin/Order/MetaBox.php:246 ./app/Admin/Order/MetaBox.php:348 ./app/Admin/Settings/Settings_Page.php:1464
+#: ./app/Admin/Order/MetaBox.php:246 ./app/Admin/Order/MetaBox.php:348 ./app/Admin/Settings/Settings_Page.php:1477
 msgid "Overview"
 msgstr "Преглед"
 
@@ -3219,7 +3231,7 @@ msgstr "Преглед"
 msgid "PDF 100×150 mm"
 msgstr "PDF 100×150 мм"
 
-#: ./app/Admin/Settings/Settings_Page.php:568
+#: ./app/Admin/Settings/Settings_Page.php:569
 msgid "PHP render"
 msgstr "PHP рендериране"
 
@@ -3299,7 +3311,7 @@ msgstr "Предаване на пратката"
 msgid "Partial delivery"
 msgstr "Частична доставка"
 
-#: ./app/Admin/Settings/Settings_Page.php:1161 ./app/Modules/Shipping/BoxNow/BoxNow.php:885
+#: ./app/Admin/Settings/Settings_Page.php:1174 ./app/Modules/Shipping/BoxNow/BoxNow.php:885
 msgid "Partner"
 msgstr "Партньор"
 
@@ -3381,12 +3393,12 @@ msgstr "Промяна на услугата само за тази поръчк
 msgid "Percentage of the cash-on-delivery amount according to the contract (for example, 0.8 for 0.8%)."
 msgstr "Процент от сумата на наложения платеж по договор (напр. 0.8 за 0.8%)."
 
-#: ./app/Admin/Settings/Settings_Page.php:566
+#: ./app/Admin/Settings/Settings_Page.php:567
 msgid "Performance diagnostics"
 msgstr "Диагностика на производителността"
 
-#: ./app/Admin/Order/MetaBox.php:270 ./app/Admin/Order/MetaBox.php:382 ./app/Admin/Order/MetaBox.php:801 ./app/Admin/Settings/Settings_Page.php:1161
-#: ./app/Checkout/Checkout.php:135 ./app/Modules/Shipping/BoxNow/BoxNow.php:2719 ./app/Modules/Shipping/BoxNow/BoxNow.php:2780 ./app/Modules/Shipping/Pigeon/Pigeon.php:555
+#: ./app/Admin/Order/MetaBox.php:270 ./app/Admin/Order/MetaBox.php:382 ./app/Admin/Order/MetaBox.php:801 ./app/Admin/Settings/Settings_Page.php:1174
+#: ./app/Checkout/Checkout.php:135 ./app/Modules/Shipping/BoxNow/BoxNow.php:2724 ./app/Modules/Shipping/BoxNow/BoxNow.php:2785 ./app/Modules/Shipping/Pigeon/Pigeon.php:555
 msgid "Phone"
 msgstr "Телефон"
 
@@ -3506,7 +3518,7 @@ msgstr "Pigeon: фирмените данни на получателя не с�
 msgid "Pigeon: the shipment was included in courier pickup request #%s."
 msgstr "Pigeon: пратката е включена в заявка за куриер №%s."
 
-#: ./app/Admin/Settings/Settings_Page.php:626
+#: ./app/Admin/Settings/Settings_Page.php:627
 msgid "Platform version"
 msgstr "Версия на платформата"
 
@@ -3514,7 +3526,7 @@ msgstr "Версия на платформата"
 msgid "Please complete the courier delivery selection."
 msgstr "Моля, завършете избора за доставка с куриер."
 
-#: ./app/Checkout/Checkout.php:603 ./app/Checkout/Checkout.php:1082 ./app/Checkout/Checkout.php:1115 ./app/Checkout/Checkout.php:1143
+#: ./app/Checkout/Checkout.php:603 ./app/Checkout/Checkout.php:1083 ./app/Checkout/Checkout.php:1116 ./app/Checkout/Checkout.php:1144
 msgid "Please select an office/locker or delivery address."
 msgstr "Моля изберете офис/автомат или адрес за доставка."
 
@@ -3560,8 +3572,8 @@ msgstr "Прегледай отчета"
 msgid "Previous valid lists"
 msgstr "Предишните валидни списъци"
 
-#: ./app/Admin/Addons.php:242 ./app/Admin/Order/MetaBox.php:426 ./app/Admin/Settings/Settings_Page.php:1652 ./app/Modules/Shipping/BoxNow/BoxNow.php:2618
-#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2805
+#: ./app/Admin/Addons.php:242 ./app/Admin/Order/MetaBox.php:426 ./app/Admin/Settings/Settings_Page.php:1665 ./app/Modules/Shipping/BoxNow/BoxNow.php:2618
+#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2810
 msgid "Price"
 msgstr "Цена"
 
@@ -3574,11 +3586,11 @@ msgstr "Неуспешно изчисление на цената."
 msgid "Pricing"
 msgstr "Ценообразуване"
 
-#: ./app/Admin/Settings/Settings_Page.php:814
+#: ./app/Admin/Settings/Settings_Page.php:827
 msgid "Pricing and COD are stored globally for Speedy; per-WooCommerce-shipping-method-instance separation is not active in the current Core contract."
 msgstr "Цените и наложеният платеж се съхраняват глобално за Speedy; отделни настройки за всяка WooCommerce инстанция на метод за доставка не са активни в текущия Core contract."
 
-#: ./app/Admin/Settings/Settings_Page.php:868 ./app/Admin/Settings/Settings_Page.php:881 ./app/Admin/Settings/Settings_Page.php:893 ./app/Admin/Settings/Settings_Page.php:905
+#: ./app/Admin/Settings/Settings_Page.php:881 ./app/Admin/Settings/Settings_Page.php:894 ./app/Admin/Settings/Settings_Page.php:906 ./app/Admin/Settings/Settings_Page.php:918
 #: ./app/Shipping/Pricing.php:509
 msgid "Pricing and free shipping"
 msgstr "Цени и безплатна доставка"
@@ -3615,19 +3627,11 @@ msgstr "Приоритетно време — до (ЧЧ:ММ)"
 msgid "Priority: free for the type → custom prices (if selected) → courier price (API)."
 msgstr "Приоритет: безплатна за типа → собствени цени (ако е избрано) → цена от куриера (API)."
 
-#: ./app/Admin/Addons.php:110
-msgid "Privacy"
-msgstr "Поверителност"
-
-#: ./app/Admin/Settings/Settings_Page.php:685
-msgid "Privacy notice"
-msgstr "Информация за поверителност"
-
 #: ./app/Admin/Order/MetaBox.php:435 ./app/Modules/Shipping/Econt/Econt.php:2519 ./app/Modules/Shipping/Pigeon/Pigeon.php:806 ./app/Shipping/Tracking_Status_Policy.php:57
 msgid "Processing"
 msgstr "В обработка"
 
-#: ./app/Admin/Settings/Settings_Page.php:674
+#: ./app/Admin/Settings/Settings_Page.php:688
 msgid "Product news and extensions from Error Web Agency."
 msgstr "Продуктови новости и разширения от Error Web Agency."
 
@@ -3659,7 +3663,7 @@ msgstr "Промоционална цена"
 msgid "Provide an invoice to the recipient before payment of cash on delivery."
 msgstr "Предоставяне на фактура на получателя преди заплащане на наложения платеж."
 
-#: ./app/Admin/Settings/Settings_Page.php:570
+#: ./app/Admin/Settings/Settings_Page.php:571
 msgid "Provider calls"
 msgstr "Заявки към доставчика"
 
@@ -3668,11 +3672,11 @@ msgstr "Заявки към доставчика"
 msgid "Provider-specific events for %1$s are kept in tracking and normalized to the closest BGCS state: %2$s."
 msgstr "Специфични събития за %1$s се запазват в проследяването и се нормализират към най-близкия BGCS статус: %2$s."
 
-#: ./app/Admin/Settings/Settings_Page.php:569
+#: ./app/Admin/Settings/Settings_Page.php:570
 msgid "Queries since BGCS render started"
 msgstr "Заявки след началото на BGCS render"
 
-#: ./app/Admin/Settings/Settings_Page.php:958
+#: ./app/Admin/Settings/Settings_Page.php:971
 msgid "REST route"
 msgstr "REST route"
 
@@ -3680,7 +3684,7 @@ msgstr "REST route"
 msgid "Range boundaries may touch: with 0–3 and 3–10 kg, exactly 3 kg uses the second row. Leave the final “To” field empty for a price with no upper limit."
 msgstr "Границите могат да се допират: при 0–3 и 3–10 кг точно 3 кг използва втория ред. Оставете последното поле „До“ празно за цена без горна граница."
 
-#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2805
+#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2810
 msgid "Range price"
 msgstr "Цена за диапазона"
 
@@ -3704,11 +3708,11 @@ msgstr "Готови за изравняване"
 msgid "Reason"
 msgstr "Причина"
 
-#: ./app/Admin/Settings/Settings_Page.php:989
+#: ./app/Admin/Settings/Settings_Page.php:1002
 msgid "Received"
 msgstr "Получен"
 
-#: ./app/Admin/Settings/Settings_Page.php:981
+#: ./app/Admin/Settings/Settings_Page.php:994
 msgid "Recent webhook events"
 msgstr "Последни webhook събития"
 
@@ -3761,7 +3765,7 @@ msgstr "Изравняване по куриерски отчет"
 msgid "Reconciled: %1$d · Skipped: %2$d · Conflicts: %3$d · Unmatched: %4$d · Already paid: %5$d · Duplicates: %6$d"
 msgstr "Изравнени: %1$d · Пропуснати: %2$d · Конфликти: %3$d · Неразпознати: %4$d · Вече изплатени: %5$d · Дубликати: %6$d"
 
-#: ./app/Admin/Settings/Settings_Page.php:728
+#: ./app/Admin/Settings/Settings_Page.php:741
 msgid "Record shipment creation snapshots"
 msgstr "Записвай данни при създаване на пратка"
 
@@ -3813,7 +3817,7 @@ msgstr "Възстановена"
 msgid "Rejected"
 msgstr "Отхвърлена"
 
-#: ./app/Admin/Settings/Settings_Page.php:661
+#: ./app/Admin/Settings/Settings_Page.php:676
 msgid "Remember the customer's last selection"
 msgstr "Запомняй последния избор на клиента"
 
@@ -3822,11 +3826,11 @@ msgstr "Запомняй последния избор на клиента"
 msgid "Remote catalog could not be refreshed. Showing the last valid catalog from %s."
 msgstr "Отдалеченият каталог не можа да бъде обновен. Показва се последният валиден каталог от %s."
 
-#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2784 ./app/Modules/Shipping/BoxNow/BoxNow.php:2806
+#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2789 ./app/Modules/Shipping/BoxNow/BoxNow.php:2811
 msgid "Remove"
 msgstr "Премахни"
 
-#: ./app/Admin/Settings/Settings_Page.php:1813
+#: ./app/Admin/Settings/Settings_Page.php:1826
 msgid "Remove rule"
 msgstr "Премахни правило"
 
@@ -3896,23 +3900,23 @@ msgid "Required when the payer is “Third party” (payment.thirdPartyClientId)
 msgstr "Задължителен при платец „Трето лице“ (payment.thirdPartyClientId)."
 
 #. translators: %s: minimum supported PHP version.
-#: ./bg-commerce-suite.php:198
+#: ./bg-commerce-suite.php:196
 #, python-format
 msgid "Requires PHP %s or newer."
 msgstr "Изисква PHP %s или по-нов."
 
 #. translators: %s: minimum supported WooCommerce version.
-#: ./bg-commerce-suite.php:208
+#: ./bg-commerce-suite.php:206
 #, python-format
 msgid "Requires WooCommerce %s or newer."
 msgstr "Изисква WooCommerce %s или по-нов."
 
-#: ./bg-commerce-suite.php:205
+#: ./bg-commerce-suite.php:203
 msgid "Requires WooCommerce to be active."
 msgstr "Изисква активен WooCommerce."
 
 #. translators: %s: minimum supported WordPress version.
-#: ./bg-commerce-suite.php:202
+#: ./bg-commerce-suite.php:200
 #, python-format
 msgid "Requires WordPress %s or newer."
 msgstr "Изисква WordPress %s или по-нов."
@@ -3933,7 +3937,7 @@ msgstr "Изисква преглед"
 msgid "Resend email"
 msgstr "Изпрати отново имейла"
 
-#: ./app/Admin/Settings/Settings_Page.php:989
+#: ./app/Admin/Settings/Settings_Page.php:1002
 msgid "Result"
 msgstr "Резултат"
 
@@ -4091,11 +4095,11 @@ msgstr "Същия ден (same-day)"
 msgid "Saturday delivery"
 msgstr "Съботна доставка"
 
-#: ./app/Admin/Settings/Settings_Page.php:776
+#: ./app/Admin/Settings/Settings_Page.php:789
 msgid "Save and check connection"
 msgstr "Запази и провери връзката"
 
-#: ./app/Admin/Order/MetaBox.php:275 ./app/Admin/Settings/Settings_Page.php:491 ./app/Admin/Settings/Settings_Page.php:926
+#: ./app/Admin/Order/MetaBox.php:275 ./app/Admin/Settings/Settings_Page.php:492 ./app/Admin/Settings/Settings_Page.php:939
 msgid "Save changes"
 msgstr "Запази промените"
 
@@ -4107,17 +4111,17 @@ msgstr "Запазете API данните и натиснете „Прове�
 msgid "Save without generating"
 msgstr "Запази без генериране"
 
-#: ./app/Admin/Settings/Settings_Page.php:1772
+#: ./app/Admin/Settings/Settings_Page.php:1785
 msgid "Saved."
 msgstr "Запазено."
 
 #. translators: %s: comma-separated list of preserved datasets.
-#: ./app/Admin/Settings/Settings_Page.php:1372
+#: ./app/Admin/Settings/Settings_Page.php:1385
 #, python-format
 msgid "Saved: %s"
 msgstr "Запазени: %s"
 
-#: ./app/Admin/Settings/Settings_Page.php:223
+#: ./app/Admin/Settings/Settings_Page.php:224
 msgid "Saving…"
 msgstr "Запазване…"
 
@@ -4133,11 +4137,11 @@ msgstr "Търсете по име или пощенски код…"
 msgid "Search city…"
 msgstr "Търсете град…"
 
-#: ./app/Admin/Settings/Settings_Page.php:216
+#: ./app/Admin/Settings/Settings_Page.php:217
 msgid "Searching…"
 msgstr "Търсене…"
 
-#: ./app/Admin/Settings/Settings_Page.php:1742
+#: ./app/Admin/Settings/Settings_Page.php:1755
 msgid "Select"
 msgstr "Избери"
 
@@ -4161,7 +4165,7 @@ msgstr "Изберете офис на Pigeon за подаване."
 msgid "Select a city first."
 msgstr "Първо изберете град."
 
-#: ./app/Checkout/Checkout.php:1354
+#: ./app/Checkout/Checkout.php:1355
 msgid "Select a locker"
 msgstr "Изберете автомат"
 
@@ -4217,7 +4221,7 @@ msgstr "Изберете профил на подателя в Еконт, пр�
 msgid "Select an address for courier pickup."
 msgstr "Изберете адрес за вземане от куриер."
 
-#: ./app/Checkout/Checkout.php:350 ./app/Checkout/Checkout.php:1353
+#: ./app/Checkout/Checkout.php:350 ./app/Checkout/Checkout.php:1354
 msgid "Select an office"
 msgstr "Изберете офис"
 
@@ -4229,7 +4233,7 @@ msgstr "Изберете офис за подаване на пратките."
 msgid "Select and synchronize an Econt sender profile to enable account-specific COD/PPP agreements, instruction templates and standalone courier pickup."
 msgstr "Изберете и синхронизирайте профил на подателя в Еконт, за да използвате специфичните за акаунта договори за НП/ППП, шаблони за инструкции и самостоятелна заявка за куриер."
 
-#: ./app/Admin/Settings/Settings_Page.php:225
+#: ./app/Admin/Settings/Settings_Page.php:226
 msgid "Select image"
 msgstr "Изберете изображение"
 
@@ -4249,7 +4253,7 @@ msgstr "Изберете град за подаване от адрес."
 msgid "Selected delivery"
 msgstr "Избрана доставка"
 
-#: ./app/Checkout/Checkout.php:1355
+#: ./app/Checkout/Checkout.php:1356
 msgid "Selected:"
 msgstr "Избрано:"
 
@@ -4265,7 +4269,7 @@ msgstr "Изпращане на SMS на получателя при прист�
 msgid "Send from"
 msgstr "Подаване от"
 
-#: ./app/Admin/Order/MetaBox.php:902 ./app/Admin/Order/MetaBox.php:1267 ./app/Admin/Settings/Settings_Page.php:783 ./app/Modules/Shipping/BoxNow/BoxNow.php:637
+#: ./app/Admin/Order/MetaBox.php:902 ./app/Admin/Order/MetaBox.php:1267 ./app/Admin/Settings/Settings_Page.php:796 ./app/Modules/Shipping/BoxNow/BoxNow.php:637
 #: ./app/Modules/Shipping/BoxNow/BoxNow.php:2567 ./app/Modules/Shipping/Econt/Econt.php:496 ./app/Modules/Shipping/Econt/Econt.php:2618 ./app/Modules/Shipping/Pigeon/Pigeon.php:126
 #: ./app/Modules/Shipping/Pigeon/Pigeon.php:1082 ./app/Modules/Shipping/Pigeon/Pigeon.php:1198 ./app/Modules/Shipping/Speedy/Speedy.php:260 ./app/Modules/Shipping/Speedy/Speedy.php:283
 #: ./app/Modules/Shipping/Speedy/Speedy.php:723 ./app/Modules/Shipping/Speedy/Speedy.php:750 ./app/Modules/Shipping/Speedy/Speedy.php:811 ./app/Modules/Shipping/Speedy/Speedy.php:1439
@@ -4381,7 +4385,7 @@ msgstr "Улица за подаване"
 msgid "Sender street ID"
 msgstr "ID на улица на подателя"
 
-#: ./app/Modules/Shipping/BoxNow/BoxNow.php:231 ./app/Modules/Shipping/BoxNow/BoxNow.php:2756
+#: ./app/Modules/Shipping/BoxNow/BoxNow.php:231 ./app/Modules/Shipping/BoxNow/BoxNow.php:2761
 msgid "Sender warehouse"
 msgstr "Склад-подател"
 
@@ -4461,15 +4465,15 @@ msgstr "Вид услуга"
 msgid "Service type and returns. These can also be changed for an individual order."
 msgstr "Вид услуга и връщания. Може да се променят и за отделна поръчка."
 
-#: ./app/Admin/Settings/Settings_Page.php:867
+#: ./app/Admin/Settings/Settings_Page.php:880
 msgid "Service, allowed delivery types and courier service payer."
 msgstr "Услуга, позволени видове доставка и платец на куриерската услуга."
 
-#: ./app/Admin/Addons.php:413 ./app/Admin/Settings/Settings_Page.php:1148
+#: ./app/Admin/Addons.php:413 ./app/Admin/Settings/Settings_Page.php:1161
 msgid "Settings"
 msgstr "Настройки"
 
-#: ./app/Admin/Settings/Settings_Page.php:384
+#: ./app/Admin/Settings/Settings_Page.php:385
 msgid "Settings saved."
 msgstr "Настройките са запазени."
 
@@ -4483,7 +4487,7 @@ msgid "Shipment %s was cancelled. There is currently no active shipment; review 
 msgstr "Пратка %s беше анулирана. В момента няма активна пратка; прегледайте запазените настройки, преди да създадете заместваща."
 
 #. translators: %s shipment number.
-#: ./app/Admin/Order/MetaBox.php:1719
+#: ./app/Admin/Order/MetaBox.php:1721
 msgid "Shipment cancelled at the courier and archived by BGCS: %s. No replacement shipment was created automatically."
 msgstr "Пратката беше анулирана при куриера и архивирана от BGCS: %s. Не беше създадена автоматично заместваща пратка."
 
@@ -4507,7 +4511,7 @@ msgstr "Несъответствие в данните на пратката."
 msgid "Shipment details before generation."
 msgstr "Данни за пратката преди генериране."
 
-#: ./app/Admin/Settings/Settings_Page.php:783
+#: ./app/Admin/Settings/Settings_Page.php:796
 msgid "Shipment drop-off/pickup details."
 msgstr "Данни за подаване/вземане на пратките."
 
@@ -4521,12 +4525,12 @@ msgstr "История на пратките"
 msgid "Shipment label"
 msgstr "Товарителница"
 
-#: ./app/Admin/Settings/Settings_Page.php:1079
+#: ./app/Admin/Settings/Settings_Page.php:1092
 msgid "Shipment label created email"
 msgstr "Имейл при създадена товарителница"
 
 #. translators: %s: newly created shipment label number.
-#: ./app/Admin/Order/MetaBox.php:1627 ./app/Admin/Order/Orders_Column.php:263
+#: ./app/Admin/Order/MetaBox.php:1629 ./app/Admin/Order/Orders_Column.php:263
 #, python-format
 msgid "Shipment label created: %s"
 msgstr "Създадена товарителница: %s"
@@ -4535,7 +4539,7 @@ msgstr "Създадена товарителница: %s"
 msgid "Shipment label creation failed."
 msgstr "Неуспешно създаване на товарителница."
 
-#: ./app/Admin/Order/MetaBox.php:1604
+#: ./app/Admin/Order/MetaBox.php:1606
 msgid "Shipment label creation is already in progress for this order. Wait a few seconds and refresh the page."
 msgstr "Създаването на товарителница вече е в процес за тази поръчка. Изчакайте няколко секунди и опреснете страницата."
 
@@ -4555,7 +4559,7 @@ msgstr "Товарителницата е блокирана: при догов�
 msgid "Shipment label preview"
 msgstr "Преглед на товарителницата"
 
-#: ./app/Admin/Settings/Settings_Page.php:624
+#: ./app/Admin/Settings/Settings_Page.php:625
 msgid "Shipment labels (30 days)"
 msgstr "Товарителници (30 дни)"
 
@@ -4601,7 +4605,7 @@ msgid "Shipping is paid by"
 msgstr "Доставката се поема от"
 
 #. translators: %s: courier name.
-#: ./app/Admin/Settings/Settings_Page.php:764 ./app/Admin/Settings/Settings_Page.php:1117
+#: ./app/Admin/Settings/Settings_Page.php:777 ./app/Admin/Settings/Settings_Page.php:1130
 msgid "Shipping methods"
 msgstr "Методи за доставка"
 
@@ -4628,13 +4632,21 @@ msgstr "Кратко описание под метода"
 msgid "Show BOX NOW in the shipping options"
 msgstr "Показвай BoxNow в списъка с доставки"
 
-#: ./app/Admin/Settings/Settings_Page.php:656
+#: ./app/Admin/Settings/Settings_Page.php:671
 msgid "Show a map with offices/lockers — the customer selects directly from it."
 msgstr "Покажи карта с офисите/автоматите — клиентът избира директно от нея."
 
-#: ./app/Admin/Settings/Settings_Page.php:219 ./app/Admin/Settings/Settings_Page.php:1828
+#: ./app/Admin/Settings/Settings_Page.php:646
+msgid "Show delivery date"
+msgstr "Показване на датата за доставка"
+
+#: ./app/Admin/Settings/Settings_Page.php:220 ./app/Admin/Settings/Settings_Page.php:1841
 msgid "Show more information"
 msgstr "Покажи повече информация"
+
+#: ./app/Admin/Settings/Settings_Page.php:694
+msgid "Show products and extensions from Error Web Agency. Enabled by default; you can disable it at any time."
+msgstr "Показване на продукти и разширения от Error Web Agency. Включено по подразбиране; можете да го изключите по всяко време."
 
 #: ./app/Modules/Shipping/Econt/Econt.php:709
 msgid "Show the “To address” option at checkout"
@@ -4664,7 +4676,7 @@ msgstr "Показвай „До офис“ в checkout"
 msgid "Shown below the selected method at checkout (for example, “Delivery in 1–2 business days”)."
 msgstr "Показва се под избрания метод в checkout (напр. „Доставка 1–2 работни дни“)."
 
-#: ./app/Admin/Settings/Settings_Page.php:566
+#: ./app/Admin/Settings/Settings_Page.php:567
 msgid "Shown only when WP_DEBUG and bgcs_debug=1 are enabled."
 msgstr "Показва се само при WP_DEBUG и bgcs_debug=1."
 
@@ -4672,7 +4684,7 @@ msgstr "Показва се само при WP_DEBUG и bgcs_debug=1."
 msgid "Shows all orders with a shipment label and cash on delivery for the selected period. CSV reconciliation compares shipment label, amount, currency and courier when those columns are present in the report."
 msgstr "Показват се всички поръчки с товарителница и наложен платеж за избрания период. CSV изравняването сравнява товарителница, сума, валута и куриер, когато тези колони присъстват в отчета."
 
-#: ./app/Admin/Settings/Settings_Page.php:959
+#: ./app/Admin/Settings/Settings_Page.php:972
 msgid "Signature"
 msgstr "Подпис"
 
@@ -4869,7 +4881,7 @@ msgstr "Стандартен наложен платеж"
 msgid "Standard cash on delivery or postal money transfer."
 msgstr "Стандартен наложен платеж или пощенски паричен превод."
 
-#: ./app/Checkout/Checkout.php:1350
+#: ./app/Checkout/Checkout.php:1351
 msgid "Start typing a city…"
 msgstr "Започнете да пишете град…"
 
@@ -4881,11 +4893,11 @@ msgstr "Статус"
 msgid "Store amount"
 msgstr "Сума в магазина"
 
-#: ./app/Admin/Settings/Settings_Page.php:729
+#: ./app/Admin/Settings/Settings_Page.php:742
 msgid "Store what was requested, what the courier said was available for the destination, what was validated, what was sent and what came back. Shown in the order under Details. Credentials are never recorded and customer names, phones, emails and addresses are stored only as a length preview."
 msgstr "Запазва какво е заявено, какво куриерът е обявил за налично за тази дестинация, какво е валидирано, какво е изпратено и какво се е върнало. Показва се в поръчката, в таб „Детайли“. Данни за достъп никога не се записват, а имената, телефоните, имейлите и адресите на клиентите се запазват само като дължина."
 
-#: ./app/Checkout/Checkout.php:370 ./app/Checkout/Checkout.php:1361
+#: ./app/Checkout/Checkout.php:370 ./app/Checkout/Checkout.php:1362
 msgid "Street"
 msgstr "Улица"
 
@@ -4893,7 +4905,7 @@ msgstr "Улица"
 msgid "Street (for address)"
 msgstr "Улица (за адрес)"
 
-#: ./app/Admin/Settings/Settings_Page.php:1101
+#: ./app/Admin/Settings/Settings_Page.php:1114
 msgid "Successful update"
 msgstr "Успешно обновяване"
 
@@ -4905,11 +4917,11 @@ msgstr "Резюме"
 msgid "Switch the Econt sender handover method to courier pickup from an address before requesting a courier."
 msgstr "Преди заявка за куриер сменете начина на предаване към Еконт на вземане от куриер от адрес."
 
-#: ./app/Admin/Settings/Settings_Page.php:528
+#: ./app/Admin/Settings/Settings_Page.php:529
 msgid "Sync directories"
 msgstr "Синхронизирай справочниците"
 
-#: ./app/Admin/Settings/Settings_Page.php:805
+#: ./app/Admin/Settings/Settings_Page.php:818
 msgid "Sync now"
 msgstr "Синхронизирай сега"
 
@@ -4931,7 +4943,7 @@ msgstr "Синхронизирайте списъка с BOX NOW автомат�
 msgid "Synchronize the missing locations: %s."
 msgstr "Синхронизирайте липсващите локации: %s."
 
-#: ./app/Admin/Settings/Settings_Page.php:1486
+#: ./app/Admin/Settings/Settings_Page.php:1499
 msgid "Synchronized"
 msgstr "Синхронизирани"
 
@@ -4940,7 +4952,7 @@ msgstr "Синхронизирани"
 msgid "Synchronized: cleared %1$d cached records for %2$s — offices/lockers will be refreshed from the API on the next load."
 msgstr "Синхронизирано: изчистени %1$d кеширани записа за %2$s — офисите/автоматите ще се обновят от API при следващо зареждане."
 
-#: ./app/Admin/Settings/Settings_Page.php:571
+#: ./app/Admin/Settings/Settings_Page.php:572
 msgid "Tab switch"
 msgstr "Смяна на таб"
 
@@ -4952,21 +4964,17 @@ msgstr "Данък"
 msgid "Taxable"
 msgstr "Облагаема"
 
-#: ./app/Admin/Settings/Settings_Page.php:850
+#: ./app/Admin/Settings/Settings_Page.php:863
 msgid "Technical and advanced settings"
 msgstr "Технически и разширени настройки"
 
-#: ./app/Admin/Settings/Settings_Page.php:1233
+#: ./app/Admin/Settings/Settings_Page.php:1246
 msgid "Technical and rarely used settings — you usually do not need to change them."
 msgstr "Технически и рядко използвани настройки — обичайно не се налага да ги пипате."
 
 #: ./app/Modules/Shipping/Econt/Econt.php:930 ./app/Modules/Shipping/Econt/Econt.php:937 ./app/Modules/Shipping/Econt/Econt.php:944
 msgid "Template ID. Sync Econt data to load account templates."
 msgstr "ID на шаблон. Синхронизирайте данните от Еконт, за да заредите шаблоните на профила."
-
-#: ./app/Admin/Addons.php:110
-msgid "Terms"
-msgstr "Условия"
 
 #: ./app/Modules/Shipping/BoxNow/BoxNow.php:906
 msgid "Test (stage)"
@@ -5020,19 +5028,19 @@ msgstr "Връзката със Speedy е успешна."
 msgid "The Speedy sender origin is confirmed."
 msgstr "Данните за подателя в Спиди са потвърдени."
 
-#: ./app/Admin/Settings/Settings_Page.php:698
+#: ./app/Admin/Settings/Settings_Page.php:711
 msgid "The WooCommerce status an order should move to is configured separately for each courier in its “Tracking” tab. Only BGCS states actually supported by that courier are shown."
 msgstr "Към кой WooCommerce статус да преминава поръчката се задава отделно за всеки куриер в неговия таб „Проследяване“. Показват се само BGCS статусите, които конкретният куриер реално поддържа."
 
-#: ./app/Admin/Settings/Settings_Page.php:1134
+#: ./app/Admin/Settings/Settings_Page.php:1147
 msgid "The account may be connected, but checkout will not offer this courier until you add the method to a shipping zone."
 msgstr "Акаунтът може да е свързан, но checkout няма да предлага този куриер, докато не добавите метода към зона."
 
-#: ./app/Admin/Settings/Settings_Page.php:2184
+#: ./app/Admin/Settings/Settings_Page.php:2206
 msgid "The active section could not be identified. Nothing was saved. Open the intended section and try again."
 msgstr "Не беше разпознат активният раздел. Нищо не е записано. Отворете желания раздел и опитайте отново."
 
-#: ./app/Admin/Settings/Settings_Page.php:945
+#: ./app/Admin/Settings/Settings_Page.php:958
 msgid "The address provided to BOX NOW for sending shipment status change events."
 msgstr "Адресът, който се предоставя на BOX NOW за изпращане на събития при промяна на състоянието на пратката."
 
@@ -5073,12 +5081,12 @@ msgstr "Данните за достъп до API на куриера са не�
 msgid "The courier API returned an invalid JSON response."
 msgstr "API на куриера върна невалиден JSON отговор."
 
-#: ./app/Admin/Order/MetaBox.php:1713
+#: ./app/Admin/Order/MetaBox.php:1715
 msgid "The courier confirmed cancellation, but BGCS could not complete the local shipment history. Refresh and try again; no replacement was created."
 msgstr "Куриерът потвърди анулирането, но BGCS не успя да завърши локалната история на пратката. Обновете и опитайте отново; не е създадена заместваща пратка."
 
-#: ./app/Checkout/Checkout.php:613 ./app/Checkout/Checkout.php:1204 ./app/Checkout/Checkout.php:1215 ./app/Checkout/Checkout.php:1219
-#: ./app/Checkout/Checkout.php:1223
+#: ./app/Checkout/Checkout.php:613 ./app/Checkout/Checkout.php:1205 ./app/Checkout/Checkout.php:1216 ./app/Checkout/Checkout.php:1220
+#: ./app/Checkout/Checkout.php:1224
 msgid "The courier could not confirm a shipping price for the current selection. Please review the delivery choice and try again."
 msgstr "Куриерът не можа да потвърди цена за доставка за текущия избор. Проверете избора за доставка и опитайте отново."
 
@@ -5094,7 +5102,7 @@ msgstr "Куриерът не потвърди анулирането. Прат�
 msgid "The courier is not active."
 msgstr "Куриерът не е активен."
 
-#: ./app/Admin/Order/MetaBox.php:1832
+#: ./app/Admin/Order/MetaBox.php:1834
 msgid "The courier is not available."
 msgstr "Куриерът не е наличен."
 
@@ -5152,7 +5160,7 @@ msgstr "Клиентът може да върне пратката по същи
 msgid "The customer profile determines which data can be updated from the API."
 msgstr "Клиентският профил определя данните, които могат да се обновят от API."
 
-#: ./app/Admin/Settings/Settings_Page.php:218
+#: ./app/Admin/Settings/Settings_Page.php:219
 msgid "The data could not be loaded. The saved selection has been preserved."
 msgstr "Данните не могат да бъдат заредени. Запазеният избор е запазен."
 
@@ -5172,11 +5180,11 @@ msgstr "Справочникът още не е синхронизиран."
 msgid "The directory is unavailable. The saved value remains unchanged."
 msgstr "Справочникът не е достъпен. Запазената стойност остава непроменена."
 
-#: ./app/Admin/Order/MetaBox.php:1738
+#: ./app/Admin/Order/MetaBox.php:1740
 msgid "The email was not sent. Check the customer address and WooCommerce email settings."
 msgstr "Имейлът не беше изпратен. Проверете адреса на клиента и WooCommerce email настройките."
 
-#: ./app/Admin/Order/MetaBox.php:1742
+#: ./app/Admin/Order/MetaBox.php:1744
 msgid "The email was sent."
 msgstr "Имейлът е изпратен."
 
@@ -5216,11 +5224,11 @@ msgstr "Последната проверка на Pigeon Express връзкат
 msgid "The last connection check failed."
 msgstr "Последната проверка на връзката е неуспешна."
 
-#: ./app/Admin/Settings/Settings_Page.php:1438
+#: ./app/Admin/Settings/Settings_Page.php:1451
 msgid "The main configuration is ready, but there are still recommended steps."
 msgstr "Основната конфигурация е готова, но има още препоръчителни стъпки."
 
-#: ./app/Admin/Settings/Settings_Page.php:131
+#: ./app/Admin/Settings/Settings_Page.php:132
 msgid "The module cannot be enabled in the current configuration."
 msgstr "Модулът не може да бъде включен при текущата конфигурация."
 
@@ -5228,15 +5236,15 @@ msgstr "Модулът не може да бъде включен при тек�
 msgid "The module cannot load the office directory."
 msgstr "Модулът не може да зареди справочника с офиси."
 
-#: ./app/Admin/Settings/Settings_Page.php:420
+#: ./app/Admin/Settings/Settings_Page.php:421
 msgid "The module is disabled."
 msgstr "Модулът е изключен."
 
-#: ./app/Admin/Settings/Settings_Page.php:224
+#: ./app/Admin/Settings/Settings_Page.php:225
 msgid "The module state could not be saved. Please try again."
 msgstr "Състоянието на модула не можа да бъде запазено. Опитайте отново."
 
-#: ./app/Admin/Settings/Settings_Page.php:475 ./app/Admin/Settings/Settings_Page.php:1900 ./app/Admin/Settings/Settings_Page.php:1937 ./app/Admin/Settings/Settings_Page.php:1976
+#: ./app/Admin/Settings/Settings_Page.php:476 ./app/Admin/Settings/Settings_Page.php:1913 ./app/Admin/Settings/Settings_Page.php:1950 ./app/Admin/Settings/Settings_Page.php:1989
 msgid "The module was not found."
 msgstr "Модулът не е намерен."
 
@@ -5244,13 +5252,13 @@ msgstr "Модулът не е намерен."
 msgid "The office list has not been synchronized yet. Try again in a moment or contact the store."
 msgstr "Списъкът с офиси още не е синхронизиран. Опитайте отново след момент или уведомете магазина."
 
-#: ./app/Admin/Settings/Settings_Page.php:895
+#: ./app/Admin/Settings/Settings_Page.php:908
 msgid "The official BOX NOW widget and locker-selection behavior."
 msgstr "Официалният BOX NOW widget и поведението при избор на автомат."
 
 #: ./app/Privacy/Policy.php:26
-msgid "The optional Error Web Agency product catalog is disabled by default. If a site administrator enables it, the site requests public product metadata from error.bg hourly and when an administrator requests a refresh. The request does not include the store URL, plugin inventory, customer or order data, credentials or cookies. The remote server necessarily receives the connecting server IP address and the generic BG-Commerce-Suite-Catalog/1 User-Agent."
-msgstr "Незадължителният продуктов каталог на Error Web Agency е изключен по подразбиране. Ако администратор на сайта го разреши, сайтът заявява публични продуктови метаданни от error.bg веднъж на час и когато администратор поиска опресняване. Заявката не включва адреса на магазина, списък с плъгини, данни за клиенти или поръчки, идентификационни данни или бисквитки. Отдалеченият сървър неизбежно получава IP адреса на свързващия се сървър и общия User-Agent BG-Commerce-Suite-Catalog/1."
+msgid "The optional Error Web Agency product catalog is enabled by default unless a site administrator has disabled it. While enabled, the site requests public product metadata from error.bg hourly and when an administrator requests a refresh. The request does not include the store URL, plugin inventory, customer or order data, credentials or cookies. The remote server necessarily receives the connecting server IP address and the generic BG-Commerce-Suite-Catalog/1 User-Agent."
+msgstr "Незадължителният продуктов каталог на Error Web Agency е включен по подразбиране, освен ако администраторът на сайта не го е изключил. Когато е включен, сайтът заявява публични продуктови данни от error.bg всеки час и при обновяване от администратор. Заявката не съдържа URL на магазина, списък с плъгини, данни за клиенти или поръчки, идентификационни данни или бисквитки. Отдалеченият сървър неизбежно получава IP адреса на свързващия се сървър и общия User-Agent BG-Commerce-Suite-Catalog/1."
 
 #: ./app/Addon/Remote_Catalog.php:141
 msgid "The optional product catalog is disabled."
@@ -5296,7 +5304,7 @@ msgstr "Периодът не може да е по-дълъг от един м�
 msgid "The pickup city is missing. The courier request requires a sender address — enter it under “Sender” and choose “Address” as the handover method."
 msgstr "Липсва град за вземане. Заявката за куриер иска адрес на подателя — попълнете го в „Подател“ и изберете „Адрес“ като начин на подаване."
 
-#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2820
+#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2825
 msgid "The pickup period has expired and the shipment is being returned."
 msgstr "Времето за получаване е изтекло, пратката се връща."
 
@@ -5351,6 +5359,10 @@ msgstr "Заглавната част на продуктовия каталог
 #: ./app/Admin/Addons.php:119
 msgid "The product catalog is already current."
 msgstr "Продуктовият каталог вече е актуален."
+
+#: ./app/Admin/Addons.php:110
+msgid "The product catalog is disabled. An administrator can enable it under General settings."
+msgstr "Продуктовият каталог е изключен. Администратор може да го включи от Общи настройки."
 
 #: ./app/Addon/Remote_Catalog.php:187
 msgid "The product catalog response has an invalid size."
@@ -5422,7 +5434,7 @@ msgstr "Записаният избор на куриер не съвпада с
 msgid "The saved delivery type is not supported by this courier."
 msgstr "Записаният тип доставка не се поддържа от този куриер."
 
-#: ./app/Admin/Settings/Settings_Page.php:964
+#: ./app/Admin/Settings/Settings_Page.php:977
 msgid "The secret must match the shared secret used by BOX NOW to sign the webhook payload. The saved value is not shown again after reloading."
 msgstr "Secret-ът трябва да съвпада със споделения secret, използван от BOX NOW за подписване на webhook payload-а. Записаната стойност не се показва обратно след презареждане."
 
@@ -5454,11 +5466,11 @@ msgstr "Избраният адрес на подателя в Еконт веч
 msgid "The selected courier cannot provide a payout report."
 msgstr "Избраният куриер не може да предостави отчет за изплатени суми."
 
-#: ./app/Checkout/Checkout.php:1246
+#: ./app/Checkout/Checkout.php:1247
 msgid "The selected courier is not synchronized with the order shipping method. Please review the delivery choice and try again."
 msgstr "Избраният куриер не е синхронизиран с метода за доставка на поръчката. Прегледайте избора за доставка и опитайте отново."
 
-#: ./app/Checkout/Checkout.php:1156 ./app/Checkout/Checkout.php:1213
+#: ./app/Checkout/Checkout.php:1157 ./app/Checkout/Checkout.php:1214
 msgid "The selected courier is not synchronized with the shipping method. Please review the delivery choice and try again."
 msgstr "Избраният куриер не е синхронизиран с метода за доставка. Прегледайте избора за доставка и опитайте отново."
 
@@ -5498,11 +5510,11 @@ msgstr "Мястото за приемане при подателя е гото
 msgid "The sender warehouse could not be confirmed through BOX NOW /origins: %s"
 msgstr "Не може да се потвърди складът-подател чрез BOX NOW /origins: %s"
 
-#: ./app/Admin/Settings/Settings_Page.php:393
+#: ./app/Admin/Settings/Settings_Page.php:394
 msgid "The settings were NOT saved — fix the following errors:"
 msgstr "Настройките НЕ са запазени — поправете следните грешки:"
 
-#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2822
+#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2827
 msgid "The shipment arrived at a BOX NOW depot."
 msgstr "Пратката е пристигнала в депо на BoxNow."
 
@@ -5522,11 +5534,11 @@ msgstr "Пратката не ползва партньор за доставк�
 msgid "The shipment has been sent"
 msgstr "Пратката е изпратена"
 
-#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2826
+#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2831
 msgid "The shipment has not been collected by the BOX NOW courier."
 msgstr "Пратката не е получена от куриера на BoxNow."
 
-#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2823
+#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2828
 msgid "The shipment is in the destination locker and is waiting for pickup."
 msgstr "Пратката е в крайния автомат, очаква получаване."
 
@@ -5554,19 +5566,19 @@ msgstr "Телефонът на получателя на пратката ли�
 msgid "The shipment remains active. No local shipment data was removed and no replacement was created."
 msgstr "Пратката остава активна. Не са премахнати локални данни за пратката и не е създадена заместваща."
 
-#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2825
+#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2830
 msgid "The shipment was accepted in a return locker."
 msgstr "Пратката е приета в автомат за връщане."
 
-#: ./app/Admin/Order/MetaBox.php:1731
+#: ./app/Admin/Order/MetaBox.php:1733
 msgid "The shipment was cancelled and archived. Review the saved settings before explicitly creating a replacement."
 msgstr "Пратката беше анулирана и архивирана. Прегледайте запазените настройки, преди изрично да създадете заместваща."
 
-#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2824
+#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2829
 msgid "The shipment was cancelled by the sender."
 msgstr "Пратката е анулирана от подателя."
 
-#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2819
+#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2824
 msgid "The shipment was delivered to the recipient."
 msgstr "Пратката е доставена на получателя."
 
@@ -5574,15 +5586,15 @@ msgstr "Пратката е доставена на получателя."
 msgid "The shipment was not found in BOX NOW."
 msgstr "Пратката не е намерена в BoxNow."
 
-#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2827
+#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2832
 msgid "The shipment was placed by the sender in the origin locker."
 msgstr "Пратката е поставена от подателя в изпращащия автомат."
 
-#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2818
+#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2823
 msgid "The shipment was registered in the system."
 msgstr "Пратката е регистрирана в системата."
 
-#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2821
+#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2826
 msgid "The shipment was returned to the sender."
 msgstr "Пратката е върната на подателя."
 
@@ -5622,7 +5634,7 @@ msgstr "Вече има активна заявка за вземане от к�
 msgid "There is already an active Pigeon courier pickup request. Refresh or cancel it before creating another one."
 msgstr "Вече има активна заявка за куриер на Pigeon. Обновете или отменете заявката, преди да създадете нова."
 
-#: ./app/Admin/Order/MetaBox.php:1581 ./app/Shipping/Shipment_Creation.php:36
+#: ./app/Admin/Order/MetaBox.php:1583 ./app/Shipping/Shipment_Creation.php:36
 msgid "There is already an active shipment label for this order. Use Print/Download/Cancel — do not create a new one until the current shipment is cancelled."
 msgstr "Вече има активна товарителница за тази поръчка. Използвайте Печат/Изтегли/Анулирай — не създавайте нова, докато текущата не бъде отказана."
 
@@ -5642,7 +5654,7 @@ msgstr "Няма товарителница за проследяване."
 msgid "Thermal label 100×90 mm (standard)"
 msgstr "Термо етикет 100×90 мм (стандарт)"
 
-#: ./app/Admin/Settings/Settings_Page.php:1073
+#: ./app/Admin/Settings/Settings_Page.php:1086
 msgid "These codes are diagnostic and specific to the current courier. Send them when needed so a safe BGCS mapping can be added."
 msgstr "Тези кодове са диагностични и са специфични за текущия куриер. Изпратете ги при нужда за добавяне на безопасен BGCS mapping."
 
@@ -5695,11 +5707,11 @@ msgstr "Този тип доставка не е наличен за избра�
 msgid "This is what the customer sees at checkout."
 msgstr "Това вижда клиентът при checkout."
 
-#: ./app/Admin/Settings/Settings_Page.php:2326
+#: ./app/Admin/Settings/Settings_Page.php:2348
 msgid "This module does not support connection checks."
 msgstr "Този модул не поддържа проверка на връзката."
 
-#: ./app/Admin/Settings/Settings_Page.php:2345
+#: ./app/Admin/Settings/Settings_Page.php:2367
 msgid "This module does not support sender refresh."
 msgstr "Този модул не поддържа обновяване на данните на подателя."
 
@@ -5725,7 +5737,7 @@ msgstr "Този запис надхвърли лимита за съхране�
 msgid "This status is specific to %s."
 msgstr "Този статус е специфичен за %s."
 
-#: ./app/Admin/Settings/Settings_Page.php:220
+#: ./app/Admin/Settings/Settings_Page.php:221
 msgid "This will replace only the data currently provided by the selected courier profile. Manual fields without an API value will be preserved. Continue?"
 msgstr "Това ще замени само данните, които избраният профил на куриера предоставя в момента. Ръчните полета без API стойност ще бъдат запазени. Да продължим ли?"
 
@@ -5737,15 +5749,15 @@ msgstr "Тип час"
 msgid "Title"
 msgstr "Заглавие"
 
-#: ./app/Admin/Settings/Settings_Page.php:871
+#: ./app/Admin/Settings/Settings_Page.php:884
 msgid "Title and short description shown to the customer when selecting Speedy."
 msgstr "Заглавие и кратко описание, които вижда клиентът при избор на Speedy."
 
-#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2618 ./app/Modules/Shipping/BoxNow/BoxNow.php:2804
+#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2618 ./app/Modules/Shipping/BoxNow/BoxNow.php:2809
 msgid "To (kg)"
 msgstr "До (кг)"
 
-#: ./app/Checkout/Checkout.php:280 ./app/Checkout/Checkout.php:734 ./app/Checkout/Checkout.php:1360 ./app/Shipping/Pricing.php:45
+#: ./app/Checkout/Checkout.php:280 ./app/Checkout/Checkout.php:734 ./app/Checkout/Checkout.php:1361 ./app/Shipping/Pricing.php:45
 msgid "To address"
 msgstr "До адрес"
 
@@ -5757,7 +5769,7 @@ msgstr "До офис на куриера"
 msgid "To date"
 msgstr "До дата"
 
-#: ./app/Checkout/Checkout.php:279 ./app/Checkout/Checkout.php:733 ./app/Checkout/Checkout.php:1359
+#: ./app/Checkout/Checkout.php:279 ./app/Checkout/Checkout.php:733 ./app/Checkout/Checkout.php:1360
 msgid "To locker"
 msgstr "До автомат"
 
@@ -5765,7 +5777,7 @@ msgstr "До автомат"
 msgid "To locker (APS)"
 msgstr "До автомат (АПС)"
 
-#: ./app/Checkout/Checkout.php:278 ./app/Checkout/Checkout.php:1358 ./app/Shipping/Pricing.php:43
+#: ./app/Checkout/Checkout.php:278 ./app/Checkout/Checkout.php:1359 ./app/Shipping/Pricing.php:43
 msgid "To office"
 msgstr "До офис"
 
@@ -5785,7 +5797,7 @@ msgstr "Проследи пратката"
 msgid "Track with courier"
 msgstr "Проследи при куриера"
 
-#: ./app/Admin/Order/MetaBox.php:349 ./app/Admin/Settings/Settings_Page.php:765 ./app/Admin/Settings/Settings_Page.php:836 ./app/Shipping/Tracking_Sync.php:99
+#: ./app/Admin/Order/MetaBox.php:349 ./app/Admin/Settings/Settings_Page.php:778 ./app/Admin/Settings/Settings_Page.php:849 ./app/Shipping/Tracking_Sync.php:99
 msgid "Tracking"
 msgstr "Проследяване"
 
@@ -5809,7 +5821,7 @@ msgstr "Проследяване: "
 msgid "Tracking: %s"
 msgstr "Проследяване: %s"
 
-#: ./app/Admin/Settings/Settings_Page.php:724
+#: ./app/Admin/Settings/Settings_Page.php:737
 msgid "Troubleshooting for shipment creation. Keep this off during normal operation."
 msgstr "Диагностика при създаване на пратка. Дръжте я изключена при нормална работа."
 
@@ -5817,7 +5829,7 @@ msgstr "Диагностика при създаване на пратка. Др
 msgid "Two-way shipment (DP)"
 msgstr "Двупосочна пратка (DP)"
 
-#: ./app/Admin/Order/MetaBox.php:192 ./app/Admin/Order/MetaBox.php:261 ./app/Admin/Order/MetaBox.php:368 ./app/Admin/Settings/Settings_Page.php:1649
+#: ./app/Admin/Order/MetaBox.php:192 ./app/Admin/Order/MetaBox.php:261 ./app/Admin/Order/MetaBox.php:368 ./app/Admin/Settings/Settings_Page.php:1662
 msgid "Type"
 msgstr "Тип"
 
@@ -5833,7 +5845,7 @@ msgstr "Неизвестен конфликт"
 msgid "Unknown courier."
 msgstr "Непознат куриер."
 
-#: ./app/Admin/Settings/Settings_Page.php:81 ./app/Admin/Settings/Settings_Page.php:116
+#: ./app/Admin/Settings/Settings_Page.php:82 ./app/Admin/Settings/Settings_Page.php:117
 msgid "Unknown module."
 msgstr "Непознат модул."
 
@@ -5841,7 +5853,7 @@ msgstr "Непознат модул."
 msgid "Unknown or inactive courier."
 msgstr "Непознат или неактивен куриер."
 
-#: ./app/Admin/Settings/Settings_Page.php:1051
+#: ./app/Admin/Settings/Settings_Page.php:1064
 msgid "Unmapped tracking statuses"
 msgstr "Неразпознати tracking статуси"
 
@@ -5853,20 +5865,20 @@ msgstr "До 10 MB и 50 000 реда. Поддържат се разделит�
 msgid "Up to date"
 msgstr "Актуална версия"
 
-#: ./app/Admin/Settings/Settings_Page.php:1651
+#: ./app/Admin/Settings/Settings_Page.php:1664
 msgid "Up to goods value"
 msgstr "До стойност на стоките"
 
-#: ./app/Admin/Settings/Settings_Page.php:1650
+#: ./app/Admin/Settings/Settings_Page.php:1663
 msgid "Up to kg"
 msgstr "До кг"
 
-#: ./app/Admin/Settings/Settings_Page.php:802
+#: ./app/Admin/Settings/Settings_Page.php:815
 #, python-format
 msgid "Up-to-date %s locations used by checkout."
 msgstr "Актуални локации на %s, използвани от checkout."
 
-#: ./app/Admin/Settings/Settings_Page.php:1099 ./app/Admin/Settings/Settings_Page.php:1100
+#: ./app/Admin/Settings/Settings_Page.php:1112 ./app/Admin/Settings/Settings_Page.php:1113
 msgid "Up-to-date data"
 msgstr "Актуални данни"
 
@@ -5874,11 +5886,11 @@ msgstr "Актуални данни"
 msgid "Update available"
 msgstr "Налична актуализация"
 
-#: ./app/Admin/Settings/Settings_Page.php:704
+#: ./app/Admin/Settings/Settings_Page.php:717
 msgid "Update offices/lockers and data for all active couriers daily."
 msgstr "Обновявай ежедневно офисите/автоматите и данните на всички активни куриери."
 
-#: ./app/Admin/Settings/Settings_Page.php:786
+#: ./app/Admin/Settings/Settings_Page.php:799
 msgid "Update sender details"
 msgstr "Обнови данните за подателя"
 
@@ -5900,7 +5912,7 @@ msgid "Updated %s ago"
 msgstr "Обновен преди %s"
 
 #. translators: %s: comma-separated list of updated datasets.
-#: ./app/Admin/Settings/Settings_Page.php:1368
+#: ./app/Admin/Settings/Settings_Page.php:1381
 #, python-format
 msgid "Updated: %s"
 msgstr "Обновени: %s"
@@ -6030,11 +6042,11 @@ msgstr "Ваучер: валидност (дни)"
 msgid "Wait for load — waiting for courier at locker"
 msgstr "Wait for load — чака куриер в автомат"
 
-#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2717 ./app/Modules/Shipping/BoxNow/BoxNow.php:2755
+#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2722 ./app/Modules/Shipping/BoxNow/BoxNow.php:2760
 msgid "Warehouse"
 msgstr "Склад"
 
-#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2774
+#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2779
 msgid "Warehouse ID"
 msgstr "ID на склада"
 
@@ -6042,7 +6054,7 @@ msgstr "ID на склада"
 msgid "Warehouse ID (origin)"
 msgstr "ID на склад (изходен)"
 
-#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2708
+#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2713
 msgid "Warehouses and pickup contacts"
 msgstr "Складове и контакти за вземане"
 
@@ -6066,15 +6078,15 @@ msgstr "В момента не можем да изчислим тази цен�
 msgid "We cannot connect to Speedy right now. Please try again or choose another delivery method."
 msgstr "В момента не можем да се свържем със Спиди. Моля, опитайте отново или изберете друг метод за доставка."
 
-#: ./app/Checkout/Checkout.php:1364
+#: ./app/Checkout/Checkout.php:1365
 msgid "We could not load the data. Try again."
 msgstr "Не успяхме да заредим данните. Опитайте отново."
 
-#: ./app/Admin/Settings/Settings_Page.php:960 ./app/Modules/Shipping/BoxNow/BoxNow.php:925
+#: ./app/Admin/Settings/Settings_Page.php:973 ./app/Modules/Shipping/BoxNow/BoxNow.php:925
 msgid "Webhook Secret"
 msgstr "Webhook Secret"
 
-#: ./app/Admin/Settings/Settings_Page.php:949
+#: ./app/Admin/Settings/Settings_Page.php:962
 msgid "Webhook URL"
 msgstr "Webhook URL"
 
@@ -6180,7 +6192,7 @@ msgstr "При първата опция BGCS добавя забележка з
 msgid "WooCommerce is not active."
 msgstr "WooCommerce не е активен."
 
-#: ./app/Admin/Settings/Settings_Page.php:1020
+#: ./app/Admin/Settings/Settings_Page.php:1033
 msgid "WooCommerce status automation"
 msgstr "Автоматизация на WooCommerce статуси"
 
@@ -6204,12 +6216,12 @@ msgstr "Изпращате твърде много заявки за насел�
 msgid "You are sending too many shipping requests. Wait a moment and try again."
 msgstr "Изпращате твърде много заявки за доставка. Изчакайте малко и опитайте отново."
 
-#: ./app/Admin/Settings/Settings_Page.php:1023
+#: ./app/Admin/Settings/Settings_Page.php:1036
 msgid "You can prepare the mapping here; it will start applying only after global automation is enabled."
 msgstr "Можете да подготвите mapping-а тук; той ще започне да се прилага едва след включване на общата автоматизация."
 
-#: ./app/Addon/Remote_Catalog.php:102 ./app/Admin/Order/Orders_Column.php:207 ./app/Admin/Settings/Settings_Page.php:72 ./app/Admin/Settings/Settings_Page.php:105
-#: ./app/Admin/Settings/Settings_Page.php:1890 ./app/Admin/Settings/Settings_Page.php:1928 ./app/Admin/Settings/Settings_Page.php:1967 ./app/Admin/Settings/Settings_Page.php:2108
+#: ./app/Addon/Remote_Catalog.php:102 ./app/Admin/Order/Orders_Column.php:207 ./app/Admin/Settings/Settings_Page.php:73 ./app/Admin/Settings/Settings_Page.php:106
+#: ./app/Admin/Settings/Settings_Page.php:1903 ./app/Admin/Settings/Settings_Page.php:1941 ./app/Admin/Settings/Settings_Page.php:1980 ./app/Admin/Settings/Settings_Page.php:2121
 #: ./app/Modules/Accounting/CodReports/Report_Controller.php:202 ./app/Modules/Accounting/CodReports/Report_Controller.php:243 ./app/Modules/Accounting/CodReports/Report_Controller.php:341 ./app/Modules/Accounting/CodReports/Report_Controller.php:409
 #: ./app/Modules/Accounting/CodReports/Report_Controller.php:479
 msgid "You do not have permission for this action."
@@ -6219,7 +6231,7 @@ msgstr "Нямате права за това действие."
 msgid "You do not have permission to download this label."
 msgstr "Нямате права за изтегляне на този етикет."
 
-#: ./app/Admin/Order/MetaBox.php:1817
+#: ./app/Admin/Order/MetaBox.php:1819
 msgid "You do not have permission."
 msgstr "Нямате права."
 
@@ -6278,7 +6290,7 @@ msgstr "Пратката ви е подготвена"
 msgid "[{site_title}] Shipment for order #{order_number} is ready"
 msgstr "[{site_title}] Пратка за поръчка #{order_number} е подготвена"
 
-#: ./app/Checkout/Checkout.php:851 ./app/Modules/Shipping/Pigeon/Pigeon.php:1986 ./app/Modules/Shipping/Pigeon/Pigeon.php:2089
+#: ./app/Checkout/Checkout.php:852 ./app/Modules/Shipping/Pigeon/Pigeon.php:1986 ./app/Modules/Shipping/Pigeon/Pigeon.php:2089
 msgid "address"
 msgstr "адрес"
 
@@ -6290,7 +6302,7 @@ msgstr "allowReturn = true в заявката за доставка"
 msgid "an earlier successful refresh"
 msgstr "по-ранно успешно обновяване"
 
-#: ./app/Admin/Settings/Settings_Page.php:1008
+#: ./app/Admin/Settings/Settings_Page.php:1021
 msgid "applied = the event was applied; duplicate_ignored = this message has already been handled for the order; expired_ignored = the event is older than the freshness window, so it is history being replayed rather than news; stale_ignored = the event is older than one already accepted for this order."
 msgstr "applied = събитието е приложено; duplicate_ignored = това съобщение вече е обработено за поръчката; expired_ignored = събитието е по-старо от прозореца за свежест, тоест е преиграна история, а не новина; stale_ignored = събитието е по-старо от вече прието за тази поръчка."
 
@@ -6389,7 +6401,7 @@ msgstr "по договор"
 msgid "inherit from Speedy settings"
 msgstr "наследи от настройките на Speedy"
 
-#: ./app/Checkout/Checkout.php:850
+#: ./app/Checkout/Checkout.php:851
 msgid "locker"
 msgstr "автомат"
 
@@ -6419,7 +6431,7 @@ msgstr "не е във вашия договор"
 msgid "not synchronized"
 msgstr "не е синхронизиран"
 
-#: ./app/Checkout/Checkout.php:849
+#: ./app/Checkout/Checkout.php:850
 msgid "office"
 msgstr "офис"
 
@@ -6454,7 +6466,7 @@ msgstr "печата се на товарителницата (до 200 знак
 msgid "read from Speedy %s ago"
 msgstr "прочетено от Speedy преди %s"
 
-#: ./app/Admin/Settings/Settings_Page.php:1436
+#: ./app/Admin/Settings/Settings_Page.php:1449
 msgid "readiness"
 msgstr "готовност"
 
@@ -6466,7 +6478,7 @@ msgstr "връщане на документи"
 msgid "return voucher"
 msgstr "ваучер за връщане"
 
-#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2778
+#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2783
 msgid "same as “Sender”"
 msgstr "както в „Подател“"
 
@@ -6529,7 +6541,7 @@ msgstr "— Изберете профил —"
 msgid "— Select a service —"
 msgstr "— Изберете услуга —"
 
-#: ./app/Modules/Shipping/BoxNow/BoxNow.php:828 ./app/Modules/Shipping/BoxNow/BoxNow.php:2762
+#: ./app/Modules/Shipping/BoxNow/BoxNow.php:828 ./app/Modules/Shipping/BoxNow/BoxNow.php:2767
 msgid "— Select a warehouse —"
 msgstr "— Изберете склад —"
 

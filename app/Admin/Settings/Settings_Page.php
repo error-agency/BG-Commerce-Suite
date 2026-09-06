@@ -15,6 +15,7 @@ use BgCommerce3\Container\Container;
 use BgCommerce3\Module\Categories;
 use BgCommerce3\Module\Module_Registry;
 use BgCommerce3\Shipping\Tracking_Unmapped_Registry;
+use BgCommerce3\Shipping\Delivery_Estimate;
 use BgCommerce3\Support\Options;
 use BgCommerce3\Support\Sync_Result;
 use BgCommerce3\Support\Module_Settings;
@@ -641,6 +642,20 @@ class Settings_Page {
 	 * Render the general settings cards.
 	 */
 	private function render_general_cards() {
+		$this->card_open( 'truck', __( 'Delivery date', 'bg-commerce-suite' ), __( 'Display courier-provided dates only when valid. No date is calculated or invented by BGCS.', 'bg-commerce-suite' ) );
+		echo '<p><label for="bgcs-delivery-estimate-display">' . esc_html__( 'Show delivery date', 'bg-commerce-suite' ) . '</label></p>';
+		echo '<select id="bgcs-delivery-estimate-display" name="checkout[delivery_estimate_display]">';
+		foreach ( array(
+			'checkout' => __( 'Checkout only', 'bg-commerce-suite' ),
+			'email'    => __( 'Email only', 'bg-commerce-suite' ),
+			'both'     => __( 'Checkout and email', 'bg-commerce-suite' ),
+			'none'     => __( 'Nowhere', 'bg-commerce-suite' ),
+		) as $value => $label ) {
+			echo '<option value="' . esc_attr( $value ) . '"' . selected( Delivery_Estimate::display_mode(), $value, false ) . '>' . esc_html( $label ) . '</option>';
+		}
+		echo '</select>';
+		$this->card_close();
+
 		// Checkout card.
 		$this->card_open( 'sliders', __( 'Checkout', 'bg-commerce-suite' ), __( 'Order form behavior.', 'bg-commerce-suite' ) );
 		$this->checkbox(
@@ -669,20 +684,18 @@ class Settings_Page {
 		);
 		$this->card_close();
 
-		// Optional product discovery is an external-service connection and remains
-		// off until an administrator explicitly opts in.
+		// Каталогът е включен по подразбиране, но запазеният избор се спазва.
 		$this->card_open( 'package', __( 'Optional product catalog', 'bg-commerce-suite' ), __( 'Product news and extensions from Error Web Agency.', 'bg-commerce-suite' ) );
 		if ( current_user_can( 'manage_options' ) ) {
 			$this->checkbox(
 				'catalog[enabled]',
 				Remote_Catalog::is_enabled(),
 				__( 'Enable the Error Web Agency product catalog', 'bg-commerce-suite' ),
-				__( 'Fetch validated product names, versions, prices, links and promotions from error.bg. Disabled by default. No store, customer, order, credential or plugin-inventory data is sent; the remote server necessarily receives the connecting server IP address.', 'bg-commerce-suite' )
+				__( 'Show products and extensions from Error Web Agency. Enabled by default; you can disable it at any time.', 'bg-commerce-suite' )
 			);
 		} else {
 			echo '<p class="bgcs-help">' . esc_html__( 'Only a site administrator can enable or disable the external product catalog.', 'bg-commerce-suite' ) . '</p>';
 		}
-		echo '<p class="bgcs-help" style="margin:10px 0 0"><a href="' . esc_url( Remote_Catalog::PRIVACY_URL ) . '" target="_blank" rel="noopener noreferrer">' . esc_html__( 'Privacy notice', 'bg-commerce-suite' ) . '</a> · <a href="' . esc_url( Remote_Catalog::TERMS_URL ) . '" target="_blank" rel="noopener noreferrer">' . esc_html__( 'Catalog service terms', 'bg-commerce-suite' ) . '</a></p>';
 		$this->card_close();
 
 		// Automation card.
@@ -2125,6 +2138,15 @@ class Settings_Page {
 		}
 
 		if ( 'general' === $active_tab ) {
+			if ( isset( $_POST['checkout']['delivery_estimate_display'] ) ) {
+				$mode = is_string( $_POST['checkout']['delivery_estimate_display'] ) ? sanitize_key( wp_unslash( $_POST['checkout']['delivery_estimate_display'] ) ) : 'none';
+				$mode = in_array( $mode, array( 'checkout', 'email', 'both', 'none' ), true ) ? $mode : 'none';
+				$previous_mode = Delivery_Estimate::display_mode();
+				Options::set( 'checkout', 'delivery_estimate_display', $mode );
+				if ( $previous_mode !== $mode && class_exists( '\WC_Cache_Helper' ) ) {
+					\WC_Cache_Helper::get_transient_version( 'shipping', true );
+				}
+			}
 			// Save checkout general options.
 			$hide_fields = isset( $_POST['checkout']['hide_fields'] ) && 'yes' === $_POST['checkout']['hide_fields'];
 			Options::set( 'checkout', 'hide_fields', $hide_fields ? 'yes' : 'no' );

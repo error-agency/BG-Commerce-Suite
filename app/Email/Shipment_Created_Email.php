@@ -80,7 +80,8 @@ class Shipment_Created_Email extends \WC_Email {
 		$this->courier_name      = (string) $courier_name;
 		$this->waybill_number    = (string) $waybill_number;
 		$this->tracking_url      = (string) $tracking_url;
-		$this->delivery_estimate = Delivery_Estimate::format( Delivery_Estimate::for_order( $this->object ) );
+		$estimate = Delivery_Estimate::for_order( $this->object );
+		$this->delivery_estimate = Delivery_Estimate::visible( $estimate, 'email' ) ? Delivery_Estimate::format( $estimate ) : '';
 		$this->placeholders['{order_number}']    = $this->object->get_order_number();
 		$created = $this->object->get_date_created();
 		$this->placeholders['{order_date}']      = $created ? wc_format_datetime( $created ) : '';

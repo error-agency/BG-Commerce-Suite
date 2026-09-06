@@ -1,7 +1,7 @@
 msgid ""
-msgstr "Project-Id-Version: BG Commerce Suite 4.4.0\n"
+msgstr "Project-Id-Version: BG Commerce Suite 4.6.0\n"
 "Report-Msgid-Bugs-To: https://error.bg\n"
-"POT-Creation-Date: 2026-09-05 07:57+0000\n"
+"POT-Creation-Date: 2026-09-06 03:29+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -87,12 +87,12 @@ msgstr ""
 msgid "%s directories were updated."
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:1117
+#: ./app/Admin/Settings/Settings_Page.php:1130
 msgid "%s is added to a WooCommerce zone. Each instance can have its own configuration."
 msgstr ""
 
 #. translators: %s: courier name.
-#: ./app/Admin/Settings/Settings_Page.php:761
+#: ./app/Admin/Settings/Settings_Page.php:774
 msgid "%s settings"
 msgstr ""
 
@@ -264,11 +264,11 @@ msgstr ""
 msgid "API username from your contracted Speedy profile."
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:881
+#: ./app/Admin/Settings/Settings_Page.php:894
 msgid "API/custom prices and free-shipping thresholds."
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:905
+#: ./app/Admin/Settings/Settings_Page.php:918
 msgid "API/custom prices and thresholds."
 msgstr ""
 
@@ -276,7 +276,7 @@ msgstr ""
 msgid "Accepted"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:762
+#: ./app/Admin/Settings/Settings_Page.php:775
 msgid "Account"
 msgstr ""
 
@@ -285,7 +285,7 @@ msgid "Account agreement returned by Econt. Agreements marked “Postal money tr
 msgstr ""
 
 #. translators: %s: courier name.
-#: ./app/Admin/Settings/Settings_Page.php:773
+#: ./app/Admin/Settings/Settings_Page.php:786
 msgid "Account and API"
 msgstr ""
 
@@ -297,20 +297,20 @@ msgstr ""
 msgid "Action"
 msgstr ""
 
-#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2618 ./app/Modules/Shipping/BoxNow/BoxNow.php:2721
+#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2618 ./app/Modules/Shipping/BoxNow/BoxNow.php:2726
 msgid "Actions"
 msgstr ""
 
 #: ./app/Admin/Addons.php:188 ./app/Admin/Addons.php:217 ./app/Admin/Addons.php:392 ./app/Admin/Addons.php:393
-#: ./app/Admin/Settings/Settings_Page.php:1148 ./app/Admin/Settings/Settings_Page.php:1623
+#: ./app/Admin/Settings/Settings_Page.php:1161 ./app/Admin/Settings/Settings_Page.php:1636
 msgid "Active"
 msgstr ""
 
-#: ./bg-commerce-suite.php:161
+#: ./bg-commerce-suite.php:159
 msgid "Active legacy BGCS plugins were detected. To avoid running two versions at the same time, deactivate the old BG Commerce Suite and its courier add-ons. Their files and settings will not be deleted."
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:623
+#: ./app/Admin/Settings/Settings_Page.php:624
 msgid "Active modules"
 msgstr ""
 
@@ -323,11 +323,11 @@ msgid "Active shipment"
 msgstr ""
 
 #. translators: %s: courier name.
-#: ./app/Admin/Settings/Settings_Page.php:1154
+#: ./app/Admin/Settings/Settings_Page.php:1167
 msgid "Add %s to zone"
 msgstr ""
 
-#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2713
+#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2718
 msgid "Add a row only for a warehouse with a different contact. An empty field inherits the value from the “Sender” section, and an empty table means all warehouses use those values."
 msgstr ""
 
@@ -355,11 +355,11 @@ msgstr ""
 msgid "Add range"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:1678
+#: ./app/Admin/Settings/Settings_Page.php:1691
 msgid "Add rule"
 msgstr ""
 
-#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2729
+#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2734
 msgid "Add warehouse"
 msgstr ""
 
@@ -371,7 +371,7 @@ msgstr ""
 msgid "Additional"
 msgstr ""
 
-#: ./app/Checkout/Checkout.php:388 ./app/Checkout/Checkout.php:1363
+#: ./app/Checkout/Checkout.php:388 ./app/Checkout/Checkout.php:1364
 msgid "Additional (optional)"
 msgstr ""
 
@@ -391,12 +391,12 @@ msgstr ""
 msgid "Additional services"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:870 ./app/Admin/Settings/Settings_Page.php:883 ./app/Admin/Settings/Settings_Page.php:894 ./app/Admin/Settings/Settings_Page.php:906
+#: ./app/Admin/Settings/Settings_Page.php:883 ./app/Admin/Settings/Settings_Page.php:896 ./app/Admin/Settings/Settings_Page.php:907 ./app/Admin/Settings/Settings_Page.php:919
 msgid "Additional services and shipment"
 msgstr ""
 
 #: ./app/Admin/Order/MetaBox.php:192 ./app/Admin/Order/MetaBox.php:266 ./app/Admin/Order/MetaBox.php:378 ./app/Admin/Order/MetaBox.php:1255
-#: ./app/Admin/Settings/Settings_Page.php:1137 ./app/Checkout/Checkout.php:756 ./app/Modules/Shipping/Pigeon/Pigeon.php:205 ./app/Modules/Shipping/Pigeon/Pigeon.php:1003
+#: ./app/Admin/Settings/Settings_Page.php:1150 ./app/Checkout/Checkout.php:756 ./app/Modules/Shipping/Pigeon/Pigeon.php:205 ./app/Modules/Shipping/Pigeon/Pigeon.php:1003
 #: ./app/Shipping/Method.php:89
 msgid "Address"
 msgstr ""
@@ -413,7 +413,7 @@ msgstr ""
 msgid "Administrative fee"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:1232
+#: ./app/Admin/Settings/Settings_Page.php:1245
 msgid "Advanced settings"
 msgstr ""
 
@@ -433,7 +433,7 @@ msgstr ""
 msgid "All"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:694
+#: ./app/Admin/Settings/Settings_Page.php:707
 msgid "Allow BGCS to change the WooCommerce status based on the normalized courier status. Specific actions and tracking check frequency are configured separately for each courier."
 msgstr ""
 
@@ -469,7 +469,7 @@ msgstr ""
 msgid "Amount mismatch"
 msgstr ""
 
-#: ./app/Admin/Order/MetaBox.php:1684
+#: ./app/Admin/Order/MetaBox.php:1686
 msgid "Another shipment operation is already in progress for this order. Wait a few seconds and refresh the page."
 msgstr ""
 
@@ -510,7 +510,7 @@ msgstr ""
 msgid "Automatic COD payout synchronization"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:1023
+#: ./app/Admin/Settings/Settings_Page.php:1036
 msgid "Automatic WooCommerce status updates are disabled globally."
 msgstr ""
 
@@ -518,7 +518,7 @@ msgstr ""
 msgid "Automatic courier API"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:703
+#: ./app/Admin/Settings/Settings_Page.php:716
 msgid "Automatic data synchronization"
 msgstr ""
 
@@ -527,7 +527,7 @@ msgstr ""
 msgid "Automatic status change after shipment label %s."
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:693
+#: ./app/Admin/Settings/Settings_Page.php:706
 msgid "Automatic status updates"
 msgstr ""
 
@@ -535,7 +535,7 @@ msgstr ""
 msgid "Automatic tracking synchronization"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:1102
+#: ./app/Admin/Settings/Settings_Page.php:1115
 msgid "Automatic updates"
 msgstr ""
 
@@ -559,7 +559,7 @@ msgstr ""
 msgid "Automatically update the shipment status from the courier."
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:689
+#: ./app/Admin/Settings/Settings_Page.php:702
 msgid "Automation"
 msgstr ""
 
@@ -575,7 +575,7 @@ msgstr ""
 msgid "Available only for offices where Speedy explicitly allows parcel drop-off."
 msgstr ""
 
-#: ./app/Checkout/Checkout.php:1365 ./app/Shipping/Hooks.php:99 ./app/Shipping/Hooks.php:136
+#: ./app/Checkout/Checkout.php:1366 ./app/Shipping/Hooks.php:99 ./app/Shipping/Hooks.php:136
 msgid "Awaiting calculation"
 msgstr ""
 
@@ -583,7 +583,7 @@ msgstr ""
 msgid "Awaiting payout"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:235 ./app/Admin/Settings/Settings_Page.php:236 ./app/Privacy/Policy.php:30
+#: ./app/Admin/Settings/Settings_Page.php:236 ./app/Admin/Settings/Settings_Page.php:237 ./app/Privacy/Policy.php:30
 msgid "BG Commerce Suite"
 msgstr ""
 
@@ -596,7 +596,7 @@ msgstr ""
 msgid "BG Commerce Suite — Shipping"
 msgstr ""
 
-#: ./app/Checkout/Checkout.php:1356
+#: ./app/Checkout/Checkout.php:1357
 msgid "BG Commerce Suite — delivery selection"
 msgstr ""
 
@@ -604,7 +604,7 @@ msgstr ""
 msgid "BGCS Core"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:565
+#: ./app/Admin/Settings/Settings_Page.php:566
 msgid "BGCS Performance Diagnostics"
 msgstr ""
 
@@ -628,7 +628,7 @@ msgstr ""
 msgid "BGCS reads the courier payout report in the background and marks COD as paid only when the shipment number, amount, currency and payout date match the shipment snapshot. It never creates a WooCommerce refund and never changes the payment status automatically."
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:989
+#: ./app/Admin/Settings/Settings_Page.php:1002
 msgid "BGCS state"
 msgstr ""
 
@@ -636,7 +636,7 @@ msgstr ""
 msgid "BGCS status"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:1079
+#: ./app/Admin/Settings/Settings_Page.php:1092
 msgid "BGCS uses a WooCommerce transactional email instead of its own mail transport."
 msgstr ""
 
@@ -653,7 +653,7 @@ msgstr ""
 msgid "BGCS: Resend shipment label email"
 msgstr ""
 
-#: ./app/Admin/Order/MetaBox.php:1661
+#: ./app/Admin/Order/MetaBox.php:1663
 msgid "BGCS: order-specific shipment settings were saved. The existing courier shipment was not changed. To apply the new values, cancel the current shipment manually and then create a new shipment label."
 msgstr ""
 
@@ -661,7 +661,7 @@ msgstr ""
 msgid "BGCS: the shipment label email was not sent. Check the email address and WooCommerce email settings."
 msgstr ""
 
-#: ./app/Admin/Order/MetaBox.php:1740 ./app/Email/Emails.php:138
+#: ./app/Admin/Order/MetaBox.php:1742 ./app/Email/Emails.php:138
 msgid "BGCS: the shipment label email was resent manually."
 msgstr ""
 
@@ -675,7 +675,7 @@ msgstr ""
 msgid "BOX NOW /origins returned an error: %s"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:944
+#: ./app/Admin/Settings/Settings_Page.php:957
 msgid "BOX NOW Webhook"
 msgstr ""
 
@@ -786,15 +786,15 @@ msgstr ""
 msgid "BOX NOW uses only these ranges for paid shipping. Free shipping, when configured, takes priority."
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:689
+#: ./app/Admin/Settings/Settings_Page.php:702
 msgid "Background tasks via Action Scheduler."
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:836
+#: ./app/Admin/Settings/Settings_Page.php:849
 msgid "Background updates, webhook (when offered by the courier), and an action immediately after a shipment is created."
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:711
+#: ./app/Admin/Settings/Settings_Page.php:724
 msgid "Behavior of additional document sections in the order."
 msgstr ""
 
@@ -842,7 +842,7 @@ msgstr ""
 msgid "COD / PPP payout agreement"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:882 ./app/Modules/Shipping/Econt/Econt.php:2625
+#: ./app/Admin/Settings/Settings_Page.php:895 ./app/Modules/Shipping/Econt/Econt.php:2625
 msgid "COD agreement, payout and sender payment method."
 msgstr ""
 
@@ -850,7 +850,7 @@ msgstr ""
 msgid "COD amount"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:869
+#: ./app/Admin/Settings/Settings_Page.php:882
 msgid "COD and postal money transfer fee (PMT) settings."
 msgstr ""
 
@@ -958,7 +958,7 @@ msgstr ""
 msgid "Cash"
 msgstr ""
 
-#: ./app/Admin/Order/MetaBox.php:863 ./app/Admin/Settings/Settings_Page.php:869 ./app/Admin/Settings/Settings_Page.php:882 ./app/Modules/Shipping/Econt/Econt.php:716
+#: ./app/Admin/Order/MetaBox.php:863 ./app/Admin/Settings/Settings_Page.php:882 ./app/Admin/Settings/Settings_Page.php:895 ./app/Modules/Shipping/Econt/Econt.php:716
 #: ./app/Modules/Shipping/Speedy/Speedy.php:573 ./app/Modules/Shipping/Speedy/Speedy.php:825 ./app/Modules/Shipping/Speedy/Speedy.php:1470 ./app/Modules/Shipping/Speedy/Speedy.php:2572
 msgid "Cash on delivery"
 msgstr ""
@@ -1000,10 +1000,6 @@ msgstr ""
 msgid "Catalog revision"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:685
-msgid "Catalog service terms"
-msgstr ""
-
 #: ./app/Admin/Addons.php:65
 msgid "Centralized tracking and reconciliation of courier COD payouts."
 msgstr ""
@@ -1016,23 +1012,31 @@ msgstr ""
 msgid "Charge the PMT and handling fees even when shipping is free"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:447
+#: ./app/Admin/Settings/Settings_Page.php:448
 msgid "Check connection"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:570
+#: ./app/Admin/Settings/Settings_Page.php:571
 msgid "Check why render reached the provider"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:645 ./app/Module/Categories.php:28 ./app/Modules/Shipping/BoxNow/BoxNow.php:2585 ./app/Modules/Shipping/Econt/Econt.php:2642
+#: ./app/Admin/Settings/Settings_Page.php:660 ./app/Module/Categories.php:28 ./app/Modules/Shipping/BoxNow/BoxNow.php:2585 ./app/Modules/Shipping/Econt/Econt.php:2642
 msgid "Checkout"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:871 ./app/Admin/Settings/Settings_Page.php:895 ./app/Admin/Settings/Settings_Page.php:907
+#: ./app/Admin/Settings/Settings_Page.php:651
+msgid "Checkout and email"
+msgstr ""
+
+#: ./app/Admin/Settings/Settings_Page.php:649
+msgid "Checkout only"
+msgstr ""
+
+#: ./app/Admin/Settings/Settings_Page.php:884 ./app/Admin/Settings/Settings_Page.php:908 ./app/Admin/Settings/Settings_Page.php:920
 msgid "Checkout presentation"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:868
+#: ./app/Admin/Settings/Settings_Page.php:881
 msgid "Choose API pricing or custom rules and set free-shipping thresholds."
 msgstr ""
 
@@ -1049,7 +1053,7 @@ msgid "Choose which delivery options the customer can see."
 msgstr ""
 
 #: ./app/Admin/Order/MetaBox.php:193 ./app/Admin/Order/MetaBox.php:263 ./app/Admin/Order/MetaBox.php:375 ./app/Checkout/Checkout.php:330
-#: ./app/Checkout/Checkout.php:1357
+#: ./app/Checkout/Checkout.php:1358
 msgid "City"
 msgstr ""
 
@@ -1057,7 +1061,7 @@ msgstr ""
 msgid "City / locality"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:649
+#: ./app/Admin/Settings/Settings_Page.php:664
 msgid "Clean checkout"
 msgstr ""
 
@@ -1069,7 +1073,7 @@ msgstr ""
 msgid "Client Secret"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:571
+#: ./app/Admin/Settings/Settings_Page.php:572
 msgid "Client-side task tab switching"
 msgstr ""
 
@@ -1097,7 +1101,7 @@ msgstr ""
 msgid "Compartment size"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:850
+#: ./app/Admin/Settings/Settings_Page.php:863
 msgid "Compatibility, diagnostics and special-case settings."
 msgstr ""
 
@@ -1109,7 +1113,7 @@ msgstr ""
 msgid "Component"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:1257
+#: ./app/Admin/Settings/Settings_Page.php:1270
 msgid "Configuration"
 msgstr ""
 
@@ -1121,7 +1125,7 @@ msgstr ""
 msgid "Configure the Pigeon Express sender (office or address)."
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:960
+#: ./app/Admin/Settings/Settings_Page.php:973
 msgid "Configured"
 msgstr ""
 
@@ -1134,7 +1138,7 @@ msgid "Conflicts — will not be applied"
 msgstr ""
 
 #. translators: %s: courier name, e.g. "Speedy".
-#: ./app/Admin/Settings/Settings_Page.php:449
+#: ./app/Admin/Settings/Settings_Page.php:450
 msgid "Connect to %s"
 msgstr ""
 
@@ -1142,12 +1146,12 @@ msgstr ""
 msgid "Connect to Speedy"
 msgstr ""
 
-#: ./app/Admin/Order/MetaBox.php:800 ./app/Modules/Shipping/BoxNow/BoxNow.php:2718 ./app/Modules/Shipping/BoxNow/BoxNow.php:2778 ./app/Modules/Shipping/Pigeon/Pigeon.php:270
+#: ./app/Admin/Order/MetaBox.php:800 ./app/Modules/Shipping/BoxNow/BoxNow.php:2723 ./app/Modules/Shipping/BoxNow/BoxNow.php:2783 ./app/Modules/Shipping/Pigeon/Pigeon.php:270
 #: ./app/Modules/Shipping/Pigeon/Pigeon.php:554
 msgid "Contact person"
 msgstr ""
 
-#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2709
+#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2714
 msgid "Contact person, phone and email for BOX NOW to use for each warehouse separately."
 msgstr ""
 
@@ -1156,15 +1160,15 @@ msgstr ""
 msgid "Contract %d"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:226
+#: ./app/Admin/Settings/Settings_Page.php:227
 msgid "Copied"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:952
+#: ./app/Admin/Settings/Settings_Page.php:965
 msgid "Copy"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:1063
+#: ./app/Admin/Settings/Settings_Page.php:1076
 msgid "Count"
 msgstr ""
 
@@ -1239,7 +1243,7 @@ msgstr ""
 msgid "Courier service payer"
 msgstr ""
 
-#: ./app/Admin/Order/MetaBox.php:418 ./app/Admin/Settings/Settings_Page.php:1062
+#: ./app/Admin/Order/MetaBox.php:418 ./app/Admin/Settings/Settings_Page.php:1075
 msgid "Courier status"
 msgstr ""
 
@@ -1252,7 +1256,7 @@ msgid "Courier warning."
 msgstr ""
 
 #. translators: %s: warning returned by the courier.
-#: ./app/Admin/Order/MetaBox.php:1630
+#: ./app/Admin/Order/MetaBox.php:1632
 msgid "Courier warning: %s"
 msgstr ""
 
@@ -1276,7 +1280,7 @@ msgstr ""
 msgid "Created"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:773
+#: ./app/Admin/Settings/Settings_Page.php:786
 msgid "Credentials and environment for %s."
 msgstr ""
 
@@ -1288,7 +1292,7 @@ msgstr ""
 msgid "Credit"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:1161 ./app/Admin/Settings/Settings_Page.php:1653 ./app/Admin/Settings/Settings_Page.php:1812 ./app/Modules/Accounting/CodReports/Report_Controller.php:281
+#: ./app/Admin/Settings/Settings_Page.php:1174 ./app/Admin/Settings/Settings_Page.php:1666 ./app/Admin/Settings/Settings_Page.php:1825 ./app/Modules/Accounting/CodReports/Report_Controller.php:281
 msgid "Currency"
 msgstr ""
 
@@ -1296,7 +1300,7 @@ msgstr ""
 msgid "Currency mismatch"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:568
+#: ./app/Admin/Settings/Settings_Page.php:569
 msgid "Current BGCS admin request"
 msgstr ""
 
@@ -1329,11 +1333,11 @@ msgstr ""
 msgid "Customer reputation"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:569
+#: ./app/Admin/Settings/Settings_Page.php:570
 msgid "DB queries"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:268
+#: ./app/Admin/Settings/Settings_Page.php:269
 msgid "Dashboard"
 msgstr ""
 
@@ -1341,7 +1345,7 @@ msgstr ""
 msgid "Data from your contracted Speedy profile."
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:513
+#: ./app/Admin/Settings/Settings_Page.php:514
 msgid "Data synchronization"
 msgstr ""
 
@@ -1422,8 +1426,12 @@ msgid "Delivery at a specific time"
 msgstr ""
 
 #. translators: %s: formatted delivery deadline date.
-#: ./app/Shipping/Delivery_Estimate.php:162
+#: ./app/Shipping/Delivery_Estimate.php:189
 msgid "Delivery by %s"
+msgstr ""
+
+#: ./app/Admin/Settings/Settings_Page.php:645
+msgid "Delivery date"
 msgstr ""
 
 #: ./app/Shipping/Tracking_State.php:96
@@ -1466,7 +1474,7 @@ msgstr ""
 msgid "Delivery to locker (APT)"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:1804
+#: ./app/Admin/Settings/Settings_Page.php:1817
 msgid "Delivery type"
 msgstr ""
 
@@ -1482,11 +1490,11 @@ msgstr ""
 msgid "Delivery types at checkout"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:904
+#: ./app/Admin/Settings/Settings_Page.php:917
 msgid "Delivery types, service and payer."
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:880
+#: ./app/Admin/Settings/Settings_Page.php:893
 msgid "Delivery types."
 msgstr ""
 
@@ -1514,7 +1522,7 @@ msgstr ""
 msgid "Details"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:724 ./app/Admin/Settings/Settings_Page.php:766
+#: ./app/Admin/Settings/Settings_Page.php:737 ./app/Admin/Settings/Settings_Page.php:779
 msgid "Diagnostics"
 msgstr ""
 
@@ -1558,7 +1566,7 @@ msgstr ""
 msgid "Dimensions — width (cm)"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:906
+#: ./app/Admin/Settings/Settings_Page.php:919
 msgid "Dimensions, label format and services from the profile."
 msgstr ""
 
@@ -1567,9 +1575,13 @@ msgid "Dimensions, packaging and printing"
 msgstr ""
 
 #: ./app/Admin/Addons.php:188 ./app/Admin/Addons.php:273 ./app/Admin/Addons.php:295 ./app/Admin/Addons.php:392
-#: ./app/Admin/Addons.php:393 ./app/Admin/Addons.php:410 ./app/Admin/Settings/Settings_Page.php:138 ./app/Admin/Settings/Settings_Page.php:222
-#: ./app/Admin/Settings/Settings_Page.php:1148 ./app/Admin/Settings/Settings_Page.php:1530 ./app/Admin/Settings/Settings_Page.php:1542
+#: ./app/Admin/Addons.php:393 ./app/Admin/Addons.php:410 ./app/Admin/Settings/Settings_Page.php:139 ./app/Admin/Settings/Settings_Page.php:223
+#: ./app/Admin/Settings/Settings_Page.php:1161 ./app/Admin/Settings/Settings_Page.php:1543 ./app/Admin/Settings/Settings_Page.php:1555
 msgid "Disabled"
+msgstr ""
+
+#: ./app/Admin/Settings/Settings_Page.php:645
+msgid "Display courier-provided dates only when valid. No date is calculated or invented by BGCS."
 msgstr ""
 
 #: ./app/Modules/Shipping/Speedy/Speedy.php:586
@@ -1584,7 +1596,7 @@ msgstr ""
 msgid "Document pallet"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:711
+#: ./app/Admin/Settings/Settings_Page.php:724
 msgid "Documents"
 msgstr ""
 
@@ -1592,7 +1604,7 @@ msgstr ""
 msgid "Download PDF"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:514
+#: ./app/Admin/Settings/Settings_Page.php:515
 msgid "Download offices/lockers and reference data (services, contracts) again from the courier API."
 msgstr ""
 
@@ -1612,11 +1624,11 @@ msgstr ""
 msgid "ETag"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:1020
+#: ./app/Admin/Settings/Settings_Page.php:1033
 msgid "Each courier maps its own tracking codes to normalized BGCS states. Here you choose what WooCommerce should do for the states that this courier actually supports."
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:731
+#: ./app/Admin/Settings/Settings_Page.php:744
 msgid "Each order keeps only its last three create attempts — older ones are discarded automatically, so this cannot grow without limit. Switching it off stops new snapshots; the ones already recorded stay readable in their orders."
 msgstr ""
 
@@ -1856,12 +1868,16 @@ msgstr ""
 msgid "Econt: the shipment was included in courier pickup request #%s."
 msgstr ""
 
-#: ./app/Admin/Order/MetaBox.php:802 ./app/Admin/Settings/Settings_Page.php:1161 ./app/Modules/Shipping/BoxNow/BoxNow.php:2720 ./app/Modules/Shipping/BoxNow/BoxNow.php:2782
+#: ./app/Admin/Order/MetaBox.php:802 ./app/Admin/Settings/Settings_Page.php:1174 ./app/Modules/Shipping/BoxNow/BoxNow.php:2725 ./app/Modules/Shipping/BoxNow/BoxNow.php:2787
 msgid "Email"
 msgstr ""
 
 #: ./app/Modules/Shipping/Econt/Econt.php:308 ./app/Modules/Shipping/Econt/Econt.php:831
 msgid "Email on delivery"
+msgstr ""
+
+#: ./app/Admin/Settings/Settings_Page.php:650
+msgid "Email only"
 msgstr ""
 
 #: ./app/Admin/Addons.php:296
@@ -1880,7 +1896,7 @@ msgstr ""
 msgid "Enable BOX NOW and locker delivery."
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:421
+#: ./app/Admin/Settings/Settings_Page.php:422
 msgid "Enable it using the switch at the top right to use its reports and actions."
 msgstr ""
 
@@ -1889,7 +1905,7 @@ msgstr ""
 msgid "Enable service “%s”"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:679
+#: ./app/Admin/Settings/Settings_Page.php:693
 msgid "Enable the Error Web Agency product catalog"
 msgstr ""
 
@@ -1897,12 +1913,12 @@ msgstr ""
 msgid "Enable the module and at least one delivery type for checkout."
 msgstr ""
 
-#: ./app/Admin/Addons.php:273 ./app/Admin/Addons.php:410 ./app/Admin/Settings/Settings_Page.php:138 ./app/Admin/Settings/Settings_Page.php:221
-#: ./app/Admin/Settings/Settings_Page.php:1530 ./app/Admin/Settings/Settings_Page.php:1542
+#: ./app/Admin/Addons.php:273 ./app/Admin/Addons.php:410 ./app/Admin/Settings/Settings_Page.php:139 ./app/Admin/Settings/Settings_Page.php:222
+#: ./app/Admin/Settings/Settings_Page.php:1543 ./app/Admin/Settings/Settings_Page.php:1555
 msgid "Enabled"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:1080
+#: ./app/Admin/Settings/Settings_Page.php:1093
 msgid "Enablement, Subject, Heading, Additional content, HTML/Plain/Multipart, sender, CC/BCC, preheader and the other available WooCommerce email features follow the active WooCommerce version and email features."
 msgstr ""
 
@@ -1982,7 +1998,7 @@ msgstr ""
 msgid "Estimated total weight (kg)"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:989
+#: ./app/Admin/Settings/Settings_Page.php:1002
 msgid "Event"
 msgstr ""
 
@@ -1990,7 +2006,7 @@ msgstr ""
 msgid "Expected COD"
 msgstr ""
 
-#: ./app/Checkout/Checkout.php:774
+#: ./app/Checkout/Checkout.php:775
 msgid "Expected delivery"
 msgstr ""
 
@@ -1999,7 +2015,7 @@ msgid "Expected delivery:"
 msgstr ""
 
 #. translators: %s: formatted expected-delivery date.
-#: ./app/Email/Emails.php:163 ./app/Shipping/Delivery_Estimate.php:168
+#: ./app/Email/Emails.php:163 ./app/Shipping/Delivery_Estimate.php:195
 msgid "Expected delivery: %s"
 msgstr ""
 
@@ -2043,7 +2059,7 @@ msgstr ""
 msgid "Failed delivery"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:667
+#: ./app/Admin/Settings/Settings_Page.php:682
 msgid "Fallback mode without a WooCommerce zone"
 msgstr ""
 
@@ -2075,10 +2091,6 @@ msgstr ""
 msgid "Fetch report from courier"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:680
-msgid "Fetch validated product names, versions, prices, links and promotions from error.bg. Disabled by default. No store, customer, order, credential or plugin-inventory data is sent; the remote server necessarily receives the connecting server IP address."
-msgstr ""
-
 #: ./app/Modules/Accounting/CodReports/Import_Renderer.php:61
 msgid "Fetches paid COD amounts directly without uploading a file. The period is based on the PAYOUT date, not the delivery date, and cannot exceed one month. You will still see a preview before any changes are made."
 msgstr ""
@@ -2087,7 +2099,7 @@ msgstr ""
 msgid "Filter"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:1811
+#: ./app/Admin/Settings/Settings_Page.php:1824
 msgid "Final price incl. VAT"
 msgstr ""
 
@@ -2106,7 +2118,7 @@ msgstr ""
 msgid "Financial mismatch while preparing the shipment label: expected COD amount %1$s %3$s, amount sent to Speedy %2$s %3$s (difference: %4$s %3$s). Shipment label creation is blocked to prevent an incorrect amount."
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:1064
+#: ./app/Admin/Settings/Settings_Page.php:1077
 msgid "First seen"
 msgstr ""
 
@@ -2134,7 +2146,7 @@ msgstr ""
 msgid "Fragile"
 msgstr ""
 
-#: ./app/Checkout/Checkout.php:1366 ./app/Shipping/Hooks.php:106 ./app/Shipping/Hooks.php:142
+#: ./app/Checkout/Checkout.php:1367 ./app/Shipping/Hooks.php:106 ./app/Shipping/Hooks.php:142
 msgid "Free shipping"
 msgstr ""
 
@@ -2159,7 +2171,7 @@ msgstr ""
 msgid "Fresh"
 msgstr ""
 
-#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2618 ./app/Modules/Shipping/BoxNow/BoxNow.php:2803
+#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2618 ./app/Modules/Shipping/BoxNow/BoxNow.php:2808
 msgid "From (kg)"
 msgstr ""
 
@@ -2179,11 +2191,11 @@ msgstr ""
 msgid "GPS on the map"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:867 ./app/Admin/Settings/Settings_Page.php:880 ./app/Admin/Settings/Settings_Page.php:892 ./app/Admin/Settings/Settings_Page.php:904
+#: ./app/Admin/Settings/Settings_Page.php:880 ./app/Admin/Settings/Settings_Page.php:893 ./app/Admin/Settings/Settings_Page.php:905 ./app/Admin/Settings/Settings_Page.php:917
 msgid "General"
 msgstr ""
 
-#: ./app/Admin/Addons.php:110 ./app/Admin/Settings/Settings_Page.php:269 ./app/Admin/Settings/Settings_Page.php:1023
+#: ./app/Admin/Addons.php:110 ./app/Admin/Settings/Settings_Page.php:270 ./app/Admin/Settings/Settings_Page.php:1036
 msgid "General settings"
 msgstr ""
 
@@ -2215,7 +2227,7 @@ msgstr ""
 msgid "HH:MM; blank = settings; 0 = no explicit time"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:954
+#: ./app/Admin/Settings/Settings_Page.php:967
 msgid "HTTP method: POST. The endpoint is public by necessity, but accepts only BOX NOW events with a valid HMAC-SHA256 datasignature."
 msgstr ""
 
@@ -2243,7 +2255,7 @@ msgstr ""
 msgid "Height, cm"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:650
+#: ./app/Admin/Settings/Settings_Page.php:665
 msgid "Hide unnecessary address fields — they are filled automatically from the selection. Classic checkout only."
 msgstr ""
 
@@ -2264,11 +2276,11 @@ msgid "I confirm marking the shown orders as paid."
 msgstr ""
 
 #. translators: %s: warehouse id.
-#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2770
+#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2775
 msgid "ID %s (no longer in the account)"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:668
+#: ./app/Admin/Settings/Settings_Page.php:683
 msgid "If the matched WooCommerce zone has no BGCS method configured, use Bulgaria as the fallback country and temporarily show active BGCS couriers. An explicitly selected different country and any manually configured BGCS zone settings take priority."
 msgstr ""
 
@@ -2316,7 +2328,7 @@ msgstr ""
 msgid "Insurance, review/test, return voucher and Saturday delivery."
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:870
+#: ./app/Admin/Settings/Settings_Page.php:883
 msgid "Insurance, review/test, return, dimensions, packaging and printing."
 msgstr ""
 
@@ -2366,7 +2378,7 @@ msgstr ""
 msgid "Invalid net payout"
 msgstr ""
 
-#: ./app/Admin/Order/MetaBox.php:1824 ./app/Admin/Order/Orders_Column.php:214
+#: ./app/Admin/Order/MetaBox.php:1826 ./app/Admin/Order/Orders_Column.php:214
 msgid "Invalid order."
 msgstr ""
 
@@ -2403,11 +2415,11 @@ msgid "Invoice before COD payment"
 msgstr ""
 
 #. translators: %s: comma-separated list of synchronization issues.
-#: ./app/Admin/Settings/Settings_Page.php:1376
+#: ./app/Admin/Settings/Settings_Page.php:1389
 msgid "Issues: %s"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:662
+#: ./app/Admin/Settings/Settings_Page.php:677
 msgid "Keep the last chosen office/locker/address in the customer's own browser so it is offered again on the next order. Switch off if you do not want delivery choices stored on shared or public computers — existing stored selections are then removed as well."
 msgstr ""
 
@@ -2460,12 +2472,12 @@ msgstr ""
 msgid "Last request #%1$s for %2$s — status: %3$s."
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:1065
+#: ./app/Admin/Settings/Settings_Page.php:1078
 msgid "Last seen"
 msgstr ""
 
 #. translators: %s: date and time of the last successful sender-profile update.
-#: ./app/Admin/Settings/Settings_Page.php:538
+#: ./app/Admin/Settings/Settings_Page.php:539
 msgid "Last sender update: %s"
 msgstr ""
 
@@ -2474,11 +2486,11 @@ msgid "Last successful refresh"
 msgstr ""
 
 #. translators: %s: date and time of the last successful location update.
-#: ./app/Admin/Settings/Settings_Page.php:532
+#: ./app/Admin/Settings/Settings_Page.php:533
 msgid "Last successful update: %s"
 msgstr ""
 
-#: ./app/Admin/Order/MetaBox.php:421 ./app/Admin/Settings/Settings_Page.php:1101
+#: ./app/Admin/Order/MetaBox.php:421 ./app/Admin/Settings/Settings_Page.php:1114
 msgid "Last synchronization"
 msgstr ""
 
@@ -2498,7 +2510,7 @@ msgstr ""
 msgid "Leave empty if you do not use volumetric weight."
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:1772
+#: ./app/Admin/Settings/Settings_Page.php:1785
 msgid "Leave empty to keep the current value, or enter a new one to replace it."
 msgstr ""
 
@@ -2530,7 +2542,7 @@ msgstr ""
 msgid "Loaded from your Speedy profile (/services)."
 msgstr ""
 
-#: ./app/Checkout/Checkout.php:1351
+#: ./app/Checkout/Checkout.php:1352
 msgid "Loading…"
 msgstr ""
 
@@ -2542,20 +2554,20 @@ msgstr ""
 msgid "Location ID from /origins. It appears as a list after the API credentials are saved."
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:763
+#: ./app/Admin/Settings/Settings_Page.php:776
 msgid "Locations"
 msgstr ""
 
 #. translators: %s: courier name.
-#: ./app/Admin/Settings/Settings_Page.php:802
+#: ./app/Admin/Settings/Settings_Page.php:815
 msgid "Locations and reference data"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:1121
+#: ./app/Admin/Settings/Settings_Page.php:1134
 msgid "Locations not covered by your other zones"
 msgstr ""
 
-#: ./app/Admin/Order/MetaBox.php:192 ./app/Admin/Order/MetaBox.php:1254 ./app/Admin/Settings/Settings_Page.php:1137 ./app/Checkout/Checkout.php:759
+#: ./app/Admin/Order/MetaBox.php:192 ./app/Admin/Order/MetaBox.php:1254 ./app/Admin/Settings/Settings_Page.php:1150 ./app/Checkout/Checkout.php:759
 #: ./app/Shipping/Method.php:88
 msgid "Locker"
 msgstr ""
@@ -2582,16 +2594,16 @@ msgstr ""
 msgid "Locker selection in the order."
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:892
+#: ./app/Admin/Settings/Settings_Page.php:905
 msgid "Locker, compartment size and service type."
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:1100 ./app/Modules/Shipping/BoxNow/BoxNow.php:645
+#: ./app/Admin/Settings/Settings_Page.php:1113 ./app/Modules/Shipping/BoxNow/BoxNow.php:645
 msgid "Lockers"
 msgstr ""
 
 #. translators: %d: number of synchronized courier lockers.
-#: ./app/Admin/Settings/Settings_Page.php:1498
+#: ./app/Admin/Settings/Settings_Page.php:1511
 msgid "Lockers: %d"
 msgstr ""
 
@@ -2599,7 +2611,7 @@ msgstr ""
 msgid "Manage included modules and discover optional extensions in one place."
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:1080
+#: ./app/Admin/Settings/Settings_Page.php:1093
 msgid "Managed entirely by WooCommerce."
 msgstr ""
 
@@ -2627,15 +2639,15 @@ msgstr ""
 msgid "Mark the shipment as “Keep upright”"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:1810
+#: ./app/Admin/Settings/Settings_Page.php:1823
 msgid "Maximum goods value after discounts and taxes"
 msgstr ""
 
-#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2804
+#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2809
 msgid "Maximum weight in kg"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:1809
+#: ./app/Admin/Settings/Settings_Page.php:1822
 msgid "Maximum weight in kilograms"
 msgstr ""
 
@@ -2647,7 +2659,7 @@ msgstr ""
 msgid "Merchant instruction: hold at the sorting hub"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:907
+#: ./app/Admin/Settings/Settings_Page.php:920
 msgid "Method title and description."
 msgstr ""
 
@@ -2663,7 +2675,7 @@ msgstr ""
 msgid "Minimum postal money transfer fee (for example, 0.26)."
 msgstr ""
 
-#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2803
+#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2808
 msgid "Minimum weight in kg"
 msgstr ""
 
@@ -2691,11 +2703,11 @@ msgstr ""
 msgid "Module API"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:139
+#: ./app/Admin/Settings/Settings_Page.php:140
 msgid "Module disabled."
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:139
+#: ./app/Admin/Settings/Settings_Page.php:140
 msgid "Module enabled."
 msgstr ""
 
@@ -2712,12 +2724,12 @@ msgid "Net payout"
 msgstr ""
 
 #. translators: %s: courier name.
-#: ./app/Admin/Settings/Settings_Page.php:1053
+#: ./app/Admin/Settings/Settings_Page.php:1066
 msgid "New/unknown codes observed only for %s. They do not change the WooCommerce status until they are normalized in Core."
 msgstr ""
 
 #. translators: %s: date and time of the next automatic location update.
-#: ./app/Admin/Settings/Settings_Page.php:1504
+#: ./app/Admin/Settings/Settings_Page.php:1517
 msgid "Next automatic update: %s"
 msgstr ""
 
@@ -2725,7 +2737,7 @@ msgstr ""
 msgid "Next day"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:1102
+#: ./app/Admin/Settings/Settings_Page.php:1115
 msgid "Next synchronization"
 msgstr ""
 
@@ -2739,7 +2751,7 @@ msgid "No"
 msgstr ""
 
 #. translators: %s: courier name.
-#: ./app/Admin/Settings/Settings_Page.php:1134
+#: ./app/Admin/Settings/Settings_Page.php:1147
 msgid "No %s method has been added to a WooCommerce zone."
 msgstr ""
 
@@ -2752,7 +2764,7 @@ msgstr ""
 msgid "No BOX NOW price is configured for a total weight of %s kg. Check the ranges in settings."
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:983
+#: ./app/Admin/Settings/Settings_Page.php:996
 msgid "No BOX NOW webhook events have been accepted yet."
 msgstr ""
 
@@ -2780,7 +2792,7 @@ msgstr ""
 msgid "No cities found."
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:1099 ./app/Admin/Settings/Settings_Page.php:1100
+#: ./app/Admin/Settings/Settings_Page.php:1112 ./app/Admin/Settings/Settings_Page.php:1113
 msgid "No data"
 msgstr ""
 
@@ -2792,7 +2804,7 @@ msgstr ""
 msgid "No extensions are currently published in the remote catalog."
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:1489
+#: ./app/Admin/Settings/Settings_Page.php:1502
 msgid "No locations have been synchronized yet"
 msgstr ""
 
@@ -2804,15 +2816,15 @@ msgstr ""
 msgid "No nearby locker was found."
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:570
+#: ./app/Admin/Settings/Settings_Page.php:571
 msgid "No remote API requests during passive render"
 msgstr ""
 
-#: ./app/Checkout/Checkout.php:363 ./app/Checkout/Checkout.php:1352
+#: ./app/Checkout/Checkout.php:363 ./app/Checkout/Checkout.php:1353
 msgid "No results"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:217
+#: ./app/Admin/Settings/Settings_Page.php:218
 msgid "No results found."
 msgstr ""
 
@@ -2824,15 +2836,15 @@ msgstr ""
 msgid "No streets found."
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:538
+#: ./app/Admin/Settings/Settings_Page.php:539
 msgid "No successful sender update."
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:1101
+#: ./app/Admin/Settings/Settings_Page.php:1114
 msgid "No successful update yet"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:532
+#: ./app/Admin/Settings/Settings_Page.php:533
 msgid "No successful update."
 msgstr ""
 
@@ -2848,7 +2860,7 @@ msgstr ""
 msgid "No tracking number is available."
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:1056
+#: ./app/Admin/Settings/Settings_Page.php:1069
 msgid "No unmapped statuses have been observed."
 msgstr ""
 
@@ -2865,7 +2877,7 @@ msgstr ""
 msgid "Not available"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:960
+#: ./app/Admin/Settings/Settings_Page.php:973
 msgid "Not configured"
 msgstr ""
 
@@ -2877,7 +2889,7 @@ msgstr ""
 msgid "Not installed"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:1439
+#: ./app/Admin/Settings/Settings_Page.php:1452
 msgid "Not ready to use yet — see what is missing below."
 msgstr ""
 
@@ -2885,7 +2897,7 @@ msgstr ""
 msgid "Not recognized"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:1089
+#: ./app/Admin/Settings/Settings_Page.php:1102
 msgid "Not scheduled"
 msgstr ""
 
@@ -2897,15 +2909,19 @@ msgstr ""
 msgid "Notifications and label"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:883
+#: ./app/Admin/Settings/Settings_Page.php:896
 msgid "Notifications, services, shipment type, Econt packaging, instructions and dimensions."
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:894
+#: ./app/Admin/Settings/Settings_Page.php:907
 msgid "Notifications, voucher and label information."
 msgstr ""
 
-#: ./app/Checkout/Checkout.php:384 ./app/Checkout/Checkout.php:1362
+#: ./app/Admin/Settings/Settings_Page.php:652
+msgid "Nowhere"
+msgstr ""
+
+#: ./app/Checkout/Checkout.php:384 ./app/Checkout/Checkout.php:1363
 msgid "Number"
 msgstr ""
 
@@ -2974,7 +2990,7 @@ msgstr ""
 msgid "Offer ends"
 msgstr ""
 
-#: ./app/Admin/Order/MetaBox.php:192 ./app/Admin/Order/MetaBox.php:1253 ./app/Admin/Settings/Settings_Page.php:1137 ./app/Checkout/Checkout.php:759
+#: ./app/Admin/Order/MetaBox.php:192 ./app/Admin/Order/MetaBox.php:1253 ./app/Admin/Settings/Settings_Page.php:1150 ./app/Checkout/Checkout.php:759
 #: ./app/Modules/Shipping/Pigeon/Pigeon.php:204 ./app/Shipping/Method.php:87
 msgid "Office"
 msgstr ""
@@ -2983,7 +2999,7 @@ msgstr ""
 msgid "Office delivery"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:655
+#: ./app/Admin/Settings/Settings_Page.php:670
 msgid "Office map"
 msgstr ""
 
@@ -2995,7 +3011,7 @@ msgstr ""
 msgid "Office/Locker"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:1099
+#: ./app/Admin/Settings/Settings_Page.php:1112
 msgid "Offices"
 msgstr ""
 
@@ -3003,12 +3019,12 @@ msgstr ""
 msgid "Offices and lockers"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:625
+#: ./app/Admin/Settings/Settings_Page.php:626
 msgid "Offices/lockers in the database"
 msgstr ""
 
 #. translators: %d: number of synchronized courier offices.
-#: ./app/Admin/Settings/Settings_Page.php:1496
+#: ./app/Admin/Settings/Settings_Page.php:1509
 msgid "Offices: %d"
 msgstr ""
 
@@ -3016,7 +3032,7 @@ msgstr ""
 msgid "On hold"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:893
+#: ./app/Admin/Settings/Settings_Page.php:906
 msgid "One BOX NOW pricing configuration: weight ranges and an optional free-shipping threshold."
 msgstr ""
 
@@ -3028,7 +3044,7 @@ msgstr ""
 msgid "One of the selected Econt instruction templates is not available for the current sender profile. Synchronize Econt data and select valid templates."
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:683
+#: ./app/Admin/Settings/Settings_Page.php:697
 msgid "Only a site administrator can enable or disable the external product catalog."
 msgstr ""
 
@@ -3036,15 +3052,15 @@ msgstr ""
 msgid "Only fetches and saves the current courier status — it does not change the order status by itself (see the setting below under “General”)."
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:846
+#: ./app/Admin/Settings/Settings_Page.php:859
 msgid "Only technical and rarely used settings are shown here. Pricing, COD and services are under Shipping methods."
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:1080
+#: ./app/Admin/Settings/Settings_Page.php:1093
 msgid "Open WooCommerce → Settings → Emails"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:715
+#: ./app/Admin/Settings/Settings_Page.php:728
 msgid "Open document sections by default"
 msgstr ""
 
@@ -3056,16 +3072,12 @@ msgstr ""
 msgid "Open module"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:716
+#: ./app/Admin/Settings/Settings_Page.php:729
 msgid "Open the Ordinance N-18 sections (and future document add-ons) in the order when the page loads."
 msgstr ""
 
 #: ./app/Shipping/Pricing.php:437
 msgid "Optional (for example, EUR). A rule with an empty currency inherits this value. If a currency is set and does not match the store currency, the rule is skipped and the courier price is used."
-msgstr ""
-
-#: ./app/Admin/Addons.php:110
-msgid "Optional Error Web Agency product offers are disabled. An administrator can opt in under General settings. Enabling makes an hourly server request to error.bg; no store, customer, order, credential or plugin-inventory data is sent."
 msgstr ""
 
 #: ./app/Modules/Shipping/Pigeon/Pigeon.php:281
@@ -3080,7 +3092,7 @@ msgstr ""
 msgid "Optional contract-object override. When empty, the configured Speedy sender is used."
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:674
+#: ./app/Admin/Settings/Settings_Page.php:688
 msgid "Optional product catalog"
 msgstr ""
 
@@ -3104,7 +3116,7 @@ msgstr ""
 msgid "Optional. Enter width/depth/height for volumetric pricing."
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:989 ./app/Modules/Accounting/CodReports/Cod_Reports.php:233 ./app/Modules/Accounting/CodReports/Import_Renderer.php:215 ./app/Modules/Accounting/CodReports/Report_Controller.php:275
+#: ./app/Admin/Settings/Settings_Page.php:1002 ./app/Modules/Accounting/CodReports/Cod_Reports.php:233 ./app/Modules/Accounting/CodReports/Import_Renderer.php:215 ./app/Modules/Accounting/CodReports/Report_Controller.php:275
 msgid "Order"
 msgstr ""
 
@@ -3113,7 +3125,7 @@ msgstr ""
 msgid "Order %s"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:645
+#: ./app/Admin/Settings/Settings_Page.php:660
 msgid "Order form behavior."
 msgstr ""
 
@@ -3121,7 +3133,7 @@ msgstr ""
 msgid "Order registration in BOX NOW failed."
 msgstr ""
 
-#: ./app/Admin/Order/MetaBox.php:1667
+#: ./app/Admin/Order/MetaBox.php:1669
 msgid "Order settings saved. The existing shipment was not changed. Cancel it manually and create a new shipment label to apply the changes."
 msgstr ""
 
@@ -3129,7 +3141,7 @@ msgstr ""
 msgid "Order status after shipment label creation"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:1035
+#: ./app/Admin/Settings/Settings_Page.php:1048
 msgid "Orders that are Refunded, Cancelled or Failed are never moved by these rules. A late or repeated courier event cannot undo a decision you have already taken about the money — the event is still recorded on the order, with a note explaining which change was declined."
 msgstr ""
 
@@ -3137,7 +3149,7 @@ msgstr ""
 msgid "Ordinary WooCommerce goods use “Parcel / pack” by default. Financial shipment types are intentionally not exposed here."
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:1252 ./app/Module/Categories.php:31
+#: ./app/Admin/Settings/Settings_Page.php:1265 ./app/Module/Categories.php:31
 msgid "Other"
 msgstr ""
 
@@ -3157,7 +3169,7 @@ msgstr ""
 msgid "Overrides the sender contact for this order only."
 msgstr ""
 
-#: ./app/Admin/Order/MetaBox.php:246 ./app/Admin/Order/MetaBox.php:348 ./app/Admin/Settings/Settings_Page.php:1464
+#: ./app/Admin/Order/MetaBox.php:246 ./app/Admin/Order/MetaBox.php:348 ./app/Admin/Settings/Settings_Page.php:1477
 msgid "Overview"
 msgstr ""
 
@@ -3165,7 +3177,7 @@ msgstr ""
 msgid "PDF 100×150 mm"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:568
+#: ./app/Admin/Settings/Settings_Page.php:569
 msgid "PHP render"
 msgstr ""
 
@@ -3243,7 +3255,7 @@ msgstr ""
 msgid "Partial delivery"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:1161 ./app/Modules/Shipping/BoxNow/BoxNow.php:885
+#: ./app/Admin/Settings/Settings_Page.php:1174 ./app/Modules/Shipping/BoxNow/BoxNow.php:885
 msgid "Partner"
 msgstr ""
 
@@ -3324,12 +3336,12 @@ msgstr ""
 msgid "Percentage of the cash-on-delivery amount according to the contract (for example, 0.8 for 0.8%)."
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:566
+#: ./app/Admin/Settings/Settings_Page.php:567
 msgid "Performance diagnostics"
 msgstr ""
 
-#: ./app/Admin/Order/MetaBox.php:270 ./app/Admin/Order/MetaBox.php:382 ./app/Admin/Order/MetaBox.php:801 ./app/Admin/Settings/Settings_Page.php:1161
-#: ./app/Checkout/Checkout.php:135 ./app/Modules/Shipping/BoxNow/BoxNow.php:2719 ./app/Modules/Shipping/BoxNow/BoxNow.php:2780 ./app/Modules/Shipping/Pigeon/Pigeon.php:555
+#: ./app/Admin/Order/MetaBox.php:270 ./app/Admin/Order/MetaBox.php:382 ./app/Admin/Order/MetaBox.php:801 ./app/Admin/Settings/Settings_Page.php:1174
+#: ./app/Checkout/Checkout.php:135 ./app/Modules/Shipping/BoxNow/BoxNow.php:2724 ./app/Modules/Shipping/BoxNow/BoxNow.php:2785 ./app/Modules/Shipping/Pigeon/Pigeon.php:555
 msgid "Phone"
 msgstr ""
 
@@ -3445,7 +3457,7 @@ msgstr ""
 msgid "Pigeon: the shipment was included in courier pickup request #%s."
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:626
+#: ./app/Admin/Settings/Settings_Page.php:627
 msgid "Platform version"
 msgstr ""
 
@@ -3453,7 +3465,7 @@ msgstr ""
 msgid "Please complete the courier delivery selection."
 msgstr ""
 
-#: ./app/Checkout/Checkout.php:603 ./app/Checkout/Checkout.php:1082 ./app/Checkout/Checkout.php:1115 ./app/Checkout/Checkout.php:1143
+#: ./app/Checkout/Checkout.php:603 ./app/Checkout/Checkout.php:1083 ./app/Checkout/Checkout.php:1116 ./app/Checkout/Checkout.php:1144
 msgid "Please select an office/locker or delivery address."
 msgstr ""
 
@@ -3499,8 +3511,8 @@ msgstr ""
 msgid "Previous valid lists"
 msgstr ""
 
-#: ./app/Admin/Addons.php:242 ./app/Admin/Order/MetaBox.php:426 ./app/Admin/Settings/Settings_Page.php:1652 ./app/Modules/Shipping/BoxNow/BoxNow.php:2618
-#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2805
+#: ./app/Admin/Addons.php:242 ./app/Admin/Order/MetaBox.php:426 ./app/Admin/Settings/Settings_Page.php:1665 ./app/Modules/Shipping/BoxNow/BoxNow.php:2618
+#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2810
 msgid "Price"
 msgstr ""
 
@@ -3513,11 +3525,11 @@ msgstr ""
 msgid "Pricing"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:814
+#: ./app/Admin/Settings/Settings_Page.php:827
 msgid "Pricing and COD are stored globally for Speedy; per-WooCommerce-shipping-method-instance separation is not active in the current Core contract."
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:868 ./app/Admin/Settings/Settings_Page.php:881 ./app/Admin/Settings/Settings_Page.php:893 ./app/Admin/Settings/Settings_Page.php:905
+#: ./app/Admin/Settings/Settings_Page.php:881 ./app/Admin/Settings/Settings_Page.php:894 ./app/Admin/Settings/Settings_Page.php:906 ./app/Admin/Settings/Settings_Page.php:918
 #: ./app/Shipping/Pricing.php:509
 msgid "Pricing and free shipping"
 msgstr ""
@@ -3554,19 +3566,11 @@ msgstr ""
 msgid "Priority: free for the type → custom prices (if selected) → courier price (API)."
 msgstr ""
 
-#: ./app/Admin/Addons.php:110
-msgid "Privacy"
-msgstr ""
-
-#: ./app/Admin/Settings/Settings_Page.php:685
-msgid "Privacy notice"
-msgstr ""
-
 #: ./app/Admin/Order/MetaBox.php:435 ./app/Modules/Shipping/Econt/Econt.php:2519 ./app/Modules/Shipping/Pigeon/Pigeon.php:806 ./app/Shipping/Tracking_Status_Policy.php:57
 msgid "Processing"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:674
+#: ./app/Admin/Settings/Settings_Page.php:688
 msgid "Product news and extensions from Error Web Agency."
 msgstr ""
 
@@ -3598,7 +3602,7 @@ msgstr ""
 msgid "Provide an invoice to the recipient before payment of cash on delivery."
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:570
+#: ./app/Admin/Settings/Settings_Page.php:571
 msgid "Provider calls"
 msgstr ""
 
@@ -3607,11 +3611,11 @@ msgstr ""
 msgid "Provider-specific events for %1$s are kept in tracking and normalized to the closest BGCS state: %2$s."
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:569
+#: ./app/Admin/Settings/Settings_Page.php:570
 msgid "Queries since BGCS render started"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:958
+#: ./app/Admin/Settings/Settings_Page.php:971
 msgid "REST route"
 msgstr ""
 
@@ -3619,7 +3623,7 @@ msgstr ""
 msgid "Range boundaries may touch: with 0–3 and 3–10 kg, exactly 3 kg uses the second row. Leave the final “To” field empty for a price with no upper limit."
 msgstr ""
 
-#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2805
+#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2810
 msgid "Range price"
 msgstr ""
 
@@ -3643,11 +3647,11 @@ msgstr ""
 msgid "Reason"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:989
+#: ./app/Admin/Settings/Settings_Page.php:1002
 msgid "Received"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:981
+#: ./app/Admin/Settings/Settings_Page.php:994
 msgid "Recent webhook events"
 msgstr ""
 
@@ -3699,7 +3703,7 @@ msgstr ""
 msgid "Reconciled: %1$d · Skipped: %2$d · Conflicts: %3$d · Unmatched: %4$d · Already paid: %5$d · Duplicates: %6$d"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:728
+#: ./app/Admin/Settings/Settings_Page.php:741
 msgid "Record shipment creation snapshots"
 msgstr ""
 
@@ -3751,7 +3755,7 @@ msgstr ""
 msgid "Rejected"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:661
+#: ./app/Admin/Settings/Settings_Page.php:676
 msgid "Remember the customer's last selection"
 msgstr ""
 
@@ -3760,11 +3764,11 @@ msgstr ""
 msgid "Remote catalog could not be refreshed. Showing the last valid catalog from %s."
 msgstr ""
 
-#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2784 ./app/Modules/Shipping/BoxNow/BoxNow.php:2806
+#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2789 ./app/Modules/Shipping/BoxNow/BoxNow.php:2811
 msgid "Remove"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:1813
+#: ./app/Admin/Settings/Settings_Page.php:1826
 msgid "Remove rule"
 msgstr ""
 
@@ -3833,21 +3837,21 @@ msgid "Required when the payer is “Third party” (payment.thirdPartyClientId)
 msgstr ""
 
 #. translators: %s: minimum supported PHP version.
-#: ./bg-commerce-suite.php:198
+#: ./bg-commerce-suite.php:196
 msgid "Requires PHP %s or newer."
 msgstr ""
 
 #. translators: %s: minimum supported WooCommerce version.
-#: ./bg-commerce-suite.php:208
+#: ./bg-commerce-suite.php:206
 msgid "Requires WooCommerce %s or newer."
 msgstr ""
 
-#: ./bg-commerce-suite.php:205
+#: ./bg-commerce-suite.php:203
 msgid "Requires WooCommerce to be active."
 msgstr ""
 
 #. translators: %s: minimum supported WordPress version.
-#: ./bg-commerce-suite.php:202
+#: ./bg-commerce-suite.php:200
 msgid "Requires WordPress %s or newer."
 msgstr ""
 
@@ -3867,7 +3871,7 @@ msgstr ""
 msgid "Resend email"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:989
+#: ./app/Admin/Settings/Settings_Page.php:1002
 msgid "Result"
 msgstr ""
 
@@ -4024,11 +4028,11 @@ msgstr ""
 msgid "Saturday delivery"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:776
+#: ./app/Admin/Settings/Settings_Page.php:789
 msgid "Save and check connection"
 msgstr ""
 
-#: ./app/Admin/Order/MetaBox.php:275 ./app/Admin/Settings/Settings_Page.php:491 ./app/Admin/Settings/Settings_Page.php:926
+#: ./app/Admin/Order/MetaBox.php:275 ./app/Admin/Settings/Settings_Page.php:492 ./app/Admin/Settings/Settings_Page.php:939
 msgid "Save changes"
 msgstr ""
 
@@ -4040,16 +4044,16 @@ msgstr ""
 msgid "Save without generating"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:1772
+#: ./app/Admin/Settings/Settings_Page.php:1785
 msgid "Saved."
 msgstr ""
 
 #. translators: %s: comma-separated list of preserved datasets.
-#: ./app/Admin/Settings/Settings_Page.php:1372
+#: ./app/Admin/Settings/Settings_Page.php:1385
 msgid "Saved: %s"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:223
+#: ./app/Admin/Settings/Settings_Page.php:224
 msgid "Saving…"
 msgstr ""
 
@@ -4065,11 +4069,11 @@ msgstr ""
 msgid "Search city…"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:216
+#: ./app/Admin/Settings/Settings_Page.php:217
 msgid "Searching…"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:1742
+#: ./app/Admin/Settings/Settings_Page.php:1755
 msgid "Select"
 msgstr ""
 
@@ -4093,7 +4097,7 @@ msgstr ""
 msgid "Select a city first."
 msgstr ""
 
-#: ./app/Checkout/Checkout.php:1354
+#: ./app/Checkout/Checkout.php:1355
 msgid "Select a locker"
 msgstr ""
 
@@ -4149,7 +4153,7 @@ msgstr ""
 msgid "Select an address for courier pickup."
 msgstr ""
 
-#: ./app/Checkout/Checkout.php:350 ./app/Checkout/Checkout.php:1353
+#: ./app/Checkout/Checkout.php:350 ./app/Checkout/Checkout.php:1354
 msgid "Select an office"
 msgstr ""
 
@@ -4161,7 +4165,7 @@ msgstr ""
 msgid "Select and synchronize an Econt sender profile to enable account-specific COD/PPP agreements, instruction templates and standalone courier pickup."
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:225
+#: ./app/Admin/Settings/Settings_Page.php:226
 msgid "Select image"
 msgstr ""
 
@@ -4181,7 +4185,7 @@ msgstr ""
 msgid "Selected delivery"
 msgstr ""
 
-#: ./app/Checkout/Checkout.php:1355
+#: ./app/Checkout/Checkout.php:1356
 msgid "Selected:"
 msgstr ""
 
@@ -4197,7 +4201,7 @@ msgstr ""
 msgid "Send from"
 msgstr ""
 
-#: ./app/Admin/Order/MetaBox.php:902 ./app/Admin/Order/MetaBox.php:1267 ./app/Admin/Settings/Settings_Page.php:783 ./app/Modules/Shipping/BoxNow/BoxNow.php:637
+#: ./app/Admin/Order/MetaBox.php:902 ./app/Admin/Order/MetaBox.php:1267 ./app/Admin/Settings/Settings_Page.php:796 ./app/Modules/Shipping/BoxNow/BoxNow.php:637
 #: ./app/Modules/Shipping/BoxNow/BoxNow.php:2567 ./app/Modules/Shipping/Econt/Econt.php:496 ./app/Modules/Shipping/Econt/Econt.php:2618 ./app/Modules/Shipping/Pigeon/Pigeon.php:126
 #: ./app/Modules/Shipping/Pigeon/Pigeon.php:1082 ./app/Modules/Shipping/Pigeon/Pigeon.php:1198 ./app/Modules/Shipping/Speedy/Speedy.php:260 ./app/Modules/Shipping/Speedy/Speedy.php:283
 #: ./app/Modules/Shipping/Speedy/Speedy.php:723 ./app/Modules/Shipping/Speedy/Speedy.php:750 ./app/Modules/Shipping/Speedy/Speedy.php:811 ./app/Modules/Shipping/Speedy/Speedy.php:1439
@@ -4313,7 +4317,7 @@ msgstr ""
 msgid "Sender street ID"
 msgstr ""
 
-#: ./app/Modules/Shipping/BoxNow/BoxNow.php:231 ./app/Modules/Shipping/BoxNow/BoxNow.php:2756
+#: ./app/Modules/Shipping/BoxNow/BoxNow.php:231 ./app/Modules/Shipping/BoxNow/BoxNow.php:2761
 msgid "Sender warehouse"
 msgstr ""
 
@@ -4393,15 +4397,15 @@ msgstr ""
 msgid "Service type and returns. These can also be changed for an individual order."
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:867
+#: ./app/Admin/Settings/Settings_Page.php:880
 msgid "Service, allowed delivery types and courier service payer."
 msgstr ""
 
-#: ./app/Admin/Addons.php:413 ./app/Admin/Settings/Settings_Page.php:1148
+#: ./app/Admin/Addons.php:413 ./app/Admin/Settings/Settings_Page.php:1161
 msgid "Settings"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:384
+#: ./app/Admin/Settings/Settings_Page.php:385
 msgid "Settings saved."
 msgstr ""
 
@@ -4415,7 +4419,7 @@ msgid "Shipment %s was cancelled. There is currently no active shipment; review 
 msgstr ""
 
 #. translators: %s shipment number.
-#: ./app/Admin/Order/MetaBox.php:1719
+#: ./app/Admin/Order/MetaBox.php:1721
 msgid "Shipment cancelled at the courier and archived by BGCS: %s. No replacement shipment was created automatically."
 msgstr ""
 
@@ -4439,7 +4443,7 @@ msgstr ""
 msgid "Shipment details before generation."
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:783
+#: ./app/Admin/Settings/Settings_Page.php:796
 msgid "Shipment drop-off/pickup details."
 msgstr ""
 
@@ -4453,12 +4457,12 @@ msgstr ""
 msgid "Shipment label"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:1079
+#: ./app/Admin/Settings/Settings_Page.php:1092
 msgid "Shipment label created email"
 msgstr ""
 
 #. translators: %s: newly created shipment label number.
-#: ./app/Admin/Order/MetaBox.php:1627 ./app/Admin/Order/Orders_Column.php:263
+#: ./app/Admin/Order/MetaBox.php:1629 ./app/Admin/Order/Orders_Column.php:263
 msgid "Shipment label created: %s"
 msgstr ""
 
@@ -4466,7 +4470,7 @@ msgstr ""
 msgid "Shipment label creation failed."
 msgstr ""
 
-#: ./app/Admin/Order/MetaBox.php:1604
+#: ./app/Admin/Order/MetaBox.php:1606
 msgid "Shipment label creation is already in progress for this order. Wait a few seconds and refresh the page."
 msgstr ""
 
@@ -4486,7 +4490,7 @@ msgstr ""
 msgid "Shipment label preview"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:624
+#: ./app/Admin/Settings/Settings_Page.php:625
 msgid "Shipment labels (30 days)"
 msgstr ""
 
@@ -4532,7 +4536,7 @@ msgid "Shipping is paid by"
 msgstr ""
 
 #. translators: %s: courier name.
-#: ./app/Admin/Settings/Settings_Page.php:764 ./app/Admin/Settings/Settings_Page.php:1117
+#: ./app/Admin/Settings/Settings_Page.php:777 ./app/Admin/Settings/Settings_Page.php:1130
 msgid "Shipping methods"
 msgstr ""
 
@@ -4558,12 +4562,20 @@ msgstr ""
 msgid "Show BOX NOW in the shipping options"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:656
+#: ./app/Admin/Settings/Settings_Page.php:671
 msgid "Show a map with offices/lockers — the customer selects directly from it."
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:219 ./app/Admin/Settings/Settings_Page.php:1828
+#: ./app/Admin/Settings/Settings_Page.php:646
+msgid "Show delivery date"
+msgstr ""
+
+#: ./app/Admin/Settings/Settings_Page.php:220 ./app/Admin/Settings/Settings_Page.php:1841
 msgid "Show more information"
+msgstr ""
+
+#: ./app/Admin/Settings/Settings_Page.php:694
+msgid "Show products and extensions from Error Web Agency. Enabled by default; you can disable it at any time."
 msgstr ""
 
 #: ./app/Modules/Shipping/Econt/Econt.php:709
@@ -4594,7 +4606,7 @@ msgstr ""
 msgid "Shown below the selected method at checkout (for example, “Delivery in 1–2 business days”)."
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:566
+#: ./app/Admin/Settings/Settings_Page.php:567
 msgid "Shown only when WP_DEBUG and bgcs_debug=1 are enabled."
 msgstr ""
 
@@ -4602,7 +4614,7 @@ msgstr ""
 msgid "Shows all orders with a shipment label and cash on delivery for the selected period. CSV reconciliation compares shipment label, amount, currency and courier when those columns are present in the report."
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:959
+#: ./app/Admin/Settings/Settings_Page.php:972
 msgid "Signature"
 msgstr ""
 
@@ -4791,7 +4803,7 @@ msgstr ""
 msgid "Standard cash on delivery or postal money transfer."
 msgstr ""
 
-#: ./app/Checkout/Checkout.php:1350
+#: ./app/Checkout/Checkout.php:1351
 msgid "Start typing a city…"
 msgstr ""
 
@@ -4803,11 +4815,11 @@ msgstr ""
 msgid "Store amount"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:729
+#: ./app/Admin/Settings/Settings_Page.php:742
 msgid "Store what was requested, what the courier said was available for the destination, what was validated, what was sent and what came back. Shown in the order under Details. Credentials are never recorded and customer names, phones, emails and addresses are stored only as a length preview."
 msgstr ""
 
-#: ./app/Checkout/Checkout.php:370 ./app/Checkout/Checkout.php:1361
+#: ./app/Checkout/Checkout.php:370 ./app/Checkout/Checkout.php:1362
 msgid "Street"
 msgstr ""
 
@@ -4815,7 +4827,7 @@ msgstr ""
 msgid "Street (for address)"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:1101
+#: ./app/Admin/Settings/Settings_Page.php:1114
 msgid "Successful update"
 msgstr ""
 
@@ -4827,11 +4839,11 @@ msgstr ""
 msgid "Switch the Econt sender handover method to courier pickup from an address before requesting a courier."
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:528
+#: ./app/Admin/Settings/Settings_Page.php:529
 msgid "Sync directories"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:805
+#: ./app/Admin/Settings/Settings_Page.php:818
 msgid "Sync now"
 msgstr ""
 
@@ -4852,7 +4864,7 @@ msgstr ""
 msgid "Synchronize the missing locations: %s."
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:1486
+#: ./app/Admin/Settings/Settings_Page.php:1499
 msgid "Synchronized"
 msgstr ""
 
@@ -4861,7 +4873,7 @@ msgstr ""
 msgid "Synchronized: cleared %1$d cached records for %2$s — offices/lockers will be refreshed from the API on the next load."
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:571
+#: ./app/Admin/Settings/Settings_Page.php:572
 msgid "Tab switch"
 msgstr ""
 
@@ -4873,20 +4885,16 @@ msgstr ""
 msgid "Taxable"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:850
+#: ./app/Admin/Settings/Settings_Page.php:863
 msgid "Technical and advanced settings"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:1233
+#: ./app/Admin/Settings/Settings_Page.php:1246
 msgid "Technical and rarely used settings — you usually do not need to change them."
 msgstr ""
 
 #: ./app/Modules/Shipping/Econt/Econt.php:930 ./app/Modules/Shipping/Econt/Econt.php:937 ./app/Modules/Shipping/Econt/Econt.php:944
 msgid "Template ID. Sync Econt data to load account templates."
-msgstr ""
-
-#: ./app/Admin/Addons.php:110
-msgid "Terms"
 msgstr ""
 
 #: ./app/Modules/Shipping/BoxNow/BoxNow.php:906
@@ -4940,19 +4948,19 @@ msgstr ""
 msgid "The Speedy sender origin is confirmed."
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:698
+#: ./app/Admin/Settings/Settings_Page.php:711
 msgid "The WooCommerce status an order should move to is configured separately for each courier in its “Tracking” tab. Only BGCS states actually supported by that courier are shown."
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:1134
+#: ./app/Admin/Settings/Settings_Page.php:1147
 msgid "The account may be connected, but checkout will not offer this courier until you add the method to a shipping zone."
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:2184
+#: ./app/Admin/Settings/Settings_Page.php:2206
 msgid "The active section could not be identified. Nothing was saved. Open the intended section and try again."
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:945
+#: ./app/Admin/Settings/Settings_Page.php:958
 msgid "The address provided to BOX NOW for sending shipment status change events."
 msgstr ""
 
@@ -4993,12 +5001,12 @@ msgstr ""
 msgid "The courier API returned an invalid JSON response."
 msgstr ""
 
-#: ./app/Admin/Order/MetaBox.php:1713
+#: ./app/Admin/Order/MetaBox.php:1715
 msgid "The courier confirmed cancellation, but BGCS could not complete the local shipment history. Refresh and try again; no replacement was created."
 msgstr ""
 
-#: ./app/Checkout/Checkout.php:613 ./app/Checkout/Checkout.php:1204 ./app/Checkout/Checkout.php:1215 ./app/Checkout/Checkout.php:1219
-#: ./app/Checkout/Checkout.php:1223
+#: ./app/Checkout/Checkout.php:613 ./app/Checkout/Checkout.php:1205 ./app/Checkout/Checkout.php:1216 ./app/Checkout/Checkout.php:1220
+#: ./app/Checkout/Checkout.php:1224
 msgid "The courier could not confirm a shipping price for the current selection. Please review the delivery choice and try again."
 msgstr ""
 
@@ -5014,7 +5022,7 @@ msgstr ""
 msgid "The courier is not active."
 msgstr ""
 
-#: ./app/Admin/Order/MetaBox.php:1832
+#: ./app/Admin/Order/MetaBox.php:1834
 msgid "The courier is not available."
 msgstr ""
 
@@ -5072,7 +5080,7 @@ msgstr ""
 msgid "The customer profile determines which data can be updated from the API."
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:218
+#: ./app/Admin/Settings/Settings_Page.php:219
 msgid "The data could not be loaded. The saved selection has been preserved."
 msgstr ""
 
@@ -5092,11 +5100,11 @@ msgstr ""
 msgid "The directory is unavailable. The saved value remains unchanged."
 msgstr ""
 
-#: ./app/Admin/Order/MetaBox.php:1738
+#: ./app/Admin/Order/MetaBox.php:1740
 msgid "The email was not sent. Check the customer address and WooCommerce email settings."
 msgstr ""
 
-#: ./app/Admin/Order/MetaBox.php:1742
+#: ./app/Admin/Order/MetaBox.php:1744
 msgid "The email was sent."
 msgstr ""
 
@@ -5136,11 +5144,11 @@ msgstr ""
 msgid "The last connection check failed."
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:1438
+#: ./app/Admin/Settings/Settings_Page.php:1451
 msgid "The main configuration is ready, but there are still recommended steps."
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:131
+#: ./app/Admin/Settings/Settings_Page.php:132
 msgid "The module cannot be enabled in the current configuration."
 msgstr ""
 
@@ -5148,15 +5156,15 @@ msgstr ""
 msgid "The module cannot load the office directory."
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:420
+#: ./app/Admin/Settings/Settings_Page.php:421
 msgid "The module is disabled."
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:224
+#: ./app/Admin/Settings/Settings_Page.php:225
 msgid "The module state could not be saved. Please try again."
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:475 ./app/Admin/Settings/Settings_Page.php:1900 ./app/Admin/Settings/Settings_Page.php:1937 ./app/Admin/Settings/Settings_Page.php:1976
+#: ./app/Admin/Settings/Settings_Page.php:476 ./app/Admin/Settings/Settings_Page.php:1913 ./app/Admin/Settings/Settings_Page.php:1950 ./app/Admin/Settings/Settings_Page.php:1989
 msgid "The module was not found."
 msgstr ""
 
@@ -5164,12 +5172,12 @@ msgstr ""
 msgid "The office list has not been synchronized yet. Try again in a moment or contact the store."
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:895
+#: ./app/Admin/Settings/Settings_Page.php:908
 msgid "The official BOX NOW widget and locker-selection behavior."
 msgstr ""
 
 #: ./app/Privacy/Policy.php:26
-msgid "The optional Error Web Agency product catalog is disabled by default. If a site administrator enables it, the site requests public product metadata from error.bg hourly and when an administrator requests a refresh. The request does not include the store URL, plugin inventory, customer or order data, credentials or cookies. The remote server necessarily receives the connecting server IP address and the generic BG-Commerce-Suite-Catalog/1 User-Agent."
+msgid "The optional Error Web Agency product catalog is enabled by default unless a site administrator has disabled it. While enabled, the site requests public product metadata from error.bg hourly and when an administrator requests a refresh. The request does not include the store URL, plugin inventory, customer or order data, credentials or cookies. The remote server necessarily receives the connecting server IP address and the generic BG-Commerce-Suite-Catalog/1 User-Agent."
 msgstr ""
 
 #: ./app/Addon/Remote_Catalog.php:141
@@ -5216,7 +5224,7 @@ msgstr ""
 msgid "The pickup city is missing. The courier request requires a sender address — enter it under “Sender” and choose “Address” as the handover method."
 msgstr ""
 
-#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2820
+#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2825
 msgid "The pickup period has expired and the shipment is being returned."
 msgstr ""
 
@@ -5270,6 +5278,10 @@ msgstr ""
 
 #: ./app/Admin/Addons.php:119
 msgid "The product catalog is already current."
+msgstr ""
+
+#: ./app/Admin/Addons.php:110
+msgid "The product catalog is disabled. An administrator can enable it under General settings."
 msgstr ""
 
 #: ./app/Addon/Remote_Catalog.php:187
@@ -5341,7 +5353,7 @@ msgstr ""
 msgid "The saved delivery type is not supported by this courier."
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:964
+#: ./app/Admin/Settings/Settings_Page.php:977
 msgid "The secret must match the shared secret used by BOX NOW to sign the webhook payload. The saved value is not shown again after reloading."
 msgstr ""
 
@@ -5373,11 +5385,11 @@ msgstr ""
 msgid "The selected courier cannot provide a payout report."
 msgstr ""
 
-#: ./app/Checkout/Checkout.php:1246
+#: ./app/Checkout/Checkout.php:1247
 msgid "The selected courier is not synchronized with the order shipping method. Please review the delivery choice and try again."
 msgstr ""
 
-#: ./app/Checkout/Checkout.php:1156 ./app/Checkout/Checkout.php:1213
+#: ./app/Checkout/Checkout.php:1157 ./app/Checkout/Checkout.php:1214
 msgid "The selected courier is not synchronized with the shipping method. Please review the delivery choice and try again."
 msgstr ""
 
@@ -5415,11 +5427,11 @@ msgstr ""
 msgid "The sender warehouse could not be confirmed through BOX NOW /origins: %s"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:393
+#: ./app/Admin/Settings/Settings_Page.php:394
 msgid "The settings were NOT saved — fix the following errors:"
 msgstr ""
 
-#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2822
+#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2827
 msgid "The shipment arrived at a BOX NOW depot."
 msgstr ""
 
@@ -5439,11 +5451,11 @@ msgstr ""
 msgid "The shipment has been sent"
 msgstr ""
 
-#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2826
+#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2831
 msgid "The shipment has not been collected by the BOX NOW courier."
 msgstr ""
 
-#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2823
+#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2828
 msgid "The shipment is in the destination locker and is waiting for pickup."
 msgstr ""
 
@@ -5471,19 +5483,19 @@ msgstr ""
 msgid "The shipment remains active. No local shipment data was removed and no replacement was created."
 msgstr ""
 
-#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2825
+#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2830
 msgid "The shipment was accepted in a return locker."
 msgstr ""
 
-#: ./app/Admin/Order/MetaBox.php:1731
+#: ./app/Admin/Order/MetaBox.php:1733
 msgid "The shipment was cancelled and archived. Review the saved settings before explicitly creating a replacement."
 msgstr ""
 
-#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2824
+#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2829
 msgid "The shipment was cancelled by the sender."
 msgstr ""
 
-#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2819
+#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2824
 msgid "The shipment was delivered to the recipient."
 msgstr ""
 
@@ -5491,15 +5503,15 @@ msgstr ""
 msgid "The shipment was not found in BOX NOW."
 msgstr ""
 
-#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2827
+#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2832
 msgid "The shipment was placed by the sender in the origin locker."
 msgstr ""
 
-#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2818
+#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2823
 msgid "The shipment was registered in the system."
 msgstr ""
 
-#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2821
+#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2826
 msgid "The shipment was returned to the sender."
 msgstr ""
 
@@ -5539,7 +5551,7 @@ msgstr ""
 msgid "There is already an active Pigeon courier pickup request. Refresh or cancel it before creating another one."
 msgstr ""
 
-#: ./app/Admin/Order/MetaBox.php:1581 ./app/Shipping/Shipment_Creation.php:36
+#: ./app/Admin/Order/MetaBox.php:1583 ./app/Shipping/Shipment_Creation.php:36
 msgid "There is already an active shipment label for this order. Use Print/Download/Cancel — do not create a new one until the current shipment is cancelled."
 msgstr ""
 
@@ -5559,7 +5571,7 @@ msgstr ""
 msgid "Thermal label 100×90 mm (standard)"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:1073
+#: ./app/Admin/Settings/Settings_Page.php:1086
 msgid "These codes are diagnostic and specific to the current courier. Send them when needed so a safe BGCS mapping can be added."
 msgstr ""
 
@@ -5612,11 +5624,11 @@ msgstr ""
 msgid "This is what the customer sees at checkout."
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:2326
+#: ./app/Admin/Settings/Settings_Page.php:2348
 msgid "This module does not support connection checks."
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:2345
+#: ./app/Admin/Settings/Settings_Page.php:2367
 msgid "This module does not support sender refresh."
 msgstr ""
 
@@ -5641,7 +5653,7 @@ msgstr ""
 msgid "This status is specific to %s."
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:220
+#: ./app/Admin/Settings/Settings_Page.php:221
 msgid "This will replace only the data currently provided by the selected courier profile. Manual fields without an API value will be preserved. Continue?"
 msgstr ""
 
@@ -5653,15 +5665,15 @@ msgstr ""
 msgid "Title"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:871
+#: ./app/Admin/Settings/Settings_Page.php:884
 msgid "Title and short description shown to the customer when selecting Speedy."
 msgstr ""
 
-#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2618 ./app/Modules/Shipping/BoxNow/BoxNow.php:2804
+#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2618 ./app/Modules/Shipping/BoxNow/BoxNow.php:2809
 msgid "To (kg)"
 msgstr ""
 
-#: ./app/Checkout/Checkout.php:280 ./app/Checkout/Checkout.php:734 ./app/Checkout/Checkout.php:1360 ./app/Shipping/Pricing.php:45
+#: ./app/Checkout/Checkout.php:280 ./app/Checkout/Checkout.php:734 ./app/Checkout/Checkout.php:1361 ./app/Shipping/Pricing.php:45
 msgid "To address"
 msgstr ""
 
@@ -5673,7 +5685,7 @@ msgstr ""
 msgid "To date"
 msgstr ""
 
-#: ./app/Checkout/Checkout.php:279 ./app/Checkout/Checkout.php:733 ./app/Checkout/Checkout.php:1359
+#: ./app/Checkout/Checkout.php:279 ./app/Checkout/Checkout.php:733 ./app/Checkout/Checkout.php:1360
 msgid "To locker"
 msgstr ""
 
@@ -5681,7 +5693,7 @@ msgstr ""
 msgid "To locker (APS)"
 msgstr ""
 
-#: ./app/Checkout/Checkout.php:278 ./app/Checkout/Checkout.php:1358 ./app/Shipping/Pricing.php:43
+#: ./app/Checkout/Checkout.php:278 ./app/Checkout/Checkout.php:1359 ./app/Shipping/Pricing.php:43
 msgid "To office"
 msgstr ""
 
@@ -5701,7 +5713,7 @@ msgstr ""
 msgid "Track with courier"
 msgstr ""
 
-#: ./app/Admin/Order/MetaBox.php:349 ./app/Admin/Settings/Settings_Page.php:765 ./app/Admin/Settings/Settings_Page.php:836 ./app/Shipping/Tracking_Sync.php:99
+#: ./app/Admin/Order/MetaBox.php:349 ./app/Admin/Settings/Settings_Page.php:778 ./app/Admin/Settings/Settings_Page.php:849 ./app/Shipping/Tracking_Sync.php:99
 msgid "Tracking"
 msgstr ""
 
@@ -5723,7 +5735,7 @@ msgstr ""
 msgid "Tracking: %s"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:724
+#: ./app/Admin/Settings/Settings_Page.php:737
 msgid "Troubleshooting for shipment creation. Keep this off during normal operation."
 msgstr ""
 
@@ -5731,7 +5743,7 @@ msgstr ""
 msgid "Two-way shipment (DP)"
 msgstr ""
 
-#: ./app/Admin/Order/MetaBox.php:192 ./app/Admin/Order/MetaBox.php:261 ./app/Admin/Order/MetaBox.php:368 ./app/Admin/Settings/Settings_Page.php:1649
+#: ./app/Admin/Order/MetaBox.php:192 ./app/Admin/Order/MetaBox.php:261 ./app/Admin/Order/MetaBox.php:368 ./app/Admin/Settings/Settings_Page.php:1662
 msgid "Type"
 msgstr ""
 
@@ -5747,7 +5759,7 @@ msgstr ""
 msgid "Unknown courier."
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:81 ./app/Admin/Settings/Settings_Page.php:116
+#: ./app/Admin/Settings/Settings_Page.php:82 ./app/Admin/Settings/Settings_Page.php:117
 msgid "Unknown module."
 msgstr ""
 
@@ -5755,7 +5767,7 @@ msgstr ""
 msgid "Unknown or inactive courier."
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:1051
+#: ./app/Admin/Settings/Settings_Page.php:1064
 msgid "Unmapped tracking statuses"
 msgstr ""
 
@@ -5767,19 +5779,19 @@ msgstr ""
 msgid "Up to date"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:1651
+#: ./app/Admin/Settings/Settings_Page.php:1664
 msgid "Up to goods value"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:1650
+#: ./app/Admin/Settings/Settings_Page.php:1663
 msgid "Up to kg"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:802
+#: ./app/Admin/Settings/Settings_Page.php:815
 msgid "Up-to-date %s locations used by checkout."
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:1099 ./app/Admin/Settings/Settings_Page.php:1100
+#: ./app/Admin/Settings/Settings_Page.php:1112 ./app/Admin/Settings/Settings_Page.php:1113
 msgid "Up-to-date data"
 msgstr ""
 
@@ -5787,11 +5799,11 @@ msgstr ""
 msgid "Update available"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:704
+#: ./app/Admin/Settings/Settings_Page.php:717
 msgid "Update offices/lockers and data for all active couriers daily."
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:786
+#: ./app/Admin/Settings/Settings_Page.php:799
 msgid "Update sender details"
 msgstr ""
 
@@ -5813,7 +5825,7 @@ msgid "Updated %s ago"
 msgstr ""
 
 #. translators: %s: comma-separated list of updated datasets.
-#: ./app/Admin/Settings/Settings_Page.php:1368
+#: ./app/Admin/Settings/Settings_Page.php:1381
 msgid "Updated: %s"
 msgstr ""
 
@@ -5942,11 +5954,11 @@ msgstr ""
 msgid "Wait for load — waiting for courier at locker"
 msgstr ""
 
-#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2717 ./app/Modules/Shipping/BoxNow/BoxNow.php:2755
+#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2722 ./app/Modules/Shipping/BoxNow/BoxNow.php:2760
 msgid "Warehouse"
 msgstr ""
 
-#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2774
+#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2779
 msgid "Warehouse ID"
 msgstr ""
 
@@ -5954,7 +5966,7 @@ msgstr ""
 msgid "Warehouse ID (origin)"
 msgstr ""
 
-#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2708
+#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2713
 msgid "Warehouses and pickup contacts"
 msgstr ""
 
@@ -5978,15 +5990,15 @@ msgstr ""
 msgid "We cannot connect to Speedy right now. Please try again or choose another delivery method."
 msgstr ""
 
-#: ./app/Checkout/Checkout.php:1364
+#: ./app/Checkout/Checkout.php:1365
 msgid "We could not load the data. Try again."
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:960 ./app/Modules/Shipping/BoxNow/BoxNow.php:925
+#: ./app/Admin/Settings/Settings_Page.php:973 ./app/Modules/Shipping/BoxNow/BoxNow.php:925
 msgid "Webhook Secret"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:949
+#: ./app/Admin/Settings/Settings_Page.php:962
 msgid "Webhook URL"
 msgstr ""
 
@@ -6091,7 +6103,7 @@ msgstr ""
 msgid "WooCommerce is not active."
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:1020
+#: ./app/Admin/Settings/Settings_Page.php:1033
 msgid "WooCommerce status automation"
 msgstr ""
 
@@ -6115,12 +6127,12 @@ msgstr ""
 msgid "You are sending too many shipping requests. Wait a moment and try again."
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:1023
+#: ./app/Admin/Settings/Settings_Page.php:1036
 msgid "You can prepare the mapping here; it will start applying only after global automation is enabled."
 msgstr ""
 
-#: ./app/Addon/Remote_Catalog.php:102 ./app/Admin/Order/Orders_Column.php:207 ./app/Admin/Settings/Settings_Page.php:72 ./app/Admin/Settings/Settings_Page.php:105
-#: ./app/Admin/Settings/Settings_Page.php:1890 ./app/Admin/Settings/Settings_Page.php:1928 ./app/Admin/Settings/Settings_Page.php:1967 ./app/Admin/Settings/Settings_Page.php:2108
+#: ./app/Addon/Remote_Catalog.php:102 ./app/Admin/Order/Orders_Column.php:207 ./app/Admin/Settings/Settings_Page.php:73 ./app/Admin/Settings/Settings_Page.php:106
+#: ./app/Admin/Settings/Settings_Page.php:1903 ./app/Admin/Settings/Settings_Page.php:1941 ./app/Admin/Settings/Settings_Page.php:1980 ./app/Admin/Settings/Settings_Page.php:2121
 #: ./app/Modules/Accounting/CodReports/Report_Controller.php:202 ./app/Modules/Accounting/CodReports/Report_Controller.php:243 ./app/Modules/Accounting/CodReports/Report_Controller.php:341 ./app/Modules/Accounting/CodReports/Report_Controller.php:409
 #: ./app/Modules/Accounting/CodReports/Report_Controller.php:479
 msgid "You do not have permission for this action."
@@ -6130,7 +6142,7 @@ msgstr ""
 msgid "You do not have permission to download this label."
 msgstr ""
 
-#: ./app/Admin/Order/MetaBox.php:1817
+#: ./app/Admin/Order/MetaBox.php:1819
 msgid "You do not have permission."
 msgstr ""
 
@@ -6188,7 +6200,7 @@ msgstr ""
 msgid "[{site_title}] Shipment for order #{order_number} is ready"
 msgstr ""
 
-#: ./app/Checkout/Checkout.php:851 ./app/Modules/Shipping/Pigeon/Pigeon.php:1986 ./app/Modules/Shipping/Pigeon/Pigeon.php:2089
+#: ./app/Checkout/Checkout.php:852 ./app/Modules/Shipping/Pigeon/Pigeon.php:1986 ./app/Modules/Shipping/Pigeon/Pigeon.php:2089
 msgid "address"
 msgstr ""
 
@@ -6200,7 +6212,7 @@ msgstr ""
 msgid "an earlier successful refresh"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:1008
+#: ./app/Admin/Settings/Settings_Page.php:1021
 msgid "applied = the event was applied; duplicate_ignored = this message has already been handled for the order; expired_ignored = the event is older than the freshness window, so it is history being replayed rather than news; stale_ignored = the event is older than one already accepted for this order."
 msgstr ""
 
@@ -6298,7 +6310,7 @@ msgstr ""
 msgid "inherit from Speedy settings"
 msgstr ""
 
-#: ./app/Checkout/Checkout.php:850
+#: ./app/Checkout/Checkout.php:851
 msgid "locker"
 msgstr ""
 
@@ -6327,7 +6339,7 @@ msgstr ""
 msgid "not synchronized"
 msgstr ""
 
-#: ./app/Checkout/Checkout.php:849
+#: ./app/Checkout/Checkout.php:850
 msgid "office"
 msgstr ""
 
@@ -6361,7 +6373,7 @@ msgstr ""
 msgid "read from Speedy %s ago"
 msgstr ""
 
-#: ./app/Admin/Settings/Settings_Page.php:1436
+#: ./app/Admin/Settings/Settings_Page.php:1449
 msgid "readiness"
 msgstr ""
 
@@ -6373,7 +6385,7 @@ msgstr ""
 msgid "return voucher"
 msgstr ""
 
-#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2778
+#: ./app/Modules/Shipping/BoxNow/BoxNow.php:2783
 msgid "same as “Sender”"
 msgstr ""
 
@@ -6435,7 +6447,7 @@ msgstr ""
 msgid "— Select a service —"
 msgstr ""
 
-#: ./app/Modules/Shipping/BoxNow/BoxNow.php:828 ./app/Modules/Shipping/BoxNow/BoxNow.php:2762
+#: ./app/Modules/Shipping/BoxNow/BoxNow.php:828 ./app/Modules/Shipping/BoxNow/BoxNow.php:2767
 msgid "— Select a warehouse —"
 msgstr ""
 

@@ -37,9 +37,9 @@ final class Remote_Catalog {
 		add_action( 'admin_post_' . self::REFRESH_ACTION, array( __CLASS__, 'handle_manual_refresh' ) );
 	}
 
-	/** Whether an administrator explicitly enabled the optional remote catalog. */
+	/** Включен по подразбиране; изрично запазеното изключване има предимство. */
 	public static function is_enabled() {
-		return 'yes' === Options::get( 'catalog', 'enabled', 'no' );
+		return 'yes' === Options::get( 'catalog', 'enabled', 'yes' );
 	}
 
 	/** Ensure the shared catalog is refreshed hourly with startup jitter. */

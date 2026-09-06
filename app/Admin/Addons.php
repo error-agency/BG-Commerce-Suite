@@ -107,7 +107,7 @@ class Addons {
 
 		if ( ! $enabled ) {
 			$settings_url = add_query_arg( array( 'page' => \BgCommerce3\Admin\Settings\Settings_Page::MENU_SLUG, 'tab' => 'general' ), admin_url( 'admin.php' ) );
-			echo '<div class="bgcs-alert bgcs-alert--info">' . Icons::svg( 'info', 18 ) . '<span>' . esc_html__( 'Optional Error Web Agency product offers are disabled. An administrator can opt in under General settings. Enabling makes an hourly server request to error.bg; no store, customer, order, credential or plugin-inventory data is sent.', 'bg-commerce-suite' ) . ' <a href="' . esc_url( $settings_url ) . '">' . esc_html__( 'General settings', 'bg-commerce-suite' ) . '</a> · <a href="' . esc_url( Remote_Catalog::PRIVACY_URL ) . '" target="_blank" rel="noopener noreferrer">' . esc_html__( 'Privacy', 'bg-commerce-suite' ) . '</a> · <a href="' . esc_url( Remote_Catalog::TERMS_URL ) . '" target="_blank" rel="noopener noreferrer">' . esc_html__( 'Terms', 'bg-commerce-suite' ) . '</a></span></div>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			echo '<div class="bgcs-alert bgcs-alert--info">' . Icons::svg( 'info', 18 ) . '<span>' . esc_html__( 'The product catalog is disabled. An administrator can enable it under General settings.', 'bg-commerce-suite' ) . ' <a href="' . esc_url( $settings_url ) . '">' . esc_html__( 'General settings', 'bg-commerce-suite' ) . '</a></span></div>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			return;
 		}
 

@@ -3,7 +3,7 @@
  * Plugin Name:       BG Commerce Suite
  * Plugin URI:        https://error.bg/bg-commerce-suite
  * Description:       Modular WooCommerce integration for Speedy, Econt, BOX NOW, Pigeon Express and COD reports.
- * Version:           4.4.0
+ * Version:           4.6.0
  * Author:            Error Web Agency
  * Author URI:        https://error.bg
  * Text Domain:       bg-commerce-suite
@@ -22,7 +22,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'BGCS3_VERSION', '4.4.0' );
+define( 'BGCS3_VERSION', '4.6.0' );
 define( 'BGCS3_API_VERSION', '1.1' );
 define( 'BGCS3_FILE', __FILE__ );
 define( 'BGCS3_PATH', plugin_dir_path( __FILE__ ) );

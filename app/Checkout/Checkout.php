@@ -769,7 +769,8 @@ class Checkout {
 			$rows[ __( 'City / locality', 'bg-commerce-suite' ) ] = $town;
 		}
 
-		$estimate = Delivery_Estimate::format( Delivery_Estimate::for_order( $order ) );
+		$delivery_estimate = Delivery_Estimate::for_order( $order );
+		$estimate = Delivery_Estimate::visible( $delivery_estimate, 'email' ) ? Delivery_Estimate::format( $delivery_estimate ) : '';
 		if ( '' !== $estimate ) {
 			$rows[ __( 'Expected delivery', 'bg-commerce-suite' ) ] = $estimate;
 		}

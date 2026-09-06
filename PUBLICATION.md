@@ -5,6 +5,13 @@ source snapshot and must not import the private Git history.
 
 ## Source boundary
 
+Version 4.6.0 enables the external product catalog by default at the owner's request.
+It is not a WordPress.org submission candidate until the external-request consent
+policy is reviewed again. The WordPress.org readiness test intentionally blocks
+this default; passing packaging or Plugin Check alone does not clear that gate.
+Repository-dependent privacy/terms links are hidden from the catalog admin UI;
+the notices themselves remain bundled and accurately describe the current behavior.
+
 Run:
 
 ```powershell
@@ -15,8 +22,8 @@ php tests/test-publication-readiness.php
 The exporter writes `dist/public-source/BG-Commerce-Suite/` from the explicit allowlist in
 `tools/release-manifest.php`. Files outside that allowlist cannot enter the snapshot.
 
-The public snapshot includes runtime source, compiled assets, tests, maintenance tools, public
-documentation and all applicable licenses. It excludes:
+The public snapshot includes runtime source, compiled assets, public documentation and all
+applicable licenses. Tests and maintenance tools stay in the internal repository. It excludes:
 
 - private Git metadata and commit trailers;
 - `audit/`, internal handoffs, test reports and live acceptance evidence;

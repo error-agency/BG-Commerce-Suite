@@ -7,8 +7,8 @@ plugin.
 
 |  |  |
 | --- | --- |
-| **Current version** | [4.4.0](https://github.com/error-agency/BG-Commerce-Suite/releases/latest) |
-| **Requires WordPress** | 6.3 or later (tested up to 7.0) |
+| **Current version** | [4.6.0](https://github.com/error-agency/BG-Commerce-Suite/releases/latest) |
+| **Requires WordPress** | 6.3 or later (tested up to 7.1) |
 | **Requires PHP** | 7.4 or later |
 | **Requires WooCommerce** | 8.2 or later |
 | **License** | [GPL-2.0-or-later](LICENSE) |
@@ -72,8 +72,8 @@ Optional BGCS add-ons are independent WordPress plugins that extend Core through
 runtime behaviour belongs in the module `register()` method so that disabled or incompatible
 modules stay inert.
 
-The merchant-facing product catalog is optional and disabled by default. After a site
-administrator explicitly enables it, BGCS refreshes validated public product metadata from
+The merchant-facing product catalog is optional and enabled by default when no preference
+has been saved. An administrator can disable it; existing opt-outs are preserved. While enabled, BGCS refreshes validated public product metadata from
 `error.bg` hourly through Action Scheduler, with an authorized manual refresh and a persistent
 last-known-good fallback. Product cards are sourced from that feed rather than bundled product
 records. Remote metadata cannot install or activate plugins, or execute code.
